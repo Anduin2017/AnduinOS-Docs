@@ -26,4 +26,8 @@ If you are using a Windows machine, you can use Rufus to create a bootable USB d
 sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress oflag=sync bs=4M
 ```
 
+>This will erase all data on the USB drive. Please make sure to back up your data before running this command.
+
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
+
+>For UEFI boot, please make sure to disable secure boot in the BIOS settings.
