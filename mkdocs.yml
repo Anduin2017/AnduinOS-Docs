@@ -117,6 +117,7 @@ nav:
       - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
       - Motrix: ./Applications/Utilities/Motrix/Motrix.md
       - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
+      - Dstat: ./Applications/Utilities/Dstat/Dstat.md
 
     - Development:
       - Docker: ./Applications/Development/Docker/Docker.md
