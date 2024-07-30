@@ -17,6 +17,17 @@ You need to copy the commands and paste them into the terminal. To paste the cop
 * If the terminal asks for your confirmation, you need to type `Y` and press `Enter`.
 * If the terminal asks for your password, you need to enter your password and press `Enter`.
 
+## Before installing applications
+
+Before starting, we strongly recommend installing the following applications first:
+
+```bash
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common wget -y
+```
+
+This command will install the necessary tools to install applications from the official Debian repository or other third-party repositories.
+
 ## Install applications from the apt repository
 
 To install applications from the apt repository, you can run:
