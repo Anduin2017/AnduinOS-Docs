@@ -102,7 +102,7 @@ nav:
 
     - Internet Services:
       - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
-      - QQ-Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
+      - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
       - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 
     - Multimedia:
@@ -122,4 +122,9 @@ nav:
     - Development:
       - Docker: ./Applications/Development/Docker/Docker.md
       - Node: ./Applications/Development/Node/Node.md
-      - Dotnet: ./Applications/Development/Dotnet/Dotnet.md
+      - .NET: ./Applications/Development/Dotnet/Dotnet.md
+
+    - Virtual Machines:
+      - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
+      - Gnome Boxes: ./Applications/Virtual-Machines/Gnome-Boxes/Gnome-Boxes.md
+      - Virt Manager: ./Applications/Virtual-Machines/Virt-Manager/Virt-Manager.md
