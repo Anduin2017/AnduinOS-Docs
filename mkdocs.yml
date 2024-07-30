@@ -113,7 +113,9 @@ nav:
       - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
       - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
       - Motrix: ./Applications/Utilities/Motrix/Motrix.md
+      - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
 
     - Development:
       - Docker: ./Applications/Development/Docker/Docker.md
       - Node: ./Applications/Development/Node/Node.md
+      - Dotnet: ./Applications/Development/Dotnet/Dotnet.md
