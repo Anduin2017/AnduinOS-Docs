@@ -104,6 +104,7 @@ nav:
 
     - Multimedia:
       - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
+      - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
 
     - Office:
       - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
