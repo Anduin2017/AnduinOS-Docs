@@ -13,6 +13,8 @@ theme:
   language: en
   features:
     - content.code.annotate
+    - content.code.select
+    - content.code.copy
     # - content.tabs.link
     # - header.autohide
     # - navigation.expand
