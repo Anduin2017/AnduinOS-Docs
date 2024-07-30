@@ -138,3 +138,8 @@ nav:
       - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
       - Gnome Boxes: ./Applications/Virtual-Machines/Gnome-Boxes/Gnome-Boxes.md
       - Virt Manager: ./Applications/Virtual-Machines/Virt-Manager/Virt-Manager.md
+
+    - Games:
+      - Minecraft: ./Applications/Games/Minecraft/Minecraft.md
+      - Steam: ./Applications/Games/Steam/Steam.md
+      
