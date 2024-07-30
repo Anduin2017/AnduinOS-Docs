@@ -89,6 +89,8 @@ nav:
   - Skills:
     - System Management:
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
+    - Sandboxing:
+      - Remote Desktop to Ubuntu Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
 
   - Applications:
     - Introduction: ./Applications/Introduction.md
