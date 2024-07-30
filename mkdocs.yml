@@ -109,8 +109,18 @@ nav:
       - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
       - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
 
+    - Media Editing:
+      - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
+      - Kdenlive: ./Applications/Media-Editing/Kdenlive/Kdenlive.md
+      - OpenShot: ./Applications/Media-Editing/OpenShot/OpenShot.md
+      - Shotcut: ./Applications/Media-Editing/Shotcut/Shotcut.md
+      - Audacity: ./Applications/Media-Editing/Audacity/Audacity.md
+      - Pinta: ./Applications/Media-Editing/Pinta/Pinta.md
+      - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
+
     - Office:
       - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
+      - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
 
     - Utilities:
       - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
