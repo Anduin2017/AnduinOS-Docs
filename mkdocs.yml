@@ -83,12 +83,20 @@ plugins:
 nav:
   - README.md
   - Install:
-      - System Requirements: ./Install/System-Requirements.md
-      - Installation: ./Install/Installation.md
+    - System Requirements: ./Install/System-Requirements.md
+    - Installation: ./Install/Installation.md
+
+  - Skills:
+    - System Management:
+      - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
 
   - Applications:
-      - Developer Tools:
-            - Visual Studio Code: ./Applications/Developer-Tools/Visual-Studio-Code/Visual-Studio-Code.md
+    - Introduction: ./Applications/Introduction.md
+    - Web Browsers:
+      - Google Chrome: ./Applications/Web-Browsers/Google-Chrome/Google-Chrome.md
 
-      - Internet Services:
-            - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
+    - Developer Tools:
+      - Visual Studio Code: ./Applications/Developer-Tools/Visual-Studio-Code/Visual-Studio-Code.md
+
+    - Internet Services:
+      - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
