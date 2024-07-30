@@ -100,3 +100,6 @@ nav:
 
     - Internet Services:
       - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
+
+    - Multimedia:
+      - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
