@@ -1,5 +1,7 @@
 # Node
 
+Node, also known as Node.js, is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is designed to build scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+
 To install Node (with npm) on AnduinOS, you can run:
 
 ```bash

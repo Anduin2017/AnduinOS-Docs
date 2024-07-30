@@ -1,5 +1,7 @@
 # WPS Office
 
+WPS Office is a suite of office software developed by Kingsoft Office. It is available for Windows, Linux, Android, and iOS.
+
 To install WPS Office on AnduinOS, you can run:
 
 <!-- The link needs to be updated regularly. -->

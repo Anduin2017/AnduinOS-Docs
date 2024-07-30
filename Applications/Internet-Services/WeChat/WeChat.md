@@ -1,5 +1,7 @@
 # WeChat
 
+WeChat is a Chinese multi-purpose messaging, social media and mobile payment app developed by Tencent.
+
 To Install WeChat on AnduinOS, you can run:
 
 ```bash
