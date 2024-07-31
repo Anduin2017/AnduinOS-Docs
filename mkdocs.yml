@@ -99,6 +99,7 @@ nav:
     - Web Browsers:
       - Google Chrome: ./Applications/Web-Browsers/Google-Chrome/Google-Chrome.md
       - Firefox: ./Applications/Web-Browsers/Firefox/Firefox.md
+      - Microsoft Edge: ./Applications/Web-Browsers/Microsoft-Edge/Microsoft-Edge.md
 
     - Code Editors:
       - Visual Studio Code: ./Applications/Code-Editors/Visual-Studio-Code/Visual-Studio-Code.md
@@ -121,6 +122,7 @@ nav:
       - Audacity: ./Applications/Media-Editing/Audacity/Audacity.md
       - Pinta: ./Applications/Media-Editing/Pinta/Pinta.md
       - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
+      - Blender: ./Applications/Media-Editing/Blender/Blender.md
 
     - Office:
       - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
