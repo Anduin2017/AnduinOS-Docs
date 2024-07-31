@@ -2,7 +2,9 @@
 
 By default, AnduinOS doesn't come with Snap pre-installed.
 
-This is because while Snap solved the package conflict problem, it introduced a new set of problems. [Snap](https://www.reddit.com/r/linux/comments/j3ajnf/whats_wrong_with_snaps_why_so_many_people_hate_it/) has some issues that may cause problems for users.
+!!! note "Why Snap is not pre-installed?"
+
+    While Snap solved the package conflict problem, it introduced a new set of problems. Reference [this](https://www.reddit.com/r/linux/comments/j3ajnf/whats_wrong_with_snaps_why_so_many_people_hate_it/). Considering the user experience, we decided to remove Snap from AnduinOS.
 
 To tell if you have Snap installed, you can run the following command:
 
@@ -12,7 +14,7 @@ snap --version
 
 If you you want to install Snap, you can run the following command:
 
-```bash
+```bash title="Install Snap"
 sudo rm /etc/apt/preferences.d/no-snap.pref
 sudo apt update
 sudo apt install -y snapd
@@ -20,7 +22,7 @@ sudo apt install -y snapd
 
 If you want to remove Snap, you can run the following command:
 
-```bash
+```bash title="Remove Snap"
 snap remove firefox || true
 snap remove snap-store || true
 snap remove gtk-common-themes || true
