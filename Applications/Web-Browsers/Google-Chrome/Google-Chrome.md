@@ -11,3 +11,9 @@ echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.g
 sudo apt update
 sudo apt install google-chrome-stable
 ```
+
+After installing Google Chrome, you may want to uninstall the default web browser, Firefox. To uninstall Firefox, you can run:
+
+```bash
+sudo apt autoremove firefox
+```
