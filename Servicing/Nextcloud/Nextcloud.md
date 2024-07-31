@@ -173,11 +173,23 @@ sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml nextcloud --detach
 ```
 
-That's it! You have successfully hosted NextCloud on AnduinOS.
+You need to update the permission for `/mnt/data` inside the container. You can do this by running the following command:
+
+```bash
+sudo docker exec -it $(sudo docker ps -qf "name=nextcloud_web") chown -R www-data:www-data /mnt/data
+```
 
 You can access NextCloud by visiting `http://localhost` in your browser.
 
 The default user is set during the first login.
+
+During initial setup, it may ask you the password for the database. You can use the following credentials:
+
+* Database: nextcloud
+* User: nextcloud
+* Password: dbpassword
+
+That's it! You have successfully hosted NextCloud on AnduinOS.
 
 ## Uninstall
 
