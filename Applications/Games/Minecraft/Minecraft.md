@@ -1,6 +1,6 @@
 # Minecraft
 
-MineCraft is a sandbox game that allows players to build and destroy blocks in a 3D world. The game has two main modes: survival and creative. In survival mode, players must gather resources and build structures to survive. In creative mode, players have unlimited resources and can build whatever they want. The game also has a multiplayer mode, where players can join servers and play with others.
+Minecraft is a sandbox game that allows players to build and destroy blocks in a 3D world. The game has two main modes: survival and creative. In survival mode, players must gather resources and build structures to survive. In creative mode, players have unlimited resources and can build whatever they want. The game also has a multiplayer mode, where players can join servers and play with others.
 
 To install Minecraft on AnduinOS, you can run:
 
