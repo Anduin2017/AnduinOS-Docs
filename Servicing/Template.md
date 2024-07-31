@@ -1,8 +1,8 @@
-# Host Jellyfin
+# Host SomeService
 
-Jellyfin is a free software media server. It is an alternative to Plex, Emby, and other media servers. Jellyfin is the Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.
+SomeService is...
 
-To host Jellyfin on AnduinOS, run the following commands.
+To host SomeService on AnduinOS, run the following commands.
 
 First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
 
@@ -16,11 +16,11 @@ Create a new folder to save the service configuration files:
 
 ```bash
 # Please install Docker first
-mkdir -p ~/Source/ServiceConfigs/Jellyfin
-cd ~/Source/ServiceConfigs/Jellyfin
+mkdir -p ~/Source/ServiceConfigs/SomeService
+cd ~/Source/ServiceConfigs/SomeService
 ```
 
-Make sure no other process is taking 1900, 7359, and 8096 ports on your machine.
+Make sure no other process is taking 1111, 2222, and 3333 ports on your machine.
 
 ```bash
 function port_exist_check() {
@@ -38,9 +38,9 @@ function port_exist_check() {
   fi
 }
 
-port_exist_check 1900
-port_exist_check 7359
-port_exist_check 8096
+port_exist_check 1111
+port_exist_check 2222
+port_exist_check 3333
 ```
 
 Then, create a `docker-compose.yml` file with the following content:
@@ -51,7 +51,7 @@ version: '3.3'
 
 services:
   web:
-    image: jellyfin/jellyfin
+    image: SomeService/SomeService
     volumes:
       - config-data:/config
       - cache-data:/cache
@@ -59,16 +59,16 @@ services:
     environment:
       - TZ=UTC
     ports:
-      - target: 1900
-        published: 1900
-        protocol: udp
+      - target: 1111
+        published: 1111
+        protocol: tcp
         mode: host
-      - target: 7359
-        published: 7359
-        protocol: udp
+      - target: 2222
+        published: 2222
+        protocol: tcp
         mode: host
-      - target: 8096
-        published: 8096
+      - target: 3333
+        published: 3333
         protocol: tcp
         mode: host
     deploy:
@@ -82,23 +82,23 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /swarm-vol/jellyfin/config
+      device: /swarm-vol/SomeService/config
   cache-data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /swarm-vol/jellyfin/cache
+      device: /swarm-vol/SomeService/cache
   media-data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /swarm-vol/jellyfin/media
+      device: /swarm-vol/SomeService/media
 EOF
-sudo mkdir -p /swarm-vol/jellyfin/config
-sudo mkdir -p /swarm-vol/jellyfin/cache
-sudo mkdir -p /swarm-vol/jellyfin/media
+sudo mkdir -p /swarm-vol/SomeService/config
+sudo mkdir -p /swarm-vol/SomeService/cache
+sudo mkdir -p /swarm-vol/SomeService/media
 ```
 
 Then, deploy the service:
@@ -106,21 +106,21 @@ Then, deploy the service:
 ```bash
 
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
-sudo docker stack deploy -c docker-compose.yml jellyfin --detach
+sudo docker stack deploy -c docker-compose.yml SomeService --detach
 ```
 
-That's it! You have successfully hosted Jellyfin on AnduinOS.
+That's it! You have successfully hosted SomeService on AnduinOS.
 
-You can access Jellyfin by visiting `http://localhost:8096` in your browser.
+You can access SomeService by visiting `http://localhost:3333` in your browser.
 
-The default username is `admin` and the default password is `admin`.
+The default username is `XXXXXXXXXXXXXXXXX` and the default password is `XXXXXXXXXXXXXXXX`.
 
 ## Uninstall
 
-To uninstall Jellyfin, run the following commands:
+To uninstall SomeService, run the following commands:
 
 ```bash
-sudo docker stack rm jellyfin
+sudo docker stack rm SomeService
 sleep 20 # Wait for the stack to be removed
 sudo docker system prune -a --volumes -f # Clean up used volumes and images
 ```
@@ -128,7 +128,7 @@ sudo docker system prune -a --volumes -f # Clean up used volumes and images
 To also remove the data, log, and config files, run the following commands:
 
 ```bash
-sudo rm /swarm-vol/jellyfin -rf
+sudo rm /swarm-vol/SomeService -rf
 ```
 
-That's it! You have successfully uninstalled Jellyfin from AnduinOS.
+That's it! You have successfully uninstalled SomeService from AnduinOS.

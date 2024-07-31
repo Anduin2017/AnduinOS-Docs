@@ -4,6 +4,14 @@ GitLab is a web-based Git repository manager with wiki and issue tracking featur
 
 To host GitLab on AnduinOS, run the following commands.
 
+First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
+
+```bash
+curl -fsSL get.docker.com -o get-docker.sh
+CHANNEL=stable sh get-docker.sh
+rm get-docker.sh
+```
+
 Create a new folder to save the service configuration files:
 
 ```bash
@@ -134,6 +142,12 @@ To uninstall GitLab, run the following commands:
 ```bash
 sudo docker stack rm gitlab
 sleep 20 # Wait for the stack to be removed
+sudo docker system prune -a --volumes -f # Clean up used volumes and images
+```
+
+To also remove the data, log, and config files, run the following commands:
+
+```bash
 sudo rm /swarm-vol/gitlab -rf
 ```
 
