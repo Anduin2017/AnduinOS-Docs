@@ -4,8 +4,6 @@ AnduinOS is great for hosting services. Before starting, you need to make sure D
 
 Please [Follow the Docker install instructions](../Applications/Development/Docker/Docker.md) to install Docker.
 
-DO install `docker-compose` as well.
-
 ## Servicing with https
 
 By default, all services in this document are served with http. If you want to serve with https, you need to install a reverse proxy server like [Caddy](../Applications/Development/Caddy/Caddy.md) or [Traefik](../Applications/Development/Traefik/Traefik.md).

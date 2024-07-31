@@ -12,6 +12,29 @@ mkdir -p ~/Source/ServiceConfigs/GitLab
 cd ~/Source/ServiceConfigs/GitLab
 ```
 
+Make sure no other process is taking 80, 443, and 2202 ports on your machine.
+
+```bash
+function port_exist_check() {
+  if [[ 0 -eq $(sudo lsof -i:"$1" | grep -i -c "listen") ]]; then
+    echo "$1 is not in use"
+    sleep 1
+  else
+    echo "Warning: $1 is occupied"
+    sudo lsof -i:"$1"
+    echo "Will kill the occupied process in 5s"
+    sleep 5
+    sudo lsof -i:"$1" | awk '{print $2}' | grep -v "PID" | sudo xargs kill -9
+    echo "Killed the occupied process"
+    sleep 1
+  fi
+}
+
+port_exist_check 80
+port_exist_check 443
+port_exist_check 2202
+```
+
 Then, create a `docker-compose.yml` file with the following content:
 
 ```bash
@@ -89,7 +112,11 @@ EOF
 sudo mkdir -p /swarm-vol/gitlab/data
 sudo mkdir -p /swarm-vol/gitlab/log
 sudo mkdir -p /swarm-vol/gitlab/config
+```
 
+Then, deploy the service:
+
+```bash
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml gitlab --detach
 ```

@@ -160,3 +160,4 @@ nav:
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
     - GitLab: ./Servicing/GitLab/GitLab.md
+    - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
