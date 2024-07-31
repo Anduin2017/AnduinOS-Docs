@@ -98,6 +98,7 @@ nav:
     - Introduction: ./Applications/Introduction.md
     - Web Browsers:
       - Google Chrome: ./Applications/Web-Browsers/Google-Chrome/Google-Chrome.md
+      - Firefox: ./Applications/Web-Browsers/Firefox/Firefox.md
 
     - Code Editors:
       - Visual Studio Code: ./Applications/Code-Editors/Visual-Studio-Code/Visual-Studio-Code.md
