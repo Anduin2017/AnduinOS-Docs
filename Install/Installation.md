@@ -20,9 +20,30 @@ Finally, boot the virtual machine and follow the on-screen instructions to insta
 
 First, download the latest release of AnduinOS from the releases page.
 
-If you are using a Windows machine, you can use Rufus to create a bootable USB drive. If you are using a Linux machine, you can use the `dd` command.
+### Windows
 
-```shell
+If you are using a Windows machine, you can use Rufus to create a bootable USB drive.
+
+!!! note "Rufus"
+    You can download Rufus from the [official website](https://rufus.ie/).
+
+!!! warning Use `dd` mode in Rufus instead of `ISO` mode!
+
+    When using Rufus, make sure to select the `dd` mode to create a bootable USB drive. This will ensure that the USB drive is bootable on both UEFI and legacy BIOS systems.
+
+### Linux
+
+If you are using a Linux machine, you can use the `dd` command to burn the ISO file to a USB drive.
+
+First, you must identify the device name of the USB drive. You can use the `lsblk` command to list all block devices on your system.
+
+```shell title="list block devices"
+sudo fdisk -l
+```
+
+Then, use the `dd` command to burn the ISO file to the USB drive. Replace `<device>` with the device name of the USB drive.
+
+```shell title="burning ISO to USB using dd on Linux"
 sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress oflag=sync bs=4M
 ```
 
@@ -30,7 +51,11 @@ sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress ofl
 
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
 
->For UEFI boot, please make sure to disable secure boot in the BIOS settings.
+<!-- >For UEFI boot, please make sure to disable secure boot in the BIOS settings. -->
+
+!!! warning "Disabling Secure Boot"
+
+    Make sure to disable Secure Boot in the BIOS settings before booting from the USB drive. Secure Boot can prevent the installation of unsigned operating systems. AnduinOS is not signed, so it will not boot with Secure Boot enabled.
 
 ## After installation
 
