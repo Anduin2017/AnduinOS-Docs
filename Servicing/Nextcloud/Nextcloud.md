@@ -175,9 +175,9 @@ sudo docker stack deploy -c docker-compose.yml nextcloud --detach
 
 That's it! You have successfully hosted NextCloud on AnduinOS.
 
-You can access NextCloud by visiting `http://localhost:3333` in your browser.
+You can access NextCloud by visiting `http://localhost` in your browser.
 
-The default username is `XXXXXXXXXXXXXXXXX` and the default password is `XXXXXXXXXXXXXXXX`.
+The default user is set during the first login.
 
 ## Uninstall
 
