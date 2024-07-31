@@ -90,6 +90,8 @@ nav:
     - Install Drivers: ./Install/Install-Drivers.md
     - Select best apt source: ./Install/Select-Best-Apt-Source.md
     - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
+    - Install or remove Snap: ./Install/Install-Or-Remove-Snap.md
+    - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
 
   - Skills:
     - System Management:
