@@ -8,6 +8,8 @@ edit_uri: ""
 use_directory_urls: true
 docs_dir: .
 theme:
+  logo: Assets/logo_128.png
+  favicon: Assets/logo_128.png
   font: false
   name: material
   language: en
@@ -47,6 +49,11 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+extra:
+  # social:
+  #   - type: gitlab
+  #     link: https://gitlab.aiursoft.cn/anduin/anduinos
+  homepage: https://gitlab.aiursoft.cn/anduin/anduinos # TODO: Change this to the homepage of your project
 
   icon:
     admonition:

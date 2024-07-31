@@ -6,7 +6,7 @@
 
 Before installing AnduinOS, you need to download the ISO file from the releases page.
 
-[Download AnduinOS (ISO)]([#](https://github.com/Anduin2017/AnduinOS/releases)){ .md-button .md-button--primary }
+[Download AnduinOS (ISO)](https://github.com/Anduin2017/AnduinOS/releases){ .md-button .md-button--primary }
 
 ## Virtual Machine Installation
 
