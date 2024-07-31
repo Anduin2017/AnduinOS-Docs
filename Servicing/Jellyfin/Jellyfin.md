@@ -113,7 +113,7 @@ That's it! You have successfully hosted Jellyfin on AnduinOS.
 
 You can access Jellyfin by visiting `http://localhost:8096` in your browser.
 
-The default username is `admin` and the default password is `admin`.
+The default username is `root` and the default password is set during the first login.
 
 ## Uninstall
 
