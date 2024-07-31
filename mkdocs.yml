@@ -110,6 +110,7 @@ nav:
     - Code Editors:
       - Visual Studio Code: ./Applications/Code-Editors/Visual-Studio-Code/Visual-Studio-Code.md
       - Sublime Text: ./Applications/Code-Editors/Sublime-Text/Sublime-Text.md
+      - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
 
     - Internet Services:
       - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
