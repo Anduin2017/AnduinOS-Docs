@@ -2,9 +2,11 @@
 
 ## Download AnduinOS
 
+---
+
 Before installing AnduinOS, you need to download the ISO file from the releases page.
 
-[Download AnduinOS (ISO)](https://github.com/Anduin2017/AnduinOS/releases)
+[Downlaod AnduinOS (ISO)]([#](https://github.com/Anduin2017/AnduinOS/releases)){ .md-button .md-button--primary }
 
 ## Virtual Machine Installation
 
@@ -20,9 +22,9 @@ Finally, boot the virtual machine and follow the on-screen instructions to insta
 
     Make sure to disable Secure Boot in the virtual machine settings before booting from the ISO file. Secure Boot can prevent the installation of unsigned operating systems. AnduinOS is not signed, so it will not boot with Secure Boot enabled.
 
-## Bare-mental Installation - Make a USB installer
-
 ---
+
+## Bare-mental Installation - Make a USB installer
 
 First, download the latest release of AnduinOS from the releases page.
 
