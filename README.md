@@ -19,3 +19,7 @@ To install AnduinOS, you can follow the instructions in the [Installation Guide]
 ## How to install applications on AnduinOS?
 
 To install applications on AnduinOS, you can follow the instructions in the [Applications Guide](./Applications/Introduction.md).
+
+## How to use AnduinOS to host other services?
+
+To host services on AnduinOS, you can follow the instructions in the [Servicing Guide](./Servicing/Introduction.md).
