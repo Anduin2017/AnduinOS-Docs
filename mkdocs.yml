@@ -92,6 +92,7 @@ nav:
   - Skills:
     - System Management:
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
+      - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
     - Sandboxing:
       - Remote Desktop to Ubuntu Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
     - Secret Management:
