@@ -141,6 +141,7 @@ nav:
       - Motrix: ./Applications/Utilities/Motrix/Motrix.md
       - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
       - Dstat: ./Applications/Utilities/Dstat/Dstat.md
+      - Postman: ./Applications/Utilities/Postman/Postman.md
 
     - Development:
       - Docker: ./Applications/Development/Docker/Docker.md
@@ -162,4 +163,3 @@ nav:
     - GitLab: ./Servicing/GitLab/GitLab.md
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
-    
