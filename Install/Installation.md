@@ -49,13 +49,13 @@ If you are using a Linux machine, you can use the `dd` command to burn the ISO f
 
 First, you must identify the device name of the USB drive. You can use the `lsblk` command to list all block devices on your system.
 
-```shell title="list block devices"
+```shell title="List block devices"
 sudo fdisk -l
 ```
 
 Then, use the `dd` command to burn the ISO file to the USB drive. Replace `<device>` with the device name of the USB drive.
 
-```shell title="burning ISO to USB using dd on Linux"
+```shell title="Burning ISO to USB using dd on Linux"
 sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress oflag=sync bs=4M
 ```
 
