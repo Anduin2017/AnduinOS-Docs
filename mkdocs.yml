@@ -87,6 +87,7 @@ nav:
   - Install:
     - System Requirements: ./Install/System-Requirements.md
     - Installation: ./Install/Installation.md
+    - Install Drivers: ./Install/Install-Drivers.md
 
   - Skills:
     - System Management:

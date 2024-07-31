@@ -31,3 +31,7 @@ sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress ofl
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
 
 >For UEFI boot, please make sure to disable secure boot in the BIOS settings.
+
+## After installation
+
+After installing AnduinOS, you may need to [Install Drivers](./Install-Drivers.md).
