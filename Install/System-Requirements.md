@@ -2,19 +2,23 @@
 
 Minimum system requirements:
 
-- 2 GHz processor (Must be x86_64 architecture)
-- 1 GB RAM
-- 25 GB disk space
-- 1024x768 screen resolution
-- USB port or DVD drive
+| Component       | Requirement                        |
+|-----------------|------------------------------------|
+| Processor       | 2 GHz processor (Must be x86_64 architecture) |
+| RAM             | 1 GB RAM                           |
+| Disk Space      | 25 GB disk space                   |
+| Screen          | 1024x768 screen resolution         |
+| Ports           | USB port or DVD drive              |
 
 System requirements for the best experience:
 
-- 2.5 GHz quad-core processor (Must be x86_64 architecture)
-- 4 GB RAM
-- 50 GB disk space
-- Internet access
-- UEFI firmware
+| Component       | Requirement                        |
+|-----------------|------------------------------------|
+| Processor       | 2.5 GHz quad-core processor (Must be x86_64 architecture) |
+| RAM             | 4 GB RAM                           |
+| Disk Space      | 50 GB disk space                   |
+| Internet        | Internet access                    |
+| Firmware        | UEFI firmware                      |
 
 !!! note "Only x86_64 architecture is supported."
 
