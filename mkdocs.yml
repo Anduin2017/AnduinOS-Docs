@@ -93,6 +93,8 @@ nav:
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
     - Sandboxing:
       - Remote Desktop to Ubuntu Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
+    - Secret Management:
+      - Manage SSH Keys: ./Skills/Secret-Management/Manage-SSH-Keys.md
 
   - Applications:
     - Introduction: ./Applications/Introduction.md
