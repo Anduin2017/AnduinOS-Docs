@@ -104,7 +104,6 @@ sudo mkdir -p /swarm-vol/jellyfin/media
 Then, deploy the service:
 
 ```bash
-
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml jellyfin --detach
 ```

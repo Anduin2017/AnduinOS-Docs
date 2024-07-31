@@ -168,7 +168,6 @@ sudo mkdir -p /swarm-vol/nextcloud/data
 Then, deploy the service:
 
 ```bash
-
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml nextcloud --detach
 ```
