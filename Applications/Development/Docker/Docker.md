@@ -188,8 +188,9 @@ int main() {
 
 ## Docker Desktop
 
-> :boom:
-I don't recommend using Docker Desktop on AnduinOS. Docker Desktop is designed for running Docker daemon in a virtual machine. It may mess up your system!
+!!! warning
+
+    I don't recommend using Docker Desktop on AnduinOS. Docker Desktop is designed for running Docker daemon in a virtual machine. It may mess up your system!
 
 * Before starting Docker-Desktop, the `docker` command is provided by original Docker daemon. After starting Docker Desktop, the `docker` command is provided by Docker Desktop running in a virtual machine. This may cause confusion.
 * While Docker Desktop is free for personal use, it is not free for commercial use. You may need to pay for it. And it's not open source.
