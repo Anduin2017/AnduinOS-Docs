@@ -139,6 +139,7 @@ nav:
       - Docker: ./Applications/Development/Docker/Docker.md
       - Node: ./Applications/Development/Node/Node.md
       - .NET: ./Applications/Development/Dotnet/Dotnet.md
+      - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
 
     - Virtual Machines:
       - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
