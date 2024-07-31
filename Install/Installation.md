@@ -27,7 +27,7 @@ If you are using a Windows machine, you can use Rufus to create a bootable USB d
 !!! note "Rufus"
     You can download Rufus from the [official website](https://rufus.ie/).
 
-!!! warning Use `dd` mode in Rufus instead of `ISO` mode!
+!!! warning "Use `dd` mode in Rufus instead of `ISO` mode!"
 
     When using Rufus, make sure to select the `dd` mode to create a bootable USB drive. This will ensure that the USB drive is bootable on both UEFI and legacy BIOS systems.
 
@@ -53,7 +53,7 @@ Then, boot the computer from the USB drive and follow the on-screen instructions
 
 <!-- >For UEFI boot, please make sure to disable secure boot in the BIOS settings. -->
 
-!!! warning "Disabling Secure Boot"
+!!! warning "Disable Secure Boot"
 
     Make sure to disable Secure Boot in the BIOS settings before booting from the USB drive. Secure Boot can prevent the installation of unsigned operating systems. AnduinOS is not signed, so it will not boot with Secure Boot enabled.
 
