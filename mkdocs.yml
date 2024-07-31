@@ -88,6 +88,8 @@ nav:
     - System Requirements: ./Install/System-Requirements.md
     - Installation: ./Install/Installation.md
     - Install Drivers: ./Install/Install-Drivers.md
+    - Select best apt source: ./Install/Select-best-apt-source.md
+    - Allow sudo without password: ./Install/Allow-sudo-without-password.md
 
   - Skills:
     - System Management:

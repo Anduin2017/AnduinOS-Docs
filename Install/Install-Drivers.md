@@ -31,3 +31,7 @@ sudo apt install nvidia-driver-545
 ```
 
 After the installation is complete, reboot your system.
+
+## After installation
+
+After installing the drivers, you may need to [Select best APT source](./Select-Best-Apt-Source.md)
