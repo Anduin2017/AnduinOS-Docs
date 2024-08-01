@@ -181,3 +181,4 @@ nav:
     - GitLab: ./Servicing/GitLab/GitLab.md
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
+    - SqlServer: ./Servicing/SqlServer/SqlServer.md
