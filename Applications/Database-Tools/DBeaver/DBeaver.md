@@ -14,7 +14,7 @@ rm dbeaver.deb
 
 !!! warning "The link above may be outdated"
 
-    The link above may be outdated. Please visit the [official website](https://im.qq.com/linuxqq/index.shtml) to get the latest version.
+    The link above may be outdated. Please visit the [official website](https://github.com/dbeaver/dbeaver/releases) to get the latest version.
 
 Get the newest download link without open browser: (with API rate limit)
 
