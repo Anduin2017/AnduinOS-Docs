@@ -167,6 +167,9 @@ nav:
       - .NET: ./Applications/Development/Dotnet/Dotnet.md
       - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
 
+    - Database Tools:
+      - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
+
     - Virtual Machines:
       - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
       - Gnome Boxes: ./Applications/Virtual-Machines/Gnome-Boxes/Gnome-Boxes.md
