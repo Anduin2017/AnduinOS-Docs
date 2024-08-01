@@ -141,6 +141,7 @@ nav:
     - Multimedia:
       - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
       - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
+      - Yes Play Music: ./Applications/Multimedia/Yes-Play-Music/Yes-Play-Music.md
 
     - Media Editing:
       - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
@@ -172,6 +173,7 @@ nav:
 
     - Database Tools:
       - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
+      - DBeaver: ./Applications/Database-Tools/DBeaver/DBeaver.md
       - Sqlite Browser: ./Applications/Database-Tools/Sqlite-Browser/Sqlite-Browser.md
 
     - Virtual Machines:
