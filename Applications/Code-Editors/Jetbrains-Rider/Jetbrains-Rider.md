@@ -23,3 +23,7 @@ Terminal=false
 Type=Application
 Categories=Development;IDE;" | sudo tee /usr/share/applications/jetbrains-rider.desktop
 ```
+
+!!! warning
+
+    The link above may be outdated. Please visit the [official website](https://www.jetbrains.com/rider/) to get the latest version.

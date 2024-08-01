@@ -205,3 +205,7 @@ sudo dpkg -i docker-desktop-amd64.deb
 sudo apt install --fix-broken -y
 rm docker-desktop-amd64.deb
 ```
+
+!!! warning
+
+    The link above may be outdated. Please visit the [official website](https://www.docker.com/products/docker-desktop) to get the latest version.

@@ -11,3 +11,7 @@ wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.10_240715_amd64_01.deb -O
 sudo dpkg -i qq.deb
 rm qq.deb
 ```
+
+!!! warning
+
+    The link above may be outdated. Please visit the [official website](https://im.qq.com/linuxqq/index.shtml) to get the latest version.
