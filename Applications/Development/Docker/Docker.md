@@ -188,7 +188,7 @@ int main() {
 
 ## Docker Desktop
 
-!!! warning
+!!! warning "Not recommended"
 
     I don't recommend using Docker Desktop on AnduinOS. Docker Desktop is designed for running Docker daemon in a virtual machine. It may mess up your system!
 
@@ -206,6 +206,6 @@ sudo apt install --fix-broken -y
 rm docker-desktop-amd64.deb
 ```
 
-!!! warning
+!!! warning "The link above may be outdated"
 
     The link above may be outdated. Please visit the [official website](https://www.docker.com/products/docker-desktop) to get the latest version.

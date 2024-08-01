@@ -12,6 +12,6 @@ sudo dpkg -i wps.deb
 rm wps.deb
 ```
 
-!!! warning
+!!! warning "The link above may be outdated"
 
     The link above may be outdated. Please visit the [official website](https://www.wps.com/office/linux/) to get the latest version.

@@ -12,6 +12,6 @@ sudo dpkg -i qq.deb
 rm qq.deb
 ```
 
-!!! warning
+!!! warning "The link above may be outdated"
 
     The link above may be outdated. Please visit the [official website](https://im.qq.com/linuxqq/index.shtml) to get the latest version.

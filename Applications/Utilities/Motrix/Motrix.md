@@ -12,6 +12,6 @@ sudo dpkg -i Motrix_1.8.19_amd64.deb
 rm Motrix_1.8.19_amd64.deb
 ```
 
-!!! warning
+!!! warning "The link above may be outdated"
 
     The link above may be outdated. Please visit the [official website](https://motrix.app/download) to get the latest version.

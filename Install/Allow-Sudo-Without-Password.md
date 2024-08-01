@@ -2,7 +2,7 @@
 
 Allowing sudo without password is a security risk, but it can be useful in certain situations.
 
-!!! warning
+!!! warning "Security Risk"
 
     Disabling the password requirement for sudo can be a security risk. This may cause some commands running without sudo to have root permissions and potentially break your system.
 
