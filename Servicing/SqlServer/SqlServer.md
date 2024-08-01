@@ -1,6 +1,6 @@
 # Host SqlServer
 
-SqlServer is...
+SqlServer is a relational database management system developed by Microsoft. It is a powerful database that is widely used in the industry.
 
 To host SqlServer on AnduinOS, run the following commands.
 
