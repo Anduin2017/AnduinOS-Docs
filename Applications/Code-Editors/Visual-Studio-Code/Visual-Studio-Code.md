@@ -12,3 +12,5 @@ rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install code
 ```
+
+That's it! You have successfully installed Visual Studio Code on AnduinOS.
