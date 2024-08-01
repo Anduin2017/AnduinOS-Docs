@@ -171,6 +171,7 @@ nav:
 
     - Database Tools:
       - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
+      - Sqlite Browser: ./Applications/Database-Tools/Sqlite-Browser/Sqlite-Browser.md
 
     - Virtual Machines:
       - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
