@@ -9,7 +9,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-That's it! We recommand you to run these commands regularly to keep your system up-to-date.
+That's it! We recommand you to run those commands regularly to keep your system up-to-date.
 
 ??? Tip "Should those commands be run automatically?"
 
@@ -23,6 +23,7 @@ That's it! We recommand you to run these commands regularly to keep your system 
     - **Rebooting Issues**: Updates often require reboots, which can be problematic for systems that have difficulty restarting or need to maintain synchronized caches.
 
     Automatic updates are advisable only if:
+
     - The system can tolerate availability degradation.
     - The system is stateless and rebooting won't affect its operation.
     - The system has a perfect backup or snapshot configuration.
