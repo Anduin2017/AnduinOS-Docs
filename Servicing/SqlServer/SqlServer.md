@@ -1,8 +1,8 @@
-# Host SqlServer
+# Host SQL Server
 
-SqlServer is a relational database management system developed by Microsoft. It is a powerful database that is widely used in the industry.
+SQL Server is a relational database management system developed by Microsoft. It is a powerful database that is widely used in the industry.
 
-To host SqlServer on AnduinOS, run the following commands.
+To host SQL Server on AnduinOS, run the following commands.
 
 First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
 
@@ -16,8 +16,8 @@ Create a new folder to save the service configuration files:
 
 ```bash
 # Please install Docker first
-mkdir -p ~/Source/ServiceConfigs/SqlServer
-cd ~/Source/ServiceConfigs/SqlServer
+mkdir -p ~/Source/ServiceConfigs/SQLServer
+cd ~/Source/ServiceConfigs/SQLServer
 ```
 
 Make sure no other process is taking 1433 port on your machine.
@@ -76,13 +76,15 @@ sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml sqlserver --detach
 ```
 
-That's it! You have successfully hosted SqlServer on AnduinOS.
+That's it! You have successfully hosted SQL Server on AnduinOS.
 
 The default user is `sa` and the password is `YourStrong!Passw0rd`.
 
+To manage your SQL Server, it is suggested to install Azure Data Studio. You can follow the instructions [here](../../Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md).
+
 ## Uninstall
 
-To uninstall SqlServer, run the following commands:
+To uninstall SQL Server, run the following commands:
 
 ```bash
 sudo docker stack rm sqlserver
@@ -96,4 +98,4 @@ To also remove the data, log, and config files, run the following commands:
 sudo rm /swarm-vol/sqlserver -rf
 ```
 
-That's it! You have successfully uninstalled SqlServer from AnduinOS.
+That's it! You have successfully uninstalled SQL Server from AnduinOS.
