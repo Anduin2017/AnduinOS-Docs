@@ -12,10 +12,6 @@ AnduinOS is a custom Debian-based Linux distribution that aims to facilitate use
 
 AnduinOS is built on the Ubuntu Jammy package base.
 
-## Where to get the source code?
-
-To get the source code of AnduinOS, you can visit the [AnduinOS GitLab repository](https://gitlab.aiursoft.cn/anduin/anduinos)
-
 ## How to install AnduinOS?
 
 To install AnduinOS, you can follow the instructions in the [Installation Guide](./Install/Installation.md).
@@ -27,3 +23,7 @@ To install applications on AnduinOS, you can follow the instructions in the [App
 ## How to use AnduinOS to host other services?
 
 To host services on AnduinOS, you can follow the instructions in the [Servicing Guide](./Servicing/Introduction.md).
+
+## Where to get the source code of AnduinOS?
+
+To get the source code of AnduinOS, you can visit the [AnduinOS GitLab repository](https://gitlab.aiursoft.cn/anduin/anduinos)
