@@ -39,8 +39,7 @@ That's it! We recommand you to run these commands regularly to keep your system 
     echo "
     sudo apt update
     sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-    sudo apt --purge autoremove -y
-    sudo reboot" | sudo tee /usr/local/bin/update.sh
+    sudo apt --purge autoremove -y" | sudo tee /usr/local/bin/update.sh
     sudo chmod +x /usr/local/bin/update.sh
     (crontab -l ; echo "0 2 * * 0 /usr/local/bin/update.sh") | crontab -
     ```
