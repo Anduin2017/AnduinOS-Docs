@@ -134,6 +134,7 @@ nav:
 
     - Internet Services:
       - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
+      - QQ: ./Applications/Internet-Services/QQ/QQ.md
       - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
       - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 

@@ -10,5 +10,3 @@ curl -fsSL $url -o azure-data-studio.deb
 sudo dpkg -i azure-data-studio.deb
 rm azure-data-studio.deb
 ```
-
-That's it! You have successfully installed Azure Data Studio on AnduinOS.

@@ -4,16 +4,10 @@ Tencent QQ (Chinese: 腾讯QQ), also known as QQ, is an instant messaging softwa
 
 To Install QQ on AnduinOS, first download a deb package form [here](https://im.qq.com/linuxqq/index.shtml). Then you can install it with `dpkg`:
 
-```bash
-# Always download the newest package from official website.
-# wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.10_240715_amd64_01.deb
-sudo dpkg -i QQ_3.2.10_240715_amd64_01.deb
-```
-
-If you would like to make QQ update itself automatically and are also using [flatpak](https://flatpak.org/), then you can install QQ from [flathub](https://flathub.org/apps/com.qq.QQ).
-
-**Note that this wrapper is not verified by, affiliated with, or supported by Tencent.**
+<!-- The link needs to be updated regularly. -->
 
 ```bash
-flatpak install flathub com.qq.QQ
+wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.10_240715_amd64_01.deb -O qq.deb
+sudo dpkg -i qq.deb
+rm qq.deb
 ```

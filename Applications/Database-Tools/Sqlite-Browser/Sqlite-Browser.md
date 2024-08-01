@@ -8,5 +8,3 @@ To install SQLite Browser on AnduinOS, run the following commands.
 sudo apt-get update
 sudo apt-get install sqlitebrowser
 ```
-
-That's it! You have successfully installed SQLite Browser on AnduinOS.

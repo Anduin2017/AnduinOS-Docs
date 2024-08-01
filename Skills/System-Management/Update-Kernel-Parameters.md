@@ -38,5 +38,3 @@ After rebooting, the new kernel parameters will take effect. You can verify the 
 ```bash
 sudo dmesg
 ```
-
-That's it!
