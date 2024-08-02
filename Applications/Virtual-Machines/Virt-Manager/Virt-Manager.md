@@ -18,7 +18,14 @@ sudo adduser $USER libvirt-qemu
 
 However, after installing Virt Manager, you may need to configure some settings to optimize the performance of your virtual machines.
 
-## Allow PCIe Pass-through
+* Setting up IO-MMU
+* Ignore MSRs
+* Offline a PCIe Device (Like GPU) Before Passing Through
+* Enable Secure Boot for Virtual Machines
+* Enable simulated TPM for Virtual Machines
+* Tune Windows VM for better performance
+
+## Setting up IO-MMU
 
 In some cases, you may need to pass through a PCIe device to a virtual machine. For example, if you want your virtual machine to have direct access to a GPU.  To do this, you need to enable IOMMU in the BIOS and add the `iommu=pt` kernel parameter.
 
@@ -141,6 +148,32 @@ sudo update-initramfs -u -k all
 sudo reboot
 ```
 
+To make sure a PCIe device is offline and ready to pass through, you can run:
+
+```bash title="Check PCIe Device"
+lspci -nnv -s 21:00.0 # Update the address `21:00.0` to your own PCIe address!
+```
+
+For example, for my NVIDIA P620 on `21:00.0` it shows:
+
+```bash
+anduin@anduin-work-aos:~$ lspci -nnv -s 21:00.0
+21:00.0 VGA compatible controller [0300]: NVIDIA Corporation GP107GL [Quadro P620] [10de:1cb6] (rev a1) (prog-if 00 [VGA controller])
+    ...
+    Kernel driver in use: vfio-pci
+```
+
+And for the other device `15:00.0`:
+
+```bash
+anduin@anduin-work-aos:~$ lspci -nnv -s 15:00.0
+15:00.0 VGA compatible controller [0300]: NVIDIA Corporation GP107GL [Quadro P620] [10de:1cb6] (rev a1) (prog-if 00 [VGA controller])
+    ...
+    Kernel driver in use: nvidia
+```
+
+If you see the `Kernel driver in use: vfio-pci`, it means the GPU is offline and ready to pass through.
+
 ## Enable Secure Boot for Virtual Machines
 
 If you want to enable Secure Boot for your virtual machines, you need to ajust the settings of the virtual machine.
@@ -183,3 +216,35 @@ Then, open your virtual machine. Click `Show virtual hardware details` -> `Overv
     ...
 </devices>
 ```
+
+## Tune Windows VM for better performance
+
+Windows only enable some performance feature when it detects that it is running on a Hyper-V hypervisor. To enable these features, you can add the following lines to the XML configuration:
+
+First, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` -> `Preferences` -> `General` and enable `Enable XML editing`.
+
+Then, open your virtual machine. Click `Show virtual hardware details` -> `Overview` and add the following lines to the XML configuration:
+
+```xml
+<features>
+    ...
+    <hyperv mode="passthrough">
+        <relaxed state="on"/>
+        <vapic state="on"/>
+        <spinlocks state="on" retries="8191"/>
+        <vpindex state="on"/>
+        <runtime state="on"/>
+        <synic state="on"/>
+        <stimer state="on"/>
+        <reset state="off"/>
+        <vendor_id state="on" value="intel"/>
+        <frequencies state="on"/>
+        <reenlightenment state="off"/>
+        <tlbflush state="on"/>
+        <ipi state="on"/>
+    </hyperv>
+    ...
+</features>
+```
+
+That's it! Now you can try benchmarking your virtual machine to see if the performance is improved.
