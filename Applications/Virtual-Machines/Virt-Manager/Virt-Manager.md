@@ -23,6 +23,7 @@ However, after installing Virt Manager, you may need to configure some settings 
 * Offline a PCIe Device (Like GPU) Before Passing Through
 * Enable Secure Boot for Virtual Machines
 * Enable simulated TPM for Virtual Machines
+* Install VirtIO drivers for Windows VM
 * Tune Windows VM for better performance
 
 ## Setting up IO-MMU
@@ -216,6 +217,32 @@ Then, open your virtual machine. Click `Show virtual hardware details` -> `Overv
     ...
 </devices>
 ```
+
+## Install VirtIO drivers for Windows VM
+
+!!! note "VirtIO Drivers"
+
+    It is suggested that when you are configuring a Windows virtual machine, you should always use VirtIO devices. For example
+
+    * For network adapter, use VirtIO network adapter instead of Intel E1000.
+    * For disks, use SCSI VirtIO disk.
+    * Always add a VirtIO Serial controller.
+    * Always add a VirtIO SCSI controller.
+    * Always add a RNG device, based on `/dev/urandom`.
+
+If you are using a Windows virtual machine, you may want to install VirtIO drivers to improve the performance of the virtual machine. To do this, you can follow these steps:
+
+!!! note "Windows may not boot without VirtIO drivers"
+
+    During Windows setup, it may not have the VirtIO drivers. In this case, Windows may not boot. You need to install the VirtIO drivers during the setup.
+
+Download the VirtIO drivers from the official website: [https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)
+
+Then, open your virtual machine. Click `Show virtual hardware details` -> `Add Hardware` -> `Storage` and add the VirtIO drivers ISO file.
+
+Then, boot your virtual machine and install the VirtIO drivers. If you are installing Windows, it will prompt you to insert the VirtIO drivers CD. You can insert the VirtIO drivers ISO file and install the drivers.
+
+After Windows is installed, it's always suggested to install the VirtIO drivers to improve the performance of the virtual machine.
 
 ## Tune Windows VM for better performance
 
