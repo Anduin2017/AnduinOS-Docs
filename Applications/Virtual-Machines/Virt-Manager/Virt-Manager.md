@@ -13,7 +13,7 @@ That's it. If you want to allow current user to connect to the libvirt daemon, y
 
 ```bash title="Allow running Virt Manager without sudo"
 sudo adduser $USER libvirt
-sudo adduser $USER libvirt-qemu
+sudo adduser $USER kvm
 ```
 
 However, after installing Virt Manager, you may need to configure some settings to optimize the performance of your virtual machines.
