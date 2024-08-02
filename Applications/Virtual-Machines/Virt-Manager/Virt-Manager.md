@@ -235,7 +235,7 @@ The `<hostdev>.<address>` is the address of the PCIe device in the virtual machi
 
 ## Enable Secure Boot for Virtual Machines
 
-If you want to enable Secure Boot for your virtual machines, you need to adjust the settings of the virtual machine.
+For Windows virtual machines, you may want to enable Secure Boot to improve the security of the virtual machine. Secure Boot is a feature of UEFI that ensures that the system only runs software that is signed by a trusted certificate authority. If you want to enable Secure Boot for your virtual machines, you need to adjust the settings of the virtual machine.
 
 First, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` -> `Preferences` -> `General` and enable `Enable XML editing`.
 
@@ -253,6 +253,8 @@ Then, open your virtual machine. Click `Show virtual hardware details` -> `Overv
 ```
 
 ## Enable simulated TPM for Virtual Machines
+
+TPM is a hardware-based security feature that provides a secure way to store cryptographic keys and perform cryptographic operations. A lot of Windows features require TPM, such as BitLocker, Windows Hello, and Windows Defender Credential Guard.
 
 If you want to enable a simulated TPM for your virtual machines, you need to adjust the settings of the virtual machine.
 
