@@ -178,7 +178,7 @@ If you see the `Kernel driver in use: vfio-pci`, it means the GPU is offline and
 
 !!! danger "Dangerous if you only have one GPU!!"
 
-    If you only have one GPU, offline it may cause the display to go black! In this case, make sure you have a remote connection to your machine before offline the GPU.
+    If you only have one GPU, offline it may cause the display to go black! In this case, make sure you have a remote connection and a virtual adapter on your machine before offline the GPU.
 
 ## Pass through a PCIe Device
 
