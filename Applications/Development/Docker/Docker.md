@@ -4,7 +4,7 @@ Docker is a set of platform as a service products that use OS-level virtualizati
 
 To install Docker on AnduinOS, you can run:
 
-```bash
+```bash title="Install Docker"
 curl -fsSL get.docker.com -o get-docker.sh
 CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
@@ -12,8 +12,10 @@ rm get-docker.sh
 
 To allow current user to run Docker commands without sudo, you can run:
 
-```bash
+```bash title="Allow current user to run Docker commands without sudo"
 sudo usermod -aG docker $USER
+sudo apt install -y uidmap
+dockerd-rootless-setuptool.sh install
 ```
 
 You may need `docker-compose` to manage multi-container Docker applications. To install `docker-compose`, you can run:
