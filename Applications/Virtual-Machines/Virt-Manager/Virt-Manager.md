@@ -91,10 +91,10 @@ For example, if you want to pass through a GPU to a virtual machine, you need to
 First, you need to know the PCI address of the GPU. You can find it by running:
 
 ```bash title="Find PCI Address"
-lspci | grep VGA
+lspci
 ```
 
-For example, I have two Nvidia Quadro P620 GPUS. The addresses are `15:00.0` and `21:00.0`.
+For example, I have two NVIDIA Quadro P620 GPUS. The addresses are `15:00.0` to `15:00.1` and `21:00.0` to `21:00.1`. You can see the addresses by running:
 
 ```bash
 anduin@anduin-work-aos:~$ lspci | grep NVIDIA
@@ -104,17 +104,17 @@ anduin@anduin-work-aos:~$ lspci | grep NVIDIA
 21:00.1 Audio device: NVIDIA Corporation GP107GL High Definition Audio Controller (rev a1)
 ```
 
-!!! note
+!!! note "Multiple devices in the same IOMMU group"
 
     In the example above, NVIDIA Quadro P620 and it's audio device are listed. And the two devices are in the same IOMMU group. You need to offline both devices.
 
 Then you need to tell Linux kernel to unbind the GPU from the driver. You can do this by running:
 
-!!! warning
+!!! warning "Update the ID to your GPU ID!"
 
     Update the ID in the script below to your GPU ID. For example, I want to pass through `21:00.0` and `21:00.1`, so I will update the script below to `0000:21:00.0` and `0000:21:00.1`. Update the values to your own PCIe address!
 
-```bash title="Unbind GPU"
+```bash title="Unbind a PCIe Device"
 echo "
 #!/bin/sh
 
@@ -151,7 +151,7 @@ sudo reboot
 
 To make sure a PCIe device is offline and ready to pass through, you can run:
 
-```bash title="Check PCIe Device"
+```bash title="Verify Isolation"
 lspci -nnv -s 21:00.0 # Update the address `21:00.0` to your own PCIe address!
 ```
 
@@ -175,15 +175,19 @@ anduin@anduin-work-aos:~$ lspci -nnv -s 15:00.0
 
 If you see the `Kernel driver in use: vfio-pci`, it means the GPU is offline and ready to pass through.
 
+!!! danger "Dangerous if you only have one GPU!!"
+
+    If you only have one GPU, offline it may cause the display to go black! In this case, make sure you have a remote connection to your machine before offline the GPU.
+
 ## Enable Secure Boot for Virtual Machines
 
-If you want to enable Secure Boot for your virtual machines, you need to ajust the settings of the virtual machine.
+If you want to enable Secure Boot for your virtual machines, you need to adjust the settings of the virtual machine.
 
 First, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` -> `Preferences` -> `General` and enable `Enable XML editing`.
 
 Then, open your virtual machine. Click `Show virtual hardware details` -> `Overview` and add the following lines to the XML configuration:
 
-```xml
+```xml title="Enable Secure Boot"
 <os firmware="efi">
     ...
     <firmware>
@@ -208,7 +212,7 @@ Then, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` ->
 
 Then, open your virtual machine. Click `Show virtual hardware details` -> `Overview` and add the following lines to the XML configuration:
 
-```xml
+```xml title="Enable simulated TPM"
 <devices>
     ...
     <tpm model="tpm-tis">
@@ -252,7 +256,7 @@ First, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` -
 
 Then, open your virtual machine. Click `Show virtual hardware details` -> `Overview` and add the following lines to the XML configuration:
 
-```xml
+```xml title="Enable Hyper-V features for better performance"
 <features>
     ...
     <hyperv mode="passthrough">
