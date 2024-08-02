@@ -21,6 +21,7 @@ However, after installing Virt Manager, you may need to configure some settings 
 * Setting up IO-MMU
 * Ignore MSRs
 * Offline a PCIe Device (Like GPU) Before Passing Through
+* Pass through a PCIe Device (Like GPU) to a Virtual Machine
 * Enable Secure Boot for Virtual Machines
 * Enable simulated TPM for Virtual Machines
 * Install VirtIO drivers for Windows VM
@@ -178,6 +179,59 @@ If you see the `Kernel driver in use: vfio-pci`, it means the GPU is offline and
 !!! danger "Dangerous if you only have one GPU!!"
 
     If you only have one GPU, offline it may cause the display to go black! In this case, make sure you have a remote connection to your machine before offline the GPU.
+
+## Pass through a PCIe Device
+
+To pass through a PCIe device to a virtual machine, you can follow these steps:
+
+First, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` -> `Preferences` -> `General` and enable `Enable XML editing`.
+
+### Pass through via GUI
+
+Then, open your virtual machine. Click `Show virtual hardware details` -> `Add Hardware` -> `PCI Host Device` and add the PCIe device you want to pass through.
+
+### Pass through via XML
+
+And also you can add the following lines to the XML configuration:
+
+The `<hostdev>.<source>.<address>` is the address of the PCIe device you want to pass through. You can find the address by running `lspci`.
+
+For example, when I want to pass through `0000:21:00.0` and `0000:21:00.1`, I will add the following lines to the XML configuration:
+
+The `<hostdev>.<alias>` is the name of the device. You can name it with `hostdev0`, `hostdev1`, etc.
+
+The `<hostdev>.<address>` is the address of the PCIe device in the virtual machine. You can set the domain, bus, slot, and function of the device.
+
+```xml title="Pass through a PCIe Device"
+<devices>
+    ...
+    <hostdev mode="subsystem" type="pci" managed="yes">
+        <driver name="vfio"/>
+        <source>
+            <!-- Pass through the address of 0000:21:00.0 -->
+            <address domain="0x0000" bus="0x21" slot="0x00" function="0x0"/>
+        </source>
+        <alias name="hostdev0"/>
+        <!-- I take the bus 0x06 in virtual machine -->
+        <address type="pci" domain="0x0000" bus="0x06" slot="0x00" function="0x0"/>
+    </hostdev>
+    <hostdev mode="subsystem" type="pci" managed="yes">
+        <driver name="vfio"/>
+        <source>
+            <!-- Pass through the address of 0000:21:00.1 -->
+            <address domain="0x0000" bus="0x21" slot="0x00" function="0x1"/>
+        </source>
+        <alias name="hostdev1"/>
+        <!-- I take the bus 0x07 in virtual machine -->
+        <address type="pci" domain="0x0000" bus="0x07" slot="0x00" function="0x0"/>
+    </hostdev>
+    ...
+</devices>
+```
+
+!!! warning "Update the XML to match your own PCIe address!"
+
+    Update the XML configuration to match your own PCIe address. And the address in the virtual machine should be unique.
 
 ## Enable Secure Boot for Virtual Machines
 
