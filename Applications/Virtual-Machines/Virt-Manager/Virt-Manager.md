@@ -224,7 +224,7 @@ Then, open your virtual machine. Click `Show virtual hardware details` -> `Overv
 
 ## Install VirtIO drivers for Windows VM
 
-!!! note "VirtIO Drivers"
+!!! note "Best practice for Windows VM"
 
     It is suggested that when you are configuring a Windows virtual machine, you should always use VirtIO devices. For example
 
