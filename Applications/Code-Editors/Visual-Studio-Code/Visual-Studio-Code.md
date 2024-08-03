@@ -12,3 +12,39 @@ rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install code
 ```
+
+## Set Visual Studio Code as the default text editor
+
+After installing Visual Studio Code, you can set it as the default text editor by running:
+
+```bash
+xdg-mime default code.desktop text/html
+xdg-mime default code.desktop text/css
+xdg-mime default code.desktop text/tsx
+xdg-mime default code.desktop text/markdown
+xdg-mime default code.desktop text/xml
+xdg-mime default code.desktop text/x-csrc
+xdg-mime default code.desktop text/x-csharp
+xdg-mime default code.desktop text/x-c++src
+xdg-mime default code.desktop text/x-c++hdr
+xdg-mime default code.desktop text/x-python
+xdg-mime default code.desktop text/x-java
+xdg-mime default code.desktop text/x-ruby
+xdg-mime default code.desktop text/x-php
+xdg-mime default code.desktop text/x-shellscript
+xdg-mime default code.desktop text/x-yaml
+xdg-mime default code.desktop text/x-sql
+xdg-mime default code.desktop text/x-dockerfile
+xdg-mime default code.desktop text/x-nginx-conf
+xdg-mime default code.desktop text/x-apacheconf
+xdg-mime default code.desktop text/x-ini
+xdg-mime default code.desktop text/x-toml
+xdg-mime default code.desktop application/json
+xdg-mime default code.desktop application/xml
+xdg-mime default code.desktop application/javascript
+xdg-mime default code.desktop application/typescript
+xdg-mime default code.desktop application/x-shellscript
+xdg-mime default code.desktop application/x-yaml
+```
+
+And when you open a file with the specified MIME type, it will be opened with Visual Studio Code by default.
