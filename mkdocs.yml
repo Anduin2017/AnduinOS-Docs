@@ -110,14 +110,13 @@ nav:
     - Maintaining AnduinOS:
       - Install or remove Snap: ./Install/Install-Or-Remove-Snap.md
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
+      - Backup And Restore: ./Install/Backup-And-Restore.md
 
   - Skills:
     - System Management:
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Find OS Install Time: ./Skills/System-Management/Find-OS-Install-Time.md
-    - Data Management:
-      - Backup And Restore: ./Skills/Data-Management/Backup-And-Restore.md
     - Sandboxing:
       - Remote Desktop to Ubuntu Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
     - Secret Management:
