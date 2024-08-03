@@ -127,6 +127,7 @@ nav:
     - By Type:
       - Web Browsers:
         - Google Chrome: ./Applications/Web-Browsers/Google-Chrome/Google-Chrome.md
+        - Chromium: ./Applications/Web-Browsers/Chromium/Chromium.md
         - Firefox: ./Applications/Web-Browsers/Firefox/Firefox.md
         - Microsoft Edge: ./Applications/Web-Browsers/Microsoft-Edge/Microsoft-Edge.md
 
