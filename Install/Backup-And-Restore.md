@@ -2,7 +2,7 @@
 
 It is suggested to backup your data regularly to prevent data loss. This can be done by copying the data to an external storage device or to a cloud storage service.
 
-## Before backing up your data
+## Locate the backup device
 
 Before backing up your data, you should add an external backup device. This can be an external hard drive, a USB flash drive, or a network-attached storage (NAS) device. You can also use a cloud storage service like Google Drive, Dropbox, or OneDrive.
 
