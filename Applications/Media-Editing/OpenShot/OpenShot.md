@@ -5,6 +5,7 @@ OpenShot is a free, open-source video editor that allows you to create and edit 
 To install OpenShot on AnduinOS, you can run:
 
 ```bash
+sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt update
-sudo apt install openshot
+sudo apt install openshot-qt python3-openshot
 ```
