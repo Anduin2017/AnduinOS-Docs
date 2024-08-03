@@ -9,7 +9,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-That's it! We recommand you to run those commands regularly to keep your system up-to-date.
+That's it! We recommend you to run those commands regularly to keep your system up-to-date.
 
 ??? Tip "Should those commands be run automatically?"
 
