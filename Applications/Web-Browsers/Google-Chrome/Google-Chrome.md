@@ -4,7 +4,7 @@ Google Chrome is a cross-platform web browser developed by Google. It was first 
 
 To install Google Chrome on AnduinOS, you can run:
 
-```bash
+```bash title="Install Google Chrome"
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub
 sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/google-chrome.gpg --import /tmp/google.pub
 echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
@@ -24,7 +24,7 @@ sudo apt install google-chrome-stable
 
 To set Google Chrome as the default web browser on AnduinOS, you can run:
 
-```bash
+```bash title="Set Google Chrome as the default web browser"
 xdg-mime default google-chrome.desktop x-scheme-handler/http
 xdg-mime default google-chrome.desktop text/html
 xdg-mime default google-chrome.desktop application/xhtml+xml

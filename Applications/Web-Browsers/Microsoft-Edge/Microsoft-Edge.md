@@ -4,7 +4,7 @@ Microsoft Edge is a web browser developed by Microsoft. It was first released fo
 
 To install Microsoft Edge on AnduinOS, you can run:
 
-```bash
+```bash title="Install Microsoft Edge"
 wget https://go.microsoft.com/fwlink?linkid=2149051 -O microsoft-edge-stable.deb
 sudo dpkg -i microsoft-edge-stable.deb
 sudo apt install --fix-broken
@@ -21,7 +21,7 @@ rm microsoft-edge-stable.deb
 
 To set Microsoft Edge as the default web browser on AnduinOS, you can run:
 
-```bash
+```bash title="Set Microsoft Edge as the default web browser"
 xdg-mime default microsoft-edge.desktop x-scheme-handler/http
 xdg-mime default microsoft-edge.desktop text/html
 xdg-mime default microsoft-edge.desktop application/xhtml+xml

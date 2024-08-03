@@ -6,6 +6,8 @@ This is the official application store for AnduinOS. Here you can find the most 
 
     To get started, pick the app from the menu on the left!
 
+---
+
 ## How to install applications on AnduinOS
 
 AnduinOS support the same software installation methods as Debian.
@@ -14,7 +16,7 @@ While we provide an official way to install some applications, you can also inst
 
 Before continuing, you need to know how to open terminal on AnduinOS.
 
-## Open the terminal
+## How to paste the commands into the terminal
 
 To open the terminal on AnduinOS, you can press `Ctrl + Alt + T` or search for `Terminal` in the application menu.
 
@@ -29,9 +31,9 @@ You need to copy the commands and paste them into the terminal. To paste the cop
 
 Before starting, we strongly recommend installing the following applications first:
 
-```bash
+```bash title="Install the necessary tools"
 sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common wget -y
+sudo apt install apt-transport-https ca-certificates curl software-properties-common wget gnupg -y
 ```
 
 This command will install the necessary tools to install applications from the official Debian repository or other third-party repositories.
@@ -59,6 +61,7 @@ To learn more about apt, please read the [Use apt to manage packages](../Skills/
 To install applications from the .deb package, you need to download the .deb package from the official website. For example:
 
 ```bash
+cd ~
 wget https://updates.insomnia.rest/downloads/ubuntu/latest -O insomnia.deb
 ```
 
@@ -66,12 +69,6 @@ Then, you can install the .deb package by running:
 
 ```bash
 sudo dpkg -i insomnia.deb
-```
-
-Or, you can install the .deb package with `apt` by running:
-
-```bash
-sudo apt install ./insomnia.deb
 ```
 
 !!! warning "Unable to automatically upgrade this application"
