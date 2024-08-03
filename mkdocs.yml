@@ -123,68 +123,69 @@ nav:
 
   - Applications:
     - Introduction: ./Applications/Introduction.md
-    - Web Browsers:
-      - Google Chrome: ./Applications/Web-Browsers/Google-Chrome/Google-Chrome.md
-      - Firefox: ./Applications/Web-Browsers/Firefox/Firefox.md
-      - Microsoft Edge: ./Applications/Web-Browsers/Microsoft-Edge/Microsoft-Edge.md
+    - By Type:
+      - Web Browsers:
+        - Google Chrome: ./Applications/Web-Browsers/Google-Chrome/Google-Chrome.md
+        - Firefox: ./Applications/Web-Browsers/Firefox/Firefox.md
+        - Microsoft Edge: ./Applications/Web-Browsers/Microsoft-Edge/Microsoft-Edge.md
 
-    - Code Editors:
-      - Visual Studio Code: ./Applications/Code-Editors/Visual-Studio-Code/Visual-Studio-Code.md
-      - Sublime Text: ./Applications/Code-Editors/Sublime-Text/Sublime-Text.md
-      - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
+      - Code Editors:
+        - Visual Studio Code: ./Applications/Code-Editors/Visual-Studio-Code/Visual-Studio-Code.md
+        - Sublime Text: ./Applications/Code-Editors/Sublime-Text/Sublime-Text.md
+        - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
 
-    - Internet Services:
-      - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
-      - QQ: ./Applications/Internet-Services/QQ/QQ.md
-      - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
-      - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
+      - Internet Services:
+        - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
+        - QQ: ./Applications/Internet-Services/QQ/QQ.md
+        - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
+        - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 
-    - Multimedia:
-      - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
-      - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
-      - Yes Play Music: ./Applications/Multimedia/Yes-Play-Music/Yes-Play-Music.md
+      - Multimedia:
+        - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
+        - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
+        - Yes Play Music: ./Applications/Multimedia/Yes-Play-Music/Yes-Play-Music.md
 
-    - Media Editing:
-      - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
-      - Kdenlive: ./Applications/Media-Editing/Kdenlive/Kdenlive.md
-      - OpenShot: ./Applications/Media-Editing/OpenShot/OpenShot.md
-      - Shotcut: ./Applications/Media-Editing/Shotcut/Shotcut.md
-      - Audacity: ./Applications/Media-Editing/Audacity/Audacity.md
-      - Pinta: ./Applications/Media-Editing/Pinta/Pinta.md
-      - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
-      - Blender: ./Applications/Media-Editing/Blender/Blender.md
+      - Media Editing:
+        - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
+        - Kdenlive: ./Applications/Media-Editing/Kdenlive/Kdenlive.md
+        - OpenShot: ./Applications/Media-Editing/OpenShot/OpenShot.md
+        - Shotcut: ./Applications/Media-Editing/Shotcut/Shotcut.md
+        - Audacity: ./Applications/Media-Editing/Audacity/Audacity.md
+        - Pinta: ./Applications/Media-Editing/Pinta/Pinta.md
+        - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
+        - Blender: ./Applications/Media-Editing/Blender/Blender.md
 
-    - Office:
-      - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
-      - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
+      - Office:
+        - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
+        - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
 
-    - Utilities:
-      - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
-      - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
-      - Motrix: ./Applications/Utilities/Motrix/Motrix.md
-      - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
-      - Dstat: ./Applications/Utilities/Dstat/Dstat.md
-      - Postman: ./Applications/Utilities/Postman/Postman.md
+      - Utilities:
+        - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
+        - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
+        - Motrix: ./Applications/Utilities/Motrix/Motrix.md
+        - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
+        - Dstat: ./Applications/Utilities/Dstat/Dstat.md
+        - Postman: ./Applications/Utilities/Postman/Postman.md
 
-    - Development:
-      - Docker: ./Applications/Development/Docker/Docker.md
-      - Node: ./Applications/Development/Node/Node.md
-      - .NET: ./Applications/Development/Dotnet/Dotnet.md
-      - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
+      - Development:
+        - Docker: ./Applications/Development/Docker/Docker.md
+        - Node: ./Applications/Development/Node/Node.md
+        - .NET: ./Applications/Development/Dotnet/Dotnet.md
+        - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
 
-    - Database Tools:
-      - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
-      - DBeaver: ./Applications/Database-Tools/DBeaver/DBeaver.md
-      - Sqlite Browser: ./Applications/Database-Tools/Sqlite-Browser/Sqlite-Browser.md
+      - Database Tools:
+        - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
+        - DBeaver: ./Applications/Database-Tools/DBeaver/DBeaver.md
+        - Sqlite Browser: ./Applications/Database-Tools/Sqlite-Browser/Sqlite-Browser.md
 
-    - Virtual Machines:
-      - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
-      - Gnome Boxes: ./Applications/Virtual-Machines/Gnome-Boxes/Gnome-Boxes.md
-      - Virt Manager: ./Applications/Virtual-Machines/Virt-Manager/Virt-Manager.md
+      - Virtual Machines:
+        - VirtualBox: ./Applications/Virtual-Machines/VirtualBox/VirtualBox.md
+        - Gnome Boxes: ./Applications/Virtual-Machines/Gnome-Boxes/Gnome-Boxes.md
+        - Virt Manager: ./Applications/Virtual-Machines/Virt-Manager/Virt-Manager.md
 
-    - Games:
-      - Minecraft: ./Applications/Games/Minecraft/Minecraft.md
-      - Steam: ./Applications/Games/Steam/Steam.md
+      - Games:
+        - Minecraft: ./Applications/Games/Minecraft/Minecraft.md
+        - Steam: ./Applications/Games/Steam/Steam.md
 
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
