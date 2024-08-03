@@ -26,3 +26,9 @@ Terminal=false
 Type=Application
 Categories=System;Monitor;" | sudo tee $DESKTOP_FILE
 ```
+
+!!! warning "Unable to automatically upgrade this application"
+
+    The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
+
+    This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.

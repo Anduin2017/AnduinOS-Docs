@@ -18,6 +18,7 @@ To install Steam on AnduinOS, you can run:
     If you encounter any issues after enabling the i386 architecture, you can revert the changes by removing the i386 architecture and its associated packages. However, this process may not be straightforward and could result in further complications.
 
 ```bash title="Install Steam"
+cd ~
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install libc6-i386 libutempter0 xbitmaps xterm libgl1-mesa-dri:i386 libgl1:i386 -y
@@ -29,6 +30,12 @@ rm steam.deb
 ```
 
 However, after installation, you will need to log in with your Steam account to download and play games. You can also install games from the Steam store using the Steam client.
+
+!!! warning "Unable to automatically upgrade this application"
+
+    The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
+
+    This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
 
 ## Uninstall Steam
 

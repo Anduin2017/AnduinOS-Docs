@@ -4,7 +4,8 @@ Visual Studio Code is a source code editor developed by Microsoft for Windows, L
 
 To install Visual Studio Code on AnduinOS, you can run:
 
-```bash
+```bash title="Install Visual Studio Code"
+cd ~
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -17,7 +18,7 @@ sudo apt install code
 
 After installing Visual Studio Code, you can set it as the default text editor by running:
 
-```bash
+```bash title="Set Visual Studio Code as the default text editor"
 xdg-mime default code.desktop text/html
 xdg-mime default code.desktop text/css
 xdg-mime default code.desktop text/tsx

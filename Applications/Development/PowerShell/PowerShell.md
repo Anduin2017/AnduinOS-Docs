@@ -5,7 +5,8 @@ PowerShell is a task automation and configuration management framework from Micr
 To install PowerShell on AnduinOS, you can run:
 
 ```bash
-wget -q "https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb"
+cd ~
+wget -q "https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb" -O packages-microsoft-prod.deb
 sudo dpkg -i ./packages-microsoft-prod.deb
 rm ./packages-microsoft-prod.deb
 sudo apt update
@@ -18,18 +19,8 @@ sudo apt update
 
 Then you can run PowerShell by typing `pwsh` in the terminal.
 
-However, after installing, `apt upgrade` won't update PowerShell automatically.
+!!! warning "Unable to automatically upgrade this application"
 
-To update PowerShell, you can run:
+    The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
 
-```bash
-wget -q "https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb"
-sudo dpkg -i ./packages-microsoft-prod.deb
-rm ./packages-microsoft-prod.deb
-sudo apt update
-sudo apt upgrade powershell
-
-# We MUST remove this file because it will mess up the `dotnet*` installation.
-sudo rm /etc/apt/sources.list.d/microsoft-prod.list
-sudo apt update
-```
+    This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
