@@ -117,6 +117,18 @@ Then you need to tell Linux kernel to unbind the GPU from the driver. You can do
 
 ```bash title="Unbind a PCIe Device"
 cat << EOF > /etc/initramfs-tools/scripts/init-top/vfio.sh
+
+PREREQS=""
+
+prereqs() { echo "$PREREQS"; }
+
+case "$1" in
+    prereqs)
+    prereqs
+    exit 0
+    ;;
+esac
+
 #!/bin/sh
 
 for dev in 0000:21:00.0 0000:21:00.1 # Update the values to your own PCIe address!
