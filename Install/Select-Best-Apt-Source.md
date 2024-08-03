@@ -2,7 +2,7 @@
 
 To select the best APT source for your system, run the following command in the terminal:
 
-```bash
+```bash title="Select best apt source"
 function switchSource() {
   mirrors=(
       "http://archive.ubuntu.com/ubuntu/"

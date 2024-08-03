@@ -6,7 +6,7 @@ After installing AnduinOS, hopefully all devices are functioning properly. Howev
 
 To install the Nvidia graphics driver, open the terminal and run the following command:
 
-```bash
+```bash title="List available drivers"
 sudo ubuntu-drivers list --gpgpu
 ```
 
@@ -26,7 +26,7 @@ nvidia-driver-450-server, (kernel modules provided by nvidia-dkms-450-server)
 
 For example, if you want to install the Nvidia driver 545, run the following command:
 
-```bash
+```bash title="Install Nvidia driver 545"
 sudo apt install nvidia-driver-545
 ```
 

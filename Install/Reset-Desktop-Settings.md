@@ -4,7 +4,7 @@ In some cases, you might mess up your desktop settings and want to reset them to
 
 To reset your desktop settings, you can run:
 
-```bash
+```bash title="Reset Desktop Settings"
 curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/dconf/dconf.ini?ref_type=heads | dconf load /org/gnome/
 ```
 
