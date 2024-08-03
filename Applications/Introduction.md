@@ -1,4 +1,12 @@
-# How to install applications on AnduinOS
+# Application Store
+
+This is the official application store for AnduinOS. Here you can find the most popular applications for AnduinOS.
+
+!!! note "Start exploring now!"
+
+    To get started, pick the app from the menu on the left!
+
+## How to install applications on AnduinOS
 
 AnduinOS support the same software installation methods as Debian.
 
