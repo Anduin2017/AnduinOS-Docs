@@ -12,7 +12,9 @@ sudo apt-get install chromium-browser
 
 !!! note "Non-official PPA"
 
-    The `ppa:saiarcot895/chromium-beta` PPA is not an official PPA. Use it at your own risk.
+    The `ppa:saiarcot895/chromium-beta` PPA is not an official PPA. This may bring some security risks. And the Chromium browser may not be the latest version.
+    
+    Use it at your own risk.
 
 ## Set Chromium as the default web browser
 
