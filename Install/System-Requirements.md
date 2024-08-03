@@ -6,7 +6,7 @@ Minimum system requirements:
 |-----------------|------------------------------------|
 | Processor       | 2 GHz processor (Must be x86_64 architecture) |
 | RAM             | 1 GB RAM                           |
-| Disk Space      | 25 GB disk space                   |
+| Disk Space      | 20 GB disk space                   |
 | Screen          | 1024x768 screen resolution         |
 | Ports           | USB port or DVD drive              |
 
