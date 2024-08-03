@@ -12,3 +12,14 @@ echo -e '\nPackage: *\nPin: release o=LP-PPA-mozillateam\nPin-Priority: 1002' | 
 sudo apt update
 sudo apt install firefox
 ```
+
+## Set Firefox as the default web browser
+
+To set Firefox as the default web browser on AnduinOS, you can run:
+
+```bash
+xdg-mime default firefox.desktop x-scheme-handler/http
+xdg-mime default firefox.desktop text/html
+xdg-mime default firefox.desktop application/xhtml+xml
+xdg-mime default firefox.desktop x-scheme-handler/https
+```

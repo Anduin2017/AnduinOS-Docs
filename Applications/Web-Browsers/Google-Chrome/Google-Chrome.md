@@ -12,8 +12,21 @@ sudo apt update
 sudo apt install google-chrome-stable
 ```
 
-After installing Google Chrome, you may want to uninstall the default web browser, Firefox. To uninstall Firefox, you can run:
+!!! note "Uninstall Firefox"
+
+    After installing Google Chrome, you may want to uninstall the default web browser, Firefox. To uninstall Firefox, you can run:
+
+    ```bash
+    sudo apt autoremove firefox
+    ```
+
+## Set Google Chrome as the default web browser
+
+To set Google Chrome as the default web browser on AnduinOS, you can run:
 
 ```bash
-sudo apt autoremove firefox
+xdg-mime default google-chrome.desktop x-scheme-handler/http
+xdg-mime default google-chrome.desktop text/html
+xdg-mime default google-chrome.desktop application/xhtml+xml
+xdg-mime default google-chrome.desktop x-scheme-handler/https
 ```

@@ -10,3 +10,14 @@ sudo dpkg -i microsoft-edge-stable.deb
 sudo apt install --fix-broken
 rm microsoft-edge-stable.deb
 ```
+
+## Set Microsoft Edge as the default web browser
+
+To set Microsoft Edge as the default web browser on AnduinOS, you can run:
+
+```bash
+xdg-mime default microsoft-edge.desktop x-scheme-handler/http
+xdg-mime default microsoft-edge.desktop text/html
+xdg-mime default microsoft-edge.desktop application/xhtml+xml
+xdg-mime default microsoft-edge.desktop x-scheme-handler/https
+```
