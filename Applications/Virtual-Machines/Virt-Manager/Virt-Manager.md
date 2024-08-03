@@ -116,30 +116,17 @@ Then you need to tell Linux kernel to unbind the GPU from the driver. You can do
     Update the ID in the script below to your GPU ID. For example, I want to pass through `21:00.0` and `21:00.1`, so I will update the script below to `0000:21:00.0` and `0000:21:00.1`. Update the values to your own PCIe address!
 
 ```bash title="Unbind a PCIe Device"
-echo "
+cat << EOF > /etc/initramfs-tools/scripts/init-top/vfio.sh
 #!/bin/sh
-
-PREREQ=""
-
-prereqs()
-{
-   echo "$PREREQ"
-}
-
-case $1 in
-prereqs)
-   prereqs
-   exit 0
-   ;;
-esac
 
 for dev in 0000:21:00.0 0000:21:00.1 # Update the values to your own PCIe address!
 do 
- echo "vfio-pci" > /sys/bus/pci/devices/$dev/driver_override 
- echo "$dev" > /sys/bus/pci/drivers/vfio-pci/bind 
+ echo "vfio-pci" > /sys/bus/pci/devices/\$dev/driver_override 
+ echo "\$dev" > /sys/bus/pci/drivers/vfio-pci/bind 
 done
 
-exit 0" | sudo tee /etc/initramfs-tools/scripts/init-top/vfio.sh
+exit 0
+EOF
 sudo chmod +x /etc/initramfs-tools/scripts/init-top/vfio.sh
 ```
 
