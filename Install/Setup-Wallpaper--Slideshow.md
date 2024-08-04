@@ -7,9 +7,11 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     If you want to enable wallpaper slideshow, you can use the following script to set up a wallpaper slideshow on your system.
 
     ```bash title="Setup wallpaper slideshow (Every 30 minutes)"
+    mkdir -p ~/.local
+    mkdir -p ~/Pictures/Wallpapers
     cat << 'EOF' > ~/.local/slide.sh
     #!/bin/bash
-    DIR="~/Pictures/Wallpapers"
+    DIR="/home/$USER/Pictures/Wallpapers"
     gsettings set org.gnome.desktop.background picture-uri-dark "file://$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)"
     EOF
     chmod +x ~/.local/slide.sh
