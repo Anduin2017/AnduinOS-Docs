@@ -4,7 +4,7 @@
 
 This is the official repository for AnduinOS documentation.
 
-[Download AnduinOS (ISO)](https://github.com/Anduin2017/AnduinOS/releases){ .md-button .md-button--primary }
+[Download AnduinOS (ISO)](https://download.anduinos.com/){ .md-button .md-button--primary }
 
 ## What is AnduinOS?
 
