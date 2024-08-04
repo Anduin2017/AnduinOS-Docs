@@ -381,7 +381,7 @@ Pin-Priority: -10
 EOF
 ```
 
-### Check the files inside a package
+### Query which files a package contains
 
 `apt-file` is a tool that can be used to check the files inside a package.
 
@@ -397,7 +397,7 @@ sudo apt-file update
 
 Then you can use `apt-file` to check the files inside a package.
 
-```bash
+```bash title="Query which files a package contains"
 anduin@host:~$ apt-file list ubuntu-wallpapers
 ubuntu-wallpapers: /usr/share/backgrounds/ubuntu-default-greyscale-wallpaper.png
 ubuntu-wallpapers: /usr/share/backgrounds/warty-final-ubuntu.png
@@ -408,11 +408,54 @@ ubuntu-wallpapers: /usr/share/gnome-background-properties/ubuntu-wallpapers.xml
 
 As you can see above, `ubuntu-wallpapers` contains the files for `/usr/share/backgrounds` and `/usr/share/gnome-background-properties`.
 
+### Query which package a specific file belongs to
+
+To find out which package a specific file belongs to, you can use the `dpkg` command.
+
+```bash title="Query which package a specific file belongs to"
+dpkg -S /path/to/file
+```
+
+For example, if I found `/usr/bin/ubuntu-bug` and I want to know which package it belongs to, I can use the following command:
+
+```bash
+anduin@host:~$ dpkg -S /usr/bin/ubuntu-bug
+apport: /usr/bin/ubuntu-bug
+```
+
+As you can see, `/usr/bin/ubuntu-bug` belongs to the `apport` package.
+
+### Query which packages a package depends on
+
+`apt-cache` is a tool that can be used to query which packages a package depends on.
+
+```bash title="Query which packages a package depends on"
+apt-cache depends package-name
+```
+
+For example, to query which packages `git` depends on, you can use the following command:
+
+```bash
+anduin@u-real:~$ apt-cache depends git
+git
+  Depends: libc6
+  Depends: libcurl3-gnutls
+  Depends: libexpat1
+  Depends: libpcre2-8-0
+  Depends: zlib1g
+  Depends: perl
+  Depends: liberror-perl
+  Depends: git-man
+  Depends: git-man
+```
+
+As you can see, `git` depends on `libc6`, `libcurl3-gnutls`, `libexpat1`, `libpcre2-8-0`, `zlib1g`, `perl`, `liberror-perl`, and `git-man`.
+
 ### Query which packages depend on a package
 
 `apt-cache` is a tool that can be used to query which packages depend on a package.
 
-```bash
+```bash title="Query which packages depend on a package"
 apt-cache rdepends package-name
 ```
 
