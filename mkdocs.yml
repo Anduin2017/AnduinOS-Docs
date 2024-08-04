@@ -175,6 +175,7 @@ nav:
         - Node: ./Applications/Development/Node/Node.md
         - .NET: ./Applications/Development/Dotnet/Dotnet.md
         - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
+        - Golang: ./Applications/Development/Golang/Golang.md
 
       - Database Tools:
         - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
