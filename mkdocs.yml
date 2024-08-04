@@ -100,7 +100,7 @@ plugins:
 nav:
   - Home:
     - Index: README.md
-    - License: LICENSE
+    - License: LICENSE.md
   - Install:
     - Installing AnduinOS:
       - System Requirements: ./Install/System-Requirements.md
