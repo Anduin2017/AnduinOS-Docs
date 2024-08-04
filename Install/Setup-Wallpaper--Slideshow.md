@@ -15,3 +15,5 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     chmod +x ~/.local/slide.sh
     (crontab -l ; echo "*/30 * * * * ~/.local/slide.sh") | crontab -
     ```
+
+    Don't forget to replace `~/Pictures/Wallpapers` with the path to the directory containing your wallpapers!
