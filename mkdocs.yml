@@ -98,7 +98,9 @@ plugins:
       minify_html: true
 
 nav:
-  - README.md
+  - Home:
+    - Index: README.md
+    - License: LICENSE
   - Install:
     - Installing AnduinOS:
       - System Requirements: ./Install/System-Requirements.md
