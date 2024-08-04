@@ -2,11 +2,17 @@
 
 After AnduinOS is installed, it is essential to keep your system up-to-date to ensure that you have the latest security patches, bug fixes, and new features. This guide will show you how to update your system using the command line.
 
-To update your system, you need to run:
+To update your system's packages, you can use the `apt` package manager. `apt` is a command-line tool that allows you to install, update, and remove packages on your system.
 
-```bash title="Update your system"
+```bash title="Update your package list"
 sudo apt update
 sudo apt upgrade
+```
+
+TO update AnduinOS itself, you can use the following command:
+
+```bash title="Update AnduinOS"
+sudo do_anduinos_upgrade
 ```
 
 That's it! We recommend you to run those commands regularly to keep your system up-to-date.
@@ -40,6 +46,7 @@ That's it! We recommend you to run those commands regularly to keep your system 
     echo "
     sudo apt update
     sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
+    sudo do_anduinos_upgrade
     sudo apt --purge autoremove -y" | sudo tee /usr/local/bin/update.sh
     sudo chmod +x /usr/local/bin/update.sh
     (crontab -l ; echo "0 2 * * 0 /usr/local/bin/update.sh") | crontab -
