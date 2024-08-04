@@ -6,7 +6,11 @@ This is the official application store for AnduinOS. Here you can find the most 
 
     To get started, pick the app from the menu on the left!
 
----
+!!! warning "Disclaimer - No warranty"
+
+    The programs included with the AnduinOS are free software; the exact distribution terms for each program are described in the individual files in `/usr/share/doc/*/copyright`.
+
+    AnduinOS comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
 
 ## How to install applications on AnduinOS
 
