@@ -6,7 +6,7 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
 
     If you want to enable wallpaper slideshow, you can use the following script to set up a wallpaper slideshow on your system.
 
-    ```bash title="Setup wallpaper slideshow"
+    ```bash title="Setup wallpaper slideshow (Every 30 minutes)"
     cat << 'EOF' > ~/.local/slide.sh
     #!/bin/bash
     DIR="~/Pictures/Wallpapers"
@@ -17,3 +17,5 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     ```
 
     Don't forget to replace `~/Pictures/Wallpapers` with the path to the directory containing your wallpapers!
+
+    And the script switches the wallpaper every 30 minutes. If you want to change the interval, you can modify the `*/30` part in the script.
