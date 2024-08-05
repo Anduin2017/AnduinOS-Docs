@@ -121,7 +121,8 @@ nav:
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Find OS Install Time: ./Skills/System-Management/Find-OS-Install-Time.md
     - Sandboxing:
-      - Remote Desktop to Ubuntu Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
+      - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
+      - Run Windows Apps with Wine: ./Skills/Sandboxing/Run-Windows-Apps.md
     - Secret Management:
       - Manage SSH Keys: ./Skills/Secret-Management/Manage-SSH-Keys.md
 
