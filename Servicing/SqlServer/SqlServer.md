@@ -2,6 +2,14 @@
 
 SQL Server is a relational database management system developed by Microsoft. It is a powerful database that is widely used in the industry.
 
+!!! note "Non-free software"
+
+    SQL Server is not open source and may have licensing restrictions. Please make sure you have the right to use SQL Server before hosting it on AnduinOS.
+    
+    Installing SQL Server on AnduinOS does not provide you with a license to use SQL Server. You must obtain a license from Microsoft to use SQL Server.
+
+    Please read the [Microsoft SQL Server End-User Licensing Agreement⁠](https://go.microsoft.com/fwlink/?linkid=857698) before using SQL Server.
+
 To host SQL Server on AnduinOS, run the following commands.
 
 First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
