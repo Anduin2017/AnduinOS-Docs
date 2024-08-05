@@ -53,7 +53,7 @@ extra:
   # social:
   #   - type: gitlab
   #     link: https://gitlab.aiursoft.cn/anduin/anduinos
-  homepage: https://gitlab.aiursoft.cn/anduin/anduinos # TODO: Change this to the homepage of your project
+  homepage: https://www.anduinos.com
 
   icon:
     admonition:
