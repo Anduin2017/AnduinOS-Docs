@@ -5,13 +5,15 @@ Insomnia is a powerful REST API client that allows you to design, debug, and tes
 To install Insomnia on AnduinOS, you can run:
 
 ```bash
-wget https://updates.insomnia.rest/downloads/ubuntu/latest -O insomnia.deb
-sudo dpkg -i insomnia.deb
-rm insomnia.deb
+curl -1sLf \
+  'https://packages.konghq.com/public/insomnia/setup.deb.sh' \
+  | sudo -E distro=ubuntu codename=focal bash
+sudo apt-get update
+sudo apt-get install insomnia
 ```
 
-!!! warning "Unable to automatically upgrade this application"
+!!! warning "This application is made for Focal and not adopted for Jammy"
 
-    The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
+    This application is only available for Ubuntu 20.04 (Focal Fossa). While on AnduinOS, you can install it, but it may not work as expected and cause package conflicts.
 
-    This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
+    We are still waiting for the official release of Insomnia for Jammy
