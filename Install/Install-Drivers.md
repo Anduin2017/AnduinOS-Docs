@@ -2,6 +2,10 @@
 
 After installing AnduinOS, hopefully all devices are functioning properly. However, if you find that some devices are not working as expected, you may need to install additional drivers. This guide will show you how to install drivers on AnduinOS.
 
+!!! note "Non-open source drivers"
+
+    Some drivers are not open source and may have licensing restrictions. Please make sure you have the right to use these drivers before installing them.
+
 ## Nvidia Graphics Driver
 
 To install the Nvidia graphics driver, open the terminal and run the following command:
