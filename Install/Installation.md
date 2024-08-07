@@ -8,6 +8,20 @@ Before installing AnduinOS, you need to download the ISO file from the releases 
 
 [Download AnduinOS (ISO)](https://download.anduinos.com/){ .md-button .md-button--primary }
 
+It is suggested to use bit-torrent to download the ISO file. You can find the torrent file on the releases page.
+
+## Verify the ISO sha256 checksum
+
+After downloading the ISO file, you should verify the integrity of the file to ensure that it has not been tampered with.
+
+To verify the ISO file, you can use the `sha256sum` command on Linux or macOS, or the `7-Zip` software on Windows.
+
+```bash title="Verify ISO file on Linux or macOS"
+sha256sum ./AnduinOS.iso
+```
+
+Please compare the output of the `sha256sum` command with the checksum provided on the releases page (File ends with `.sha256`). If the checksums match, the ISO file is valid and has not been tampered with.
+
 ## Virtual Machine Installation
 
 ---
