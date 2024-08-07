@@ -22,4 +22,4 @@ And then you can run `nextcloudcmd` to sync your files with Nextcloud server.
 
 ## Nextcloud Server
 
-To install Nextcloud Server on AnduinOS, you can follow the official guide at [Nextcloud Installation](https://docs.nextcloud.com/server/latest/admin_manual/installation/index.html).
+To install Nextcloud Server on AnduinOS, you can follow the official guide at [Nextcloud Installation](../../../Servicing/Nextcloud/Nextcloud.md).
