@@ -100,6 +100,7 @@ plugins:
 nav:
   - Home:
     - Documentation: README.md
+    - Change Log: CHANGELOG.md
     - License: LICENSE.md
   - Install:
     - Installing AnduinOS:
