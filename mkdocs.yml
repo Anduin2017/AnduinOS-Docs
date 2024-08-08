@@ -99,7 +99,7 @@ plugins:
 
 nav:
   - Home:
-    - Index: README.md
+    - Documentation: README.md
     - License: LICENSE.md
   - Install:
     - Installing AnduinOS:
