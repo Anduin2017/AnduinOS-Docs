@@ -35,20 +35,24 @@ theme:
     # - toc.integrate
   search_index_only: true
   palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/weather-sunny
+        icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+        icon: material/toggle-switch-off
+        name: Switch to system preference
 extra:
   # social:
   #   - type: gitlab
