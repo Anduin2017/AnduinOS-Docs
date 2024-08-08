@@ -4,6 +4,7 @@
 
 * Install Fluent cursor theme
 * Edited `Home_url` in `/etc/os-release` to point to the AnduinOS website.
+* Added a wallpaper for light theme.
 
 ## v0.1.2-beta
 
