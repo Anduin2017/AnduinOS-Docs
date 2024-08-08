@@ -23,6 +23,7 @@ function switchSource() {
       "http://mirrors.163.com/ubuntu/" # NetEase
       "http://mirrors.cloud.tencent.com/ubuntu/" # Tencent Cloud
       "http://mirror.aiursoft.cn/ubuntu/" # Aiursoft
+      "http://mirrors.anduinos.com/ubuntu/" # AnduinOS
       "http://mirrors.huaweicloud.com/ubuntu/" # Huawei Cloud
       "http://mirrors.zju.edu.cn/ubuntu/" # 浙江大学
       "http://azure.archive.ubuntu.com/ubuntu/" # Azure
