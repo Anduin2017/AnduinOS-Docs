@@ -5,6 +5,7 @@
 * Install Fluent cursor theme
 * Edited `Home_url` in `/etc/os-release` to point to the AnduinOS website.
 * Added a wallpaper for light theme.
+* Remove the Ramdisk option for `Try AnduinOS` to reduce memory consumption.
 
 ## v0.1.2-beta
 
