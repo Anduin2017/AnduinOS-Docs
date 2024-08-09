@@ -5,11 +5,12 @@
 * Install Fluent cursor theme
 * Edited `Home_url` in `/etc/os-release` to point to the AnduinOS website.
 * Added a wallpaper for light theme.
-* Remove the Ramdisk option for `Try AnduinOS` to reduce memory consumption.
+* Use overlay instead of ramdisk for loading the live environment.
 * Use AnduinOS's own gnome plugin to switch light and dark themes.
 * Hide the Ubuntu logo in `gnome-control-center`.
 * Hide the dark\light theme switch in `gnome-control-center`.
 * Live environment (including installer) will use the new mirror `http://mirrors.anduinos.com` by default.
+* Gnome console will use the AnduinOS theme by default. (instead of the dark theme)
 
 ## v0.1.2-beta
 
