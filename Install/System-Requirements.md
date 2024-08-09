@@ -5,7 +5,7 @@ Minimum system requirements:
 | Component       | Requirement                        |
 |-----------------|------------------------------------|
 | Processor       | 2 GHz processor (Must be x86_64 architecture) |
-| RAM             | 1 GB RAM                           |
+| RAM             | 4 GB RAM                           |
 | Disk Space      | 20 GB disk space                   |
 | Screen          | 1024x768 screen resolution         |
 | Ports           | USB port or DVD drive              |
@@ -15,7 +15,7 @@ System requirements for the best experience:
 | Component       | Requirement                        |
 |-----------------|------------------------------------|
 | Processor       | 2.5 GHz quad-core processor (Must be x86_64 architecture) |
-| RAM             | 4 GB RAM                           |
+| RAM             | 8 GB RAM                           |
 | Disk Space      | 50 GB disk space                   |
 | Internet        | Internet access                    |
 | Firmware        | UEFI firmware                      |

@@ -9,6 +9,7 @@
 * Use AnduinOS's own gnome plugin to switch light and dark themes.
 * Hide the Ubuntu logo in `gnome-control-center`.
 * Hide the dark\light theme switch in `gnome-control-center`.
+* Live environment (including installer) will use the new mirror `http://mirrors.anduinos.com` by default.
 
 ## v0.1.2-beta
 
