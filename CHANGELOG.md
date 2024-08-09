@@ -11,6 +11,7 @@
 * Hide the dark\light theme switch in `gnome-control-center`.
 * Live environment (including installer) will use the new mirror `http://mirrors.anduinos.com` by default.
 * Gnome console will use the AnduinOS theme by default. (instead of the dark theme)
+* Arcmenu will use the AnduinOS theme by default. (instead of the dark theme)
 
 ## v0.1.2-beta
 
