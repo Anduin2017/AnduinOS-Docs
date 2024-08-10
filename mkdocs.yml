@@ -53,7 +53,11 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
+
 extra:
+  analytics:
+    - provider: google
+      property: G-JYS4W8XSMZ
   # social:
   #   - type: gitlab
   #     link: https://gitlab.aiursoft.cn/anduin/anduinos
