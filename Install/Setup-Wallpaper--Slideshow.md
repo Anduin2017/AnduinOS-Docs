@@ -21,3 +21,5 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     Don't forget to replace `~/Pictures/Wallpapers` with the path to the directory containing your wallpapers!
 
     And the script switches the wallpaper every 30 minutes. If you want to change the interval, you can modify the `*/30` part in the script.
+
+Or even easier, you can install this gnome extension: [wallpaper--switcher](https://extensions.gnome.org/extension/4812/wallpaper-switcher/), which allows you to set up a wallpaper slideshow through the GNOME Shell.
