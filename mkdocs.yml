@@ -151,10 +151,11 @@ nav:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 
-      - Multimedia:
-        - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
-        - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
-        - Yes Play Music: ./Applications/Multimedia/Yes-Play-Music/Yes-Play-Music.md
+      - Media Players:
+        - VLC Media Player: ./Applications/Media-Players/VLC-Media-Player/VLC-Media-Player.md
+        - Spotify: ./Applications/Media-Players/Spotify/Spotify.md
+        - Yes Play Music: ./Applications/Media-Players/Yes-Play-Music/Yes-Play-Music.md
+        - mpv: ./Applications/Media-Players/mpv/mpv.md
 
       - Media Editing:
         - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
