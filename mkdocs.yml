@@ -170,11 +170,14 @@ nav:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
         - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
 
+        Download Tools:
+        - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
+        - qBittorrent: ./Applications/Download-Tools/qBittorrent/qBittorrent.md
+        - Deluge: ./Applications/Download-Tools/Deluge/Deluge.md
+
       - Utilities:
         - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
         - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
-        - Motrix: ./Applications/Utilities/Motrix/Motrix.md
-        - qBittorrent: ./Applications/Utilities/qBittorrent/qBittorrent.md
         - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
         - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
