@@ -1,4 +1,4 @@
-# Check file format
+# Check File Format
 
 In some cases, you might need to check if an uploaded file is in the correct format before processing it further.
 
