@@ -4,7 +4,7 @@
 
 * Scrolling on taskbar nolonger switch workspace.
 * Uninstall `gstreamer1.0-vaapi` to fix a bug that may cause `totem` unable to play video.
-* Added a new shortcut `<Super> + <Print>` to start screen recording.
+* Added a new shortcut `<Super> + G` to start screen recording.
 * Added a new shortcut `<Super> + F11` to toggle full screen.
 * Added a new shortcut `<Super> + BackSpace` to toggle the zoom feature.
 
