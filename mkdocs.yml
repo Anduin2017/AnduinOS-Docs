@@ -56,8 +56,9 @@ theme:
 
 extra:
   analytics:
-    - provider: google
-      property: G-JYS4W8XSMZ
+    provider: google
+    property: G-JYS4W8XSMZ
+      
   # social:
   #   - type: gitlab
   #     link: https://gitlab.aiursoft.cn/anduin/anduinos
@@ -96,12 +97,6 @@ plugins:
   - offline
   - same-dir
   - search
-  - with-pdf:
-      author: Anduin Xue
-      copyright: The Unlicense
-      cover_title: AnduinOS
-      cover_subtitle: AnduinOS Documentation
-      output_path: document.pdf
   - minify:
       minify_html: true
 
