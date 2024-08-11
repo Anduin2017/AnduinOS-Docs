@@ -12,8 +12,9 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     cat << 'EOF' > ~/.local/slide.sh
     #!/bin/bash
     DIR="/home/$USER/Pictures/Wallpapers"
-    gsettings set org.gnome.desktop.background picture-uri      "file://$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)"
-    gsettings set org.gnome.desktop.background picture-uri-dark "file://$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)"
+    FILE=$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)
+    gsettings set org.gnome.desktop.background picture-uri      "file://$FILE"
+    gsettings set org.gnome.desktop.background picture-uri-dark "file://$FILE"
     EOF
     chmod +x ~/.local/slide.sh
     (crontab -l ; echo "*/30 * * * * ~/.local/slide.sh") | crontab -
