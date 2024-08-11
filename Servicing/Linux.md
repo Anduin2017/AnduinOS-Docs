@@ -254,22 +254,10 @@ enable_bbr_force()
 sudo sysctl net.ipv4.tcp_available_congestion_control | grep -q bbr ||  enable_bbr_force
 ```
 
-------
+!!! warning "BBR with fq qdisc"
 
-### Enable cake for better QoS
+    BBR *must* be used with the fq qdisc ("man tc-fq") with pacing enabled, since pacing is integral to the BBR design and implementation. BBR without pacing would not function properly, and may incur unnecessary high packet loss rates. [source](https://groups.google.com/g/bbr-dev/c/4jL4ropdOV8/m/0-bNH-KEBgAJ?pli=1)
 
-CAKE is a queuing discipline that can improve network performance. You can enable it by running:
-
-```bash title="Enable Cake"
-enable_cake()
-{
-    echo "Cake not enabled. Enabling Cake..."
-    echo 'net.core.default_qdisc=cake' | sudo tee /etc/sysctl.conf
-    sudo sysctl -p
-    echo "Cake enabled. Reboot to take effect."
-}
-sudo sysctl net.core.default_qdisc | grep -q cake ||  enable_cake
-```
 
 ------
 
