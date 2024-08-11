@@ -10,6 +10,7 @@
 * Added a new shortcut `<Super> + M` to minimize the current window.
 * Added `cups` and `system-config-printer` packages to support printing.
 * Added `caribou` package to support on-screen keyboard.
+* The theme switcher gnome plugin will nolonger switch user's wallpaper. Set AnduinOS wallpaper as default.
 
 ## v0.1.3-beta
 
