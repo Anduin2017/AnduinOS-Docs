@@ -2,7 +2,9 @@
 
 If you have bought a server from an external provider, usually it's not following the Linux authentication best practices. You need to set it up properly before hosting services on it.
 
-## Connect to the server
+## Authentication
+
+### Connect to the server
 
 After buying a server, it will provide you:
 
@@ -16,7 +18,9 @@ So you can connect to the server using SSH. For example:
 ssh root@your-server-ip
 ```
 
-## Change hostname
+------
+
+### Change hostname
 
 By default, the hostname of the server is usually not set properly. You can change it by running:
 
@@ -25,7 +29,9 @@ sudo hostnamectl set-hostname your-hostname
 sudo reboot
 ```
 
-## Create a new user
+------
+
+### Create a new user
 
 It's not recommended to use the root user for daily tasks. You should create a new user and give it sudo permission. For example:
 
@@ -48,7 +54,9 @@ su - your-username
 sudo whoami
 ```
 
-## Copy SSH public key
+------
+
+### Copy SSH public key
 
 !!! note "Run on your local machine!"
 
@@ -82,7 +90,9 @@ Now you can connect to the server without a password:
 ssh your-username@your-server-ip
 ```
 
-## Disable root login
+------
+
+### Disable root login
 
 It's not recommended to allow root login via SSH. You should disable it by editing the SSH configuration file:
 
@@ -100,7 +110,9 @@ Then restart the SSH service:
 sudo systemctl restart sshd
 ```
 
-## Allow your user to run sudo without password
+------
+
+### Allow your user to run sudo without password (Optional)
 
 Allowing sudo without password is a security risk, but it can be useful in certain situations.
 
@@ -120,18 +132,9 @@ echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/$USER
 
 That's it! You can now run sudo commands without entering your password.
 
-## Renew Machine ID
+------
 
-If you have cloned the server, (For some cloud providers, the server is cloned from a template), you need to renew the machine ID to avoid conflicts. You can renew the machine ID by running:
-
-```bash title="Renew Machine ID"
-sudo rm /etc/machine-id
-sudo rm /var/lib/dbus/machine-id
-sudo systemd-machine-id-setup
-sudo cp /etc/machine-id /var/lib/dbus/machine-id
-```
-
-## Delete other users
+### Delete other users
 
 By default, the server provider may create some users for you. You should delete them if you don't need them.
 
@@ -162,7 +165,24 @@ sudo ls /home
 sudo rm -rf /home/other-username
 ```
 
-## Enable firewall
+------
+
+## Network
+
+### Renew Machine ID
+
+If you have cloned the server, (For some cloud providers, the server is cloned from a template), you need to renew the machine ID to avoid conflicts. You can renew the machine ID by running:
+
+```bash title="Renew Machine ID"
+sudo rm /etc/machine-id
+sudo rm /var/lib/dbus/machine-id
+sudo systemd-machine-id-setup
+sudo cp /etc/machine-id /var/lib/dbus/machine-id
+```
+
+------
+
+### Enable firewall
 
 By default, the server provider may not enable the firewall. You should enable it to protect your server.
 
@@ -179,7 +199,9 @@ Then enable the firewall:
 sudo ufw enable
 ```
 
-## Enable BBR for congestion control
+------
+
+### Enable BBR for congestion control
 
 BBR is a congestion control algorithm developed by Google. It can improve network performance. You can enable it by running:
 
@@ -195,7 +217,9 @@ enable_bbr_force()
 sudo sysctl net.ipv4.tcp_available_congestion_control | grep -q bbr ||  enable_bbr_force
 ```
 
-## Enable cake for better QoS
+------
+
+### Enable cake for better QoS
 
 CAKE is a queuing discipline that can improve network performance. You can enable it by running:
 
@@ -210,7 +234,9 @@ enable_cake()
 sudo sysctl net.core.default_qdisc | grep -q cake ||  enable_cake
 ```
 
-## Setup best apt mirror
+------
+
+### Setup best apt mirror
 
 By default, the server provider may not set the best apt mirror for you. You can set it by running:
 
@@ -284,7 +310,11 @@ switchSource
 
 That command will test all mirrors and set the fastest one for you.
 
-## Run security updates
+------
+
+## Security
+
+### Run security updates
 
 After setting up the server, you should run security updates to make sure the server is secure:
 
@@ -294,78 +324,9 @@ sudo apt upgrade -y
 sudo apt autoremove -y
 ```
 
-## Install latest kernel
+------
 
-By default, the server provider may not install the latest kernel for you. For example, by default, Ubuntu 22.04 may provide the 5.15 kernel, but the latest kernel is 6.*.
-
-!!! warning "Kernel version"
-
-    The kernel version may vary depending on the Ubuntu version. You should check the latest kernel version for your Ubuntu version.
-
-    It is always recommended to use a newer kernel for better performance and security, especially if you are using a server with newer hardware.
-
-To verify the current kernel version, you can run:
-
-```bash title="Check current kernel version"
-uname -r
-```
-
-You can install the latest kernel by running:
-
-```bash title="Install latest kernel"
-sudo apt install -y linux-generic-hwe-22.04
-sudo reboot
-```
-
-!!! note "Command only for Ubuntu 22.04"
-
-    The command above is only for Ubuntu 22.04. For other versions, you can search for the latest kernel package.
-
-## Tune CPU from power-saver to performance
-
-If you are running on a bare-metal server, you can tune the CPU from power-saver to performance to get better performance:
-
-```bash title="Tune CPU to performance"
-sudo apt install -y linux-tools-common linux-tools-generic
-sudo cpupower frequency-info
-sudo cpupower frequency-set -g performance
-```
-
-## Change timezone
-
-By default, the server provider may not set the timezone properly. You should set it correctly. And it's recommended to set it to GMT.
-
-For example, to set the timezone to GMT:
-
-```bash title="Change timezone"
-sudo timedatectl set-timezone GMT
-```
-
-To set the timezone to your local timezone, you can run:
-
-```bash title="Change timezone to China"
-sudo timedatectl set-timezone Asia/Shanghai
-```
-
-## Remove Snap
-
-Snap is a package manager that can be used to install applications. However, I understand that a lot of Ubuntu users don't like Snap. You can remove Snap by running:
-
-```bash title="Remove Snap"
-echo "Removing snap..."
-sudo systemctl disable --now snapd
-sudo apt purge -y snapd
-sudo rm -rf /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd ~/snap
-cat << EOF | sudo tee -a /etc/apt/preferences.d/no-snap.pref
-Package: snapd
-Pin: release a=*
-Pin-Priority: -10
-EOF
-sudo chown root:root /etc/apt/preferences.d/no-snap.pref
-echo "Snap removed"
-```
-
-## Enable Automatic Security Updates
+### Enable Automatic Security Updates (Optional)
 
 Every day there are new security vulnerabilities discovered in software. To protect your server from these vulnerabilities, you should always keep your server up-to-date with the latest security patches.
 
@@ -404,7 +365,92 @@ sudo chmod +x /usr/local/bin/update.sh
 (crontab -l ; echo "0 2 * * 0 /usr/local/bin/update.sh") | crontab -
 ```
 
-## Benchmark your server
+------
+
+## Performance
+
+### Install latest kernel
+
+By default, the server provider may not install the latest kernel for you. For example, by default, Ubuntu 22.04 may provide the 5.15 kernel, but the latest kernel is 6.*.
+
+!!! warning "Kernel version"
+
+    The kernel version may vary depending on the Ubuntu version. You should check the latest kernel version for your Ubuntu version.
+
+    It is always recommended to use a newer kernel for better performance and security, especially if you are using a server with newer hardware.
+
+To verify the current kernel version, you can run:
+
+```bash title="Check current kernel version"
+uname -r
+```
+
+You can install the latest kernel by running:
+
+```bash title="Install latest kernel"
+sudo apt install -y linux-generic-hwe-22.04
+sudo reboot
+```
+
+!!! note "Command only for Ubuntu 22.04"
+
+    The command above is only for Ubuntu 22.04. For other versions, you can search for the latest kernel package.
+
+------
+
+### Tune CPU from power-saver to performance
+
+If you are running on a bare-metal server, you can tune the CPU from power-saver to performance to get better performance:
+
+```bash title="Tune CPU to performance"
+sudo apt install -y linux-tools-common linux-tools-generic
+sudo cpupower frequency-info
+sudo cpupower frequency-set -g performance
+```
+
+------
+
+## System
+
+### Change timezone
+
+By default, the server provider may not set the timezone properly. You should set it correctly. And it's recommended to set it to GMT.
+
+For example, to set the timezone to GMT:
+
+```bash title="Change timezone"
+sudo timedatectl set-timezone GMT
+```
+
+To set the timezone to your local timezone, you can run:
+
+```bash title="Change timezone to China"
+sudo timedatectl set-timezone Asia/Shanghai
+```
+
+------
+
+### Remove Snap (Optional)
+
+Snap is a package manager that can be used to install applications. However, I understand that a lot of Ubuntu users don't like Snap. You can remove Snap by running:
+
+```bash title="Remove Snap"
+echo "Removing snap..."
+sudo systemctl disable --now snapd
+sudo apt purge -y snapd
+sudo rm -rf /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd ~/snap
+cat << EOF | sudo tee -a /etc/apt/preferences.d/no-snap.pref
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
+sudo chown root:root /etc/apt/preferences.d/no-snap.pref
+echo "Snap removed"
+```
+
+------
+
+### Benchmark your server (Optional)
 
 After setting up the server, you can benchmark it to see the performance. You can use tools like `iperf3` to test the network speed and `sysbench` to test the CPU performance.
 
@@ -429,7 +475,9 @@ sudo apt install -y sysbench
 sysbench cpu --threads=64 run
 ```
 
-## Install runtime
+------
+
+### Install runtime (Optional)
 
 By default, the server provider may not install the runtime for you. You can install the runtime.
 
@@ -437,6 +485,8 @@ By default, the server provider may not install the runtime for you. You can ins
 * [Docker](../Applications/Development/Docker/Docker.md)
 * [.NET](../Applications/Development/Dotnet/Dotnet.md)
 
-## Start hosting services
+------
+
+### Start hosting services
 
 After setting up the server, you can start hosting services on it. You can refer to the [Servicing guide](./Introduction.md) for more information.
