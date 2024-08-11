@@ -7,6 +7,7 @@
 * Added a new shortcut `<Super> + G` to start screen recording.
 * Added a new shortcut `<Super> + F11` to toggle full screen.
 * Added a new shortcut `<Super> + BackSpace` to toggle the zoom feature.
+* Added a new shortcut `<Super> + M` to minimize the current window.
 * Added `cups` and `system-config-printer` packages to support printing.
 
 ## v0.1.3-beta

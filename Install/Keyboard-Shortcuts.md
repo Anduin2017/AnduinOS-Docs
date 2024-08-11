@@ -23,3 +23,14 @@
 
 * Switch to the next workspace: `Ctrl + Windows + →`
 * Switch to the previous workspace: `Ctrl + Windows + ←`
+
+## Window management
+
+* Hide all windows: `Windows + D`
+* Maximize window: `Windows + ↑`
+* Restore window: `Windows + ↓`
+* Move window to the left half of the screen: `Windows + ←`
+* Move window to the right half of the screen: `Windows + →`
+* Minimize window: `Windows + M`
+* Overview all windows: `Windows + Tab`
+* Switch between windows: `Alt + Tab`
