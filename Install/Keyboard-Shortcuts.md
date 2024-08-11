@@ -9,7 +9,7 @@
 
 * Take a screenshot of the entire screen: `Shift + Print`
 * Take a screenshot of current window: `Alt + Print`
-* Take a screenshot of a selected area: `Windows + Shift + S`
+* Take a screenshot of a selected area: `Windows + Shift + S` or just `Print`
 
 ## Screen recording
 
