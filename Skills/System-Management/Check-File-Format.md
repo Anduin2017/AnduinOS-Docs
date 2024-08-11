@@ -37,7 +37,9 @@ start address 0x0000000001d8df84
 
 !!! note "Why the Linux kernel is an PE executable?"
 
-    The Linux kernel is not a Windows application, but it is an executable file in the Portable Executable (PE) format. The PE format is a file format used in Windows operating systems for executables, object code, and DLLs.
+    The Linux kernel is not a Windows application, but it is an executable file in the Portable Executable (PE) format. That is to allow it to be booted directly by UEFI firmware on compatible systems.
+
+    The PE format is a file format used in Windows operating systems for executables, object code, and DLLs.
 
 For example:
 
