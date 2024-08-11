@@ -114,7 +114,7 @@ nav:
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
       - Update your system: ./Install/Update-Your-System.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
-      - Add printer: ./Install/Add-Printer.md
+      - Managing Printers: ./Install/Managing-Printers.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
     - Maintaining AnduinOS:
