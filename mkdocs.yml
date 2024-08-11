@@ -211,6 +211,7 @@ nav:
 
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
+    - Setting up new Linux Server: ./Servicing/Linux.md
     - GitLab: ./Servicing/GitLab/GitLab.md
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
