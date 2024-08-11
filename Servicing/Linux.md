@@ -9,13 +9,13 @@ If you have bought a server from an external provider, usually it's not followin
 After buying a server, it will provide you:
 
 * IP address
-* Username
+* Username (Usually `root`)
 * Password
 
 So you can connect to the server using SSH. For example:
 
 ```bash title="Connect to the server (Run on your local machine)"
-ssh root@your-server-ip
+ssh default-user-name@your-server-ip
 ```
 
 ------
