@@ -34,3 +34,4 @@
 * Minimize window: `Windows + M`
 * Overview all windows: `Windows + Tab`
 * Switch between windows: `Alt + Tab`
+* Fullscreen for the current window: `Windows + F11` (Some apps may natively support `F11` for fullscreen)
