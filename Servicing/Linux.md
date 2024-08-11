@@ -258,6 +258,19 @@ sudo sysctl net.ipv4.tcp_available_congestion_control | grep -q bbr ||  enable_b
 
     BBR *must* be used with the fq qdisc ("man tc-fq") with pacing enabled, since pacing is integral to the BBR design and implementation. BBR without pacing would not function properly, and may incur unnecessary high packet loss rates. [source](https://groups.google.com/g/bbr-dev/c/4jL4ropdOV8/m/0-bNH-KEBgAJ?pli=1)
 
+    To enable fq qdisc, you can run:
+
+    ```bash title="Enable fq"
+    enable_fq()
+    {
+        echo "fq not enabled. Enabling fq..."
+        echo 'net.core.default_qdisc=fq' | sudo tee /etc/sysctl.conf
+        sudo sysctl -p
+        judge "Enable fq"
+    }
+    sysctl net.core.default_qdisc | grep -q fq ||  enable_fq
+    print_ok "fq enabled"
+    ```
 
 ------
 
