@@ -55,6 +55,8 @@ Finally, boot the virtual machine and follow the on-screen instructions to insta
 
 First, download the latest release of AnduinOS from the releases page.
 
+Then, create a bootable USB drive with the downloaded ISO file. Obviously, you need a USB drive with at least 4GB of storage.
+
 ### Windows
 
 ---
