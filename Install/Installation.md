@@ -88,13 +88,13 @@ Then, use the `dd` command to burn the ISO file to the USB drive. Replace `<devi
 sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress oflag=sync bs=4M
 ```
 
-!!! warning "Data Loss"
+!!! warning "Data Loss!"
 
     This command will erase all data on the USB drive. Make sure to back up your data before running this command.
 
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
 
-!!! warning "Adjust Secure boot settings in your BIOS"
+!!! warning "Adjust Secure boot settings in your BIOS!"
 
     If you are using a UEFI system, by default it may only trust Microsoft-signed operating systems. In this case, you may need to adjust the Secure Boot settings in your BIOS to trust 3rd party operating systems. Please refer to your system's documentation for instructions on how to do this.
 

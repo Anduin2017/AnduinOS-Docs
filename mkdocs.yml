@@ -63,8 +63,8 @@ extra:
   #   - type: gitlab
   #     link: https://gitlab.aiursoft.cn/anduin/anduinos
   homepage: https://www.anduinos.com
-
   icon:
+    annotation: material/arrow-right-circle 
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
@@ -80,6 +80,7 @@ extra:
       quote: octicons/quote-16
 
 markdown_extensions:
+  - md_in_html
   - admonition
   - pymdownx.details
   - pymdownx.superfences

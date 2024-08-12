@@ -193,9 +193,13 @@ cat /etc/passwd | grep -v nologin | grep -v false
 
 Usually the users are:
 
+<div class="annotate" markdown>
+
 * root
 * sync (1)
 * your-username
+
+</div>
 
 1.  The `sync` user is used for synchronizing the system clock. It's safe to keep it.
 

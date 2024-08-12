@@ -16,6 +16,6 @@ By default, all services in this document are served with http. If you want to s
 
 Obviously, you can't expose your services to the internet directly if you are behind NAT. You need to use a reverse proxy server like [frp](.) to expose your services to the internet.
 
-## Bought a server from external provider? Set it up!
+## Bought a server from an external provider? Set it up!
 
 If you have bought a server from an external provider, usually it's not following the Linux authentication best practices. You need to set it up properly before hosting services on it. Please refer to the [Linux server setup guide](./Linux.md) for more information.

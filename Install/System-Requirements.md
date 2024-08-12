@@ -1,6 +1,6 @@
 # AnduinOS System Requirements
 
-!!! warning "Adjust Secure boot settings in your BIOS"
+!!! warning "Adjust Secure boot settings in your BIOS!"
 
     If you are using a UEFI system, by default it may only trust Microsoft-signed operating systems. In this case, you may need to adjust the Secure Boot settings in your BIOS to trust 3rd party operating systems. Please refer to your system's documentation for instructions on how to do this.
 
