@@ -3,7 +3,6 @@
 ## v0.1.4-beta
 
 * Scrolling on taskbar nolonger switch workspace.
-* Uninstall `gstreamer1.0-vaapi` to fix a bug that may cause `totem` unable to play video.
 * Added a new shortcut `<Super> + G` to start screen recording.
 * Added a new shortcut `<Super> + F11` to toggle full screen.
 * Added a new shortcut `<Super> + BackSpace` to toggle the zoom feature.
@@ -11,6 +10,7 @@
 * Added `cups` and `system-config-printer` packages to support printing.
 * Added `caribou` package to support on-screen keyboard.
 * The theme switcher gnome plugin will nolonger switch user's wallpaper. Set AnduinOS wallpaper as default.
+* Patch arcmenu for localization.
 
 ## v0.1.3-beta
 
