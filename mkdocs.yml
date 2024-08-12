@@ -127,7 +127,6 @@ nav:
       - Check system layout: ./Skills/System-Management/Check-System-Layout.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
-      - Find OS Install Time: ./Skills/System-Management/Find-OS-Install-Time.md
       - Check file format: ./Skills/System-Management/Check-File-Format.md
     - Sandboxing:
       - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
