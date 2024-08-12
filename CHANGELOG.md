@@ -9,7 +9,7 @@
 * Added a new shortcut `<Super> + M` to minimize the current window.
 * Added `cups` and `system-config-printer` packages to support printing.
 * The theme switcher gnome plugin will nolonger switch user's wallpaper. Set AnduinOS wallpaper as default.
-* Patch arcmenu for localization.
+* Patch arcmenu for localization "关机" "重启" "新增" "从开始菜单取消固定" "固定到任务栏"
 
 ## v0.1.3-beta
 
