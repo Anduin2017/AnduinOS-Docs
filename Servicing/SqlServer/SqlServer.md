@@ -14,7 +14,7 @@ To host SQL Server on AnduinOS, run the following commands.
 
 First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
 
-```bash
+```bash title="Install Docker"
 curl -fsSL get.docker.com -o get-docker.sh
 CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
@@ -22,7 +22,7 @@ rm get-docker.sh
 
 Create a new folder to save the service configuration files:
 
-```bash
+```bash title="Prepare a clean directory"
 # Please install Docker first
 mkdir -p ~/Source/ServiceConfigs/SQLServer
 cd ~/Source/ServiceConfigs/SQLServer
@@ -30,7 +30,7 @@ cd ~/Source/ServiceConfigs/SQLServer
 
 Make sure no other process is taking 1433 port on your machine.
 
-```bash
+```bash title="Check if the port is occupied"
 function port_exist_check() {
   if [[ 0 -eq $(sudo lsof -i:"$1" | grep -i -c "listen") ]]; then
     echo "$1 is not in use"
@@ -51,7 +51,7 @@ port_exist_check 1433
 
 Then, create a `docker-compose.yml` file with the following content:
 
-```bash
+```bash title="Create a docker-compose.yml file"
 cat << EOF > ./docker-compose.yml
 version: '3.3' 
 
@@ -59,7 +59,10 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
-      - "1433:1433"
+      - target: 1433
+        published: 1433
+        protocol: tcp
+        mode: host
     environment:
       SA_PASSWORD: "YourStrong!Passw0rd"
       ACCEPT_EULA: "Y"
@@ -79,7 +82,7 @@ sudo mkdir -p /swarm-vol/sqlserver/data
 
 Then, deploy the service:
 
-```bash
+```bash title="Deploy the service"
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml sqlserver --detach
 ```
@@ -94,7 +97,7 @@ To manage your SQL Server, it is suggested to install Azure Data Studio. You can
 
 To uninstall SQL Server, run the following commands:
 
-```bash
+```bash title="Uninstall SQL Server"
 sudo docker stack rm sqlserver
 sleep 20 # Wait for the stack to be removed
 sudo docker system prune -a --volumes -f # Clean up used volumes and images
@@ -102,7 +105,7 @@ sudo docker system prune -a --volumes -f # Clean up used volumes and images
 
 To also remove the data, log, and config files, run the following commands:
 
-```bash
+```bash title="Remove the data, log, and config files"
 sudo rm /swarm-vol/sqlserver -rf
 ```
 

@@ -19,6 +19,14 @@ function print() {
 
 print "OS information"
 sudo lsb_release -a
+print "OS install date"
+stat -c %w /
+print "Secure Boot status"
+sudo mokutil --sb-state
+print "Root file system"
+sudo df -Th /
+print "Boot mode"
+if [ -d /sys/firmware/efi ]; then echo "Boot mode: UEFI"; else echo "Boot mode: Legacy"; fi
 print "CPU information"
 sudo lscpu
 print "PCIE information"
@@ -35,6 +43,8 @@ print "Memory information"
 sudo free -h
 print "Network information"
 sudo ip link show
+print "Firewall status"
+sudo ufw status
 print "Network location"
 curl https://ipinfo.io
 ```

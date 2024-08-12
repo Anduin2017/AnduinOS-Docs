@@ -6,7 +6,7 @@ To host SomeService on AnduinOS, run the following commands.
 
 First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
 
-```bash
+```bash title="Install Docker"
 curl -fsSL get.docker.com -o get-docker.sh
 CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
@@ -14,7 +14,7 @@ rm get-docker.sh
 
 Create a new folder to save the service configuration files:
 
-```bash
+```bash title="Prepare a clean directory"
 # Please install Docker first
 mkdir -p ~/Source/ServiceConfigs/SomeService
 cd ~/Source/ServiceConfigs/SomeService
@@ -22,7 +22,7 @@ cd ~/Source/ServiceConfigs/SomeService
 
 Make sure no other process is taking 1111, 2222, and 3333 ports on your machine.
 
-```bash
+```bash title="Check if the ports are occupied"
 function port_exist_check() {
   if [[ 0 -eq $(sudo lsof -i:"$1" | grep -i -c "listen") ]]; then
     echo "$1 is not in use"
@@ -45,7 +45,7 @@ port_exist_check 3333
 
 Then, create a `docker-compose.yml` file with the following content:
 
-```bash
+```bash title="Create a docker-compose.yml file"
 cat << EOF > ./docker-compose.yml
 version: '3.3' 
 
@@ -103,7 +103,7 @@ sudo mkdir -p /swarm-vol/SomeService/media
 
 Then, deploy the service:
 
-```bash
+```bash title="Deploy the service"
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml SomeService --detach
 ```
@@ -118,7 +118,7 @@ The default username is `XXXXXXXXXXXXXXXXX` and the default password is `XXXXXXX
 
 To uninstall SomeService, run the following commands:
 
-```bash
+```bash title="Uninstall SomeService"
 sudo docker stack rm SomeService
 sleep 20 # Wait for the stack to be removed
 sudo docker system prune -a --volumes -f # Clean up used volumes and images
@@ -126,7 +126,7 @@ sudo docker system prune -a --volumes -f # Clean up used volumes and images
 
 To also remove the data, log, and config files, run the following commands:
 
-```bash
+```bash title="Remove the data, log, and config files"
 sudo rm /swarm-vol/SomeService -rf
 ```
 
