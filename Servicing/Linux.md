@@ -19,6 +19,12 @@ function print() {
 
 print "OS information"
 sudo lsb_release -a
+print "OS install date"
+stat -c %w /
+print "Secure Boot status"
+sudo mokutil --sb-state
+print "Boot mode"
+if [ -d /sys/firmware/efi ]; then echo "Boot mode: UEFI"; else echo "Boot mode: Legacy"; fi
 print "CPU information"
 sudo lscpu
 print "PCIE information"

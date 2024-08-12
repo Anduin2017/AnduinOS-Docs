@@ -124,6 +124,7 @@ nav:
 
   - Skills:
     - System Management:
+      - Check system layout: ./Skills/System-Management/Check-System-Layout.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Find OS Install Time: ./Skills/System-Management/Find-OS-Install-Time.md
