@@ -1,15 +1,29 @@
 # AnduinOS Changelog
 
+## v0.1.4-beta
+
+* Scrolling on taskbar nolonger switch workspace.
+* Uninstall `gstreamer1.0-vaapi` to fix a bug that may cause `totem` unable to play video.
+* Added a new shortcut `<Super> + G` to start screen recording.
+* Added a new shortcut `<Super> + F11` to toggle full screen.
+* Added a new shortcut `<Super> + BackSpace` to toggle the zoom feature.
+* Added a new shortcut `<Super> + M` to minimize the current window.
+* Added `cups` and `system-config-printer` packages to support printing.
+* Added `caribou` package to support on-screen keyboard.
+* The theme switcher gnome plugin will nolonger switch user's wallpaper. Set AnduinOS wallpaper as default.
+
 ## v0.1.3-beta
 
 * Install Fluent cursor theme
 * Edited `Home_url` in `/etc/os-release` to point to the AnduinOS website.
 * Added a wallpaper for light theme.
-* Remove the Ramdisk option for `Try AnduinOS` to reduce memory consumption.
+* Use overlay instead of ramdisk for loading the live environment.
 * Use AnduinOS's own gnome plugin to switch light and dark themes.
 * Hide the Ubuntu logo in `gnome-control-center`.
 * Hide the dark\light theme switch in `gnome-control-center`.
 * Live environment (including installer) will use the new mirror `http://mirrors.anduinos.com` by default.
+* Gnome console will use the AnduinOS theme by default. (instead of the dark theme)
+* Arcmenu will use the AnduinOS theme by default. (instead of the dark theme)
 
 ## v0.1.2-beta
 

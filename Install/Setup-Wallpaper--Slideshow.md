@@ -12,7 +12,9 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     cat << 'EOF' > ~/.local/slide.sh
     #!/bin/bash
     DIR="/home/$USER/Pictures/Wallpapers"
-    gsettings set org.gnome.desktop.background picture-uri-dark "file://$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)"
+    FILE=$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)
+    gsettings set org.gnome.desktop.background picture-uri      "file://$FILE"
+    gsettings set org.gnome.desktop.background picture-uri-dark "file://$FILE"
     EOF
     chmod +x ~/.local/slide.sh
     (crontab -l ; echo "*/30 * * * * ~/.local/slide.sh") | crontab -
@@ -21,3 +23,5 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     Don't forget to replace `~/Pictures/Wallpapers` with the path to the directory containing your wallpapers!
 
     And the script switches the wallpaper every 30 minutes. If you want to change the interval, you can modify the `*/30` part in the script.
+
+Or even easier, you can install this gnome extension: [wallpaper--switcher](https://extensions.gnome.org/extension/4812/wallpaper-switcher/), which allows you to set up a wallpaper slideshow through the GNOME Shell.

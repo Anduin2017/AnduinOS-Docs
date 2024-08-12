@@ -53,7 +53,12 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
+
 extra:
+  analytics:
+    provider: google
+    property: G-JYS4W8XSMZ
+      
   # social:
   #   - type: gitlab
   #     link: https://gitlab.aiursoft.cn/anduin/anduinos
@@ -92,12 +97,6 @@ plugins:
   - offline
   - same-dir
   - search
-  - with-pdf:
-      author: Anduin Xue
-      copyright: The Unlicense
-      cover_title: AnduinOS
-      cover_subtitle: AnduinOS Documentation
-      output_path: document.pdf
   - minify:
       minify_html: true
 
@@ -115,6 +114,9 @@ nav:
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
       - Update your system: ./Install/Update-Your-System.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
+      - Managing Printers: ./Install/Managing-Printers.md
+    - Learning AnduinOS:
+      - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
     - Maintaining AnduinOS:
       - Install or remove Snap: ./Install/Install-Or-Remove-Snap.md
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
@@ -125,6 +127,7 @@ nav:
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Find OS Install Time: ./Skills/System-Management/Find-OS-Install-Time.md
+      - Check file format: ./Skills/System-Management/Check-File-Format.md
     - Sandboxing:
       - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
       - Run Windows Apps with Wine: ./Skills/Sandboxing/Run-Windows-Apps.md
@@ -152,10 +155,11 @@ nav:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 
-      - Multimedia:
-        - VLC Media Player: ./Applications/Multimedia/VLC-Media-Player/VLC-Media-Player.md
-        - Spotify: ./Applications/Multimedia/Spotify/Spotify.md
-        - Yes Play Music: ./Applications/Multimedia/Yes-Play-Music/Yes-Play-Music.md
+      - Media Players:
+        - VLC Media Player: ./Applications/Media-Players/VLC-Media-Player/VLC-Media-Player.md
+        - Spotify: ./Applications/Media-Players/Spotify/Spotify.md
+        - Yes Play Music: ./Applications/Media-Players/Yes-Play-Music/Yes-Play-Music.md
+        - mpv: ./Applications/Media-Players/mpv/mpv.md
 
       - Media Editing:
         - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
@@ -171,10 +175,14 @@ nav:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
         - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
 
+      - Download Tools:
+        - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
+        - qBittorrent: ./Applications/Download-Tools/qBittorrent/qBittorrent.md
+        - Deluge: ./Applications/Download-Tools/Deluge/Deluge.md
+
       - Utilities:
         - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
         - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
-        - Motrix: ./Applications/Utilities/Motrix/Motrix.md
         - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
         - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
@@ -203,6 +211,7 @@ nav:
 
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
+    - Setting up new Linux Server: ./Servicing/Linux.md
     - GitLab: ./Servicing/GitLab/GitLab.md
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
