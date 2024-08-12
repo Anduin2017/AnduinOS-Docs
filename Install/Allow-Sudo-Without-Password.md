@@ -22,4 +22,4 @@ That's it! You can now run sudo commands without entering your password.
 
 ---
 
-After installing AnduinOS, you may want to [Install more applications](../Applications/Introduction.md)
+After installing AnduinOS, you may want to [Setup system automatic updates](./Update-Your-System.md) to keep your system up-to-date.
