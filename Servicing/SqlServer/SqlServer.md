@@ -59,7 +59,10 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
-      - "1433:1433"
+      - target: 1433
+        published: 1433
+        protocol: tcp
+        mode: host
     environment:
       SA_PASSWORD: "YourStrong!Passw0rd"
       ACCEPT_EULA: "Y"
