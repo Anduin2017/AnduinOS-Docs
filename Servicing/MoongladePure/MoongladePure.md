@@ -67,8 +67,6 @@ services:
         Storage__Path: /data/files
     networks:
       - moonglade_app
-    deploy:
-      replicas: 2
 
   moongladepure-db:
     image: mysql
