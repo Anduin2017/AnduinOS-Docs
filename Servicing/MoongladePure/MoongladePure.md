@@ -80,6 +80,10 @@ services:
     networks:
       - moonglade_app
 
+networks:
+  moonglade_app:
+    driver: overlay
+
 volumes:
   web-files:
     driver: local
