@@ -1,5 +1,9 @@
 # Node
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Node is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Node, also known as Node.js, is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is designed to build scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
 
 To install Node (with npm) on AnduinOS, you can run:

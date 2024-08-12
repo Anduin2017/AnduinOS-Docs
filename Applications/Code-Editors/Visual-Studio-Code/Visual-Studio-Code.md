@@ -1,5 +1,9 @@
 # Visual Studio Code
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Visual Studio Code is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring. It is also customizable, so users can change the editor's theme, keyboard shortcuts, and preferences.
 
 To install Visual Studio Code on AnduinOS, you can run:

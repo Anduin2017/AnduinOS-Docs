@@ -1,5 +1,9 @@
 # VLC Media Player
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    VLC is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 VLC Media Player is a free and open-source media player that can play most multimedia files as well as DVDs, audio CDs, VCDs, and various streaming protocols.
 
 To install VLC Media Player on AnduinOS, you can run:

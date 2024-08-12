@@ -1,5 +1,9 @@
 # Nextcloud
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Nextcloud is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Nextcloud is a suite of client-server software for creating and using file hosting services. It is functionally similar to Dropbox, although Nextcloud is free and open-source, allowing anyone to install and operate it on a private server. In contrast to proprietary services the open architecture enables users to have full control of their data. The Nextcloud server is written in the PHP and JavaScript scripting languages. It is built on a LAMP stack, which consists of Linux, Apache, MySQL, and PHP. Nextcloud is extensible via a developer-friendly API for applications and plugins and it works with any storage.
 
 To install Nextcloud Desktop Client on AnduinOS, you can run:

@@ -1,5 +1,9 @@
 # LibreOffice
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    LibreOffice is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 LibreOffice is a free and open-source office suite, a project of The Document Foundation. It was forked from OpenOffice.org in 2010, which was an open-sourced version of the earlier StarOffice. The LibreOffice suite comprises programs for word processing, creating and editing of spreadsheets, slideshows, diagrams and drawings, working with databases, and composing mathematical formulae. It is available in 110 languages.
 
 To install LibreOffice on AnduinOS, you can run:

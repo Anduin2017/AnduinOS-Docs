@@ -1,5 +1,9 @@
 # Docker
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Docker is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
 To install Docker on AnduinOS, you can run:

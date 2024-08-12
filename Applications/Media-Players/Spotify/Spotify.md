@@ -1,5 +1,9 @@
 # Spotify
 
+!!! tip "AnduinOS Verified App"
+
+    Spotify is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Spotify is a digital music streaming service that gives you access to millions of songs, podcasts and videos from artists all over the world.
 
 To install Spotify on AnduinOS, you can run:

@@ -1,5 +1,9 @@
 # Sublime Text
 
+!!! tip "AnduinOS Verified App"
+
+    Sublime Text is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Sublime Text is a sophisticated text editor for code, markup and prose. You'll love the slick user interface, extraordinary features and amazing performance.
 
 To install Sublime Text on AnduinOS, you can run:

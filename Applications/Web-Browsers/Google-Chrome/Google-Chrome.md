@@ -1,5 +1,9 @@
 # Google Chrome
 
+!!! tip "AnduinOS Verified App"
+
+    Google Chrome is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Google Chrome is a cross-platform web browser developed by Google. It was first released in 2008 for Microsoft Windows and later ported to Linux, macOS, iOS, and Android. The browser is based on the open-source Chromium project, which is also developed by Google.
 
 To install Google Chrome on AnduinOS, you can run:

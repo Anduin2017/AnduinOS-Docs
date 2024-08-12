@@ -1,5 +1,9 @@
 # Firefox
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Firefox is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Firefox is a free and open-source web browser developed by the Mozilla Foundation. It is available for Windows, macOS, Linux, and Android.
 
 By default, AnduinOS is shipped with Firefox as the default web browser.

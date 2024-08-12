@@ -1,5 +1,9 @@
 # Virt Manager
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Virt Manager is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 Virt Manager is a graphical tool for managing virtual machines. It is based on libvirt and supports KVM, QEMU, Xen, and LXC. It is written in Python and uses GTK+ for the graphical user interface.
 
 To install Virt Manager on AnduinOS, you can run:

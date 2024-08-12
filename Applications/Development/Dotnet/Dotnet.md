@@ -1,5 +1,9 @@
 # .NET
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    .NET is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 .NET is a free, cross-platform, open source developer platform for building many different types of applications.
 
 To install .NET 8 on AnduinOS, you can run:
