@@ -6,7 +6,7 @@ To host NextCloud on AnduinOS, run the following commands.
 
 First, make sure Docker is installed on your machine. If not, you can install Docker by running the following commands:
 
-```bash
+```bash title="Install Docker"
 curl -fsSL get.docker.com -o get-docker.sh
 CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
@@ -14,7 +14,7 @@ rm get-docker.sh
 
 Create a new folder to save the service configuration files:
 
-```bash
+```bash title="Prepare a clean directory"
 # Please install Docker first
 mkdir -p ~/Source/ServiceConfigs/nextcloud
 cd ~/Source/ServiceConfigs/nextcloud
@@ -22,7 +22,7 @@ cd ~/Source/ServiceConfigs/nextcloud
 
 Make sure no other process is taking 80 port on your machine.
 
-```bash
+```bash title="Check if the port is occupied"
 function port_exist_check() {
   if [[ 0 -eq $(sudo lsof -i:"$1" | grep -i -c "listen") ]]; then
     echo "$1 is not in use"
@@ -43,7 +43,7 @@ port_exist_check 80
 
 Then, create a `docker-compose.yml` file with the following content:
 
-```bash
+```bash title="Create a docker-compose.yml file"
 cat << EOF > ./docker-compose.yml
 version: '3'
 
@@ -167,15 +167,16 @@ sudo mkdir -p /swarm-vol/nextcloud/data
 
 Then, deploy the service:
 
-```bash
+```bash title="Deploy the service"
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml nextcloud --detach
 ```
 
 You need to update the permission for `/mnt/data` inside the container. You can do this by running the following command:
 
-```bash
+```bash title="Update the permission for /mnt/data"
 sudo docker exec -it $(sudo docker ps -qf "name=nextcloud_web") chown -R www-data:www-data /mnt/data
+sudo docker exec -it $(sudo docker ps -qf "name=nextcloud_web") chmod -R 0770 /mnt/data
 ```
 
 You can access NextCloud by visiting `http://localhost` in your browser.
@@ -194,7 +195,7 @@ That's it! You have successfully hosted NextCloud on AnduinOS.
 
 To uninstall NextCloud, run the following commands:
 
-```bash
+```bash title="Uninstall NextCloud"
 sudo docker stack rm nextcloud
 sleep 20 # Wait for the stack to be removed
 sudo docker system prune -a --volumes -f # Clean up used volumes and images
@@ -202,7 +203,7 @@ sudo docker system prune -a --volumes -f # Clean up used volumes and images
 
 To also remove the data, log, and config files, run the following commands:
 
-```bash
+```bash title="Remove the data, log, and config files"
 sudo rm /swarm-vol/nextcloud -rf
 ```
 
