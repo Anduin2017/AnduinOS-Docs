@@ -62,20 +62,20 @@ services:
       - web-aspnet:/root/.aspnet/
     environment:
         ConnectionStrings__AllowCache: 'False'
-        ConnectionStrings__DefaultConnection: Server=moongladepure-db;Database=moongaldepure;Uid=moongaldepure;Pwd=<moongaldepure_password>;
+        ConnectionStrings__DefaultConnection: Server=db;Database=moongladepure;Uid=moongladepure;Pwd=<moongaldepure_password>;
         ConnectionStrings__DbType: MySql
         Storage__Path: /data/files
     networks:
       - internal
 
-  moongladepure-db:
+  db:
     image: mysql
     volumes:
       - db-files:/var/lib/mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=true
-      - MYSQL_DATABASE=mongaldepure
-      - MYSQL_USER=mongaldepure
+      - MYSQL_DATABASE=moongladepure
+      - MYSQL_USER=moongladepure
       - MYSQL_PASSWORD=<moongaldepure_password>
     networks:
       - internal
