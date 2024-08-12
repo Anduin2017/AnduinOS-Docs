@@ -113,7 +113,7 @@ Then, deploy the service:
 
 ```bash title="Deploy the service"
 sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
-sudo docker stack deploy -c docker-compose.yml MoongladePure --detach
+sudo docker stack deploy -c docker-compose.yml moongladepure --detach
 ```
 
 That's it! You have successfully hosted MoongladePure on AnduinOS.
@@ -127,7 +127,7 @@ The default username is `admin` and the default password is `admin123`.
 To uninstall MoongladePure, run the following commands:
 
 ```bash title="Uninstall MoongladePure"
-sudo docker stack rm MoongladePure
+sudo docker stack rm moongladepure
 sleep 20 # Wait for the stack to be removed
 sudo docker system prune -a --volumes -f # Clean up used volumes and images
 ```
