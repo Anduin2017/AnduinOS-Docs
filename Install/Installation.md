@@ -32,9 +32,22 @@ Then, create a new virtual machine with any virtualization software (e.g. Virtua
 
 Finally, boot the virtual machine and follow the on-screen instructions to install AnduinOS.
 
-!!! warning "Disable Secure Boot"
+!!! warning "Adjust Secure Boot to trust 3rd party OS"
 
-    Make sure to disable Secure Boot in the virtual machine settings before booting from the ISO file. Secure Boot can prevent the installation of unsigned operating systems. AnduinOS is not signed, so it will not boot with Secure Boot enabled.
+    By default, your virtual machine may have Secure Boot enabled, which can prevent the installation of 3rd party operating systems. You may need to adjust the Secure Boot settings in the virtual machine's BIOS to trust 3rd party operating systems.
+
+    Sample for virtual manager:
+
+    ```xml title="Sample for virtual manager"
+    <os firmware="efi">
+        <type arch="x86_64" machine="pc-q35-6.2">hvm</type>
+        <firmware>
+        <feature enabled="yes" name="enrolled-keys"/>
+        <feature enabled="yes" name="secure-boot"/>
+        </firmware>
+        <boot dev="hd"/>
+    </os>
+    ```
 
 ---
 
@@ -79,9 +92,11 @@ sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress ofl
 
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
 
-!!! warning "Disable Secure Boot"
+!!! warning "Adjust Secure boot settings in your BIOS"
 
-    Make sure to disable Secure Boot in the BIOS settings before booting from the USB drive. Secure Boot can prevent the installation of unsigned operating systems. AnduinOS is not signed, so it will not boot with Secure Boot enabled.
+    If you are using a UEFI system, by default it may only trust Microsoft-signed operating systems. In this case, you may need to adjust the Secure Boot settings in your BIOS to trust 3rd party operating systems. Please refer to your system's documentation for instructions on how to do this.
+
+    ![Adjust secure boot settings](./seboot.png)
 
 ## After installation
 
