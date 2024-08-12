@@ -66,7 +66,7 @@ services:
         ConnectionStrings__DbType: MySql
         Storage__Path: /data/files
     networks:
-      - moonglade_app
+      - internal
 
   moongladepure-db:
     image: mysql
@@ -78,10 +78,10 @@ services:
       - MYSQL_USER=mongaldepure
       - MYSQL_PASSWORD=<moongaldepure_password>
     networks:
-      - moonglade_app
+      - internal
 
 networks:
-  moonglade_app:
+  internal:
     driver: overlay
 
 volumes:
