@@ -22,7 +22,7 @@ cd /tmp
 #https://github.com/Diolinux/PhotoGIMP.git
 mkdir /tmp/PhotoGIMP
 git clone https://github.com/Diolinux/PhotoGIMP.git /tmp/PhotoGIMP
-#rsync -Aavx --update --delete /home/anduin/Desktop/PhotoGIMP/.var/app/org.gimp.GIMP/config/GIMP/2.10/ /home/anduin/.config/GIMP/2.10/
+mkdir -p ~/.config/GIMP/2.10/
 rsync -Aavx --update --delete /tmp/PhotoGIMP/.var/app/org.gimp.GIMP/config/GIMP/2.10/ ~/.config/GIMP/2.10/
 rm -rf /tmp/PhotoGIMP
 ```
