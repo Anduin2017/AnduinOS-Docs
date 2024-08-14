@@ -381,6 +381,7 @@ And now you need to plan your CPU cores for the virtual machine.
 First you need to understand which logical CPU cores numbers are in the same physical core. You can run the following command to find out:
 
 ```bash title="Find out CPU core numbers"
+sudo apt install hwloc
 sudo lstopo
 ```
 
