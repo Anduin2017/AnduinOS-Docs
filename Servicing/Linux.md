@@ -523,7 +523,7 @@ To use `sysbench` to test the CPU performance:
 
 ```bash title="Test CPU performance"
 sudo apt install -y sysbench
-sysbench cpu --threads=64 run
+sysbench cpu --threads=$(nproc) run
 ```
 
 | CPU             | Total number of events |
@@ -535,12 +535,12 @@ sysbench cpu --threads=64 run
 
 | Average latency (ms) | Rating     |
 | --------------- | -----------|
-| 0-0.1            | Awesome    |
-| 0.1-2             | Great      |
-| 2-10            | Good       |
-| 10-50           | Normal     |
-| 50-100          | Bad        |
-| 100+            | Terrible   |
+| 0-0.1           | Awesome    |
+| 0.1-1           | Great      |
+| 1-2             | Good       |
+| 2-5             | Normal     |
+| 5-10            | Bad        |
+| 10+             | Terrible   |
 
 ------
 
