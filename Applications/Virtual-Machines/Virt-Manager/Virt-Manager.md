@@ -338,3 +338,113 @@ Then, open your virtual machine. Click `Show virtual hardware details` -> `Overv
 ```
 
 That's it! Now you can try benchmarking your virtual machine to see if the performance is improved.
+
+## Isolate CPU Cores for Virtual Machines
+
+By default, the CPU cores are shared among all virtual machines. This will cause the CPU scheduler by both VM and host to cause additional latency.
+
+It is suggested to isolate CPU cores for virtual machines, you can follow these steps:
+
+First, open `Virt-Manage` and create a new virtual machine. Then, go to `Edit` -> `Preferences` -> `General` and enable `Enable XML editing`.
+
+Then, open your virtual machine. Click `Show virtual hardware details` -> `Overview` and edit the XML configuration.
+
+First, edit the domain XML and add the following lines:
+
+```xml title="Edit the domain XML"
+<domain xmlns:qemu="http://libvirt.org/schemas/domain/qemu/1.0" type="kvm">
+  ...
+</domain>
+```
+
+Then, add the following lines to the XML configuration:
+
+```xml title="Set CPU overcommit"
+<domain xmlns:qemu="http://libvirt.org/schemas/domain/qemu/1.0" type="kvm">
+  ...
+  <qemu:commandline>
+    <qemu:arg value="-overcommit"/> 
+    <qemu:arg value="cpu-pm=on"/>
+  </qemu:commandline>
+  ...
+</domain>
+```
+
+And now you need to plan your CPU cores for the virtual machine.
+
+!!! note "A sample plan for isolating half of the Intel Hyper-Threading CPU cores (10 cores 20 threads)"
+
+    "Hyper-Threading" is a technology that allows a single physical CPU core to act as two logical CPUs. 20 Logical CPUs will be shown as `0-19` in the system.
+
+    In my case, I want my virtual machine to have half of the physical CPU performance. So I want to bind 0-4 physical cores (0-9 logical CPUs) to the host and 5-9 physical cores (10-19 logical CPUs) to the virtual machine.
+
+First you need to understand which logical CPU cores numbers are in the same physical core. You can run the following command to find out:
+
+```bash title="Find out CPU core numbers"
+sudo lstopo
+```
+
+It may output a graph like this:
+
+![numa isolate 10-19 cores](./numa.png)
+
+And as the topology shows, the logical CPU cores `10-19` are in physical core `5-9`. You can isolate the CPU cores by editing the domain XML:
+
+* I want to bind 5 cores
+* 5 x 2 = 10, so 10 logical CPUs are needed
+* the `0-9` CPUs in virtual machine are `10-19` in the host
+* threads should be 2
+* cores should be 5
+* dies should be 1
+* sockets should be 1
+
+```xml title="Isolate CPU cores"
+<domain xmlns:qemu="http://libvirt.org/schemas/domain/qemu/1.0" type="kvm">
+  ...
+  <!-- 10 logical CPUs -->
+  <vcpu placement="static">10</vcpu>
+
+  <!-- the `0-9` CPUs in virtual machine are `10-19` in the host -->
+  <cputune>
+    <vcpupin vcpu="0" cpuset="10"/>
+    <vcpupin vcpu="1" cpuset="11"/>
+    <vcpupin vcpu="2" cpuset="12"/>
+    <vcpupin vcpu="3" cpuset="13"/>
+    <vcpupin vcpu="4" cpuset="14"/>
+    <vcpupin vcpu="5" cpuset="15"/>
+    <vcpupin vcpu="6" cpuset="16"/>
+    <vcpupin vcpu="7" cpuset="17"/>
+    <vcpupin vcpu="8" cpuset="18"/>
+    <vcpupin vcpu="9" cpuset="19"/>
+  </cputune>
+
+  <!-- CPU topology, threads should be 2, cores should be 5, dies should be 1, sockets should be 1 -->
+  <cpu mode="host-passthrough" check="none" migratable="on">
+    <topology sockets="1" dies="1" cores="5" threads="2" />
+  </cpu>
+  ...
+</domain>
+```
+
+As the configuration above, the virtual machine will use the CPU cores `10-19` and the CPU topology is set to 5 cores and 2 threads (Hyper-Threading), on one socket and one die.
+
+After that, you can start the virtual machine and check if the CPU cores are isolated. You should see 10-19 CPUs usage on the host is always 100%.
+
+!!! note "Why CPU usage is always 100% on host?"
+
+    You will see the CPU usage of 10-19 on your host shows always 100% when the virtual machine is running. It is expected behavior because host scheduler no longer schedules the isolated CPU cores. Those cores are over-committed to the virtual machine. But don't worry, the virtual machine will not actually use 100% of the CPU. To check the actual usage, you can check inside the virtual machine, or running:
+
+    ```bash
+    sudo apt install linux-tools-common
+    sudo turbostat
+    ```
+
+    And check the `Busy%` column.
+
+And you don't have to turn your host's CPU frequency governor to performance mode. The virtual machine will have its own CPU frequency governor.
+
+Instead, setting it to `powersave` may save power and reduce heat on the host. You can run the following command to set the CPU frequency governor to `powersave`:
+
+```bash title="Check CPU frequency governor"
+sudo cpupower frequency-set -g powersave
+```
