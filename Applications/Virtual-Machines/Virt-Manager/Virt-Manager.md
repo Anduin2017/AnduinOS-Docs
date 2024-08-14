@@ -436,7 +436,7 @@ After that, you can start the virtual machine and check if the CPU cores are iso
     You will see the CPU usage of 10-19 on your host shows always 100% when the virtual machine is running. It is expected behavior because host scheduler no longer schedules the isolated CPU cores. Those cores are over-committed to the virtual machine. But don't worry, the virtual machine will not actually use 100% of the CPU. To check the actual usage, you can check inside the virtual machine, or running:
 
     ```bash title="View actual CPU usage"
-    sudo apt install linux-tools-common
+    sudo apt install linux-tools-common linux-tools-$(uname -r)
     sudo turbostat
     ```
 
@@ -446,6 +446,13 @@ And you don't have to turn your host's CPU frequency governor to performance mod
 
 Instead, setting it to `powersave` may save power and reduce heat on the host. You can run the following command to set the CPU frequency governor to `powersave`:
 
-```bash title="Check CPU frequency governor"
+```bash title="Set CPU frequency governor to powersave"
+sudo apt install linux-tools-common linux-tools-$(uname -r)
 sudo cpupower frequency-set -g powersave
+```
+
+To check current CPU frequency governor, you can run:
+
+```bash title="Check CPU frequency governor"
+sudo cpupower frequency-info | grep "decide which speed to use"
 ```

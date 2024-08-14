@@ -454,7 +454,7 @@ sudo reboot
 If you are running on a bare-metal server, you can tune the CPU from power-saver to performance to get better performance:
 
 ```bash title="Tune CPU to performance"
-sudo apt install -y linux-tools-common linux-tools-generic
+sudo apt install -y linux-tools-common linux-tools-$(uname -r)
 sudo cpupower frequency-info
 sudo cpupower frequency-set -g performance
 ```
