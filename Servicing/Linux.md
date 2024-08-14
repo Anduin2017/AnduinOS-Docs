@@ -528,10 +528,10 @@ sysbench cpu --threads=64 run
 
 | CPU             | Total number of events |
 | --------------- | ---------------------- |
-| Intel 13900KS   | 1000000                |
-| Intel 10900H    |  400000                |
-| Vultr 2 vCPU    |   70000                |
-| Azure B1s       |   18000                |
+| Intel 13900KS   | 100,0000                |
+| Intel 10900H    |  40,0000                |
+| Vultr 2 vCPU    |   7,0000                |
+| Azure B1s       |   1,8000                |
 
 | Average latency (ms) | Rating     |
 | --------------- | -----------|
