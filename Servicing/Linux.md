@@ -526,6 +526,22 @@ sudo apt install -y sysbench
 sysbench cpu --threads=64 run
 ```
 
+| CPU             | Total number of events |
+| --------------- | ---------------------- |
+| Intel 13900KS   | 1000000                |
+| Intel 10900H    |  400000                |
+| Vultr 2 vCPU    |   70000                |
+| Azure B1s       |   18000                |
+
+| Average latency (ms) | Rating     |
+| --------------- | -----------|
+| 0-0.1            | Awesome    |
+| 0.1-2             | Great      |
+| 2-10            | Good       |
+| 10-50           | Normal     |
+| 50-100          | Bad        |
+| 100+            | Terrible   |
+
 ------
 
 ### Install runtime (Optional)
