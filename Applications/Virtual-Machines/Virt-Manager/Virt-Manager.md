@@ -435,7 +435,7 @@ After that, you can start the virtual machine and check if the CPU cores are iso
 
     You will see the CPU usage of 10-19 on your host shows always 100% when the virtual machine is running. It is expected behavior because host scheduler no longer schedules the isolated CPU cores. Those cores are over-committed to the virtual machine. But don't worry, the virtual machine will not actually use 100% of the CPU. To check the actual usage, you can check inside the virtual machine, or running:
 
-    ```bash
+    ```bash title="View actual CPU usage"
     sudo apt install linux-tools-common
     sudo turbostat
     ```
