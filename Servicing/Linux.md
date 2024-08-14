@@ -535,8 +535,8 @@ sysbench cpu --threads=$(nproc) run
 
 | Average latency (ms) | Rating     |
 | --------------- | -----------|
-| 0-0.1           | Awesome    |
-| 0.1-1           | Great      |
+| 0-0.2           | Awesome    |
+| 0.2-1           | Great      |
 | 1-2             | Good       |
 | 2-5             | Normal     |
 | 5-10            | Bad        |
