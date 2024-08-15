@@ -96,6 +96,7 @@ Default settings for AnduinOS:
 | org.gnome.settings-daemon.plugins.power        | lid-close-suspend-with-external-monitor  | Disables suspend when the laptop lid is closed with an external monitor connected.                 | false                      |
 | org.gnome.settings-daemon.plugins.power        | ambient-enabled                          | Enables the ambient light sensor to automatically adjust the brightness of the display.            | true                       |
 | org.gnome.desktop.screensaver                  | lock-enabled                             | Enables the auto lock screen feature when the screen is blanked.                                   | true                       |
+| org.gnome.desktop.screensaver                  | ubuntu-lock-on-suspend                   | Ubuntu specific setting to lock the screen when the system is suspended.                           | true                       |
 | org.gnome.desktop.screensaver                  | lock-delay                               | Number of seconds after the screen is blank before locking the screen                              | uint32 0                   |
 | org.gnome.desktop.screensaver                  | logout-enabled                           | Disables automatic logout after a period of inactivity.                                            | false                      |
 
