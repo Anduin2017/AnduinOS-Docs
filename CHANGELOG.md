@@ -3,6 +3,7 @@
 ## v0.1.5-beta
 
 * Hide network stat icon on taskbar.
+* Hide power button on taskbar.
 
 ## v0.1.4-beta
 

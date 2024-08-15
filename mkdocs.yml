@@ -218,4 +218,5 @@ nav:
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
     - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
+    - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
     - SqlServer: ./Servicing/SqlServer/SqlServer.md

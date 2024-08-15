@@ -454,7 +454,7 @@ sudo reboot
 If you are running on a bare-metal server, you can tune the CPU from power-saver to performance to get better performance:
 
 ```bash title="Tune CPU to performance"
-sudo apt install -y linux-tools-common linux-tools-generic
+sudo apt install -y linux-tools-common linux-tools-$(uname -r)
 sudo cpupower frequency-info
 sudo cpupower frequency-set -g performance
 ```
@@ -523,8 +523,24 @@ To use `sysbench` to test the CPU performance:
 
 ```bash title="Test CPU performance"
 sudo apt install -y sysbench
-sysbench cpu --threads=64 run
+sysbench cpu --threads=$(nproc) run
 ```
+
+| CPU             | Total number of events |
+| --------------- | ---------------------- |
+| Intel 13900KS   | 100,0000                |
+| Intel 10900H    |  40,0000                |
+| Vultr 2 vCPU    |   7,0000                |
+| Azure B1s       |   1,8000                |
+
+| Average latency (ms) | Rating     |
+| --------------- | -----------|
+| 0-0.2           | Awesome    |
+| 0.2-1           | Great      |
+| 1-2             | Good       |
+| 2-5             | Normal     |
+| 5-10            | Bad        |
+| 10+             | Terrible   |
 
 ------
 
