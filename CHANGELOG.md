@@ -4,6 +4,7 @@
 
 * Hide network stat icon on taskbar.
 * Hide power button on taskbar.
+* Hide network state on taskbar by default. (User can enable it back in the gnome extension settings)
 
 ## v0.1.4-beta
 
