@@ -521,6 +521,16 @@ cd /etc/apt/sources.list.d/
 ls
 ```
 
+### Clean duplicate sources
+
+Sometimes, you may have duplicate sources in your `/etc/apt/sources.list` and `/etc/apt/sources.list.d/`. You can use `aptsources-cleanup` to clean the duplicate sources.
+
+```bash title="Clean the duplicate sources"
+wget https://github.com/davidfoerster/aptsources-cleanup/releases/download/v0.1.7.5.2/aptsources-cleanup.pyz
+chmod +x aptsources-cleanup.pyz
+sudo bash -c "echo all | ./aptsources-cleanup.pyz  --yes"
+```
+
 ### Setting up your own apt mirror
 
 Reference [here](https://anduin.aiursoft.cn/post/2024/2/8/setup-a-ubuntu-apt-mirror-server)
