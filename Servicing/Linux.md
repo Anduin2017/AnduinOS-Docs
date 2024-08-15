@@ -510,6 +510,7 @@ For example, to use `iperf3` to test the network speed:
 ```bash title="Test network speed"
 sudo apt update
 sudo apt install -y iperf3
+sudo uf allow 5201
 iperf3 -s
 ```
 
