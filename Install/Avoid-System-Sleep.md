@@ -73,3 +73,40 @@ Also, you can set how long the system should wait before going to sleep when the
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout <time-in-seconds>
 ```
+
+## References
+
+Default settings for AnduinOS:
+
+* Auto dim after inactivity: 15 minutes
+* Auto sleep after inactivity: 30 minutes
+* Lock screen right after screen is blanked.
+* Power button action: Suspend(sleep)
+* Lid close action: Suspend(sleep)
+
+| Settings Path                                  | Settings Key                             | Explanation                                                                                        | Default Value              |
+| ---------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------- |
+| org.gnome.desktop.session                      | idle-delay                               | The time in seconds before the system is considered idle.                                          | 900                        |
+| org.gnome.settings-daemon.plugins.power        | idle-dim                                 | Enables dimming the screen when idle to save power.                                                | true                       |
+| org.gnome.settings-daemon.plugins.power        | idle-brightness                          | The brightness level (percentage) when the screen is dimmed due to inactivity.                     | 30                         |
+| org.gnome.settings-daemon.plugins.power        | sleep-inactive-ac-timeout                | The time in seconds before the system automatically suspends when inactive and on AC power.        | 1800                       |
+| org.gnome.settings-daemon.plugins.power        | sleep-inactive-ac-type                   | The action performed when the system is inactive and on AC power.                                  | 'suspend'                  |
+| org.gnome.settings-daemon.plugins.power        | power-button-action                      | The action performed when the power button is pressed.                                             | 'suspend'                  |
+| org.gnome.settings-daemon.plugins.power        | lid-close-ac-action                      | The action performed when the laptop lid is closed while on AC power.                              | 'suspend'                  |
+| org.gnome.settings-daemon.plugins.power        | lid-close-suspend-with-external-monitor  | Disables suspend when the laptop lid is closed with an external monitor connected.                 | false                      |
+| org.gnome.settings-daemon.plugins.power        | ambient-enabled                          | Enables the ambient light sensor to automatically adjust the brightness of the display.            | true                       |
+| org.gnome.desktop.screensaver                  | lock-enabled                             | Enables the auto lock screen feature when the screen is blanked.                                   | true                       |
+| org.gnome.desktop.screensaver                  | lock-delay                               | Number of seconds after the screen is blank before locking the screen                              | uint32 0                   |
+| org.gnome.desktop.screensaver                  | logout-enabled                           | Disables automatic logout after a period of inactivity.                                            | false                      |
+
+To get the value of a setting, you can run the following command:
+
+```bash title="Get settings value"
+gsettings get <settings-path> <settings-key>
+```
+
+To set the value of a setting, you can run the following command:
+
+```bash title="Set settings value"
+gsettings set <settings-path> <settings-key> <value>
+```
