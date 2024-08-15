@@ -2,6 +2,7 @@
 
 ## v0.1.5-beta
 
+* Updated kernel version from `6.5.0-45-generic` to `6.8.0-40-generic`.
 * Hide network stat icon on taskbar.
 * Hide power button on taskbar.
 * Hide network state on taskbar by default. (User can enable it back in the gnome extension settings)
