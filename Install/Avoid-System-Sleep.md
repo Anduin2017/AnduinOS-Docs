@@ -2,6 +2,28 @@
 
 In some cases, you might need your computer always to be awake. For example, you might need to download a large file, run a long-running task, or keep your computer awake for a presentation. In this guide, we will show you how to avoid system sleep on AnduinOS.
 
+## Configure auto lock settings
+
+!!! warning "Configure auto lock settings"
+
+    Avoiding auto lock can cause your computer to be vulnerable to unauthorized access. We recommend using this feature only when necessary. For example, running as kiosk mode.
+
+To configure auto lock settings, you can follow these steps:
+
+1. Open the **Settings** app.
+2. Click on **Privacy**.
+3. Click on **Screen**.
+4. Set the **Automatic Screen Lock** toggle to **ON** or **OFF**.
+
+To configure the time before the screen locks, you can set the **Automatic Screen Lock Delay** to the desired time.
+
+To setup auto lock in the terminal, you can run the following command:
+
+```bash
+gsettings set org.gnome.desktop.screensaver lock-enabled true
+gsettings set org.gnome.desktop.screensaver lock-delay <time-in-seconds-after-screen-blanking>
+```
+
 ## Avoid screen blanking using the terminal
 
 !!! warning "Avoid screen blanking using the terminal"
