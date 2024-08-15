@@ -6,6 +6,17 @@ After installing AnduinOS, hopefully all devices are functioning properly. Howev
 
     Some drivers are not open source and may have licensing restrictions. Please make sure you have the right to use these drivers before installing them.
 
+## Automatic installation
+
+To install drivers automatically, open the terminal and run the following command:
+
+```bash title="Install drivers automatically"
+sudo apt update
+sudo ubuntu-drivers install
+```
+
+This command will install the recommended drivers for your system. After the installation is complete, reboot your system.
+
 ## Nvidia Graphics Driver
 
 To install the Nvidia graphics driver, open the terminal and run the following command:
