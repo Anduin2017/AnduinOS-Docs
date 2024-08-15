@@ -5,6 +5,12 @@
 * Hide network stat icon on taskbar.
 * Hide power button on taskbar.
 * Hide network state on taskbar by default. (User can enable it back in the gnome extension settings)
+* Adjust the default power settings:
+  * Auto dim after inactivity: 15 minutes
+  * Auto sleep after inactivity: 30 minutes
+  * Lock screen right after screen is blanked.
+  * Power button action: Suspend(sleep)
+  * Lid close action: Suspend(sleep)
 
 ## v0.1.4-beta
 

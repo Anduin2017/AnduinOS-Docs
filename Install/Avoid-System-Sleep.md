@@ -86,7 +86,7 @@ Default settings for AnduinOS:
 
 | Settings Path                                  | Settings Key                             | Explanation                                                                                        | Default Value              |
 | ---------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------- |
-| org.gnome.desktop.session                      | idle-delay                               | The time in seconds before the system is considered idle.                                          | 900                        |
+| org.gnome.desktop.session                      | idle-delay                               | The time in seconds before the system is considered idle.                                          | uint32 900                 |
 | org.gnome.settings-daemon.plugins.power        | idle-dim                                 | Enables dimming the screen when idle to save power.                                                | true                       |
 | org.gnome.settings-daemon.plugins.power        | idle-brightness                          | The brightness level (percentage) when the screen is dimmed due to inactivity.                     | 30                         |
 | org.gnome.settings-daemon.plugins.power        | sleep-inactive-ac-timeout                | The time in seconds before the system automatically suspends when inactive and on AC power.        | 1800                       |
