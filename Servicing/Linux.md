@@ -76,6 +76,21 @@ sudo hostnamectl set-hostname your-hostname
 sudo reboot
 ```
 
+You also need to update `/etc/hosts` to add the new hostname as `127.0.0.1`:
+
+```bash title="Update /etc/hosts"
+sudo vim /etc/hosts
+```
+
+Inside the /etc/hosts file, add the new hostname as 127.0.0.1, like this:
+
+```bash title="Update /etc/hosts"
+127.0.0.1   localhost
+127.0.1.1   your-hostname
+```
+
+Make sure to replace your-hostname with the actual hostname you set using the hostnamectl command. Save and close the file.
+
 ------
 
 ### Create a new user
