@@ -5,17 +5,32 @@ To select the best APT source for your system, run the following command in the 
 ```bash title="Select best apt source"
 function switchSource() {
   mirrors=(
-      "http://archive.ubuntu.com/ubuntu/"
+      "https://archive.ubuntu.com/ubuntu/"
+      "https://mirror.aarnet.edu.au/pub/ubuntu/archive/" # Australia
+      "https://mirror.fsmg.org.nz/ubuntu/" # New Zealand
+      "https://mirrors.neterra.net/ubuntu/archive/" # Bulgaria
+      "https://mirror.csclub.uwaterloo.ca/ubuntu/" # Canada
+      "https://mirrors.dotsrc.org/ubuntu/" # Denmark
+      "https://mirrors.nic.funet.fi/ubuntu/" # Finland
+      "https://mirror.ubuntu.ikoula.com/" # France
+      "https://mirror.xtom.com.hk/ubuntu/" # Hong Kong
+      "https://mirrors.piconets.webwerks.in/ubuntu-mirror/ubuntu/" # India
+      "https://ftp.udx.icscoe.jp/Linux/ubuntu/" # Japan
+      "https://ftp.kaist.ac.kr/ubuntu/" # Korea
+      "https://ubuntu.mirror.garr.it/ubuntu/" # Italy
+      "https://ftp.uni-stuttgart.de/ubuntu/" # Germany
+      "https://mirror.i3d.net/pub/ubuntu/" # Netherlands
+      "https://mirroronet.pl/pub/mirrors/ubuntu/" # Poland
+      "https://ubuntu.mobinhost.com/ubuntu/" # Iran
       "http://sg.archive.ubuntu.com/ubuntu/" # Singapore
+      "http://ossmirror.mycloud.services/os/linux/ubuntu/" # Singapore
+      "https://mirror.enzu.com/ubuntu/" # United States
       "http://jp.archive.ubuntu.com/ubuntu/" # Japan
       "http://kr.archive.ubuntu.com/ubuntu/" # Korea
       "http://us.archive.ubuntu.com/ubuntu/" # United States
-      "http://ca.archive.ubuntu.com/ubuntu/" # Canada
       "http://tw.archive.ubuntu.com/ubuntu/" # Taiwan (Province of China)
-      "http://th.archive.ubuntu.com/ubuntu/" # Thailand
-      "http://de.archive.ubuntu.com/ubuntu/" # Germany
+      "https://mirror.twds.com.tw/ubuntu/" # Taiwan (Province of China)
       "https://ubuntu.mirrors.uk2.net/ubuntu/" # United Kingdom
-      "http://ubuntu.mirror.cambrium.nl/ubuntu/" # Netherlands
       "http://mirrors.ustc.edu.cn/ubuntu/" # 中国科学技术大学
       "http://ftp.sjtu.edu.cn/ubuntu/" # 上海交通大学
       "http://mirrors.tuna.tsinghua.edu.cn/ubuntu/" # 清华大学
@@ -67,7 +82,7 @@ function switchSource() {
 }
 
 sudo apt update
-sudo apt install curl -y
+sudo apt install curl apt-transport-https -y
 switchSource
 ```
 
