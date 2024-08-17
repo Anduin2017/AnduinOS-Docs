@@ -3,7 +3,11 @@
 ## v0.1.5-beta
 
 * Updated kernel version from `6.5.0-45-generic` to `6.8.0-40-generic`.
-* Update `gnome-text-editor` default font to `Ubuntu Mono 13`.
+* Updated font settings:
+  * Default interface font: `Sans 11`
+  * Default document font: `Ubuntu Mono 13`
+  * Default monospace font: `Monospace 11`
+  * Default gnome-text-editor font: `Ubuntu Mono 13`
 * Nolonger install `info` to reduce the size of the ISO file.
 * Added `alsa-utils`, `firmware-sof-signed` to support audio control.
 * Hide network stat icon on taskbar.
