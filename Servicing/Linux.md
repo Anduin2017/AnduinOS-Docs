@@ -353,7 +353,7 @@ function switchSource() {
 
   test_speed() {
       url=$1
-      response=$(curl -o /dev/null -s -w "%{http_code} %{time_total}\n" --connect-timeout 1 --max-time 5 "$url")
+      response=$(curl -o /dev/null -s -w "%{http_code} %{time_total}\n" --connect-timeout 1 --max-time 2 "$url")
       http_code=$(echo $response | awk '{print $1}')
       time_total=$(echo $response | awk '{print $2}')
 
