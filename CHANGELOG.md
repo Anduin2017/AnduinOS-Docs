@@ -1,5 +1,9 @@
 # AnduinOS Changelog
 
+## v0.2.1-beta
+
+* Added `fprintd` and `libpam-fprintd` to support fingerprint login.
+
 ## v0.2.0-beta
 
 * Updated kernel version from `6.5.0-45-generic` to `6.8.0-40-generic`.
