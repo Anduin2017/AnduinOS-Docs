@@ -67,3 +67,17 @@ start address 0x00406f45
 The output shows that the file `./QQ_9.9.15_240808_x64_01.exe` is in the PE format for i386 architecture.
 
 If the input `exe` file is i386 architecture, the output will be `pei-i386`. If the input `exe` file is x86-64 architecture, the output will be `pei-x86-64`.
+
+## Check PE file signature
+
+To check the signature of a PE file, you can use the `pesign` command. The `pesign` command is a utility for signing and verifying PE files.
+
+```bash title="Install pesign"
+sudo apt install pesign
+```
+
+To check the signature of a PE file, run the following command:
+
+```bash title="Check PE file signature"
+pesign -S -i ./BOOTX64.EFI
+```
