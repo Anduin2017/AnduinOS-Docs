@@ -32,22 +32,11 @@ Then, create a new virtual machine with any virtualization software (e.g. Virtua
 
 Finally, boot the virtual machine and follow the on-screen instructions to install AnduinOS.
 
-!!! warning "Adjust Secure Boot to trust 3rd party OS"
+!!! warning "Turn off Secure Boot"
 
-    By default, your virtual machine may have Secure Boot enabled, which can prevent the installation of 3rd party operating systems. You may need to adjust the Secure Boot settings in the virtual machine's BIOS to trust 3rd party operating systems.
+    By default, your virtual machine may have Secure Boot enabled, which can prevent the installation of 3rd party operating systems. You may need to disable Secure Boot in the BIOS settings to install AnduinOS.
 
-    Sample for virtual manager:
-
-    ```xml title="Sample for virtual manager"
-    <os firmware="efi">
-        <type arch="x86_64" machine="pc-q35-6.2">hvm</type>
-        <firmware>
-        <feature enabled="yes" name="enrolled-keys"/>
-        <feature enabled="yes" name="secure-boot"/>
-        </firmware>
-        <boot dev="hd"/>
-    </os>
-    ```
+    While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings to install AnduinOS. And you can re-enable Secure Boot after the installation.
 
 ---
 
@@ -94,11 +83,11 @@ sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress ofl
 
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
 
-!!! warning "Adjust Secure boot settings in your BIOS!"
+!!! warning "Turn off Secure Boot"
 
-    If you are using a UEFI system, by default it may only trust Microsoft-signed operating systems. In this case, you may need to adjust the Secure Boot settings in your BIOS to trust 3rd party operating systems. Please refer to your system's documentation for instructions on how to do this.
+    If you are using a UEFI system, by default it may enabled Secure Boot, which can prevent the installation of 3rd party operating systems. You may need to disable Secure Boot in the BIOS settings to install AnduinOS.
 
-    ![Adjust secure boot settings](./seboot.png)
+    While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings to install AnduinOS. And you can re-enable Secure Boot after the installation.
 
 ## After installation
 

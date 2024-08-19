@@ -1,10 +1,10 @@
 # AnduinOS System Requirements
 
-!!! warning "Adjust Secure boot settings in your BIOS!"
+!!! warning "Turn off Secure Boot"
 
-    If you are using a UEFI system, by default it may only trust Microsoft-signed operating systems. In this case, you may need to adjust the Secure Boot settings in your BIOS to trust 3rd party operating systems. Please refer to your system's documentation for instructions on how to do this.
+    If you are using a UEFI system, by default it may enabled Secure Boot, which can prevent the installation of 3rd party operating systems. 
 
-    ![Adjust secure boot settings](./seboot.png)
+    While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings to install AnduinOS. And you can re-enable Secure Boot after the installation.
 
 Minimum system requirements:
 
