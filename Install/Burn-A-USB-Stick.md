@@ -40,9 +40,3 @@ sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress ofl
     This command will erase all data on the USB drive. Make sure to back up your data before running this command.
 
 Then, boot the computer from the USB drive and follow the on-screen instructions to install AnduinOS.
-
-!!! warning "Turn off Secure Boot"
-
-    If you are using a UEFI system, by default it may enabled Secure Boot, which can prevent the installation of 3rd party operating systems. You may need to disable Secure Boot in the BIOS settings to install AnduinOS.
-
-    While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings to install AnduinOS. And you can re-enable Secure Boot after the installation.

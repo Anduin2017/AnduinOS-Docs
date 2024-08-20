@@ -8,7 +8,7 @@
 
 To turn on Secure Boot, you need to enter BIOS settings first. The key to enter BIOS settings varies depending on the manufacturer of your computer. Common keys include `F2`, `F10`, `Volume up + Power` or `Del`. You can usually see the key to enter BIOS settings on the boot screen when you start your computer.
 
-Boot your computer, press `F2` or the key to enter BIOS settings, and then find the Secure Boot option in the BIOS settings. Disable Secure Boot and save the changes. Then you can boot your computer from the USB drive.
+Boot your computer, press `F2` or the key to enter BIOS settings, and then find the Secure Boot option in the BIOS settings. Enable Secure Boot and save the changes. Set the Secure Boot certificate to `Linux` or `3rd Party CA`. After that, you can boot your computer from the AnduinOS USB drive and install AnduinOS.
 
 To verify that Secure Boot is enabled, you can boot AnduinOS on your computer and run the following command in the terminal:
 

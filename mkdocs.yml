@@ -114,11 +114,11 @@ nav:
       - Install AnduinOS from USB: ./Install/Install-AnduinOS-From-USB.md
     - Setting Up AnduinOS:
       - Turn on Secure Boot: ./Install/Turn-On-Secure-Boot.md
-      - Install Drivers: ./Install/Install-Drivers.md
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
-      - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
+      - Install Drivers: ./Install/Install-Drivers.md
       - Update your system: ./Install/Update-Your-System.md
       - Update firmware: ./Install/Upgrade-Firmware.md
+      - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
       - Managing Printers: ./Install/Managing-Printers.md
