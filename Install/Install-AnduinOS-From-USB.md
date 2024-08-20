@@ -39,7 +39,7 @@ The installation process will guide you through the following steps:
 2. **Select Keyboard Layout**: Choose the keyboard layout you want to use.
 3. **Updates and Other Software**: Choose whether you want to install updates and third-party software during the installation process.
 4. **Setup Disk**: Choose the disk where you want to install AnduinOS. You can also choose to encrypt the disk with LVM and LUKS2.
-5. **Location**: Choose your location to set the time zone.
+5. **Location**: Choose your location to set the time zone, locale formats and apt source.
 6. **User Information**: Enter your name, username, and password for the new user account.
 7. **Installation**: The installation process will start, and you can see the progress on the screen.
 8. **Complete**: Once the installation is complete, you will be prompted to restart your computer.
