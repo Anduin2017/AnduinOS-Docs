@@ -1,48 +1,8 @@
 # AnduinOS Installation Guide
 
-## Download AnduinOS
-
----
-
-Before installing AnduinOS, you need to download the ISO file from the releases page.
-
-[Download AnduinOS (ISO)](https://download.anduinos.com/){ .md-button .md-button--primary }
-
-It is suggested to use bit-torrent to download the ISO file. You can find the torrent file on the releases page.
-
-## Verify the ISO sha256 checksum
-
-After downloading the ISO file, you should verify the integrity of the file to ensure that it has not been tampered with.
-
-To verify the ISO file, you can use the `sha256sum` command on Linux or macOS, or the `7-Zip` software on Windows.
-
-```bash title="Verify ISO file on Linux or macOS"
-sha256sum ./AnduinOS.iso
-```
-
-Please compare the output of the `sha256sum` command with the checksum provided on the releases page (File ends with `.sha256`). If the checksums match, the ISO file is valid and has not been tampered with.
-
-## Virtual Machine Installation
-
----
-
-First, download AnduinOS from releases page.
-
-Then, create a new virtual machine with any virtualization software (e.g. VirtualBox, VMware, etc.) and attach the downloaded ISO file to the virtual machine.
-
-Finally, boot the virtual machine and follow the on-screen instructions to install AnduinOS.
-
-!!! warning "Turn off Secure Boot"
-
-    By default, your virtual machine may have Secure Boot enabled, which can prevent the installation of 3rd party operating systems. You may need to disable Secure Boot in the BIOS settings to install AnduinOS.
-
-    While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings to install AnduinOS. And you can re-enable Secure Boot after the installation.
-
----
-
 ## Bare-mental Installation - Make a USB installer
 
-First, download the latest release of AnduinOS from the releases page.
+First, [download the latest release of AnduinOS](./Download-AnduinOS.md).
 
 Then, create a bootable USB drive with the downloaded ISO file. Obviously, you need a USB drive with at least 4GB of storage.
 
@@ -88,9 +48,3 @@ Then, boot the computer from the USB drive and follow the on-screen instructions
     If you are using a UEFI system, by default it may enabled Secure Boot, which can prevent the installation of 3rd party operating systems. You may need to disable Secure Boot in the BIOS settings to install AnduinOS.
 
     While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings to install AnduinOS. And you can re-enable Secure Boot after the installation.
-
-## After installation
-
----
-
-After installing AnduinOS, you may need to [Install Drivers](./Install-Drivers.md).

@@ -14,7 +14,7 @@ AnduinOS is built on the Ubuntu Jammy package base.
 
 ## How to install AnduinOS?
 
-To install AnduinOS, you can follow the instructions in the [Installation Guide](./Install/Installation.md).
+To install AnduinOS, you can follow the instructions in the [Installation Guide](./Install/./System-Requirements.md).
 
 ## How to install applications on AnduinOS?
 
