@@ -9,7 +9,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-TO update AnduinOS itself, you can use the following command:
+to update AnduinOS itself, you can use the following command:
 
 ```bash title="Update AnduinOS"
 sudo do_anduinos_upgrade
