@@ -215,6 +215,7 @@ nav:
         - Minecraft: ./Applications/Games/Minecraft/Minecraft.md
         - Steam: ./Applications/Games/Steam/Steam.md
         - Stellarium: ./Applications/Games/Stellarium/Stellarium.md
+        - 0AD: ./Applications/Games/0AD/0AD.md
 
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
