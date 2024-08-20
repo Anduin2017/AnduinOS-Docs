@@ -57,6 +57,6 @@ rm -rf anduinos-rime-master
 
     You **need** to log out and log back in to make the input method available.
 
-Then, you can add `AnduinOS-Rime` as the input method.
+Now, you have set `AnduinOS-Rime` as your input method.
 
 To switch between input methods, you can press `Windows + Space`.
