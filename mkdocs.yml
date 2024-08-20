@@ -116,6 +116,7 @@ nav:
       - Turn on Secure Boot: ./Install/Turn-On-Secure-Boot.md
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
       - Install Drivers: ./Install/Install-Drivers.md
+      - Install input method: ./Install/Install-Input-Method.md
       - Update your system: ./Install/Update-Your-System.md
       - Update firmware: ./Install/Upgrade-Firmware.md
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
