@@ -1,12 +1,10 @@
-# AnduinOS Installation Guide
-
-## Bare-mental Installation - Make a USB installer
+# Bare-mental Installation - Make a USB installer
 
 First, [download the latest release of AnduinOS](./Download-AnduinOS.md).
 
 Then, create a bootable USB drive with the downloaded ISO file. Obviously, you need a USB drive with at least 4GB of storage.
 
-### Windows
+## Windows
 
 ---
 
@@ -19,7 +17,7 @@ If you are using a Windows machine, you can use Rufus to create a bootable USB d
 
     When using Rufus, make sure to select the `dd` mode to create a bootable USB drive. This will ensure that the USB drive is bootable on both UEFI and legacy BIOS systems.
 
-### Linux
+## Linux
 
 ---
 

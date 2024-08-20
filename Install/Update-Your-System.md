@@ -51,9 +51,3 @@ That's it! We recommend you to run those commands regularly to keep your system 
     sudo chmod +x /usr/local/bin/update.sh
     (crontab -l ; echo "0 2 * * 0 /usr/local/bin/update.sh") | crontab -
     ```
-
-## After installation
-
----
-
-After installing AnduinOS, you may want to [Avoid system sleep](./Avoid-System-Sleep.md) to keep your computer awake when necessary.

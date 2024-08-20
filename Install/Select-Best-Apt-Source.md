@@ -85,9 +85,3 @@ sudo apt update
 sudo apt install curl apt-transport-https -y
 switchSource
 ```
-
-## After switching the source
-
-After switching the APT source, you can run `sudo apt update` to update the package list.
-
-You may want to setup [sudo without password](./Allow-Sudo-Without-Password.md).

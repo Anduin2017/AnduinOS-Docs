@@ -30,3 +30,16 @@ After booting from the USB drive, you will see the AnduinOS installer screen. Yo
 - `Install AnduinOS`: This option will start the installation process. You can follow the on-screen instructions to install AnduinOS on your computer.
 
 Choose the option that suits your needs, and follow the on-screen instructions to install AnduinOS on your computer.
+
+## Installation Process
+
+The installation process will guide you through the following steps:
+
+1. **Select Language**: Choose the language you want to use during the installation process.
+2. **Select Keyboard Layout**: Choose the keyboard layout you want to use.
+3. **Updates and Other Software**: Choose whether you want to install updates and third-party software during the installation process.
+4. **Setup Disk**: Choose the disk where you want to install AnduinOS. You can also choose to encrypt the disk or use LVM.
+5. **Location**: Choose your location to set the time zone.
+6. **User Information**: Enter your name, username, and password for the new user account.
+7. **Installation**: The installation process will start, and you can see the progress on the screen.
+8. **Complete**: Once the installation is complete, you will be prompted to restart your computer.
