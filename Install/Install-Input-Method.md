@@ -51,7 +51,7 @@ You can also setup the input method manually.
 
 1. Open Settings, go to `Region & Language` -> `Manage Installed Languages` -> `Install / Remove languages`.
 2. Select `Chinese (Simplified)`. Make sure `Keyboard Input method system` has `Ibus` selected. Apply.
-3. Reboot (please don't think "this isn't necessary", just do it or you will waste more precious time!)
+3. Reboot (don't think "this isn't necessary"!)
 
 ### Install ibus-libpinyin (Optional)
 
