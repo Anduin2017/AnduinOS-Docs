@@ -61,7 +61,7 @@ For example, if you want to use `ibus-libpinyin` as the input method engine, you
 sudo apt install ibus-libpinyin
 ```
 
-You need to log out and log back in to make the input method available.
+You **need** to log out and log back in to make the input method available.
 
 Then, you can add `Intelligent Pinyin` as the input method.
 
@@ -77,7 +77,7 @@ For example, if you want to use `ibus-rime` as the input method engine, you can 
 sudo apt install ibus-rime
 ```
 
-You need to log out and log back in to make the input method available.
+You **need** to log out and log back in to make the input method available.
 
 Then, you can add `Rime` as the input method.
 
