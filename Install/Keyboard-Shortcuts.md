@@ -1,10 +1,5 @@
 # Keyboard Shortcuts
 
-## Input
-
-* Switch to the next input method: `Windows + Space`
-* Switch language in the input method: `Shift`
-
 ## Screenshots
 
 * Take a screenshot of the entire screen: `Shift + Print`

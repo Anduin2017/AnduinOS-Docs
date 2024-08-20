@@ -26,66 +26,23 @@ flowchart TD
     Rime -->|calls| Arime["anduinos-rime (Suggested)"]
 ```
 
-## Install AnduinOS-Rime as the Chinese Input Method
+## How to install AnduinOS-Rime as the Chinese input method
 
-For Chinese input method, we suggest you to install `ibus-rime` and `anduinos-rime`.
-
-```bash title="Install anduinos-rime"
-echo "Installing ibus-rime..."
-sudo apt install ibus-rime
-
-zip=https://gitlab.aiursoft.cn/aiursoft/anduinos-rime/-/archive/master/anduinos-rime-master.zip
-wget $zip -O anduinos-rime.zip && unzip anduinos-rime.zip && rm anduinos-rime.zip
-rsync -Aavx --update --delete ./anduinos-rime-master/assets/ ~/.config/ibus/rime/
-rm -rf anduinos-rime-master
-
-ibus restart
-ibus engine rime
-```
-
-## Manually manage the input method
-
-You can also setup the input method manually.
-
-### Configure ibus as the input method framework
-
-1. Open Settings, go to `Region & Language` -> `Manage Installed Languages` -> `Install / Remove languages`.
-2. Select `Chinese (Simplified)`. Make sure `Keyboard Input method system` has `Ibus` selected. Apply.
-3. Reboot (don't think "this isn't necessary"!)
-
-### Install ibus-libpinyin (Optional)
-
-For example, if you want to use `ibus-libpinyin` as the input method engine, you can install it by:
-
-```bash title="Install ibus-libpinyin"
-sudo apt install ibus-libpinyin
-```
-
-You **need** to log out and log back in to make the input method available.
-
-Then, you can add `Intelligent Pinyin` as the input method.
-
-1. Log back in, reopen Settings, go to `Keyboard`.
-2. Click on the "+" sign under `Input sources`.
-3. Select `Chinese (China)` and then `Chinese (Intelligent Pinyin)`.
-
-### Install rime (Optional)
-
-For example, if you want to use `ibus-rime` as the input method engine, you can install it by:
+To install AnduinOS-Rime, first, you need to install `ibus-rime`.
 
 ```bash title="Install ibus-rime"
 sudo apt install ibus-rime
 ```
 
-You **need** to log out and log back in to make the input method available.
+!!! note "Log out and log back in"
+
+    You **need** to log out and log back in to make the input method available.
 
 Then, you can add `Rime` as the input method.
 
-1. Log back in, reopen Settings, go to `Keyboard`.
+1. Log in, open `Settings`, go to `Keyboard`.
 2. Click on the "+" sign under `Input sources`.
 3. Select `Chinese (China)` and then `Chinese (Rime)`.
-
-By default, `ibus-rime` uses `rime-data-luna-pinyin` as the default input method engine. You can also install other input method engines like `anduinos-rime`.
 
 To install `anduinos-rime`, you can run the following command:
 
@@ -94,7 +51,12 @@ zip=https://gitlab.aiursoft.cn/aiursoft/anduinos-rime/-/archive/master/anduinos-
 wget $zip -O anduinos-rime.zip && unzip anduinos-rime.zip && rm anduinos-rime.zip
 rsync -Aavx --update --delete ./anduinos-rime-master/assets/ ~/.config/ibus/rime/
 rm -rf anduinos-rime-master
-
-ibus restart
-ibus engine rime
 ```
+
+!!! note "Log out and log back in"
+
+    You **need** to log out and log back in to make the input method available.
+
+Then, you can add `AnduinOS-Rime` as the input method.
+
+To switch between input methods, you can press `Windows + Space`.
