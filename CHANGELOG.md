@@ -3,6 +3,7 @@
 ## v0.2.1-beta
 
 * Added `fprintd` and `libpam-fprintd` to support fingerprint login.
+* Removed `gnome-tweaks` from the default app list to reduce to avoid distraction.
 
 ## v0.2.0-beta
 
