@@ -4,6 +4,7 @@
 
 * Added `fprintd` and `libpam-fprintd` to support fingerprint login.
 * Removed `gnome-tweaks` from the default app list to reduce to avoid distraction.
+* Use `gedit` to replace `gnome-text-editor` as the default text editor, because `gnome-text-editor` may having some issue with ibus.
 
 ## v0.2.0-beta
 
