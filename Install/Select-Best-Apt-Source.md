@@ -1,5 +1,7 @@
 # Select best apt source
 
+By default, AnduinOS may not selected the best APT source for you. You need to set the best APT source for your system to speed up the installation process.
+
 To select the best APT source for your system, run the following command in the terminal:
 
 ```bash title="Select best apt source"
