@@ -20,8 +20,8 @@ The dependency graph is as follows:
 
 ```mermaid
 flowchart TD
-    Aos[AnduinOS] -->|calls| Ibs(ibus)
     Aos[AnduinOS] -->|calls| Fcitx(fcitx)
+    Aos[AnduinOS] -->|calls| Ibs(ibus)
     Ibs -->|calls| Pin[ibus-libpinyin]
     Ibs -->|calls| Anthy[ibus-anthy]
     Ibs -->|calls| Oth["(Other ibus input methods...)"]
@@ -29,9 +29,9 @@ flowchart TD
     Rime -->|calls| Luna[rime-data-luna-pinyin]
     Rime -->|calls| Cangjie[rime-data-cangjie]
     Rime -->|calls| Ice[iDevel/rime-ice]
-    Rime -->|calls| Arime["anduinos-rime (Suggested)"]
+    Rime -->|calls| Arime["AnduinOS-Rime (Suggested)"]
 
-    style Arime fill:#3f3,stroke:#333,stroke-width:2px
+    style Arime fill:#1b3136,stroke:#00bfa5,stroke-width:2px
 ```
 
 ## How to install AnduinOS-Rime as the Chinese input method
