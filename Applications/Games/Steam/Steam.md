@@ -39,9 +39,11 @@ However, after installation, you will need to log in with your Steam account to 
 
 ## Enable Proton for Steam
 
-For some games which are not natively supported on Linux, you can use Proton to run them on Steam. Proton is a compatibility layer that allows Windows games to run on Linux-based operating systems. It is developed by Valve Corporation and is based on Wine and other community projects.
+For some games which are not natively supported on Linux, you can use Proton to run them on Steam.
 
-To enable Proton for Steam, you can follow these steps:
+Proton is a new tool released by Valve Software that has been integrated with Steam Play to make playing Windows games on Linux as simple as hitting the Play button within Steam. Underneath the hood, Proton comprises other popular tools like Wine and DXVK among others that a gamer would otherwise have to install and maintain themselves. This greatly eases the burden for users to switch to Linux without having to learn the underlying systems or losing access to a large part of their library of games. Proton is still in its infancy so support is inconsistent, but regularly improving.
+
+To enable Proton for a game on Steam, you can follow these steps:
 
 1. Open Steam and go to `Steam` > `Library`.
 2. Select the game you want to enable Proton for.
