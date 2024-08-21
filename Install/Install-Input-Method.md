@@ -30,6 +30,8 @@ flowchart TD
     Rime -->|calls| Cangjie[rime-data-cangjie]
     Rime -->|calls| Ice[iDevel/rime-ice]
     Rime -->|calls| Arime["anduinos-rime (Suggested)"]
+
+    style Arime fill:#3f3,stroke:#333,stroke-width:2px
 ```
 
 ## How to install AnduinOS-Rime as the Chinese input method
@@ -66,5 +68,7 @@ rm -rf anduinos-rime-master
     You **need** to log out and log back in to make the input method available.
 
 Now, you have set `AnduinOS-Rime` as your input method.
+
+![using-rime](./using-rime.png)
 
 To switch between input methods, you can press `Windows + Space`.
