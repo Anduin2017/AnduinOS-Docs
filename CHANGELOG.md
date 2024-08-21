@@ -1,5 +1,9 @@
 # AnduinOS Changelog
 
+## v0.2.2-beta
+
+* The homepage of firefox will be set to `https://anduinos.com/` by default.
+
 ## v0.2.1-beta
 
 * Added `fprintd` and `libpam-fprintd` to support fingerprint login.
@@ -76,7 +80,7 @@
 ## v0.1.0-beta-jammy
 
 * Removed `gnome-software`, `software-properties-gtk`, `ubuntu-pro-client`, `ubuntu-advantage-desktop-daemon`, `ubuntu-advantage-tools`, `ubuntu-pro-client-l10n`, `gnome-software-common`, `gnome-software-plugin-snap` to reduce the size of the ISO file.
-* Added a `Software-store` pointing to `https://anduinos-docs.aiursoft.cn/Applications/Introduction.html` in the start menu.
+* Added a `Software-store` pointing to `https://docs.aiursoft.cn/Applications/Introduction.html` in the start menu.
 * Patch `Ubiquity-slideshow` to show the AnduinOS introduction.
 * Patch the `/etc/casper.conf` to change the default live session username to `try-user` and hostname to `anduinos`.
 
