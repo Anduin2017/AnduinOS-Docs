@@ -10,6 +10,12 @@ For example:
 * If you choose `Japanese` as the default language, the installer will install [ibus-anthy](https://github.com/phuang/ibus-anthy) for you.
 * You can also install your own `ibus` input method engine. For example, `ibus-rime`.
 
+??? Tip "Why doesn't AnduinOS embed Rime input method by default?"
+
+    Rime is a powerful input method engine that supports multiple languages and input methods. It is widely used in China. However, Rime is not included in AnduinOS by default because not all users who use AnduinOS need Chinese input methods. Therefore, we recommend users who need Chinese input methods to install Rime manually.
+
+    If you don't prefer Rime, you can use other input methods like `ibus-libpinyin`.
+
 The dependency graph is as follows:
 
 ```mermaid
