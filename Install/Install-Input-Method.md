@@ -61,6 +61,9 @@ zip=https://gitlab.aiursoft.cn/anduin/anduinos-rime/-/archive/master/anduinos-ri
 wget $zip -O anduinos-rime.zip && unzip anduinos-rime.zip && rm anduinos-rime.zip
 rsync -Aavx --update --delete ./anduinos-rime-master/assets/ ~/.config/ibus/rime/
 rm -rf anduinos-rime-master
+ibus restart
+ibus engine rime
+echo "Please logout and login to start AnduinOS-Rime!"
 ```
 
 !!! note "Log out and log back in"
