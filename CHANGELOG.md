@@ -3,6 +3,7 @@
 ## v0.2.2-beta
 
 * The homepage of firefox will be set to `https://anduinos.com/` by default.
+* Slightly changed the text of ubiquity slideshow for better localization.
 
 ## v0.2.1-beta
 
