@@ -37,6 +37,23 @@ However, after installation, you will need to log in with your Steam account to 
 
     This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
 
+## Enable Proton for Steam
+
+For some games which are not natively supported on Linux, you can use Proton to run them on Steam. Proton is a compatibility layer that allows Windows games to run on Linux-based operating systems. It is developed by Valve Corporation and is based on Wine and other community projects.
+
+To enable Proton for Steam, you can follow these steps:
+
+1. Open Steam and go to `Steam` > `Library`.
+2. Select the game you want to enable Proton for.
+3. Right-click on the game and select `Properties`.
+4. Go to the `Compatibility` tab.
+5. Check the box that says `Force the use of a specific Steam Play compatibility tool`.
+6. Select the version of Proton you want to use from the dropdown menu.
+7. Click `Close` to save your changes.
+8. Launch the game to run it using Proton.
+
+![proton](./proton.png)
+
 ## Uninstall Steam
 
 To uninstall Steam from AnduinOS, you can run:
