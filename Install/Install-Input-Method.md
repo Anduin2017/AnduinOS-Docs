@@ -44,6 +44,8 @@ Then, you can add `Rime` as the input method.
 2. Click on the "+" sign under `Input sources`.
 3. Select `Chinese (China)` and then `Chinese (Rime)`.
 
+![select rime](./select-rime.png)
+
 To install `anduinos-rime`, you can run the following command:
 
 ```bash title="Install anduinos-rime"
