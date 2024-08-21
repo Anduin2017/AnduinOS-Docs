@@ -78,5 +78,5 @@ To switch between input methods, you can press `Windows + Space`.
     It is very suggested to uninstall the `ibus-libpinyin` package if you are using `AnduinOS-Rime`.
 
     ```bash title="Uninstall ibus-libpinyin"
-    sudo apt remove ibus-libpinyin --purge
+    sudo apt autoremove ibus-libpinyin --purge
     ```
