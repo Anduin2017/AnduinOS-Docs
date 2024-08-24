@@ -20,6 +20,22 @@ sudo adduser $USER libvirt
 sudo adduser $USER kvm
 ```
 
+You may also want to isntall `virt-viewer` to view the virtual machine console:
+
+```bash title="Install Virt Viewer"
+sudo apt install virt-viewer
+#cat << EOF > /usr/share/applications/virt-viewer.desktop
+echo "
+[Desktop Entry]
+Name=Virt Viewer
+Comment=Connect to virtual machines
+Exec=virt-viewer
+Icon=virt-viewer
+Terminal=false
+Type=Application
+Categories=System;" | sudo tee /usr/share/applications/virt-viewer.desktop
+```
+
 However, after installing Virt Manager, you may need to configure some settings to optimize the performance of your virtual machines.
 
 * Setting up IO-MMU
