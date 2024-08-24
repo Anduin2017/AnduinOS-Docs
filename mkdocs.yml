@@ -199,6 +199,7 @@ nav:
         - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
         - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
+        - GameConqueror: ./Applications/Utilities/GameConqueror/GameConqueror.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
