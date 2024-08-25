@@ -233,3 +233,6 @@ nav:
     - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
     - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
     - SqlServer: ./Servicing/SqlServer/SqlServer.md
+
+  - Virtualization:
+    - Windows: ./Virtualization/Windows.md
