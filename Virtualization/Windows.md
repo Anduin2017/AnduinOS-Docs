@@ -716,4 +716,6 @@ Or you can add the following lines to the XML configuration:
 
 Now start the guest machine and install [spice-webdav](https://www.spice-space.org/download/windows/spice-webdavd/) on the guest machine. After installing spice-webdav make sure the `Spice webdav proxy` service is actually running (via services.msc).
 
-Now running `C:\Program File\SPICE webdavd\map-drive.bat` will map the shared folder, which is by default `~/Public`.
+Now you **must** use the `virt-viewer` to open the virtual machine. To mount the shared folder, you can click on `File` -> `Preferences` -> `Spice` -> `Folder Sharing` and add the shared folder.
+
+Run `C:\Program File\SPICE webdavd\map-drive.bat` will map the shared folder, which is by default `~/Public`.
