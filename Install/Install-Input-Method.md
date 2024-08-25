@@ -54,6 +54,13 @@ Then, you can add `Rime` as the input method.
 
 ![select rime](./select-rime.png)
 
+Or even easier, you can run the following command to add `Rime` as the input method.
+
+```bash title="Add Rime as the input method"
+dconf write /org/gnome/desktop/input-sources/mru-sources "[('xkb', 'us'), ('ibus', 'rime')]"
+dconf write /org/gnome/desktop/input-sources/sources "[('xkb', 'us'), ('ibus', 'rime')]"
+```
+
 To install `anduinos-rime`, you can run the following command:
 
 ```bash title="Install anduinos-rime"
