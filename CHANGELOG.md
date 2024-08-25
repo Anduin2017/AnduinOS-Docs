@@ -4,6 +4,7 @@
 
 * The homepage of firefox will be set to `https://anduinos.com/` by default.
 * Slightly changed the text of ubiquity slideshow for better localization.
+* Support multiple languages iso file. (Chinese, English)
 
 ## v0.2.1-beta
 
