@@ -41,3 +41,35 @@ sha256sum ./AnduinOS.iso
 ```
 
 Please compare the output of the `sha256sum` command with the checksum provided on the releases page (File ends with `.sha256`). If the checksums match, the ISO file is valid and has not been tampered with.
+
+## FAQ: What's the difference between different language versions?
+
+For example, you may see iso versions like this:
+
+* AnduinOS-0.2.2-beta-en_US-2408250718.iso
+* AnduinOS-0.2.2-beta-zh_CN-2408250659.iso
+
+There are a few differences between different language versions:
+
+* Installed language packs are different. For example, `zh_CN` version will have Chinese language packs installed by default.
+* Installed input methods are different. For example, `zh_CN` version will have Chinese input methods installed by default.
+* Environment variables are different. Including: `LANG`, `LC_ALL`, `LANGUAGE`.
+  * `/etc/default/locale` is different. Providing different default values for `LANG`, `LC_ALL`, `LANGUAGE`.
+  * `/etc/skel/.pam_environment` is different. Providing different default values for `LANG`, `LC_ALL`, `LANGUAGE`.
+* Timezone is different. `zh_CN` version will use `Asia/Shanghai` by default.
+* Default apt mirror is different. `zh_CN` version will use Chinese mirrors by default.
+
+!!! note "You can still switch the language after installation"
+
+    You can switch the language after installation. The difference is only for the default settings.
+
+    For example, if you downloaded `en_US` version but you want to use Chinese language, you can install Chinese language packs and input methods after installation. Internet connection is required.
+
+    ```bash
+    sudo apt update
+    sudo apt install language-pack-zh* language-pack-gnome-zh*
+    sudo apt install ibus-rime
+    sudo timedatectl set-timezone Asia/Shanghai
+    ```
+
+    Then, you can switch the language in the settings.
