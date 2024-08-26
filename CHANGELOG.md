@@ -1,5 +1,12 @@
 # AnduinOS Changelog
 
+## v0.3.0-rc
+
+* Based on language, will auto install the corresponding input method.
+* Based on language, will auto select the corresponding apt mirror.
+* Based on language, will auto select the corresponding timezone.
+* The `LANG` environment variable will be patched to `/etc/default/locale` and `/etc/skel/.pam_environment`.
+
 ## v0.2.2-beta
 
 * The homepage of firefox will be set to `https://anduinos.com/` by default.
