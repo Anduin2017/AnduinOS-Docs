@@ -52,3 +52,22 @@ This section provides a list of keyboard shortcuts that can be used in the Andui
 * Toggle zoom feature: `Windows + <Backspace ←>` (Enabling this feature will slightly impact the performance of the system)
 * Zoom in: `Windows + +`
 * Zoom out: `Windows + -`
+
+## File manager
+
+* Rename a file: `F2`
+* Delete a file: `Delete`
+* Delete a file permanently: `Shift + Delete`
+* Quick preview of a file: `Space`
+* Go to a specific folder:
+  * `Ctrl + L` + Type the path.
+  * Or directly type `/` or `~` to go to the root or home directory.
+* Toggle show or hide hidden files: `Ctrl + H`
+* Show files as a list: `Ctrl + 1`
+* Show files as a grid: `Ctrl + 2`
+* Edit the properties of a file: `Alt + Enter`
+* Create a new folder: `Ctrl + Shift + N`
+* Open current folder in a new Window: `Ctrl + N`
+* Open current folder in a new tab: `Ctrl + T`
+* Close the current tab: `Ctrl + W`
+* Close all instances of the file manager: `Ctrl + Q`
