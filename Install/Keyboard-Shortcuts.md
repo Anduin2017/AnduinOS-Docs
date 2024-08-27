@@ -4,6 +4,8 @@ Keyboard shortcuts are a combination of keys that can be pressed to perform a ta
 
 This section provides a list of keyboard shortcuts that can be used in the AnduinOS desktop environment.
 
+We strongly recommend learning and using these shortcuts to improve your productivity and efficiency while using the system.
+
 ## System
 
 * Lock the screen: `Windows + L`
