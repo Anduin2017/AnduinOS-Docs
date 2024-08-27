@@ -1,5 +1,21 @@
 # Keyboard Shortcuts
 
+Keyboard shortcuts are a combination of keys that can be pressed to perform a task that would typically require a mouse or other pointing device. They are designed to make it easier and faster to interact with the operating system and applications.
+
+This section provides a list of keyboard shortcuts that can be used in the AnduinOS desktop environment.
+
+## System
+
+* Lock the screen: `Windows + L`
+* Open the system menu: `Windows`
+
+## Applications
+
+* Open the terminal: `Ctrl + Alt + T`
+* Open the file manager: `Windows + E`
+* Open the settings: `Windows + I`
+* Open the search: `Windows + S`
+
 ## Screenshots
 
 * Take a screenshot of the entire screen: `Shift + Print`
