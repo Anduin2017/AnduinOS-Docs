@@ -23,7 +23,7 @@ cd ~/Downloads
 sudo apt update
 sudo apt install aria2
 wget https://download.anduinos.com/AnduinOS.latest.torrent -O AnduinOS.latest.torrent
-aria2c -x 16 -s 16 AnduinOS.latest.torrent
+aria2c AnduinOS.latest.torrent
 ```
 
 For Windows users, you can use `qBittorrent` to download the ISO file.
