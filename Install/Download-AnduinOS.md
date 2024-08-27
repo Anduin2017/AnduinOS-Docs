@@ -53,23 +53,14 @@ There are a few differences between different language versions:
 
 * Installed language packs are different. For example, `zh_CN` version will have Chinese language packs installed by default.
 * Installed input methods are different. For example, `zh_CN` version will have Chinese input methods installed by default.
-* Environment variables are different. Including: `LANG`, `LC_ALL`, `LANGUAGE`.
-  * `/etc/default/locale` is different. Providing different default values for `LANG`, `LC_ALL`, `LANGUAGE`.
-  * `/etc/skel/.pam_environment` is different. Providing different default values for `LANG`, `LC_ALL`, `LANGUAGE`.
+* Environment variables are different. Including: `LANG`, `LANGUAGE`.
 * Timezone is different. `zh_CN` version will use `Asia/Shanghai` by default.
 * Default apt mirror is different. `zh_CN` version will use Chinese mirrors by default.
 
-!!! note "You can still switch the language after installation"
+!!! note "You can still switch the language during or after the installation"
 
     You can switch the language after installation. The difference is only for the default settings.
 
     For example, if you downloaded `en_US` version but you want to use Chinese language, you can install Chinese language packs and input methods after installation. Internet connection is required.
 
-    ```bash
-    sudo apt update
-    sudo apt install language-pack-zh* language-pack-gnome-zh*
-    sudo apt install ibus-rime
-    sudo timedatectl set-timezone Asia/Shanghai
-    ```
-
-    Then, you can switch the language in the settings.
+    To switch the language, please refer to the [Change system language](./Switch-To-Your-Language.md) guide.
