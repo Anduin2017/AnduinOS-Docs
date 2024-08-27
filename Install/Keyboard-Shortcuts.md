@@ -30,3 +30,9 @@
 * Overview all windows: `Windows + Tab`
 * Switch between windows: `Alt + Tab`
 * Fullscreen for the current window: `Windows + F11` (Some apps may natively support `F11` for fullscreen)
+
+## Accessibility
+
+* Toggle zoom feature: `Windows + <Backspace ←>` (Enabling this feature will slightly impact the performance of the system)
+* Zoom in: `Windows + +`
+* Zoom out: `Windows + -`
