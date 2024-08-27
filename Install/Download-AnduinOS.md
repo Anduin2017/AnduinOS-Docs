@@ -57,10 +57,10 @@ There are a few differences between different language versions:
 * Timezone is different. `zh_CN` version will use `Asia/Shanghai` by default.
 * Default apt mirror is different. `zh_CN` version will use Chinese mirrors by default.
 
-!!! note "You can still switch the language during or after the installation"
+!!! note "You can still switch the language before or after the installation"
 
-    You can switch the language after installation. The difference is only for the default settings.
+    You can still switch the language before or after the installation. The only difference is the default settings.
 
-    For example, if you downloaded `en_US` version but you want to use Chinese language, you can install Chinese language packs and input methods after the installation. Internet connection is required.
+    For example, if you downloaded `en_US` version but you want to use Chinese language, you can install Chinese language packs and input methods after the installation. Or you can just select Chinese language during the installation process. Internet connection is required.
 
     To switch the language, please refer to the [Change system language](./Switch-To-Your-Language.md) guide.
