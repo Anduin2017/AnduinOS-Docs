@@ -61,6 +61,6 @@ There are a few differences between different language versions:
 
     You can switch the language after installation. The difference is only for the default settings.
 
-    For example, if you downloaded `en_US` version but you want to use Chinese language, you can install Chinese language packs and input methods after installation. Internet connection is required.
+    For example, if you downloaded `en_US` version but you want to use Chinese language, you can install Chinese language packs and input methods after the installation. Internet connection is required.
 
     To switch the language, please refer to the [Change system language](./Switch-To-Your-Language.md) guide.
