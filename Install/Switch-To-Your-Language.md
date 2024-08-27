@@ -62,13 +62,13 @@ If you are using a non-English language, you may need to install the correct inp
 
 For example, if you are using the Japanese language, you can install the `ibus-anthy` input method by running the following command:
 
-```bash
+```bash title="Install Japanese input method anthy"
 sudo apt install ibus-anthy
 ```
 
 If you are using the Chinese language, you can install the `ibus-rime` input method by running the following command:
 
-```bash
+```bash title="Install Chinese input method rime"
 sudo apt install ibus-rime
 ```
 
@@ -82,19 +82,19 @@ You may also want to switch the timezone to your local timezone. You can do this
 
 Or if you want to switch the timezone using the command line, you can run the following command:
 
-```bash
+```bash title="Switch to Japanese timezone"
 sudo timedatectl set-timezone Asia/Tokyo
 ```
 
 If you want to switch to the Chinese timezone, you can run the following command:
 
-```bash
+```bash title="Switch to Chinese timezone"
 sudo timedatectl set-timezone Asia/Shanghai
 ```
 
 To view available timezones, you can run the following command:
 
-```bash
+```bash title="List available timezones"
 ls /usr/share/zoneinfo -R
 ```
 
