@@ -57,7 +57,7 @@ services:
         protocol: tcp
         mode: host
     environment:
-      - OVERRIDE_API_URL=http://localhost:8000/
+      - OVERRIDE_API_URL=http://localhost:8000
 
   server:
     image: hub.aiursoft.cn/edgeneko/neko-image-gallery:edge-cpu
