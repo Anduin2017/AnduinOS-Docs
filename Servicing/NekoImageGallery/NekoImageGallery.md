@@ -57,7 +57,7 @@ services:
         protocol: tcp
         mode: host
     environment:
-      - OVERRIDE_API_URL=http://localhost:8000/api
+      - OVERRIDE_API_URL=http://localhost:8000/
 
   server:
     image: hub.aiursoft.cn/edgeneko/neko-image-gallery:edge-cpu
@@ -124,6 +124,8 @@ sudo mkdir -p /swarm-vol/neko-image-gallery/local_images
 You need to create two secrets for the service. Run the following commands to create the secrets:
 
 ```bash title="Create secrets"
+sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
+
 function create_secret() {
     secret_name=$1
     known_secrets=$(sudo docker secret ls --format '{{.Name}}')
@@ -141,7 +143,6 @@ create_secret neko-image-gallery-admin-token
 Then, deploy the service:
 
 ```bash title="Deploy the service"
-sudo docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 sudo docker stack deploy -c docker-compose.yml neko-image-gallery --detach
 ```
 
@@ -150,6 +151,21 @@ That's it! You have successfully hosted NekoImageGallery on AnduinOS.
 You can access NekoImageGallery by visiting `http://localhost:5000` in your browser.
 
 The default password is set as the secret you created during the deployment.
+
+## Import photos
+
+To view photos in the gallery, you need to copy photos to the gallery folder. The gallery folder is located at `/swarm-vol/neko-image-gallery/local_images/`.
+
+```bash title="Copy photos to the gallery"
+sudo cp -r /path/to/your/photos/* /swarm-vol/neko-image-gallery/local_images/
+```
+
+Then you need to let the service know that there are new photos in the gallery. You can do this by re-indexing the gallery. To re-index the gallery, run the following commands:
+
+```bash title="Re-index the gallery"
+containerId=$(sudo docker ps -qf "name=neko-image-gallery_server")
+sudo docker exec -it $containerId python main.py local-index /opt/NekoImageGallery/static
+```
 
 ## Uninstall
 
