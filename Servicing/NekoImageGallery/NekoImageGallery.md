@@ -84,7 +84,6 @@ services:
         target: app_access_token
       - source: neko-image-gallery-admin-token
         target: app_admin_token
-    command: ["--root-path", "/api"]
 
   qdrant_database:
     image: qdrant/qdrant
@@ -157,7 +156,7 @@ The default password is set as the secret you created during the deployment.
 To view photos in the gallery, you need to copy photos to the gallery folder. The gallery folder is located at `/swarm-vol/neko-image-gallery/local_images/`.
 
 ```bash title="Copy photos to the gallery"
-sudo cp -r /path/to/your/photos/* /swarm-vol/neko-image-gallery/local_images/
+sudo cp -v /path/to/your/photos/* /swarm-vol/neko-image-gallery/local_images/
 ```
 
 Then you need to let the service know that there are new photos in the gallery. You can do this by re-indexing the gallery. To re-index the gallery, run the following commands:
