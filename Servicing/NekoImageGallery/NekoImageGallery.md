@@ -60,7 +60,7 @@ services:
       - OVERRIDE_API_URL=http://localhost:8000
 
   server:
-    image: hub.aiursoft.cn/edgeneko/neko-image-gallery:edge-cpu
+    image: hub.aiursoft.cn/edgeneko/neko-image-gallery:latest-cpu
     ports:
       - target: 8000
         published: 8000
@@ -153,18 +153,17 @@ The default password is set as the secret you created during the deployment.
 
 ## Import photos
 
-To view photos in the gallery, you need to copy photos to the gallery folder. The gallery folder is located at `/swarm-vol/neko-image-gallery/local_images/`.
+You can upload photos to NekoImageGallery through the web portal.
 
-```bash title="Copy photos to the gallery"
-sudo cp -v /path/to/your/photos/* /swarm-vol/neko-image-gallery/local_images/
-```
+To get started, visit http://localhost:5000. Click the `Settings` button located at the top right corner. Enable the `Use admin portal` option by toggling the switch, and then enter the admin token you previously set, as shown below:
 
-Then you need to let the service know that there are new photos in the gallery. You can do this by re-indexing the gallery. To re-index the gallery, run the following commands:
+![settings](settings.png)
 
-```bash title="Re-index the gallery"
-containerId=$(sudo docker ps -qf "name=neko-image-gallery_server")
-sudo docker exec -it $containerId python main.py local-index /opt/NekoImageGallery/static
-```
+Next, click the `Upload` button at the top right corner. Select the images you wish to upload, and then click `Upload`. Your images will be uploaded to the server and queued for indexing. Once the images are indexed, they will appear in the search results.
+
+![upload](upload.png)
+
+You can checkout the [official documentation](https://github.com/hv0905/NekoImageGallery?tab=readme-ov-file#upload-images-to-nekoimagegallery) for more information.
 
 ## Uninstall
 
