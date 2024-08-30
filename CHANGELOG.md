@@ -6,8 +6,8 @@
 * Add default world clock with `Seattle`, `Beijing`, `New York` and `GMT`.
 * Ubiquity slides-show was localized for all supported languages.
 * Built ISO root folder will have a `README.md` file to show the version number.
-* Removed packages: `iotop`, `iftop`, `tree`, `w3m`, `sysbench`, `nethogs`, `iperf3`, `dmz-cursor-theme`. (Users can install them manually via `sudo apt install`)
-* Added packages: `gnome-characters`, `gnome-font-viewer`, `gnome-chess`, `gnome-mines`, `gnome-sudoku`.
+* Removed packages: `aisleriot`, `iotop`, `iftop`, `tree`, `w3m`, `sysbench`, `nethogs`, `iperf3`, `dmz-cursor-theme`. (Users can install them manually via `sudo apt install`)
+* Added packages: `gnome-characters`, `gnome-font-viewer`, `gnome-chess`.
 
 ## v0.3.0-rc
 
