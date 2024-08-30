@@ -110,6 +110,7 @@ nav:
   - Home:
     - Documentation: README.md
     - Change Log: CHANGELOG.md
+    - Known Issues: KNOWN_ISSUES.md
     - License: LICENSE.md
   - Install:
     - Installing AnduinOS:
