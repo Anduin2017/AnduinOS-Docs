@@ -184,6 +184,7 @@ nav:
         - Pinta: ./Applications/Media-Editing/Pinta/Pinta.md
         - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
         - Blender: ./Applications/Media-Editing/Blender/Blender.md
+        - Inkscape: ./Applications/Media-Editing/Inkscape/Inkscape.md
 
       - Office:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
@@ -201,6 +202,7 @@ nav:
         - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
         - GameConqueror: ./Applications/Utilities/GameConqueror/GameConqueror.md
+        - Cool Retro Term: ./Applications/Utilities/Cool-Retro-Term/Cool-Retro-Term.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
