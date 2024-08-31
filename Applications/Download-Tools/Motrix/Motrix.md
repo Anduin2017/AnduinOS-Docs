@@ -9,6 +9,7 @@ To install Motrix on AnduinOS, you can run:
 ```bash
 wget https://dl.motrix.app/release/Motrix_1.8.19_amd64.deb
 sudo dpkg -i Motrix_1.8.19_amd64.deb
+sudo apt install --fix-broken -y
 rm Motrix_1.8.19_amd64.deb
 ```
 

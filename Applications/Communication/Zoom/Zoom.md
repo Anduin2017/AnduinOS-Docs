@@ -7,6 +7,7 @@ To install Zoom on AnduinOS, you can run the following commands in the terminal:
 ```bash
 wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
 sudo dpkg -i zoom.deb
+sudo apt install --fix-broken -y
 rm zoom.deb
 ```
 

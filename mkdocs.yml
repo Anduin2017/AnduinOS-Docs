@@ -169,6 +169,7 @@ nav:
         - WeChat: ./Applications/Communication/WeChat/WeChat.md
         - QQ: ./Applications/Communication/QQ/QQ.md
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
+        - Slack: ./Applications/Communication/Slack/Slack.md
 
       - Internet Services:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
