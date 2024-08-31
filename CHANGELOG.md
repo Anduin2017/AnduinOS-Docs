@@ -8,6 +8,8 @@
 * Built ISO root folder will have a `README.md` file to show the version number.
 * Removed packages: `aisleriot`, `iotop`, `iftop`, `tree`, `w3m`, `sysbench`, `nethogs`, `iperf3`, `dmz-cursor-theme`. (Users can install them manually via `sudo apt install`)
 * Added packages: `gnome-characters`, `gnome-font-viewer`, `gnome-chess`.
+* Login page will use `Fluent` cursor theme by default.
+* Default apt mirror for United States switch to `http://archive.ubuntu.com/ubuntu/` considering this version may be used by global users.
 
 ## v0.3.0-rc
 
