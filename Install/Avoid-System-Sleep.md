@@ -79,7 +79,8 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 
 Default settings for AnduinOS:
 
 * Auto dim after inactivity: 15 minutes
-* Auto sleep after inactivity: 30 minutes
+* Auto sleep after inactivity: 20 minutes (Battery)
+* Auto sleep after inactivity: 30 minutes (AC Power)
 * Lock screen right after screen is blanked.
 * Power button action: Suspend(sleep)
 * Lid close action: Suspend(sleep)
@@ -91,6 +92,8 @@ Default settings for AnduinOS:
 | org.gnome.settings-daemon.plugins.power        | idle-brightness                          | The brightness level (percentage) when the screen is dimmed due to inactivity.                     | 30                         |
 | org.gnome.settings-daemon.plugins.power        | sleep-inactive-ac-timeout                | The time in seconds before the system automatically suspends when inactive and on AC power.        | 1800                       |
 | org.gnome.settings-daemon.plugins.power        | sleep-inactive-ac-type                   | The action performed when the system is inactive and on AC power.                                  | 'suspend'                  |
+| org.gnome.settings-daemon.plugins.power        | sleep-inactive-battery-timeout           | The time in seconds before the system automatically suspends when inactive and on battery power.   | 1200                       |
+| org.gnome.settings-daemon.plugins.power        | sleep-inactive-battery-type              | The action performed when the system is inactive and on battery power.                             | 'suspend'                  |
 | org.gnome.settings-daemon.plugins.power        | power-button-action                      | The action performed when the power button is pressed.                                             | 'suspend'                  |
 | org.gnome.settings-daemon.plugins.power        | lid-close-ac-action                      | The action performed when the laptop lid is closed while on AC power.                              | 'suspend'                  |
 | org.gnome.settings-daemon.plugins.power        | lid-close-suspend-with-external-monitor  | Disables suspend when the laptop lid is closed with an external monitor connected.                 | false                      |
