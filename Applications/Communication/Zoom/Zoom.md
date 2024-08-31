@@ -11,10 +11,6 @@ sudo apt install --fix-broken -y
 rm zoom.deb
 ```
 
-!!! warning "The link above may be outdated"
-
-    The link above may be outdated. Please visit the [official website](https://zoom.us/download?os=linux) to get the latest version.
-
 !!! warning "Unable to automatically upgrade this application"
 
     The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
