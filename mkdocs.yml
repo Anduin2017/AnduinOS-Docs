@@ -165,6 +165,7 @@ nav:
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
 
       - Communication:
+        - Telegram: ./Applications/Communication/Telegram/Telegram.md
         - WeChat: ./Applications/Communication/WeChat/WeChat.md
         - QQ: ./Applications/Communication/QQ/QQ.md
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
