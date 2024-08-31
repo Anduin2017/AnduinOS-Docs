@@ -10,6 +10,7 @@ We strongly recommend learning and using these shortcuts to improve your product
 
 * Lock the screen: `Windows + L`
 * Open the system menu: `Windows`
+* Toggle display network state on taskbar: `Windows + U`
 
 ## Applications
 
