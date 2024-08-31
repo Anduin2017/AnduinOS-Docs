@@ -170,6 +170,7 @@ nav:
         - QQ: ./Applications/Communication/QQ/QQ.md
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
         - Slack: ./Applications/Communication/Slack/Slack.md
+        - Discord: ./Applications/Communication/Discord/Discord.md
 
       - Internet Services:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
