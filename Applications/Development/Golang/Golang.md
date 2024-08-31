@@ -2,7 +2,25 @@
 
 Go is a statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson.
 
-To Install Golang on AnduinOS, first download a tar.gz package form [here](https://go.dev/dl). Then you need to extract the tar.gz file into `/usr/local`:
+To Install Golang on AnduinOS, run the following commands:
+
+```bash
+sudo apt install golang-go
+```
+
+This will install golang 1.18 on your system. And set the following environment variables to you:
+
+```bash
+GOROOT="/usr/lib/go-1.18"
+GOPATH="$HOME/go" # The HOME was set to be current user who run the installation command
+GO111MODULE=""
+```
+
+Also, this package will create a symbolic at `/usr/bin/go` and `/bin/go`.
+
+---
+
+If you want a newest version of golang, first download a tar.gz package form [here](https://go.dev/dl). Then you need to extract the tar.gz file into `/usr/local`:
 
 <!-- The link needs to be updated regularly. -->
 
