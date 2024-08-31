@@ -1,4 +1,4 @@
-# Avoid System Sleep
+# Configure auto lock, auto screen blanking, and auto sleep settings
 
 In some cases, you might need your computer always to be awake. For example, you might need to download a large file, run a long-running task, or keep your computer awake for a presentation. In this guide, we will show you how to avoid system sleep on AnduinOS.
 
@@ -56,6 +56,7 @@ To avoid system sleep using the terminal, you can run the following command:
 
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 ```
 
 This command will prevent the system from sleeping when the computer is inactive while connected to AC power.
@@ -64,6 +65,7 @@ To revert the changes, you can run the following command:
 
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
 ```
 
 This command will allow the system to sleep when the computer is inactive while connected to AC power.
@@ -72,6 +74,7 @@ Also, you can set how long the system should wait before going to sleep when the
 
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout <time-in-seconds>
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout <time-in-seconds>
 ```
 
 ## References
