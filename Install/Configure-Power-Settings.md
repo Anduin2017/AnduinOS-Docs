@@ -1,6 +1,17 @@
 # Configure auto lock, auto screen blanking, and auto sleep settings
 
-In some cases, you might need your computer always to be awake. For example, you might need to download a large file, run a long-running task, or keep your computer awake for a presentation. In this guide, we will show you how to avoid system sleep on AnduinOS.
+In some cases, you might need your computer always to be awake. For example, you might need to download a large file, run a long-running task, or keep your computer awake for a presentation. In this guide, we will show you how to avoid system sleep, keep screen awake, and avoid auto lock.
+
+## Default settings
+
+Default settings for AnduinOS:
+
+* Auto dim after inactivity: 15 minutes
+* Lock screen right after screen is blanked
+* Auto sleep after inactivity: 20 minutes (Battery)
+* Auto sleep after inactivity: 30 minutes (AC Power)
+* Power button action: Suspend(sleep)
+* Lid close action: Suspend(sleep)
 
 ## Configure auto lock settings
 
@@ -78,15 +89,6 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-tim
 ```
 
 ## References
-
-Default settings for AnduinOS:
-
-* Auto dim after inactivity: 15 minutes
-* Auto sleep after inactivity: 20 minutes (Battery)
-* Auto sleep after inactivity: 30 minutes (AC Power)
-* Lock screen right after screen is blanked.
-* Power button action: Suspend(sleep)
-* Lid close action: Suspend(sleep)
 
 | Settings Path                                  | Settings Key                             | Explanation                                                                                        | Default Value              |
 | ---------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------- |
