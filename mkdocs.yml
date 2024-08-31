@@ -164,9 +164,12 @@ nav:
         - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
 
+      - Communication:
+        - WeChat: ./Applications/Communication/WeChat/WeChat.md
+        - QQ: ./Applications/Communication/QQ/QQ.md
+        - Zoom: ./Applications/Communication/Zoom/Zoom.md
+
       - Internet Services:
-        - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
-        - QQ: ./Applications/Internet-Services/QQ/QQ.md
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 
