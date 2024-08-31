@@ -1,29 +1,13 @@
 # Golang
 
-Go is a statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson.
+!!! tip "AnduinOS Verified App - Open Source"
 
-To Install Golang on AnduinOS, first download a tar.gz package form [here](https://go.dev/dl). Then you need to extract the tar.gz file into `/usr/local`:
+    Golang is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
 
-<!-- The link needs to be updated regularly. -->
+Go is an open-source programming language that makes it easy to build simple, reliable, and efficient software. It is a statically typed language with syntax loosely derived from that of C, adding garbage collection, type safety, some dynamic-typing capabilities, additional built-in types such as variable-length arrays and key-value maps, and a large standard library.
 
-```bash
-wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
-rm go1.22.5.linux-amd64.tar.gz
-```
-
-!!! warning "The link above may be outdated"
-
-    The link above may be outdated. Please visit the [official website](https://go.dev/dl/) to get the latest version.
-
-After extract the binary file, add some environment variables into `$HOME/.bashrc`
+To Install Golang on AnduinOS, run the following commands:
 
 ```bash
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/.golang
-export PATH=$GOROOT/bin:$PATH
-export PATH=$GOPATH/bin:$PATH
-export GO111MODULE=on
-# optional
-# export GOPROXY=https://goproxy.cn
+sudo apt install golang-go
 ```

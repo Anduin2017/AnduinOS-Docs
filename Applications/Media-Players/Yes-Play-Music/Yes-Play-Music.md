@@ -9,6 +9,7 @@ To Install Yes-Play-Music on AnduinOS, first download a deb package from [here](
 ```bash
 wget https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/yesplaymusic_0.4.8_amd64.deb -O yesplaymusic.deb
 sudo dpkg -i yesplaymusic.deb
+sudo apt install --fix-broken -y
 rm yesplaymusic.deb
 ```
 

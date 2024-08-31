@@ -16,6 +16,18 @@ AnduinOS is built on the Ubuntu Jammy package base.
 
 To install AnduinOS, you can follow the instructions in the [Installation Guide](./Install/./System-Requirements.md).
 
+## What need to be done after installing AnduinOS?
+
+After installing AnduinOS, you may need to do some post-installation configurations. You can follow the instructions in the following guides:
+
+* [Select best apt source](./Install/Select-Best-Apt-Source.md)
+* [Install Drivers](./Install/Install-Drivers.md)
+* [Install input method](./Install/Install-Input-Method.md)
+* [Update your system](./Install/Update-Your-System.md)
+* [Switch to your language](./Install/Switch-To-Your-Language.md)
+* [Update firmware](./Install/Upgrade-Firmware.md)
+* [Install applications](./Applications/Introduction.md)
+
 ## How to install applications on AnduinOS?
 
 To install applications on AnduinOS, you can follow the instructions in the [Applications Guide](./Applications/Introduction.md).

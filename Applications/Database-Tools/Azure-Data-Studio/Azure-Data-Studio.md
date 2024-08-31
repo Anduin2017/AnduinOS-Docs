@@ -8,6 +8,7 @@ To install Azure Data Studio on AnduinOS, run the following commands.
 url=https://go.microsoft.com/fwlink/?linkid=2275602
 curl -fsSL $url -o azure-data-studio.deb
 sudo dpkg -i azure-data-studio.deb
+sudo apt install --fix-broken -y
 rm azure-data-studio.deb
 ```
 

@@ -2,7 +2,7 @@
 
 First, [download the latest release of AnduinOS](./Download-AnduinOS.md).
 
-Then, create a bootable USB drive with the downloaded ISO file. Obviously, you need a USB drive with at least 4GB of storage.
+Then, create a bootable USB drive with the downloaded ISO file. Obviously, you need a USB drive with at least 2GB of storage.
 
 ## Windows
 

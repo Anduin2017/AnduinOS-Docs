@@ -73,6 +73,7 @@ Then, you can install the .deb package by running:
 
 ```bash
 sudo dpkg -i insomnia.deb
+sudo apt install --fix-broken -y
 ```
 
 !!! warning "Unable to automatically upgrade this application"

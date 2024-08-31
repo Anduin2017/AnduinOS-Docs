@@ -110,6 +110,7 @@ nav:
   - Home:
     - Documentation: README.md
     - Change Log: CHANGELOG.md
+    - Known Issues: KNOWN_ISSUES.md
     - License: LICENSE.md
   - Install:
     - Installing AnduinOS:
@@ -123,6 +124,7 @@ nav:
       - Install Drivers: ./Install/Install-Drivers.md
       - Install input method: ./Install/Install-Input-Method.md
       - Update your system: ./Install/Update-Your-System.md
+      - Switch To Your Language: ./Install/Switch-To-Your-Language.md
       - Update firmware: ./Install/Upgrade-Firmware.md
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
     - Learning AnduinOS:
@@ -162,9 +164,15 @@ nav:
         - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
 
+      - Communication:
+        - Telegram: ./Applications/Communication/Telegram/Telegram.md
+        - WeChat: ./Applications/Communication/WeChat/WeChat.md
+        - QQ: ./Applications/Communication/QQ/QQ.md
+        - Zoom: ./Applications/Communication/Zoom/Zoom.md
+        - Slack: ./Applications/Communication/Slack/Slack.md
+        - Discord: ./Applications/Communication/Discord/Discord.md
+
       - Internet Services:
-        - WeChat: ./Applications/Internet-Services/WeChat/WeChat.md
-        - QQ: ./Applications/Internet-Services/QQ/QQ.md
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
 
@@ -183,6 +191,7 @@ nav:
         - Pinta: ./Applications/Media-Editing/Pinta/Pinta.md
         - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
         - Blender: ./Applications/Media-Editing/Blender/Blender.md
+        - Inkscape: ./Applications/Media-Editing/Inkscape/Inkscape.md
 
       - Office:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
@@ -199,6 +208,8 @@ nav:
         - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
         - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
+        - GameConqueror: ./Applications/Utilities/GameConqueror/GameConqueror.md
+        - Cool Retro Term: ./Applications/Utilities/Cool-Retro-Term/Cool-Retro-Term.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
@@ -230,5 +241,9 @@ nav:
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
     - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
+    - NekoImageGallery: ./Servicing/NekoImageGallery/NekoImageGallery.md
     - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
     - SqlServer: ./Servicing/SqlServer/SqlServer.md
+
+  - Virtualization:
+    - Windows: ./Virtualization/Windows.md

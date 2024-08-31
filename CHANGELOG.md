@@ -1,10 +1,37 @@
 # AnduinOS Changelog
 
+## v0.3.1-rc
+
+* The default city for weather will be set to corresponding to the locale of the build.
+* Add default world clock with `Seattle`, `Beijing`, `New York` and `GMT`.
+* Ubiquity slides-show was localized for all supported languages.
+* Built ISO root folder will have a `README.md` file to show the version number.
+* Removed packages: `aisleriot`, `iotop`, `iftop`, `tree`, `w3m`, `sysbench`, `nethogs`, `iperf3`, `dmz-cursor-theme`. (Users can install them manually via `sudo apt install`)
+* Added packages: `gnome-characters`, `gnome-font-viewer`, `gnome-chess`.
+* Login page will use `Fluent` cursor theme by default.
+* Default apt mirror for United States switch to `http://archive.ubuntu.com/ubuntu/` considering this version may be used by global users.
+
+## v0.3.0-rc
+
+* Based on language, will auto install the corresponding input method.
+* Based on language, will auto select the corresponding apt mirror.
+* Based on language, will auto select the corresponding timezone.
+* The `LANG` environment variable will be patched to `/etc/default/locale`.
+
+## v0.2.2-beta
+
+* The homepage of firefox will be set to `https://anduinos.com/` by default.
+* Slightly changed the text of ubiquity slideshow for better localization.
+* Support multiple languages iso file. (Chinese, English)
+
 ## v0.2.1-beta
 
 * Added `fprintd` and `libpam-fprintd` to support fingerprint login.
 * Removed `gnome-tweaks` from the default app list to reduce to avoid distraction.
 * Use `gedit` to replace `gnome-text-editor` as the default text editor, because `gnome-text-editor` may having some issue with ibus.
+* Rime will no longer be preinstalled due to its high disk and memory usage, especially for users without Chinese input needs. Instead, only ibus will be preinstalled. Users can install Rime manually via `sudo apt install ibus-rime`, or use the custom [AnduinOS-Rime](https://gitlab.aiursoft.cn/anduin/anduinos-rime) input method if needed.
+* Patch `baobab` localization for Chinese.
+* Refactor AnduinOS build script as modularized functions.
 
 ## v0.2.0-beta
 
@@ -73,7 +100,7 @@
 ## v0.1.0-beta-jammy
 
 * Removed `gnome-software`, `software-properties-gtk`, `ubuntu-pro-client`, `ubuntu-advantage-desktop-daemon`, `ubuntu-advantage-tools`, `ubuntu-pro-client-l10n`, `gnome-software-common`, `gnome-software-plugin-snap` to reduce the size of the ISO file.
-* Added a `Software-store` pointing to `https://anduinos-docs.aiursoft.cn/Applications/Introduction.html` in the start menu.
+* Added a `Software-store` pointing to `https://docs.aiursoft.cn/Applications/Introduction.html` in the start menu.
 * Patch `Ubiquity-slideshow` to show the AnduinOS introduction.
 * Patch the `/etc/casper.conf` to change the default live session username to `try-user` and hostname to `anduinos`.
 

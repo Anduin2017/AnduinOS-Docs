@@ -8,16 +8,16 @@ To install `fwupd` on Ubuntu, run the following command:
 sudo apt install fwupd
 ```
 
-To check the firmware information, run the following command:
-
-```bash title="Check for updates"
-sudo fwupdmgr get-updates
-```
-
 To refresh the firmware, run the following command:
 
 ```bash title="Refresh firmware"
 sudo fwupdmgr refresh
+```
+
+To check the firmware information, run the following command:
+
+```bash title="Check for updates"
+sudo fwupdmgr get-updates
 ```
 
 To upgrade the firmware, run the following command:
@@ -25,3 +25,7 @@ To upgrade the firmware, run the following command:
 ```bash title="Upgrade firmware"
 sudo fwupdmgr update
 ```
+
+For example, the following screenshot shows the firmware upgrade process on a Dell device:
+
+![AnduinOS Upgrade Firmware](./fw.png)
