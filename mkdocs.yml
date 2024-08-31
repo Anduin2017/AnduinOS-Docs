@@ -126,12 +126,12 @@ nav:
       - Update your system: ./Install/Update-Your-System.md
       - Switch To Your Language: ./Install/Switch-To-Your-Language.md
       - Update firmware: ./Install/Upgrade-Firmware.md
+      - Configure Power Settings: ./Install/Configure-Power-Settings.md
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
       - Managing Printers: ./Install/Managing-Printers.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
-      - Avoid system sleep: ./Install/Avoid-System-Sleep.md
     - Maintaining AnduinOS:
       - Install or remove Snap: ./Install/Install-Or-Remove-Snap.md
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
