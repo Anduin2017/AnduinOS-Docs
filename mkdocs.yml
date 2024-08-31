@@ -209,6 +209,7 @@ nav:
         - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
         - GameConqueror: ./Applications/Utilities/GameConqueror/GameConqueror.md
+        - Terminus: ./Applications/Utilities/Terminus/Terminus.md
         - Cool Retro Term: ./Applications/Utilities/Cool-Retro-Term/Cool-Retro-Term.md
 
       - Development:
