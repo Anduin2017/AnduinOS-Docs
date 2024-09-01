@@ -4,17 +4,9 @@
 
 Before installing AnduinOS, you need to download the ISO file from the releases page.
 
-[Download AnduinOS (ISO)](https://download.anduinos.com/){ .md-button .md-button--primary }
+[Download AnduinOS (ISO)](https://www.anduinos.com/){ .md-button .md-button--primary }
 
 It is suggested to use aria2 to download the ISO file. You can find the torrent file on the releases page.
-
-## Download the torrent file
-
-<!-- https://download.anduinos.com/AnduinOS.latest.torrent -->
-
-To download the torrent file, click the link below:
-
-[Download AnduinOS (Torrent)](https://download.anduinos.com/AnduinOS.latest.torrent){ .md-button .md-button--primary }
 
 You can use a BitTorrent client to download the ISO file. It is suggested to use `aria2` to download the ISO file.
 
@@ -22,8 +14,8 @@ You can use a BitTorrent client to download the ISO file. It is suggested to use
 cd ~/Downloads
 sudo apt update
 sudo apt install aria2
-wget https://download.anduinos.com/AnduinOS.latest.torrent -O AnduinOS.latest.torrent
-aria2c AnduinOS.latest.torrent
+wget https://download.anduinos.com/AnduinOS.some-version.torrent -O AnduinOS.some-version.torrent
+aria2c AnduinOS.some-version.torrent
 ```
 
 For Windows users, you can use `qBittorrent` to download the ISO file.
