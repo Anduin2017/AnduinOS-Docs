@@ -3,6 +3,20 @@
 ## v1.0.0
 
 * Added a new keyboard shortcut `Windows + U` to toggle the display network state on the taskbar.
+* Removed the `htop.desktop` file since nobody uses it.
+* Default sleep time after inactivity is set to 30 minutes on AC power and 20 minutes on battery.
+* Chinese mainland users no-longer installs `ibus-libpinyin` by default. Instead, only `ibus-rime` will be installed.
+* Taiwan users no-longer installs `ibus-cangjie` and `ibus-libzhuyin`. Instead, only `ibus-chewing` will be installed.
+* Japan users no-longer installs `ibus-anthy`. Instead, only `ibus-mozc` will be installed.
+* de_DE, fr_FR, ru_RU, it_IT, pt_PT, ar_SA, nl_NL, sv,SE non-longer install an input method by default. Instead, their keyboard layout will be set to the corresponding language. So:
+  *  `zh-hans` will install `ibus-rime` by default.
+  *  `zh-hant` will install `ibus-chewing` by default. (Taiwan)
+  *  `zh-hant` will install `ibus-table-cangjie` by default. (Hong Kong)
+  *  `ja` will install `ibus-mozc` by default.
+  *  `ko` will install `ibus-hangul` by default.
+  *  `vi` will install `ibus-unikey` by default.
+  *  `th` will install `ibus-libthai` by default.
+* United state users' timezone set to Los Angeles by default. (Pacific Time) Instead of New York.
 
 ## v0.3.1-rc
 
