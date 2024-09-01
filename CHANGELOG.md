@@ -1,5 +1,9 @@
 # AnduinOS Changelog
 
+## v1.0.0
+
+* Added a new keyboard shortcut `Windows + U` to toggle the display network state on the taskbar.
+
 ## v0.3.1-rc
 
 * The default city for weather will be set to corresponding to the locale of the build.
