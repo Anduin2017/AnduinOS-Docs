@@ -10,4 +10,4 @@ In recent Microsoft updates, it revoked the certificate of Canonical shim. This 
 
 ## 3. Issue 3 - The share feature on Gnome Control Center may not work
 
-The share feature on Gnome Control Center may not work. So you can not use the share feature to host a remote desktop session. The workaround is to use the `xrpd` package to host a remote desktop session.
+The share feature on Gnome Control Center may not work. So you can not use the share feature to host a remote desktop session. The workaround is to use the `xrdp` package to host a remote desktop session.
