@@ -97,7 +97,7 @@ sudo docker system prune -a --volumes -f # Clean up used volumes and images
 To also remove the data, log, and config files, run the following commands:
 
 ```bash title="Remove the data, log, and config files"
-sudo rm /swarm-vol/opengist -rf
+sudo rm /swarm-vol/gist-data -rf
 ```
 
 That's it! You have successfully uninstalled OpenGist from AnduinOS.
