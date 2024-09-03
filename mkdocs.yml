@@ -201,6 +201,7 @@ nav:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
         - qBittorrent: ./Applications/Download-Tools/qBittorrent/qBittorrent.md
         - Deluge: ./Applications/Download-Tools/Deluge/Deluge.md
+        - uGet: ./Applications/Download-Tools/uGet/uGet.md
 
       - Utilities:
         - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
