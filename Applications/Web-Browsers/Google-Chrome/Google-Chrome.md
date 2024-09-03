@@ -34,3 +34,36 @@ xdg-mime default google-chrome.desktop text/html
 xdg-mime default google-chrome.desktop application/xhtml+xml
 xdg-mime default google-chrome.desktop x-scheme-handler/https
 ```
+
+## Fix Wayland issue
+
+If you are using Wayland with fractional scaling, you may encounter an issue when running Google Chrome. Google Chrome may display with fuzzy text and blurry images.
+
+To fix the issue, you can open Chrome and enter the following URL in the address bar:
+
+```text
+chrome://flags/#ozone-platform-hint
+```
+
+Then, select `Auto` from the dropdown list and restart Chrome.
+
+You need to quit all Chrome windows and restart Chrome to apply the changes.
+
+## Fix iBus typing issue
+
+If you are using iBus as the input method framework, you may encounter an issue when typing in Google Chrome. The issue may cause you unable to type in the address bar or text fields in Chrome.
+
+To fix the issue, you can edit the `/usr/share/applications/google-chrome.desktop` file and edit the `Exec` line as follows:
+
+```text
+Exec=/usr/bin/google-chrome-stable --gtk-version=4 %U
+```
+
+Or you can directly run:
+
+```bash title="Fix iBus typing issue"
+# Replace 'Exec=/usr/bin/google-chrome-stable' with 'Exec=/usr/bin/google-chrome-stable --gtk-version=4' in the google-chrome.desktop file
+sudo sed -i 's|Exec=/usr/bin/google-chrome-stable|Exec=/usr/bin/google-chrome-stable --gtk-version=4|' /usr/share/applications/google-chrome.desktop
+```
+
+You need to log out and log back in to apply the changes.
