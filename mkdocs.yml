@@ -242,6 +242,7 @@ nav:
     - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
     - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
     - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
+    - OpenGist: ./Servicing/OpenGist/OpenGist.md
     - NekoImageGallery: ./Servicing/NekoImageGallery/NekoImageGallery.md
     - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
     - SqlServer: ./Servicing/SqlServer/SqlServer.md
