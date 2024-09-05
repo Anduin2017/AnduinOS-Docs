@@ -157,6 +157,7 @@ nav:
         - Chromium: ./Applications/Web-Browsers/Chromium/Chromium.md
         - Firefox: ./Applications/Web-Browsers/Firefox/Firefox.md
         - Microsoft Edge: ./Applications/Web-Browsers/Microsoft-Edge/Microsoft-Edge.md
+        - Opera: ./Applications/Web-Browsers/Opera/Opera.md
 
       - Code Editors:
         - Visual Studio Code: ./Applications/Code-Editors/Visual-Studio-Code/Visual-Studio-Code.md
