@@ -185,6 +185,7 @@ nav:
 
       - Media Editing:
         - GIMP: ./Applications/Media-Editing/GIMP/GIMP.md
+        - Krita: ./Applications/Media-Editing/Krita/Krita.md
         - Kdenlive: ./Applications/Media-Editing/Kdenlive/Kdenlive.md
         - OpenShot: ./Applications/Media-Editing/OpenShot/OpenShot.md
         - Shotcut: ./Applications/Media-Editing/Shotcut/Shotcut.md
