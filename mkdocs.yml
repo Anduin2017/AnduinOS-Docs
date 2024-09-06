@@ -241,14 +241,15 @@ nav:
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
     - Setting up new Linux Server: ./Servicing/Linux.md
-    - GitLab: ./Servicing/GitLab/GitLab.md
-    - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
-    - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
-    - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
-    - OpenGist: ./Servicing/OpenGist/OpenGist.md
-    - NekoImageGallery: ./Servicing/NekoImageGallery/NekoImageGallery.md
-    - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
-    - SqlServer: ./Servicing/SqlServer/SqlServer.md
+    - Hosting Services:
+      - GitLab: ./Servicing/GitLab/GitLab.md
+      - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
+      - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
+      - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
+      - OpenGist: ./Servicing/OpenGist/OpenGist.md
+      - NekoImageGallery: ./Servicing/NekoImageGallery/NekoImageGallery.md
+      - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
+      - SqlServer: ./Servicing/SqlServer/SqlServer.md
 
   - Virtualization:
     - Windows: ./Virtualization/Windows.md
