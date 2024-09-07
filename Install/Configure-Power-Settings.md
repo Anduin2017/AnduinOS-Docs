@@ -13,6 +13,19 @@ Default settings for AnduinOS:
 * Power button action: Suspend(sleep)
 * Lid close action: Suspend(sleep)
 
+## Tune CPU power settings
+
+You can tune the CPU power settings to save power or boost performance. To do this, you can use the `cpupower` command. The `cpupower` command is a tool to set and display CPU power settings. You can use the `cpupower frequency-info` command to display the current CPU power settings. You can use the `cpupower frequency-set` command to set the CPU power settings.
+
+* Performance: Maximum performance, always boost the CPU frequency to the maximum. (Not recommended)
+* Powersave: Dynamic frequency scaling. (Recommended)
+
+```bash title="Tune CPU power settings"
+sudo apt install -y linux-tools-common linux-tools-$(uname -r)
+sudo cpupower frequency-info
+sudo cpupower frequency-set -g powersave
+```
+
 ## Configure auto lock settings
 
 !!! warning "Configure auto lock settings"
