@@ -156,6 +156,14 @@ AnduinOS 在第一次启动前，可能会询问您之前设置的 Secure Boot �
 
 ![mok-manager-enroll-mok](https://ursache.io/images/blogpost-enroll-mok.png)
 
+## 更多内容
+
+在安装 AnduinOS 后，我们还推荐您完成一些后续的配置，安装应用，个性化，配置打印机等。您可以在 AnduinOS 的官方网站上找到更多的指南和教程。
+
+如果需要访问 AnduinOS 的官方网站，请扫描以下二维码：
+
+![AnduinOS QR Code](./Assets/website_qr.svg){ width=100 }
+
 ## 支持
 
 如果您在安装过程中遇到任何问题，请随时联系我们的技术支持团队。我们将竭诚为您提供帮助。
