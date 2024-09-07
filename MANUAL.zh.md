@@ -35,7 +35,7 @@ AnduinOS 使用了基于 Gnome 的桌面环境，拥有美观的界面和符合�
 
 ![screen-shot](https://www.anduinos.com/sc.png)
 
-AnduinOS 的设计初中是不收集任何用户的信息，也不会追踪用户。用户在使用 AnduinOS 的过程中是完全匿名的。
+AnduinOS 的设计初衷是不收集任何用户的信息，也不会追踪用户。用户在使用 AnduinOS 的过程中是完全匿名的。
 
 通过安全更新，AnduinOS 会修复漏洞并改善安全性并改进性能。我们建议您定期更新系统以确保系统的安全性和稳定性。
 
