@@ -1,5 +1,5 @@
-* 核准日期：2024 年 9 月 7 日
-* 修改日期：2024 年 9 月 7 日
+> 核准日期：2024 年 9 月 7 日
+> 修改日期：2024 年 9 月 7 日
 
 ![AnduinOS Logo](./Assets/logo.svg){ align=right, width=100 }
 
@@ -12,6 +12,8 @@
     无论是否与其他操作系统共存，安装 AnduinOS 均存在丢失磁盘上所以数据的风险。请务必在安装前备份您的数据。
 
 ## 开始
+
+![background](https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/mods/20-ubiquity-patch/slides/screenshots/welcome.png?ref_type=heads)
 
 感谢您选择 AnduinOS！我们将在本文档中指导您如何安装 AnduinOS。
 
@@ -27,14 +29,15 @@ AnduinOS 的设计初中是不收集任何用户的信息，也不会追踪用�
 
 通过安全更新，AnduinOS 会修复漏洞并改善安全性并改进性能。我们建议您定期更新系统以确保系统的安全性和稳定性。
 
-## 协议
+## 版权声明
 
-版权声明  
 本程序是自由软件：您可以根据自由软件基金会发布的GNU通用公共许可证的条款，重新发布或修改该程序，许可证版本为第3版，或（根据您的选择）任何更高版本。
 
 本程序的发布目的是希望它能带来帮助，但不提供任何担保；甚至不含默示的适销性或特定用途的适用性担保。详情请参阅GNU通用公共许可证。
 
 完整的协议内容，请参阅 https://www.gnu.org/licenses/ 。
+
+继续使用本程序即表示您接受这些条款。
 
 ## 盒装内容
 
@@ -107,9 +110,11 @@ U 盘内文件完整
 
 AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot。但是，许多电脑的 BIOS 中的 Secure Boot 选项默认为 "Windows"。这会导致 U 盘无法引导。
 
-如果您的计算机启用了 Secure Boot，我们建议您将 Secure Boot 调整到 "Other OS"。这有助于确保您可以正确引导 U 盘并安装 AnduinOS。
+如果您的计算机启用了 Secure Boot，我们建议您将 Secure Boot 调整到 "Other OS" 或 "3rd Party CA"。这有助于确保您可以正确引导 U 盘并安装 AnduinOS。
 
 ![Adjust secure boot settings](./Install/seboot.png)
+
+您也可以选择关闭 Secure Boot。但是这会丧失系统对 AnduinOS 内核的完整性验证，从而降低系统的安全性。
 
 ## 调整 Windows 设置
 
@@ -118,3 +123,45 @@ AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot�
 !!! warning "微软会将 shimx64.efi 从可信的 UEFI 引导项中删除"
 
 在很多情况中已经观察到，在使用 Windows 进行系统更新时，而可能会出现重新启动后，UEFI 将 AnduinOS 的 shimx64.efi 从受信任的 UEFI 引导项中删除。这是由于微软会定期吊销一些数字证书。为了避免这种情况，，我们建议您谨慎的选择将 Windows 与 AnduinOS 安装在同一台计算机上。
+
+## 安装 AnduinOS
+
+安装 AnduinOS 非常简单。您只需将 U 盘插入计算机，然后启动计算机即可。
+
+根据电脑的制造商不同，进入启动设备菜单的方式也不同。通常，您可以按下 `F2`、`F12`、`ESC` 或 `DEL` 键来进入启动设备菜单。如果您不确定如何进入启动设备菜单，请查阅您的计算机的用户手册。
+
+在启动设备菜单中，选择 AnduinOS 的 U 盘。然后，您将看到 AnduinOS 的启动菜单。您将会看到 `Try AnduinOS` 和 `Install AnduinOS` 选项。选择 `Install AnduinOS` 以开始安装。
+
+* `Try AnduinOS`：此选项允许你在不安装系统的情况下试用AnduinOS。你可以探索系统并查看其在电脑上的运行情况。
+* `Install AnduinOS`：此选项将开始安装过程。你可以按照屏幕上的指示将AnduinOS安装到电脑上。
+
+安装程序将会引导你完成以下步骤：
+
+![running-installer](./Install/run_installer.png)
+
+* 选择语言：选择安装过程中使用的语言。
+* 连接网络：选择如何连接到网络。这一步是可选的，但是我们建议您连接到网络以确保系统安装过程中的更新。
+* 选择键盘布局：选择你要使用的键盘布局。
+* 更新和其他软件：选择是否在安装过程中安装更新和第三方软件。
+* 设置 Mok 密码：如果您启用了 Secure Boot，您需要设置 Mok 密码以确保您可以正确引导 AnduinOS。
+* 设置磁盘：选择要安装AnduinOS的磁盘。你还可以选择使用LVM和LUKS2加密磁盘。
+* 位置：选择你的位置来设置时区、区域格式、输入法和apt源。
+* 用户信息：输入你的姓名、用户名和新用户账户的密码。
+* 安装：安装过程将开始，你可以在屏幕上看到进度。
+* 完成：安装完成后，系统会提示你重新启动电脑。
+
+在完成安装后，将 U 盘从计算机中取出，然后重新启动计算机。您将看到 AnduinOS 启动。
+
+AnduinOS 在第一次启动前，可能会询问您之前设置的 Secure Boot 密码。请确保您输入正确的密码。这将保证您在更新内核和自定义内核模块时不会遇到问题。
+
+![mok-manager-enroll-mok](https://ursache.io/images/blogpost-enroll-mok.png)
+
+## 支持
+
+如果您在安装过程中遇到任何问题，请随时联系我们的技术支持团队。我们将竭诚为您提供帮助。
+
+AnduinOS 的支持团队联络方式：
+
+* 电子邮件：anduin@aiursoft.com
+* 网站：https://www.anduinos.com
+* 论坛：https://github.com/Anduin2017/AnduinOS/discussions

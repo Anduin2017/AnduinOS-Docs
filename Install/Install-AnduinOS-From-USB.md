@@ -35,6 +35,8 @@ Choose the option that suits your needs, and follow the on-screen instructions t
 
 The installation process will guide you through the following steps:
 
+![running-installer](./run_installer.png)
+
 1. **Select Language**: Choose the language you want to use during the installation process.
 2. **Select Keyboard Layout**: Choose the keyboard layout you want to use.
 3. **Updates and Other Software**: Choose whether you want to install updates and third-party software during the installation process.
