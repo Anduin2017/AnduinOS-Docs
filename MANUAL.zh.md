@@ -3,7 +3,9 @@
 
 ![AnduinOS Logo](./Assets/logo.svg){ align=right, width=100 }
 
-# AnduinOS 盒装安装媒介 - 使用说明
+# AnduinOS 1.0 盒装安装媒介 - 使用说明
+
+![background](https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/mods/20-ubiquity-patch/slides/screenshots/welcome.png?ref_type=heads)
 
 请仔细阅读本说明书，以确保您正确安装 AnduinOS。
 
@@ -11,9 +13,17 @@
 
     无论是否与其他操作系统共存，安装 AnduinOS 均存在丢失磁盘上所以数据的风险。请务必在安装前备份您的数据。
 
-## 开始
+## 版权声明
 
-![background](https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/mods/20-ubiquity-patch/slides/screenshots/welcome.png?ref_type=heads)
+本程序是自由软件：您可以根据自由软件基金会发布的GNU通用公共许可证的条款，重新发布或修改该程序，许可证版本为第3版，或（根据您的选择）任何更高版本。
+
+本程序的发布目的是希望它能带来帮助，但不提供任何担保；甚至不含默示的适销性或特定用途的适用性担保。详情请参阅GNU通用公共许可证。
+
+完整的协议内容，请参阅 https://www.gnu.org/licenses/ 。
+
+继续使用本程序即表示您接受这些条款。
+
+## 开始
 
 感谢您选择 AnduinOS！我们将在本文档中指导您如何安装 AnduinOS。
 
@@ -28,16 +38,6 @@ AnduinOS 使用了基于 Gnome 的桌面环境，拥有美观的界面和符合�
 AnduinOS 的设计初中是不收集任何用户的信息，也不会追踪用户。用户在使用 AnduinOS 的过程中是完全匿名的。
 
 通过安全更新，AnduinOS 会修复漏洞并改善安全性并改进性能。我们建议您定期更新系统以确保系统的安全性和稳定性。
-
-## 版权声明
-
-本程序是自由软件：您可以根据自由软件基金会发布的GNU通用公共许可证的条款，重新发布或修改该程序，许可证版本为第3版，或（根据您的选择）任何更高版本。
-
-本程序的发布目的是希望它能带来帮助，但不提供任何担保；甚至不含默示的适销性或特定用途的适用性担保。详情请参阅GNU通用公共许可证。
-
-完整的协议内容，请参阅 https://www.gnu.org/licenses/ 。
-
-继续使用本程序即表示您接受这些条款。
 
 ## 盒装内容
 
@@ -82,13 +82,9 @@ AnduinOS 盒装包含以下内容：
 | 网络           | 互联网连接                             |
 | 安全启动       | 启用安全启动（信任第三方操作系统）     |
 
-!!! note "仅支持 x86_64 架构和兼容 ACPI 的硬件。"
+!!! note "仅支持 x86_64 架构"
 
     目前 AnduinOS 仅支持 x86_64 架构。如果您使用的是其他架构，将无法安装 AnduinOS。（不支持 ARM）
-
-    目前 AnduinOS 仅支持兼容 ACPI 的硬件。如果您使用的是不兼容 ACPI 的硬件，将无法安装 AnduinOS。（不支持旧硬件）
-
-    AnduinOS 支持 UEFI 和 BIOS 引导固件。请确保您的硬件兼容 ACPI，以确保正确安装。（不支持 U-boot）
 
 ## 验证 U 盘内文件完整性
 
@@ -108,13 +104,13 @@ U 盘内文件完整
 
 ## 将 Secure Boot 调整到 "Other OS"
 
-AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot。但是，许多电脑的 BIOS 中的 Secure Boot 选项默认为 "Windows"。这会导致 U 盘无法引导。
+AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot。但是，许多电脑的 BIOS 中的 Secure Boot 选项默认为 "Microsoft Windows"。这会导致其他操作系统无法正确引导。
 
 如果您的计算机启用了 Secure Boot，我们建议您将 Secure Boot 调整到 "Other OS" 或 "3rd Party CA"。这有助于确保您可以正确引导 U 盘并安装 AnduinOS。
 
 ![Adjust secure boot settings](./Install/seboot.png)
 
-您也可以选择关闭 Secure Boot。但是这会丧失系统对 AnduinOS 内核的完整性验证，从而降低系统的安全性。
+您也可以选择关闭 Secure Boot （不推荐）。但是这会丧失系统对 AnduinOS 内核的完整性验证，从而降低系统的安全性。
 
 ## 谨慎搭配 Windows 双系统
 
@@ -126,7 +122,7 @@ AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot�
 
 !!! warning "备份您的 BitLocker 密钥"
 
-    如果您的 Windows 系统启用了 BitLocker 加密，我们建议您备份您的 BitLocker 密钥。在安装 AnduinOS 时，可能会由于改变了 UEFI 引导项而导致 TPM 无法解锁。因此，我们始终建议您备份您的 BitLocker 密钥以确保您可以在需要时解锁您的 Windows 系统。
+    如果您的 Windows 系统启用了 BitLocker 加密，我们建议您备份您的 BitLocker 密钥。在安装 AnduinOS 时，可能会由于改变了 UEFI 引导项而导致磁盘无法自动解锁。因此，我们始终建议您备份您的 BitLocker 密钥以确保您可以在需要时可以通过输入您的密钥来解锁磁盘。
 
     有关备份 BitLocker 密钥的详细信息，请参阅 Microsoft 文档。
 
@@ -138,7 +134,7 @@ AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot�
 
 在启动设备菜单中，选择 AnduinOS 的 U 盘。然后，您将看到 AnduinOS 的启动菜单。您将会看到 `Try AnduinOS` 和 `Install AnduinOS` 选项。选择 `Install AnduinOS` 以开始安装。
 
-* `Try AnduinOS`：此选项允许你在不安装系统的情况下试用AnduinOS。你可以探索系统并查看其在电脑上的运行情况。
+* `Try AnduinOS`：此选项允许你在不安装系统的情况下试用AnduinOS。你可以探索系统并查看其在电脑上的运行情况，也可以测试硬件兼容性。
 * `Install AnduinOS`：此选项将开始安装过程。你可以按照屏幕上的指示将AnduinOS安装到电脑上。
 
 安装程序将会引导你完成以下步骤：
@@ -164,13 +160,13 @@ AnduinOS 在第一次启动前，可能会询问您之前设置的 Secure Boot �
 
 ## 安装驱动
 
-AnduinOS 会自动安装大多数硬件的驱动程序。但是，有些硬件可能需要额外的驱动程序。您可以使用以下命令安装额外的驱动程序：
+AnduinOS 会自动安装大多数硬件的驱动程序。但是，有些硬件可能需要额外的驱动程序（例如显卡）。您可以使用以下命令安装额外的显卡驱动程序：
 
 !!! note "如何在 AnduinOS 里打开终端"
 
     您随时可以按下 `Ctrl + Alt + T` 打开终端。在任何命令前追加 `sudo` 可以以 `root` 权限（也就是管理员权限）运行命令。
 
-```bash title="安装额外的驱动程序"
+```bash title="安装额外的显卡驱动程序"
 sudo apt update
 sudo ubuntu-drivers install
 ```
@@ -198,9 +194,11 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## 更多内容
+其中，`do_anduinos_upgrade` 是 AnduinOS 提供的一个脚本，它会自动更新 AnduinOS 本身。而 `apt update` 和 `apt upgrade` 会更新系统的软件包。
 
-在安装 AnduinOS 后，我们还推荐您完成一些后续的配置、安装应用、个性化、挂载其他磁盘、配置打印机等。您可以在 AnduinOS 的官方网站上找到更多的指南和教程。
+## 更多配置
+
+在安装 AnduinOS 后，我们还推荐您完成一些后续的配置，例如：安装其他语言包、挂载其他磁盘、配置打印机等。您可以在 AnduinOS 的官方网站上找到更多的指南和教程。
 
 如果需要访问 AnduinOS 的官方网站，请扫描以下二维码：
 
@@ -209,6 +207,8 @@ sudo apt upgrade
 ## 访问应用商店
 
 AnduinOS 提供了一个应用商店，里面列举了一些经过验证的应用。这些应用是经过团队验证可以在 AnduinOS 上安全运行。
+
+![store](./Applications/store.png)
 
 您可以在开始菜单中找到 AnduinOS 应用商店。您可以在这里找到您需要的应用。
 
