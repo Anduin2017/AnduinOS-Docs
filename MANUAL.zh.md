@@ -49,7 +49,7 @@ AnduinOS 盒装包含以下内容：
 
 注意: 当您收到盒装安装媒介时，媒介内的 AnduinOS 和文档可能已经不再是最新版本。我们推荐您访问 AnduinOS 的官方网站以浏览最近的版本更新和错误修复。并且，我们建议您在安装前阅读最新的安装说明书。
 
-如果需要访问 AnduinOS 的官方网站，请扫描以下二维码：
+如果需要访问 AnduinOS 的官方网站，请扫描以下二维码，或访问 [https://www.anduinos.com](https://www.anduinos.com)。
 
 ![AnduinOS QR Code](./Assets/website_qr.svg){ width=100 }
 
@@ -106,11 +106,11 @@ U 盘内文件完整
 
 AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot。但是，许多电脑的 BIOS 中的 Secure Boot 选项默认为 "Microsoft Windows"。这会导致其他操作系统无法正确引导。
 
-如果您的计算机启用了 Secure Boot，我们建议您将 Secure Boot 调整到 "Other OS" 或 "3rd Party CA"。这有助于确保您可以正确引导 U 盘并安装 AnduinOS。
+如果您的计算机启用了 Secure Boot，我们建议您将 Secure Boot 调整到 `Other OS` 或 `3rd Party CA`。这有助于确保您可以正确引导 U 盘并安装 AnduinOS。
 
 ![Adjust secure boot settings](./Install/seboot.png)
 
-您也可以选择关闭 Secure Boot （不推荐）。但是这会丧失系统对 AnduinOS 内核的完整性验证，从而降低系统的安全性。
+如果您的系统有障碍开启 Secure Boot 并信任 `3rd Party CA`，您也可以选择关闭 Secure Boot （不推荐）。但是这会丧失系统对 AnduinOS 内核的完整性验证，从而降低系统的安全性。
 
 ## 谨慎搭配 Windows 双系统
 
@@ -200,7 +200,7 @@ sudo apt upgrade
 
 在安装 AnduinOS 后，我们还推荐您完成一些后续的配置，例如：安装其他语言包、挂载其他磁盘、配置打印机等。您可以在 AnduinOS 的官方网站上找到更多的指南和教程。
 
-如果需要访问 AnduinOS 的官方网站，请扫描以下二维码：
+如果需要访问 AnduinOS 的官方网站，请扫描以下二维码，或访问 [https://www.anduinos.com](https://www.anduinos.com)。
 
 ![AnduinOS QR Code](./Assets/website_qr.svg){ width=100 }
 
@@ -216,7 +216,7 @@ AnduinOS 提供了一个应用商店，里面列举了一些经过验证的应�
 
 AnduinOS 是一个开源项目。您可以在 AnduinOS 的 GitLab 仓库中找到源代码。
 
-如果您需要访问 AnduinOS 的 GitLab 仓库，请扫描以下二维码：
+如果您需要访问 AnduinOS 的 GitLab 仓库，请扫描以下二维码，或访问 [https://gitlab.aiursoft.cn/anduin/anduinos](https://gitlab.aiursoft.cn/anduin/anduinos)。
 
 ![AnduinOS GitLab QR Code](./Assets/gitlab_qr.svg){ width=100 }
 
