@@ -229,3 +229,6 @@ AnduinOS 的支持团队联络方式：
 * 电子邮件：anduin@aiursoft.com
 * 网站：https://www.anduinos.com
 * 论坛：https://github.com/Anduin2017/AnduinOS/discussions
+
+生产商: AnduinOS 团队于 GitLab 上协作生产。
+生产日期: 2024 年 9 月 15 日
