@@ -122,6 +122,7 @@ nav:
       - Turn on Secure Boot: ./Install/Turn-On-Secure-Boot.md
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
       - Install Drivers: ./Install/Install-Drivers.md
+      - Mounting second disk: ./Install/Mounting-Second-Disk.md
       - Install input method: ./Install/Install-Input-Method.md
       - Update your system: ./Install/Update-Your-System.md
       - Switch To Your Language: ./Install/Switch-To-Your-Language.md
