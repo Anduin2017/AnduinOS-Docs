@@ -116,13 +116,19 @@ AnduinOS 支持 UEFI 和 BIOS 引导固件，并且完善的支持 Secure Boot�
 
 您也可以选择关闭 Secure Boot。但是这会丧失系统对 AnduinOS 内核的完整性验证，从而降低系统的安全性。
 
-## 调整 Windows 设置
+## 谨慎搭配 Windows 双系统
 
 当您有双引导时，若另一个操作系统与 Windows 访问相同的文件系统，这就有可能导致问题和数据丢失。在这种情况下，文件系统的真实状态可能与 Windows 认为在“启动”之后的情况不同，并且可能在进一步写入文件系统时导致文件系统损坏。因此，在双引导设置中，为了避免文件系统损坏，有必要在 Windows 中禁用“快速启动”功能。
 
 !!! warning "微软会将 shimx64.efi 从可信的 UEFI 引导项中删除"
 
-在很多情况中已经观察到，在使用 Windows 进行系统更新时，而可能会出现重新启动后，UEFI 将 AnduinOS 的 shimx64.efi 从受信任的 UEFI 引导项中删除。这是由于微软会定期吊销一些数字证书。为了避免这种情况，，我们建议您谨慎的选择将 Windows 与 AnduinOS 安装在同一台计算机上。
+    在很多情况中已经观察到，在使用 Windows 进行系统更新时，而可能会出现重新启动后 AnduinOS 的 shimx64.efi 从受信任的 UEFI 引导项中删除。这是由于微软会定期通过 Windows Update 吊销一些数字证书。为了避免这种情况，，我们建议您谨慎的选择将 Windows 与 AnduinOS 安装在同一台计算机上。
+
+!!! warning "备份您的 BitLocker 密钥"
+
+    如果您的 Windows 系统启用了 BitLocker 加密，我们建议您备份您的 BitLocker 密钥。在安装 AnduinOS 时，可能会由于改变了 UEFI 引导项而导致 TPM 无法解锁。因此，我们始终建议您备份您的 BitLocker 密钥以确保您可以在需要时解锁您的 Windows 系统。
+
+    有关备份 BitLocker 密钥的详细信息，请参阅 Microsoft 文档。
 
 ## 安装 AnduinOS
 
@@ -156,13 +162,63 @@ AnduinOS 在第一次启动前，可能会询问您之前设置的 Secure Boot �
 
 ![mok-manager-enroll-mok](https://ursache.io/images/blogpost-enroll-mok.png)
 
+## 安装驱动
+
+AnduinOS 会自动安装大多数硬件的驱动程序。但是，有些硬件可能需要额外的驱动程序。您可以使用以下命令安装额外的驱动程序：
+
+!!! note "如何在 AnduinOS 里打开终端"
+
+    您随时可以按下 `Ctrl + Alt + T` 打开终端。在任何命令前追加 `sudo` 可以以 `root` 权限（也就是管理员权限）运行命令。
+
+```bash title="安装额外的驱动程序"
+sudo apt update
+sudo ubuntu-drivers install
+```
+
+## 更新您的固件
+
+我们建议您在安装 AnduinOS 后更新您的固件。更新固件可以帮助您解决硬件问题，提高系统的稳定性和性能。
+
+```bash title="安装  fwupd"
+sudo apt install fwupd
+```
+
+运行以下命令以更新您的固件：
+
+```bash title="更新固件"
+sudo fwupdmgr refresh
+sudo fwupdmgr update
+```
+
+同时，我们也建议您在安装后更新您的系统。运行以下命令以更新您的系统：
+
+```bash title="更新系统"
+sudo do_anduinos_upgrade
+sudo apt update
+sudo apt upgrade
+```
+
 ## 更多内容
 
-在安装 AnduinOS 后，我们还推荐您完成一些后续的配置，安装应用，个性化，配置打印机等。您可以在 AnduinOS 的官方网站上找到更多的指南和教程。
+在安装 AnduinOS 后，我们还推荐您完成一些后续的配置、安装应用、个性化、挂载其他磁盘、配置打印机等。您可以在 AnduinOS 的官方网站上找到更多的指南和教程。
 
 如果需要访问 AnduinOS 的官方网站，请扫描以下二维码：
 
 ![AnduinOS QR Code](./Assets/website_qr.svg){ width=100 }
+
+## 访问应用商店
+
+AnduinOS 提供了一个应用商店，里面列举了一些经过验证的应用。这些应用是经过团队验证可以在 AnduinOS 上安全运行。
+
+您可以在开始菜单中找到 AnduinOS 应用商店。您可以在这里找到您需要的应用。
+
+## 源代码
+
+AnduinOS 是一个开源项目。您可以在 AnduinOS 的 GitLab 仓库中找到源代码。
+
+如果您需要访问 AnduinOS 的 GitLab 仓库，请扫描以下二维码：
+
+![AnduinOS GitLab QR Code](./Assets/gitlab_qr.svg){ width=100 }
 
 ## 支持
 
