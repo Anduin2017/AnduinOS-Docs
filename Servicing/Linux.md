@@ -291,16 +291,23 @@ sudo systemctl start crowdsec-firewall-bouncer
 sudo systemctl enable crowdsec-firewall-bouncer
 ```
 
+You can verify the current rules and decisions by running:
+
+```bash
+# Collections are the CVEs that have been detected
+sudo cscli collections list
+# Senarios are the rules that detect malicious behavior
+sudo cscli scenarios list
+# Decisions are the IPs that have been blocked
+sudo cscli decisions list
+# Bouncers are the tools that block the IPs
+sudo cscli bouncers list
+```
+
 You can use CrowdSec’s IP blacklist feature to manually add or regularly update blacklisted IP addresses. To manually add an IP to the blacklist:
 
 ```bash
 sudo cscli decisions add -i [IP address] -r "Malicious BT client"
-```
-
-You can verify the current blocked IPs and status by running:
-
-```bash
-sudo cscli decisions list
 ```
 
 Now you have enabled CrowdSec to enhance your server security.
