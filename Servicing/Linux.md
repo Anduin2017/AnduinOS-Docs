@@ -571,13 +571,14 @@ sysbench cpu --threads=$(nproc) run
 | Intel 10900H    |  40,0000                |
 | Vultr 2 vCPU    |   7,0000                |
 | Azure B1s       |   1,8000                |
+| 腾讯云轻量应用  |   1,6000                |
 
 | Average latency (ms) | Rating     |
 | --------------- | -----------|
 | 0-0.2           | Awesome    |
-| 0.2-1           | Great      |
-| 1-2             | Good       |
-| 2-5             | Normal     |
+| 0.2-1           | Good       |
+| 1-2             | Normal     |
+| 2-5             | Acceptable |
 | 5-10            | Bad        |
 | 10+             | Terrible   |
 
