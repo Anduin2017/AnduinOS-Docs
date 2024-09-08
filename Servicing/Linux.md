@@ -267,6 +267,57 @@ sudo ufw enable
 
 ------
 
+### Enable CrowdSec to enhance security
+
+CrowdSec is an open-source security tool that can help you block malicious IP connections. You can use it to block hackers, bots, and other malicious connections.
+
+```bash title="Install crowdsec"
+curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
+sudo apt-get update
+sudo apt-get install crowdsec
+```
+
+CrowdSec is a senario-based security tool. You can list all the scenarios by running:
+
+```bash title="List all CrowdSec scenarios"
+sudo cscli scenarios list
+```
+
+CrowdSec leverages Bouncer to block bad IPs. handle malicious behavior once it’s detected. To block TCP/UDP connections with blacklisted IPs, install the CrowdSec firewall Bouncer:
+
+```bash title="Install CrowdSec Bouncer"
+sudo apt-get install crowdsec-firewall-bouncer-iptables
+```
+
+To start and configure the Bouncer, run:
+
+```bash title="Start CrowdSec Bouncer"
+sudo systemctl start crowdsec-firewall-bouncer
+sudo systemctl enable crowdsec-firewall-bouncer
+```
+
+You can use CrowdSec’s IP blacklist feature to manually add or regularly update blacklisted IP addresses. To manually add an IP to the blacklist:
+
+```bash
+sudo cscli decisions add -i [IP address] -r "Malicious BT client"
+```
+
+To further enhance the defense against BT leeching, you can subscribe to CrowdSec's global threat intelligence (CTI) feeds, ensuring up-to-date protection:
+
+```bash
+sudo cscli collections install crowdsecurity/cti-ips
+```
+
+You can verify the current blocked IPs and status by running:
+
+```bash
+sudo cscli decisions list
+```
+
+By following these steps, you can effectively use the CrowdSec project to block BT leeching and other malicious IP connections. If you need more advanced customization, you can create your own detection scenarios or rules based on your specific needs.
+
+------
+
 ### Enable BBR for congestion control
 
 BBR is a congestion control algorithm developed by Google. It can improve network performance. You can enable it by running:
