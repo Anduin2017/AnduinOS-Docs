@@ -310,6 +310,13 @@ sudo cscli decisions list
 sudo cscli bouncers list
 ```
 
+You should regularly update the CrowdSec database to get the latest security rules:
+
+```bash title="Update CrowdSec database"
+sudo cscli hub update
+sudo cscli hub upgrade
+```
+
 You can use CrowdSec’s IP blacklist feature to manually add or regularly update blacklisted IP addresses. To manually add an IP to the blacklist:
 
 ```bash
