@@ -320,7 +320,7 @@ sudo cscli hub upgrade
 You can use CrowdSec’s IP blacklist feature to manually add or regularly update blacklisted IP addresses. To manually add an IP to the blacklist:
 
 ```bash
-sudo cscli decisions add -i [IP address] -r "Malicious BT client"
+sudo cscli decisions add -i [IP address]
 ```
 
 Now you have enabled CrowdSec to enhance your server security.
