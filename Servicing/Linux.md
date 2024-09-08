@@ -287,11 +287,6 @@ CrowdSec leverages Bouncer to block bad IPs. handle malicious behavior once itâ€
 
 ```bash title="Install CrowdSec Bouncer"
 sudo apt-get install crowdsec-firewall-bouncer-iptables
-```
-
-To start and configure the Bouncer, run:
-
-```bash title="Start CrowdSec Bouncer"
 sudo systemctl start crowdsec-firewall-bouncer
 sudo systemctl enable crowdsec-firewall-bouncer
 ```
@@ -302,19 +297,13 @@ You can use CrowdSecâ€™s IP blacklist feature to manually add or regularly updat
 sudo cscli decisions add -i [IP address] -r "Malicious BT client"
 ```
 
-To further enhance the defense against BT leeching, you can subscribe to CrowdSec's global threat intelligence (CTI) feeds, ensuring up-to-date protection:
-
-```bash
-sudo cscli collections install crowdsecurity/cti-ips
-```
-
 You can verify the current blocked IPs and status by running:
 
 ```bash
 sudo cscli decisions list
 ```
 
-By following these steps, you can effectively use the CrowdSec project to block BT leeching and other malicious IP connections. If you need more advanced customization, you can create your own detection scenarios or rules based on your specific needs.
+Now you have enabled CrowdSec to enhance your server security.
 
 ------
 
