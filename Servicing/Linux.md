@@ -277,6 +277,12 @@ sudo apt-get update
 sudo apt-get install crowdsec
 ```
 
+!!! warning "CrowdSec uses 8080 port"
+
+    CrowdSec uses 8080 port by default. Make sure you don't have any service running on 8080 port.
+
+    You can change this port by editing the `/etc/crowdsec/crowdsec.yaml` file.
+
 CrowdSec is a senario-based security tool. You can list all the scenarios by running:
 
 ```bash title="List all CrowdSec scenarios"
