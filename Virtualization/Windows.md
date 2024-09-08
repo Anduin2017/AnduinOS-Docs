@@ -670,6 +670,18 @@ Due to lack of VirtIO drivers, you may not see the disk during the installation 
 
 ![Select VirtIO driver](./select_drivers.jpg)
 
+!!! note "What if the virtual machine's screen is always blank?"
+
+    It has been reported that the virtual machine's screen may be always blank. You need to finish the following checklist to solve this problem:
+
+    * Make sure the host machine has enabled IO-MMO on both grub settings and BIOS settings.
+    * Make sure the host machine has ignored MSRs.
+    * Make sure you uninstalled the driver for the PCIe device you want to pass through. (It has been reported that NVIDIA driver may block the device to pass through) Verify the pci device is running with driver `vfio-pci` by running `lspci -nnv -s 21:00.0`.
+    * Try turning off the `Above 4G Decoding` and `Re-Size BAR` in the BIOS settings. Some GPUs may not work with these settings.
+    * Try totally turning off the host machine and turning it on again. Some settings may not be applied without a full reboot.
+
+    If the problem still exists, you may need to read the [Troubleshooting](https://pve.proxmox.com/wiki/PCI_Passthrough) document.
+
 ## After Installation
 
 !!! note "You still need to install VirtIO drivers!"
