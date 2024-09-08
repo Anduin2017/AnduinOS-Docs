@@ -297,12 +297,6 @@ sudo systemctl start crowdsec-firewall-bouncer
 sudo systemctl enable crowdsec-firewall-bouncer
 ```
 
-<!-- TODO: Understand how this enhances security -->
-
-```bash title="Install CrowdSec blocklist mirror"
-sudo apt install crowdsec-blocklist-mirror
-```
-
 You can verify the current rules and decisions by running:
 
 ```bash
