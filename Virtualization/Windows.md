@@ -742,3 +742,16 @@ Now start the guest machine and install [spice-webdav](https://www.spice-space.o
 Now you **must** use the `virt-viewer` to open the virtual machine. To mount the shared folder, you can click on `File` -> `Preferences` -> `Spice` -> `Folder Sharing` and add the shared folder.
 
 Run `C:\Program File\SPICE webdavd\map-drive.bat` will map the shared folder, which is by default `~/Public`.
+
+## Never let the host sleep
+
+If the host goes to sleep, the virtual machine will be paused. To prevent this, you can run the following command to prevent the host from sleeping:
+
+```bash title="Prevent the host from sleeping"
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+```
+
+## Conclusion
+
+In conclusion, running Windows on AnduinOS through KVM/QEMU provides a powerful and flexible virtualization solution with near-native performance when properly configured. By following the detailed steps in this guide, including installing and configuring KVM, setting up PCIe passthrough, adjusting virtual machine settings for optimal performance, and enabling advanced features such as UEFI, Secure Boot, and TPM, you can achieve a smooth and efficient Windows experience within a virtualized environment. Additionally, tuning the VM settings, isolating CPU cores, and ensuring the host does not sleep will further enhance performance and reliability.
