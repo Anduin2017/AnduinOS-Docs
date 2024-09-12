@@ -34,6 +34,10 @@ You can also manually edit the `/etc/default/locale` file and set the `LANG` var
 
 For example, if you want to switch to the Japanese language, you can set the `LANG` variable to `ja_JP.UTF-8`.
 
+```bash title="Edit /etc/default/locale to set Language"
+sudo nano /etc/default/locale
+```
+
 You need to log out and log back in for the changes to take effect.
 
 ## Step 3: Edit pam configuration for current user
