@@ -1,5 +1,12 @@
 # AnduinOS Changelog
 
+## v1.0.1
+
+* Fixed an issue that Secure Boot may not work.
+* Added new locales: `pt_BR`.
+* Fixed the package `base-files` to avoid Ubuntu to upgrade to the next version.
+* Fixed the localization to replace `Add to favorites` with `Pin to taskbar`.
+
 ## v1.0.0
 
 * Added a new keyboard shortcut `Windows + U` to toggle the display network state on the taskbar.
