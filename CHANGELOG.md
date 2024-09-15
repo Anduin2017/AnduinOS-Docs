@@ -6,6 +6,7 @@
 * Added new locales: `pt_BR`.
 * Fixed the package `base-files` to avoid Ubuntu to upgrade to the next version.
 * Fixed the localization to replace `Add to favorites` with `Pin to taskbar`.
+* Added a new gnome plugin `rounded-window-corners@yilozt` to make the window corners rounded and looks more like Windows 11.
 
 ## v1.0.0
 
