@@ -31,6 +31,16 @@ After booting from the USB drive, you will see the AnduinOS installer screen. Yo
 
 Choose the option that suits your needs, and follow the on-screen instructions to install AnduinOS on your computer.
 
+## Set the Password for Secure Boot during installation
+
+During the installation process, you will be asked to set a password for Secure Boot. This password is required to enroll the AnduinOS Secure Boot key during the first boot.
+
+In the installation process, you will see the following screen to set the password for Secure Boot:
+
+![Ubiquity Set Secure Boot Key Password](./set-secure-boot-password.png)
+
+Enter a password and confirm it. This password will be used to enroll the AnduinOS Secure Boot key during the first boot.
+
 ## Installation Process
 
 The installation process will guide you through the following steps:
@@ -45,3 +55,9 @@ The installation process will guide you through the following steps:
 6. **User Information**: Enter your name, username, and password for the new user account.
 7. **Installation**: The installation process will start, and you can see the progress on the screen.
 8. **Complete**: Once the installation is complete, you will be prompted to restart your computer.
+
+## First boot and setup Secure Boot
+
+After the installation is complete, you can restart your computer and boot into AnduinOS. During the first boot, you may need to set up some configurations like Secure Boot, display settings, and other preferences.
+
+Please follow the [First-Boot-For-Secure-Boot.md](./First-Boot-For-Secure-Boot.md) guide to set up Secure Boot and other configurations during the first boot.
