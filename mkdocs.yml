@@ -119,7 +119,7 @@ nav:
       - Burn a USB stick: ./Install/Burn-A-USB-Stick.md
       - Install AnduinOS from USB: ./Install/Install-AnduinOS-From-USB.md
     - Setting Up AnduinOS:
-      - Turn on Secure Boot: ./Install/First-Boot-For-Secure-Boot.md
+      - First Boot for Secure Boot: ./Install/First-Boot-For-Secure-Boot.md
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
       - Install Drivers: ./Install/Install-Drivers.md
       - Mounting second disk: ./Install/Mounting-Second-Disk.md
