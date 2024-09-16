@@ -8,7 +8,7 @@ After burning the AnduinOS ISO file to a USB drive in the [previous step](./Burn
 
 !!! warning "Adjust Secure boot settings in your BIOS!"
 
-    AnduinOS supports Secure boot well. During the installation, it is very recommended to turn on Secure Boot to ensure the security of your system. If you have already installed AnduinOS without Secure Boot, you can turn on Secure Boot at any time. However, you may need to sign the kernel modules manually if you have installed third-party kernel modules.
+    AnduinOS supports Secure boot well. During the installation, it is very recommended to turn on Secure Boot to ensure the security of your system.
 
     ![Adjust secure boot settings](./seboot.png)
 
