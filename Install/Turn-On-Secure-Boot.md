@@ -2,7 +2,7 @@
 
 !!! warning "Adjust Secure boot settings in your BIOS!"
 
-    During the installation of AnduinOS, you need to [disable Secure Boot](./Install-AnduinOS-From-USB.md) in the BIOS settings to install AnduinOS. And you need to re-enable Secure Boot after the installation.
+    AnduinOS supports Secure boot well. During the installation, it is very recommended to turn on Secure Boot to ensure the security of your system. If you have already installed AnduinOS without Secure Boot, you can turn on Secure Boot at any time. However, you may need to sign the kernel modules manually if you have installed third-party kernel modules.
 
     ![Adjust secure boot settings](./seboot.png)
 

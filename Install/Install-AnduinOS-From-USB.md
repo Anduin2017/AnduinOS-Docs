@@ -4,17 +4,17 @@
 
 After burning the AnduinOS ISO file to a USB drive in the [previous step](./Burn-A-USB-Stick.md), you can boot your computer from the USB drive to install AnduinOS. This guide will show you how to boot from a USB drive on different systems.
 
-## Turn off Secure Boot
+## Turn on Secure Boot
 
-!!! warning "Turn off Secure Boot for UEFI systems"
+!!! warning "Adjust Secure boot settings in your BIOS!"
 
-    If you are using a UEFI system, by default it may enabled Secure Boot, which can prevent the installation of 3rd party operating systems. You may need to disable Secure Boot in the BIOS settings to install AnduinOS.
+    AnduinOS supports Secure boot well. During the installation, it is very recommended to turn on Secure Boot to ensure the security of your system. If you have already installed AnduinOS without Secure Boot, you can turn on Secure Boot at any time. However, you may need to sign the kernel modules manually if you have installed third-party kernel modules.
 
-    While AnduinOS's installer ISO doesn't support Secure Boot, the installed system does. You may need to disable Secure Boot in the BIOS settings only to install AnduinOS. And you can re-enable Secure Boot after the installation.
+    ![Adjust secure boot settings](./seboot.png)
 
-To turn off Secure Boot, you need to enter BIOS settings first. The key to enter BIOS settings varies depending on the manufacturer of your computer. Common keys include `F2`, `F10`, `Volume up + Power` or `Del`. You can usually see the key to enter BIOS settings on the boot screen when you start your computer.
+To turn on Secure Boot, you need to enter BIOS settings first. The key to enter BIOS settings varies depending on the manufacturer of your computer. Common keys include `F2`, `F10`, `Volume up + Power` or `Del`. You can usually see the key to enter BIOS settings on the boot screen when you start your computer.
 
-Boot your computer, press `F2` or the key to enter BIOS settings, and then find the Secure Boot option in the BIOS settings. Disable Secure Boot and save the changes. Then you can boot your computer from the USB drive.
+Boot your computer, press `F2` or the key to enter BIOS settings, and then find the Secure Boot option in the BIOS settings. Enable Secure Boot and save the changes. Set the Secure Boot certificate to `Linux` or `3rd Party CA`. After that, you can boot your computer from the AnduinOS USB drive and install AnduinOS.
 
 ## Boot from USB
 
