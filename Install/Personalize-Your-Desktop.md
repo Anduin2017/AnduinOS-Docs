@@ -14,6 +14,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/bott
 
 ![bottom-center](./styles/1.png)
 
+----------
+
 ### Move taskbar to the bottom, and put the start menu on the left
 
 ```bash title="Move taskbar to the bottom, and put the start menu on the left"
@@ -21,6 +23,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/bott
 ```
 
 ![bottom-left](./styles/2.png)
+
+----------
 
 ### Move taskbar to the left, and center the start menu
 
@@ -30,6 +34,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/left
 
 ![left-center](./styles/3.png)
 
+----------
+
 ### Move taskbar to the left, and put the start menu on the top
 
 ```bash title="Move taskbar to the left, and put the start menu on the top"
@@ -37,6 +43,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/left
 ```
 
 ![left-top](./styles/4.png)
+
+----------
 
 ### Move taskbar to the top, and center the start menu
 
@@ -46,6 +54,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/top_
 
 ![top-center](./styles/5.png)
 
+----------
+
 ### Move taskbar to the top, and put the start menu on the left
 
 ```bash title="Move taskbar to the top, and put the start menu on the left"
@@ -54,6 +64,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/top_
 
 ![top-left](./styles/6.png)
 
+----------
+
 ### Move taskbar to the right, and center the start menu
 
 ```bash title="Move taskbar to the right, and center the start menu"
@@ -61,6 +73,8 @@ curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/styles/righ
 ```
 
 ![right-center](./styles/7.png)
+
+----------
 
 ### Move taskbar to the right, and put the start menu on the top
 
