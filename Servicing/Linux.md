@@ -381,6 +381,12 @@ sudo sysctl net.ipv4.tcp_available_congestion_control | grep -q bbr ||  enable_b
 
 ### Setup best apt mirror
 
+!!! warning "Ubuntu Jammy and AnduinOS only"
+
+    The following command is for Ubuntu Jammy and AnduinOS. If you are using other versions of Ubuntu, you should search for the best apt mirror for your version.
+
+    If you are running other Linux distributions, you should search for the best apt mirror for your distribution. Do NOT use the following command.
+
 By default, the server provider may not set the best apt mirror for you. You can set it by running:
 
 ```bash title="Select best apt source"
