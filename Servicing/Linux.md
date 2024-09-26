@@ -165,6 +165,8 @@ Now you can connect to the server without a password:
 ssh your-username@your-server-ip
 ```
 
+If the server didn't ask for a password, you have successfully set up the SSH key.
+
 ------
 
 ### Disable root login
@@ -176,7 +178,7 @@ sudo vim /etc/ssh/sshd_config
 ```
 
 * Change: `PermitRootLogin` to `no` to disable the root user login.
-* Change `PasswordAuthentication`  to `no` to prevent the password login.
+* Change `PasswordAuthentication` to `no` to disable password login. (Make sure you can use SSH key login before disabling password login)
 * Change `PubkeyAuthentication` to `yes` to allow ssh key login.
 
 Then restart the SSH service:
