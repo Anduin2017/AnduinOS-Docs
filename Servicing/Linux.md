@@ -466,6 +466,9 @@ function switchSource() {
 
   fastest_mirror=$(echo "$sorted_mirrors" | head -n 1 | awk '{print $1}')
 
+  echo "Backup sources.list to sources.list.bak"
+  sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
   echo "Fastest mirror: $fastest_mirror"
   echo "
   deb $fastest_mirror jammy main restricted universe multiverse
