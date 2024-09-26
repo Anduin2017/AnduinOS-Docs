@@ -76,6 +76,13 @@ sudo hostnamectl set-hostname your-hostname
 sudo reboot
 ```
 
+!!! warning "Only limited characters are allowed"
+
+    The hostname can only contain letters, numbers, and hyphens. It cannot start or end with a hyphen. It cannot contain spaces or special characters like underscores.
+
+    For example, `your-hostname` is a valid hostname, but `your-hostname-` is not.
+    For example, `your-hostname` is a valid hostname, but `your_hostname` is not.
+
 You also need to update `/etc/hosts` to add the new hostname as `127.0.0.1`:
 
 ```bash title="Update /etc/hosts"
@@ -136,13 +143,13 @@ By default, the server provider will give you a password to connect to the serve
     ls ~/.ssh
     ```
 
-```bash title="Generate a new SSH key pair"
+```bash title="Generate a new SSH key pair (Run on your local machine)"
 ssh-keygen
 ```
 
 Then copy the public key to the server:
 
-```bash title="Copy SSH public key"
+```bash title="Copy SSH public key (Run on your local machine)"
 ssh-copy-id your-username@your-server-ip
 ```
 
