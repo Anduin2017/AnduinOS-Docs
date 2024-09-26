@@ -136,7 +136,7 @@ sudo ls
 
 !!! note "Run on your local machine!"
 
-    The next command should be run on your local machine instead of the server!
+    The next command should be run on your local machine instead of the server! No matter your local machine is running Windows, macOS, or Linux, you can still run the command below. All those systems support the SSH command.
 
 By default, the server provider will give you a password to connect to the server. It's recommended to use [SSH key](../Skills/Secret-Management/Manage-SSH-Keys.md) instead. You can generate a new SSH key pair on your local machine:
 
