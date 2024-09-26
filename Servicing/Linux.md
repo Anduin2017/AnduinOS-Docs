@@ -126,7 +126,8 @@ Now you can test the new user's root permission:
 
 ```bash title="Test the new user's root permission"
 su - your-username
-sudo whoami
+whoami
+sudo ls
 ```
 
 ------
