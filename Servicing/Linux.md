@@ -89,7 +89,7 @@ You also need to update `/etc/hosts` to add the new hostname as `127.0.0.1`:
 sudo vim /etc/hosts
 ```
 
-Inside the /etc/hosts file, add the new hostname as 127.0.0.1, like this:
+Inside the /etc/hosts file, add the new hostname as `127.0.0.1`, like this:
 
 ```bash title="Update /etc/hosts"
 127.0.0.1   localhost
@@ -97,6 +97,12 @@ Inside the /etc/hosts file, add the new hostname as 127.0.0.1, like this:
 ```
 
 Make sure to replace your-hostname with the actual hostname you set using the hostnamectl command. Save and close the file.
+
+!!! note "Use the vim editor"
+
+    To start editing the file in vim, you can press `i` to enter insert mode. You can use the arrow keys to navigate and edit the file.
+
+    To save and close the file in vim, you can press `ESC` and then type `:wq` and press `Enter`.
 
 ------
 
