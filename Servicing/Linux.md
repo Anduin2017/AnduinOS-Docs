@@ -76,13 +76,20 @@ sudo hostnamectl set-hostname your-hostname
 sudo reboot
 ```
 
+!!! warning "Only limited characters are allowed"
+
+    The hostname can only contain letters, numbers, and hyphens. It cannot start or end with a hyphen. It cannot contain spaces or special characters like underscores.
+
+    For example, `your-hostname` is a valid hostname, but `your-hostname-` is not.
+    For example, `your-hostname` is a valid hostname, but `your_hostname` is not.
+
 You also need to update `/etc/hosts` to add the new hostname as `127.0.0.1`:
 
 ```bash title="Update /etc/hosts"
 sudo vim /etc/hosts
 ```
 
-Inside the /etc/hosts file, add the new hostname as 127.0.0.1, like this:
+Inside the /etc/hosts file, add the new hostname as `127.0.0.1`, like this:
 
 ```bash title="Update /etc/hosts"
 127.0.0.1   localhost
@@ -90,6 +97,12 @@ Inside the /etc/hosts file, add the new hostname as 127.0.0.1, like this:
 ```
 
 Make sure to replace your-hostname with the actual hostname you set using the hostnamectl command. Save and close the file.
+
+!!! note "Use the vim editor"
+
+    To start editing the file in vim, you can press `i` to enter insert mode. You can use the arrow keys to navigate and edit the file.
+
+    To save and close the file in vim, you can press `ESC` and then type `:wq` and press `Enter`.
 
 ------
 
@@ -113,7 +126,8 @@ Now you can test the new user's root permission:
 
 ```bash title="Test the new user's root permission"
 su - your-username
-sudo whoami
+whoami
+sudo ls
 ```
 
 ------
@@ -122,7 +136,7 @@ sudo whoami
 
 !!! note "Run on your local machine!"
 
-    The next command should be run on your local machine instead of the server!
+    The next command should be run on your local machine instead of the server! No matter your local machine is running Windows, macOS, or Linux, you can still run the command below. All those systems support the SSH command.
 
 By default, the server provider will give you a password to connect to the server. It's recommended to use [SSH key](../Skills/Secret-Management/Manage-SSH-Keys.md) instead. You can generate a new SSH key pair on your local machine:
 
@@ -136,13 +150,13 @@ By default, the server provider will give you a password to connect to the serve
     ls ~/.ssh
     ```
 
-```bash title="Generate a new SSH key pair"
+```bash title="Generate a new SSH key pair (Run on your local machine)"
 ssh-keygen
 ```
 
 Then copy the public key to the server:
 
-```bash title="Copy SSH public key"
+```bash title="Copy SSH public key (Run on your local machine)"
 ssh-copy-id your-username@your-server-ip
 ```
 
@@ -151,6 +165,8 @@ Now you can connect to the server without a password:
 ```bash title="Connect to the server without password (Run on your local machine)"
 ssh your-username@your-server-ip
 ```
+
+If the server didn't ask for a password, you have successfully set up the SSH key.
 
 ------
 
@@ -163,7 +179,7 @@ sudo vim /etc/ssh/sshd_config
 ```
 
 * Change: `PermitRootLogin` to `no` to disable the root user login.
-* Change `PasswordAuthentication`  to `no` to prevent the password login.
+* Change `PasswordAuthentication` to `no` to disable password login. (Make sure you can use SSH key login before disabling password login)
 * Change `PubkeyAuthentication` to `yes` to allow ssh key login.
 
 Then restart the SSH service:
@@ -365,6 +381,12 @@ sudo sysctl net.ipv4.tcp_available_congestion_control | grep -q bbr ||  enable_b
 
 ### Setup best apt mirror
 
+!!! warning "Ubuntu Jammy and AnduinOS only"
+
+    The following command is for Ubuntu Jammy and AnduinOS. If you are using other versions of Ubuntu, you should search for the best apt mirror for your version.
+
+    If you are running other Linux distributions, you should search for the best apt mirror for your distribution. Do NOT use the following command.
+
 By default, the server provider may not set the best apt mirror for you. You can set it by running:
 
 ```bash title="Select best apt source"
@@ -443,6 +465,9 @@ function switchSource() {
   echo "$sorted_mirrors"
 
   fastest_mirror=$(echo "$sorted_mirrors" | head -n 1 | awk '{print $1}')
+
+  echo "Backup sources.list to sources.list.bak"
+  sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
   echo "Fastest mirror: $fastest_mirror"
   echo "

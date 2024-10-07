@@ -131,6 +131,7 @@ nav:
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
+      - Personalize Your Desktop: ./Install/Personalize-Your-Desktop.md
       - Managing Printers: ./Install/Managing-Printers.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
     - Maintaining AnduinOS:
