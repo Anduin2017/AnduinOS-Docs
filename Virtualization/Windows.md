@@ -191,6 +191,8 @@ sudo chmod +x /etc/initramfs-tools/scripts/init-top/vfio.sh
 Then update the initramfs and reboot your system:
 
 ```bash title="Update initramfs"
+sudo modprobe vfio
+sudo modprobe vfio-pci
 sudo update-initramfs -u -k all
 sudo reboot
 ```
