@@ -73,7 +73,7 @@ In some cases, you may need to pass through a PCIe device to a virtual machine. 
 
 To enable IOMMU in the BIOS, you need to reboot your system, press `F2` or `Delete` to enter the BIOS settings, and enable IOMMU in the settings. On Intel PCs, it may be called `VT-d`, and on AMD PCs, it may be called `AMD-Vi`.
 
-Then you need to [Edit kernel parameter](../../../Skills/System-Management/Update-Kernel-Parameters.md).
+Then you need to [Edit kernel parameter](../Skills/System-Management/Update-Kernel-Parameters.md):
 
 * `hugepagesz=1G` and `default_hugepagesz=2M` will enable huge pages with a size of 1GB and 2MB. It may improve the performance of the virtual machine.
 * `intel_iommu=on` and `iommu=pt` will enable IOMMU and pass-through mode. For AMD CPUs, you can use `amd_iommu=on` and `iommu=pt`.
