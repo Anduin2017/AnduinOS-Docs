@@ -129,6 +129,7 @@ nav:
       - Update firmware: ./Install/Upgrade-Firmware.md
       - Configure Power Settings: ./Install/Configure-Power-Settings.md
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
+      - Enable SSH and Firewall: ./Install/Enable-SSH-And-Firewall.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
       - Personalize Your Desktop: ./Install/Personalize-Your-Desktop.md
