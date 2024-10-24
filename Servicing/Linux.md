@@ -633,7 +633,7 @@ For example, to use `iperf3` to test the network speed:
 ```bash title="Test network speed"
 sudo apt update
 sudo apt install -y iperf3
-sudo uf allow 5201
+sudo ufw allow 5201
 iperf3 -s
 ```
 
@@ -653,6 +653,7 @@ sysbench cpu --threads=$(nproc) run
 | CPU             | Total number of events |
 | --------------- | ---------------------- |
 | Intel 13900KS   | 100,0000                |
+| Intel 13900H    |  43,0000                |
 | Intel 10900H    |  40,0000                |
 | Vultr 2 vCPU    |   7,0000                |
 | Azure B1s       |   1,8000                |
