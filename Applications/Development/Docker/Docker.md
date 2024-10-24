@@ -28,6 +28,12 @@ You may need `docker-compose` to manage multi-container Docker applications. To 
 sudo apt install docker-compose
 ```
 
+Or you can directly prompt current machine as a swarm manager:
+
+```bash
+sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
+```
+
 ## Docker with Nvidia GPU
 
 First, confirm that your Nvidia GPU is detected by the system:
