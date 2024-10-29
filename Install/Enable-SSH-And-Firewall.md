@@ -1,5 +1,7 @@
 # Enable SSH and Firewall
 
+By default, SSH is disabled on AnduinOS. This is because not all users need to use SSH, and enabling it by default can be a security risk. However, if you are building a server or need to access your system remotely, you may want to enable SSH. In this guide, we will show you how to enable SSH and the firewall on AnduinOS.
+
 ## Enable SSH
 
 SSH is a secure protocol used to connect to remote servers. It is a good practice to enable SSH on your server to allow remote access. To enable SSH, follow the steps below:
