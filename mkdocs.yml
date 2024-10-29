@@ -143,6 +143,7 @@ nav:
   - Skills:
     - System Management:
       - Check system layout: ./Skills/System-Management/Check-System-Layout.md
+      - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Debug storage consumption: ./Skills/System-Management/Debug-Storage-Consumption.md
