@@ -148,6 +148,7 @@ nav:
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Debug storage consumption: ./Skills/System-Management/Debug-Storage-Consumption.md
       - Check file format: ./Skills/System-Management/Check-File-Format.md
+      - Remove duplicate apt source: ./Skills/System-Management/Remove-Duplicate-Apt-Source.md
       - Make a RAM disk: ./Skills/System-Management/Make-A-RAM-Disk.md
     - Sandboxing:
       - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
