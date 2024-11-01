@@ -15,6 +15,7 @@ Here's a quick way to remove duplicate entries from your apt sources list. You c
 Open a terminal and run the following commands:
 
 ```bash
+sudo apt install python3-apt python3-regex
 wget https://github.com/davidfoerster/aptsources-cleanup/releases/download/v0.1.7.5.2/aptsources-cleanup.pyz
 chmod +x aptsources-cleanup.pyz
 sudo bash -c "echo all | ./aptsources-cleanup.pyz  --yes"
