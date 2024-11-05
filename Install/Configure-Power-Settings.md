@@ -83,6 +83,12 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'no
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 ```
 
+To enable it system wide:
+
+```bash
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
 This command will prevent the system from sleeping when the computer is inactive while connected to AC power.
 
 To revert the changes, you can run the following command:
@@ -90,6 +96,7 @@ To revert the changes, you can run the following command:
 ```bash
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
+sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
 
 This command will allow the system to sleep when the computer is inactive while connected to AC power.
