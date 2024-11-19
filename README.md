@@ -28,7 +28,7 @@ After installing AnduinOS, you may need to do some post-installation configurati
 * [Switch to your language](./Install/Switch-To-Your-Language.md)
 * [Update firmware](./Install/Upgrade-Firmware.md)
 * [Configure Power Settings](./Install/Configure-Power-Settings.md)
-* [Install applications](./Applications/Introduction.md)
+* [Install an App Store](./Install/Install-An-App-Store.md) or [Install applications](./Applications/Introduction.md)
 
 ## How to install applications on AnduinOS?
 

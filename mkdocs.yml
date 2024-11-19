@@ -129,6 +129,7 @@ nav:
       - Update firmware: ./Install/Upgrade-Firmware.md
       - Configure Power Settings: ./Install/Configure-Power-Settings.md
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
+      - Install an App Store: ./Install/Install-An-App-Store.md
       - Enable SSH and Firewall: ./Install/Enable-SSH-And-Firewall.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
@@ -136,7 +137,6 @@ nav:
       - Managing Printers: ./Install/Managing-Printers.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
     - Maintaining AnduinOS:
-      - Install or remove Snap: ./Install/Install-Or-Remove-Snap.md
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
       - Backup And Restore: ./Install/Backup-And-Restore.md
 
@@ -172,6 +172,9 @@ nav:
         - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
 
+      - Store:
+        - Flathub: ./Applications/Store/Flathub/Flathub.md
+        - Snap Store: ./Applications/Store/Snap-Store/Snap-Store.md
       - Communication:
         - Telegram: ./Applications/Communication/Telegram/Telegram.md
         - WeChat: ./Applications/Communication/WeChat/WeChat.md
