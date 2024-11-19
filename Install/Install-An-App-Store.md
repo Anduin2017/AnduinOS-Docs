@@ -25,3 +25,9 @@ Follow these simple steps to start using Flatpak as a Software Store on AnduinOS
 Follow these simple steps to start using Snap as a Software Store on AnduinOS.
 
 [Install Snap Store](../Applications/Store/Snap-Store/Snap-Store.md)
+
+## Option 3 - Install Nix as a Software Store
+
+Follow these simple steps to start using Nix as a Software Store on AnduinOS.
+
+[Install Nix](../Applications/Store/Nix/Nix.md)
