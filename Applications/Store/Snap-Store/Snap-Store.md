@@ -27,6 +27,10 @@ sudo snap install snapd-desktop-integration
 
 That's it! You can now open Snap Store from the Applications menu and start installing apps.
 
+## 2. Restart
+
+To complete setup, restart your system. Now all you have to do is [install some apps](https://snapcraft.io/store)!
+
 ## To remove Snap
 
 If you want to remove Snap, you can run the following command:
