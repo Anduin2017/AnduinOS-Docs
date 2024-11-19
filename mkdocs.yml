@@ -175,6 +175,7 @@ nav:
       - Store:
         - Flathub: ./Applications/Store/Flathub/Flathub.md
         - Snap Store: ./Applications/Store/Snap-Store/Snap-Store.md
+
       - Communication:
         - Telegram: ./Applications/Communication/Telegram/Telegram.md
         - WeChat: ./Applications/Communication/WeChat/WeChat.md

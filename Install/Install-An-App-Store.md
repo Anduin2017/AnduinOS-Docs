@@ -16,10 +16,10 @@ By default, AnduinOS doesn't come with a Software Store pre-installed. You can i
 
 Follow these simple steps to start using Flatpak as a Software Store on AnduinOS.
 
-[Install Flatpak and Flathub](../Applications/Store/Flatpak.md)
+[Install Flatpak and Flathub](../Applications/Store/Flathub/Flathub.md)
 
 ## Option 2 - Install Snap Store as a Software Store
 
 Follow these simple steps to start using Snap as a Software Store on AnduinOS.
 
-[Install Snap Store](../Applications/Store/Snap-Store.md)
+[Install Snap Store](../Applications/Store/Snap-Store/Snap-Store.md)
