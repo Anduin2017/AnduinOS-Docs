@@ -12,6 +12,8 @@ By default, AnduinOS doesn't come with a Software Store pre-installed. You can i
 
     AnduinOS currently does not have a definitive development direction or distinguishing focus. As a result, beyond apt, it does not come pre-configured with any user software management system or store. This provides flexibility, allowing users to choose their preferred solution. Flatpak, combined with Flathub, is highly recommended for those seeking a modern graphical app store experience.
 
+    So, AnduinOS does not come with a pre-installed Software Store. This allows you to choose the Software Store that best fits your needs.
+
 ## Option 1 - Install Flatpak and Flathub as a Software Store
 
 Follow these simple steps to start using Flatpak as a Software Store on AnduinOS.
