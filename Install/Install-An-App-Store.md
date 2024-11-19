@@ -2,7 +2,7 @@
 
 By default, AnduinOS doesn't come with a Software Store pre-installed. You can install a Software Store of your choice to start installing apps.
 
-!!! note "Why a store is not pre-installed?"
+??? Tip "Why a store is not pre-installed?"
 
     The choice not to pre-install a software store on AnduinOS is driven by several considerations. 
 
