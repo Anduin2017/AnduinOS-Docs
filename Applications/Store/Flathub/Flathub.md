@@ -4,17 +4,9 @@ Follow these simple steps to start using Flatpak as a Software Store on AnduinOS
 
 ## 1. Install Flatpak
 
-To install Flatpak on Ubuntu 18.10 (Cosmic Cuttlefish) or later, simply run:
+To install Flatpak on AnduinOS, simply run:
 
 ```bash
-sudo apt install flatpak
-```
-
-With older Ubuntu versions, the official Flatpak PPA is the recommended way to install Flatpak. To install it, run the following in a terminal:
-
-```bash
-sudo add-apt-repository ppa:flatpak/stable
-sudo apt update
 sudo apt install flatpak
 ```
 
@@ -25,8 +17,6 @@ The Flatpak plugin for the Software app makes it possible to install apps withou
 ```bash
 sudo apt install gnome-software-plugin-flatpak
 ```
-
-**Note:** The Software app is distributed as a Snap since Ubuntu 20.04 and does not support graphical installation of Flatpak apps. Installing the Flatpak plugin will also install a deb version of Software and result in two Software apps being installed at the same time.
 
 ## 3. Add the Flathub repository
 
