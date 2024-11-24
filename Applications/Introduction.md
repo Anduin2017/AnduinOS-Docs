@@ -20,6 +20,20 @@ While we provide an official way to install some applications, you can also inst
 
 Before continuing, you need to know how to open terminal on AnduinOS.
 
+??? Tip "Why a native store is not pre-installed?"
+
+    The decision not to include a pre-installed software store in AnduinOS stems from several key considerations.
+
+    Traditional package management systems each present unique challenges. For instance, Nix, while powerful with its functional approach, can be daunting for the average user to navigate. Arch's AUR, despite its flexibility, is often criticized for its chaotic and hard-to-manage nature. Ubuntu and Debian's `apt` package manager is reliable, but resolving package conflicts can be particularly challenging. Meanwhile, newer industry trends favor solutions like Snap, AppImage, and Flatpak. We believe it makes sense to rely on `apt` for managing core system components while utilizing modern solutions such as Flatpak, Docker, AppImage, or Snap for user-installed graphical applications.
+
+    It’s also evident that preferences for software management vary widely among users today. Some prefer native package managers like `apt` or `dnf`, others appreciate the extensibility of AUR, while many are drawn to newer approaches like Nix, Flatpak, Docker, AppImage, or Snap. The guiding principle for AnduinOS's pre-installed content is straightforward: if it’s not certain that all users need something, it won’t be pre-installed. AnduinOS primarily targets professional users who are proficient in managing their system's software packages, and for most, `apt` alone suffices. Furthermore, the Linux application store ecosystem is highly fragmented, often relying on different underlying package management solutions, such as `dpkg`, AppImage, Flatpak, or Docker.
+
+    Currently, AnduinOS lacks a specific development direction or distinguishing focus. Therefore, apart from `apt`, it doesn’t come pre-configured with any additional software management systems or stores. This design provides flexibility, allowing users to adopt the solutions that best suit their needs. For those seeking a modern graphical app store experience, Flatpak combined with Flathub is highly recommended.
+
+    By omitting a pre-installed software store, AnduinOS empowers users to choose the option that aligns best with their workflow and preferences.
+
+To install a native App Store, please [click here](../Install/Install-An-App-Store.md).
+
 ## How to paste the commands into the terminal
 
 To open the terminal on AnduinOS, you can press `Ctrl + Alt + T` or search for `Terminal` in the application menu.
