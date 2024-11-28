@@ -216,6 +216,7 @@ nav:
         - qBittorrent: ./Applications/Download-Tools/qBittorrent/qBittorrent.md
         - Deluge: ./Applications/Download-Tools/Deluge/Deluge.md
         - uGet: ./Applications/Download-Tools/uGet/uGet.md
+        - Youtube-dl: ./Applications/Download-Tools/Youtube-dl/Youtube-dl.md
 
       - Utilities:
         - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
