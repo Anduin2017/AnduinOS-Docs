@@ -12,6 +12,8 @@ By default, AnduinOS doesn't come with a Software Store pre-installed. You can i
 
     Currently, AnduinOS lacks a specific development direction or distinguishing focus. Therefore, apart from `apt`, it doesn’t come pre-configured with any additional software management systems or stores. This design provides flexibility, allowing users to adopt the solutions that best suit their needs. For those seeking a modern graphical app store experience, Flatpak combined with Flathub is highly recommended.
 
+    Additionally, many software license agreements explicitly state that unauthorized distribution is illegal. If we operate our own app store, such software that we lack the rights to distribute cannot be included in the store. We cannot take on this legal risk. For example: Google Chrome, Skype, Zoom, WhatsApp, ElasticSearch, Minecraft, Steam, Epic Store, EA Origin, etc. Therefore, the best option we can provide is to guide users on how to install these applications via their official channels on Linux and organize one-click installation methods through the official channels.
+
     By omitting a pre-installed software store, AnduinOS empowers users to choose the option that aligns best with their workflow and preferences.
 
 ## Option 1 - Install Flatpak and Flathub as a Software Store
