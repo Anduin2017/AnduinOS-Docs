@@ -2,6 +2,10 @@
 
 Youtube dl is a command-line program to download videos from YouTube.com and other video sites.
 
+The source code of Youtube dl is available on [GitHub](https://github.com/ytdl-org/youtube-dl).
+
+By using it may violate the terms of service of the video hosting sites. Please refer to the [YouTube Terms of Service](https://www.youtube.com/static?template=terms) before using it. Please refer the [License](https://github.com/ytdl-org/youtube-dl/blob/master/LICENSE) of Youtube dl before using it. In case of any violation, the user will be responsible for it.
+
 To install Youtube dl on AnduinOS, run the following command:
 
 ```bash
