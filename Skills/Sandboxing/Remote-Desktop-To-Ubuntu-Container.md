@@ -1,4 +1,4 @@
-# Remote Desktop to Ubuntu Container
+# Run Ubuntu Desktop in a Docker Container
 
 ![Run Ubuntu GUI Container in AnduinOS](./u_in_a.png)
 
