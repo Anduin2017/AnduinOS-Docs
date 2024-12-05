@@ -1,5 +1,18 @@
 # AnduinOS Changelog
 
+## v1.0.4
+
+* Fixed an issue that the `help` feature in some gnome apps might not work.
+* Generate the `/etc/locale.gen` file to enable all locales by default.
+
+## v1.0.3
+
+* Added `gnome-bluetooth`, `gnome-power-manager`, `gnome-maps` to the default app list.
+
+## v1.0.2
+
+* Use Qalculate gtk to replace Gnome Calculator.
+
 ## v1.0.1
 
 * Fixed an issue that Secure Boot may not work.
