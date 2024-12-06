@@ -16,9 +16,7 @@ nvidia-smi
 
 To install CUDA, download it here: [https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive).
 
-I downloaded 11.8.0.
-
-Don't forget, you also need to decide which version of CUDA to install. Not all CUDA supports all driviers.
+Don't forget, you also need to decide which version of CUDA to install. **Not all CUDA supports all driviers!**
 
 First you need know the verison of the driver via `nvidia-smi`. And query the doc to know which CUDA it supports:
 
@@ -38,28 +36,28 @@ source /etc/environment
 nvcc --version
 ```
 
+That would install CUDA 11.8.0 on your system.
+
 ## Install Nvidia Container Toolkit
 
 If you are using Docker, you may need to install Nvidia Container Toolkit.
 
-Please refer to [document here](../Docker/Docker.md) to install Docker and Nvidia Container Toolkit.
+Please refer to [document here](../Docker/Docker.md) to install Docker and Nvidia Container Toolkit if you need CUDA in Docker.
 
 ## Install cuDNN
 
 To install cuDNN, download it here: [https://developer.nvidia.com/rdp/cudnn-download](https://developer.nvidia.com/rdp/cudnn-download).
 
-I downloaded `Download cuDNN v8.9.0 (April 11th, 2023), for CUDA 11.x`.
-
 Run:
 
 ```bash
-	echo "Installing CUDNN..."
-	sudo dpkg -i ./cudnn-local-repo-ubuntu2204-8.9.0.131_1.0-1_amd64_cuda11.deb
-	sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/
-	sudo apt-get update
-	sudo apt-get install libcudnn8=8.9.0.131-1+cuda11.8
-	sudo apt-get install libcudnn8-dev=8.9.0.131-1+cuda11.8
-	sudo apt-get install libfreeimage-dev
+echo "Installing CUDNN..."
+sudo dpkg -i ./cudnn-local-repo-ubuntu2204-8.9.0.131_1.0-1_amd64_cuda11.deb
+sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get install libcudnn8=8.9.0.131-1+cuda11.8
+sudo apt-get install libcudnn8-dev=8.9.0.131-1+cuda11.8
+sudo apt-get install libfreeimage-dev
 ```
 
 ## Install PyTorch
