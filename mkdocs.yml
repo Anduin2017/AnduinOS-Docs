@@ -231,6 +231,7 @@ nav:
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
+        - CUDA: ./Applications/Development/CUDA/CUDA.md
         - Node: ./Applications/Development/Node/Node.md
         - .NET: ./Applications/Development/Dotnet/Dotnet.md
         - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
