@@ -14,6 +14,8 @@ CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
 ```
 
+To quickly learn how to use Docker, you can visit the [official Docker documentation](https://docs.docker.com/get-started/). You can also view our quick Docker handbook [here](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
+
 To allow current user to run Docker commands without sudo, you can run:
 
 ```bash title="Allow current user to run Docker commands without sudo"
@@ -35,6 +37,8 @@ sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
 ```
 
 ## Docker with Nvidia GPU
+
+If your system has an Nvidia GPU, you can use it with Docker. This provides GPU acceleration for your containers.
 
 First, confirm that your Nvidia GPU is detected by the system:
 
