@@ -2,7 +2,7 @@
 
 Terminal mode is a feature that allows you to interact with the system using a command-line interface. This mode is useful for advanced users who prefer to work with the system using commands.
 
-For example, if you need to host as a server, or running a benchmark tool which requires minimal resources, you can use terminal mode to interact with the system.
+For example, if you need to install Nvidia drivers, host as a server, or running a benchmark tool which requires minimal resources, you can use terminal mode to interact with the system.
 
 ![terminal](./terminal.jpg)
 
