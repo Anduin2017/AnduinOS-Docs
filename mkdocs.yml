@@ -173,6 +173,7 @@ nav:
         - Sublime Text: ./Applications/Code-Editors/Sublime-Text/Sublime-Text.md
         - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
+        - Obisidian: ./Applications/Code-Editors/Obisidian/Obisidian.md
 
       - Store:
         - Flathub: ./Applications/Store/Flathub/Flathub.md
