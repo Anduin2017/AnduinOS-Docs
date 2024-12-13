@@ -7,10 +7,10 @@ You can personalize your desktop by changing the wallpaper, theme, and element l
 You can change the cursor size via running the following command:
 
 ```bash title="Change cursor size"
-dconf write  /org/gnome/desktop/interface/cursor-size 25
+dconf write  /org/gnome/desktop/interface/cursor-size 24
 ```
 
-25 is default, you can change it to any number you like. For example, change it to `100` and you will see a huge cursor.
+24 is default, you can change it to any number you like. For example, change it to `100` and you will see a huge cursor.
 
 ## Change taskbar position
 
