@@ -2,6 +2,16 @@
 
 You can personalize your desktop by changing the wallpaper, theme, and element locations. This guide will show you how to personalize your desktop.
 
+## Change cursor size
+
+You can change the cursor size via running the following command:
+
+```bash title="Change cursor size"
+dconf write  /org/gnome/desktop/interface/cursor-size 24
+```
+
+24 is default, you can change it to any number you like. For example, change it to `100` and you will see a huge cursor.
+
 ## Change taskbar position
 
 You can change the taskbar position to the top, bottom, left, or right of the screen.
