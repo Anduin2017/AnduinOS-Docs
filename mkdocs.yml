@@ -190,6 +190,7 @@ nav:
       - Internet Services:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
+        - Dropbox: ./Applications/Internet-Services/Dropbox/Dropbox.md
 
       - Media Players:
         - VLC Media Player: ./Applications/Media-Players/VLC-Media-Player/VLC-Media-Player.md
