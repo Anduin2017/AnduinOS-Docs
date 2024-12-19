@@ -32,6 +32,10 @@ This will mount the remote drive on your local machine, and you can access the d
 
     In the example above, we set `file_mode` and `dir_mode` to `0666` and `0777`, which means giving read and write permissions to everyone. This is only for convenience and might not be secure. You should adjust the permissions according to your needs and security requirements.
 
+!!! note "Wondering how to host a shared SMB folder?"
+
+    Check out our guide on [Setting Up an SMB Share](../../Servicing/Samba/Samba.md) to learn how to host a shared folder on AnduinOS!
+
 ## NFS
 
 To mount a remote drive using the NFS protocol, you need to install the `nfs-common` package. You can install it using the following command:
