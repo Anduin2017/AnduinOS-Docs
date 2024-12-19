@@ -146,6 +146,7 @@ nav:
       - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
       - Enter terminal mode: ./Skills/System-Management/Terminal-Mode.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
+      - Mounting remote folders: ./Skills/System-Management/Mounting-Remote-Folder.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Debug storage consumption: ./Skills/System-Management/Debug-Storage-Consumption.md
       - Check file format: ./Skills/System-Management/Check-File-Format.md
