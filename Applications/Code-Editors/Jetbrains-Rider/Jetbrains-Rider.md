@@ -12,7 +12,7 @@ wget -O /tmp/rider.tar.gz $url
 sudo tar -xzf /tmp/rider.tar.gz -C /opt
 sudo rm /opt/rider-old-backup -rf
 sudo mv /opt/rider /opt/rider-old-backup || true
-sudo mv /opt/JetBrains\ Rider-2024.2.6 /opt/rider
+sudo mv /opt/JetBrains\ Rider-2024.3.2 /opt/rider
 sudo chown -R $USER:$USER /opt/rider
 rm /tmp/rider.tar.gz
 echo "[Desktop Entry]
