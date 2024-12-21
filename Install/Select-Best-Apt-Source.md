@@ -94,3 +94,10 @@ sudo apt update
 sudo apt install curl apt-transport-https -y
 switchSource
 ```
+
+<!--
+
+TODO
+
+The command above only works for Ubuntu 22.04 (Jammy Jellyfish). We need to update the command to work with other versions of Ubuntu.
+ -->
