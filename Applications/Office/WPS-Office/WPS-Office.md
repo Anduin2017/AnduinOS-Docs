@@ -22,3 +22,7 @@ rm wps.deb
     The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
 
     This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
+
+## Fix the `missing fonts` issue
+
+WPS may alert you that some fonts are missing. To fix this, you can install the fonts via this [GitHub Repo https://github.com/dv-anomaly/ttf-wps-fonts](https://github.com/dv-anomaly/ttf-wps-fonts).
