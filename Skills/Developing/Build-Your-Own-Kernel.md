@@ -161,7 +161,7 @@ make -j$(nproc)
 
 This command will build the Kernel using all the available CPU cores.
 
-??? tip "What if the build fails?"
+??? note "What if the build fails?"
 
     If the build fails, you need to fix the issue and run the `make` command again.
 
