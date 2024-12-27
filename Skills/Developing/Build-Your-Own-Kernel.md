@@ -254,6 +254,13 @@ sudo mv /boot/vmlinuz-[KERNEL-VERSION] ~/kernel-backup
 sudo mv /boot/vmlinuz-[KERNEL-VERSION].signed /boot/vmlinuz-[KERNEL-VERSION]
 ```
 
+To verify if the kernel image is signed, run the following command:
+
+```bash title="Verify the kernel image is signed"
+sudo apt install -y pesign
+sudo pesign -S -i /boot/vmlinuz-[KERNEL-VERSION]
+```
+
 #### 5. Sign Kernel Modules
 
 Similarly, sign all necessary kernel modules.
@@ -284,6 +291,4 @@ To verify if your kernel is signed and trusted by Secure Boot, run the following
 ```bash
 sudo dmesg | grep -i 'cert'
 sudo mokutil --sb-state
-sudo apt install pesign
-sudo pesign -S -i /boot/vmlinuz-6.13.0-rc4
 ```
