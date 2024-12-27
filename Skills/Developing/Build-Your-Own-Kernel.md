@@ -233,10 +233,16 @@ Reboot your system. During the boot process, the **MokManager** interface will a
 
 #### 4. Sign the Kernel Image
 
-After enrolling the key, sign your compiled kernel image.
+After enrolling the key, sign your compiled kernel image. Change directory to the Kernel source code directory.
 
-```bash title="Sign the kernel image"
-sudo /usr/src/linux-6.13-rc4/scripts/sign_file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt /boot/vmlinuz-6.13-rc4
+```bash title="Change directory to the Kernel source code directory"
+cd ./linux-6.13-rc4
+```
+
+Then, sign the kernel image.
+
+```bash title="Sign the kernel image (6.13-rc4 as an example)"
+sudo ./scripts/sign-file sha245 ~/my-keys/MOK.key ~/my-keys/MOK.crt /boot/vmlinuz-6.13.0-rc4 
 ```
 
 #### 5. Sign Kernel Modules
@@ -245,7 +251,12 @@ Similarly, sign all necessary kernel modules.
 
 ```bash title="Sign kernel modules"
 for module in $(find /lib/modules/$(uname -r)/kernel/ -type f -name '*.ko'); do
-    sudo /usr/src/linux-6.13-rc4/scripts/sign_file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt "$module"
+    echo "Signing $module"
+    sudo ./scripts/sign-file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt "$module"
+    if [ $? -ne 0 ]; then
+        echo "Failed to sign $module"
+        exit 1
+    fi
 done
 ```
 
@@ -257,10 +268,11 @@ Ensure your bootloader is aware of the new kernel. Update GRUB if necessary.
 sudo update-grub
 ```
 
-#### Summary
-
 By following these steps, your custom kernel and its modules are signed with your own keys and trusted by Secure Boot through **MokManager**. This allows you to securely use your custom kernel without disabling Secure Boot.
 
-!!! tip "Secure Boot Compatibility"
+To verify if your kernel is signed and trusted by Secure Boot, run the following command:
 
-    Signing your kernel ensures that Secure Boot remains enabled, maintaining the security integrity of your system while allowing the use of a custom-compiled kernel.
+```bash
+sudo dmesg | grep -i 'cert'
+sudo mokutil --sb-state
+```
