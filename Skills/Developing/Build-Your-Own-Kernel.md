@@ -34,7 +34,7 @@ Directly download the Kernel source code from the website. Click the `tarball` l
 
 Here I'm downloading the Kernel version 6.13-rc4 as an example.
 
-```bash
+```bash title="Download the Kernel source code"
 link=https://git.kernel.org/torvalds/t/linux-6.13-rc4.tar.gz
 wget $link -O linux-6.13-rc4.tar.gz
 tar -zxvf linux-6.13-rc4.tar.gz
@@ -46,7 +46,7 @@ tar -zxvf linux-6.13-rc4.tar.gz
 
 You can also clone the Kernel source code from the Git repository.
 
-```bash
+```bash title="Clone the Kernel source code"
 sudo apt install -y git
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 ```
@@ -59,7 +59,7 @@ git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 
 You need to install some tools to build the Kernel.
 
-```bash
+```bash title="Install the required tools"
 sudo apt-get update
 sudo apt-get install -y \
   bc \
@@ -93,13 +93,9 @@ Not all of these tools are required to build the Kernel. But it's better to inst
 
 ## Step 3 - Configure the Kernel
 
-Now, you need to configure the Kernel.
+Now, you need to configure the Kernel. You can use the current Kernel configuration as the base configuration.
 
-### Option 1: Use current Kernel configuration
-
-You can use the current Kernel configuration as the base configuration.
-
-```bash
+```bash title="Use the current Kernel configuration"
 sudo cp /boot/config-$(uname -r) .config
 ```
 
@@ -107,19 +103,11 @@ If the kernel you are building is a newer version than the one you are currently
 
 Run either of the following commands to update the configuration:
 
-```bash
+```bash title="Update the configuration"
 # Automatically migrate old configurations to the new kernel version
 make olddefconfig
 # Or: Manually update the configuration
 make oldconfig
-```
-
-### Option 2: Use the default configuration
-
-You can also use the default configuration.
-
-```bash
-make defconfig
 ```
 
 ### Review the configuration
@@ -136,7 +124,7 @@ make menuconfig
 
 You **need** to disable Canonical's signing key because that file is not available on your system.
 
-```bash
+```bash title="Use an editor to edit the configuration"
 vim .config
 ```
 
@@ -156,7 +144,7 @@ Comment out those lines.
 
 Now, you can build the Kernel.
 
-```bash
+```bash title="Build the Kernel"
 make clean
 make -j$(nproc)
 ```
@@ -171,7 +159,7 @@ This command will build the Kernel using all the available CPU cores.
 
 Now, you can install the Kernel.
 
-```bash
+```bash title="Install the Kernel"
 sudo make modules_install
 sudo make install
 ```
@@ -180,7 +168,7 @@ This command will install the Kernel and the modules.
 
 You may also need to update the bootloader configuration to boot the new Kernel.
 
-```bash
+```bash title="Update the bootloader configuration (Might be optional)"
 sudo update-grub
 ```
 
