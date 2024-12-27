@@ -1,6 +1,6 @@
 # Build your own kernel
 
-??? tip "Don't be afraid, building your kernel is easy!
+??? tip "Don't be afraid, building your kernel is easy!"
 
     Usually, stable kernels are easy to build. You can build your own kernel in 5 simple steps.
 
