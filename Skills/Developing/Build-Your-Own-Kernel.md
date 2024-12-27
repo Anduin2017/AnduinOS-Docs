@@ -182,12 +182,6 @@ sudo make install
 
 This command will install the Kernel and the modules.
 
-You may also need to update the bootloader configuration to boot the new Kernel.
-
-```bash title="Update the bootloader configuration (Might be optional)"
-sudo update-grub
-```
-
 That's it! You have successfully built and installed your own Kernel. Now, you can reboot your system to use the new Kernel.
 
 ```bash
