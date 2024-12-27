@@ -675,6 +675,12 @@ sysbench cpu --threads=$(nproc) run
 | 5-10            | Bad        |
 | 10+             | Terrible   |
 
+To benchmark a single core, you can use `taskset`:
+
+```bash title="Test CPU 0 only"
+taskset -c 0 sysbench cpu --threads=1 run
+```
+
 ------
 
 ### Install runtime (Optional)
