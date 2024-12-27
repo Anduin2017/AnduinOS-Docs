@@ -15,6 +15,8 @@ print "OS information"
 sudo lsb_release -a
 print "OS install date"
 stat -c %w /
+print "Kernel version"
+uname -r
 print "Secure Boot status"
 sudo mokutil --sb-state
 print "Root file system"
@@ -223,4 +225,20 @@ To check the network location on AnduinOS, you can use the `ipinfo` command:
 
 ```bash title="Check network location"
 curl https://ipinfo.io
+```
+
+## Check kernel version
+
+To check the kernel version on AnduinOS, you can use the `uname` command:
+
+```bash title="Check kernel version"
+uname -r
+```
+
+## Check kernel log
+
+To check the kernel log on AnduinOS, you can use the `dmesg` command:
+
+```bash title="Check kernel log"
+sudo dmesg
 ```
