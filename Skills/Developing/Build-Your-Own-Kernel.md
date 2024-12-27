@@ -242,7 +242,7 @@ cd ./linux-6.13-rc4
 Then, sign the kernel image.
 
 ```bash title="Sign the kernel image (6.13-rc4 as an example)"
-sudo ./scripts/sign-file sha245 ~/my-keys/MOK.key ~/my-keys/MOK.crt /boot/vmlinuz-6.13.0-rc4 
+sudo ./scripts/sign-file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt /boot/vmlinuz-6.13.0-rc4 
 ```
 
 #### 5. Sign Kernel Modules
