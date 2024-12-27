@@ -209,6 +209,7 @@ mkdir ~/my-keys
 cd ~/my-keys
 openssl req -new -newkey rsa:2048 -days 36500 -nodes -keyout MOK.key -out MOK.csr
 openssl x509 -req -in MOK.csr -signkey MOK.key -out MOK.crt
+openssl x509 -in MOK.crt -outform DER -out MOK.der
 ```
 
 #### 2. Enroll the Certificate with MokManager
@@ -216,7 +217,7 @@ openssl x509 -req -in MOK.csr -signkey MOK.key -out MOK.crt
 Add your certificate to the Machine Owner Key (MOK) list.
 
 ```bash title="Import the certificate to MOK"
-sudo mokutil --import MOK.crt
+sudo mokutil --import MOK.der
 ```
 
 You will be prompted to create a password. **Remember this password**, as you will need it during the next reboot.
