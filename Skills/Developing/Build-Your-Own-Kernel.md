@@ -1,0 +1,183 @@
+# Build your own kernel
+
+In some cases, for example:
+
+* When the current Kernel doesn't support your hardware. (e.g. Wi-Fi, Bluetooth, sound, etc.)
+* When you need to add a new feature to the Kernel.
+* When you need to remove some Kernel features to reduce the Kernel size.
+* When you want to have better performance by optimizing the Kernel for your hardware.
+* When you want to learn how the Kernel works.
+
+You may need to build your own Kernel.
+
+Here are 5 simple steps to build your own Kernel:
+
+* Get the Kernel source code
+* Install the required tools
+* Configure the Kernel
+* Build the Kernel
+* Install the Kernel
+
+## Step 1 - Get the Kernel source code
+
+First, you need to get the Kernel source code. You can get the Kernel source code from the [https://www.kernel.org/](https://www.kernel.org/) website.
+
+![kerele.org](./kernel-org.png)
+
+### Option 1: Download the Kernel source code from the website
+
+Directly download the Kernel source code from the website. Click the `tarball` link to download the Kernel source code.
+
+Here I'm downloading the Kernel version 6.13-rc4 as an example.
+
+```bash
+link=https://git.kernel.org/torvalds/t/linux-6.13-rc4.tar.gz
+wget $link -O linux-6.13-rc4.tar.gz
+tar -zxvf linux-6.13-rc4.tar.gz
+```
+
+### Option 2: Clone the Kernel source code from the Git repository
+
+You can also clone the Kernel source code from the Git repository.
+
+```bash
+sudo apt install -y git
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+```
+
+## Step 2 - Install the required tools
+
+You need to install some tools to build the Kernel.
+
+```bash
+sudo apt-get update
+sudo apt-get install -y \
+  bc \
+  bison \
+  build-essential \
+  ccache \
+  clang \
+  cpio \
+  dwarves \
+  flex \
+  gcc \
+  git \
+  gzip \
+  libcap-dev \
+  libelf-dev \
+  liblz4-dev \
+  libncurses-dev \
+  libssl-dev \
+  libudev-dev \
+  libzstd-dev \
+  lz4 \
+  python3 \
+  python3-dev \
+  python3-distutils-extra \
+  python3-setuptools \
+  xz-utils \
+  zstd
+```
+
+Not all of these tools are required to build the Kernel. But it's better to install them to avoid any issues.
+
+## Step 3 - Configure the Kernel
+
+Now, you need to configure the Kernel.
+
+### Option 1: Use current Kernel configuration
+
+You can use the current Kernel configuration as the base configuration.
+
+```bash
+sudo cp /boot/config-$(uname -r) .config
+```
+
+If the kernel you are building is a newer version than the one you are currently using, you may need to update the configuration.
+
+Run either of the following commands to update the configuration:
+
+```bash
+# Automatically migrate old configurations to the new kernel version
+make olddefconfig
+# Manually update the configuration
+make menuconfig
+```
+
+### Option 2: Use the default configuration
+
+You can also use the default configuration.
+
+```bash
+make defconfig
+```
+
+### Review the configuration
+
+It is also suggested to review the configuration to make sure it is correct.
+
+The following command will open the configuration menu to review the kernel configuration.
+
+```bash
+make menuconfig
+```
+
+### Disable Canonical's signing key
+
+You need to disable Canonical's signing key because that file is not available on your system.
+
+```bash
+vim .config
+```
+
+Search for:
+
+* CONFIG_SYSTEM_TRUSTED_KEYS=*
+* CONFIG_SYSTEM_REVOCATION_KEYS=*
+
+Comment out those lines.
+
+```ini
+#CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
+#CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
+```
+
+## Step 4 - Build the Kernel
+
+Now, you can build the Kernel.
+
+```bash
+make clean
+make -j$(nproc)
+```
+
+This command will build the Kernel using all the available CPU cores.
+
+## Step 5 - Install the Kernel
+
+Now, you can install the Kernel.
+
+```bash
+sudo make modules_install
+sudo make install
+```
+
+This command will install the Kernel and the modules.
+
+You may also need to update the bootloader configuration to boot the new Kernel.
+
+```bash
+sudo update-grub
+```
+
+That's it! You have successfully built and installed your own Kernel. Now, you can reboot your system to use the new Kernel.
+
+```bash
+sudo reboot
+```
+
+After rebooting, you can check the Kernel version using the following command:
+
+```bash
+uname -r
+```
