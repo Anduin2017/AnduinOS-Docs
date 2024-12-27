@@ -231,18 +231,27 @@ Reboot your system. During the boot process, the **MokManager** interface will a
 3. Enter the password you set earlier.
 4. Confirm to enroll the key and reboot.
 
+To verify if the key is enrolled, run the following command:
+
+```bash title="Verify the key is enrolled"
+sudo mokutil --list-enrolled
+```
+
 #### 4. Sign the Kernel Image
 
 After enrolling the key, sign your compiled kernel image. Change directory to the Kernel source code directory.
 
-```bash title="Change directory to the Kernel source code directory"
-cd ./linux-6.13-rc4
-```
-
-Then, sign the kernel image.
+Sign the kernel image.
 
 ```bash title="Sign the kernel image (6.13-rc4 as an example)"
-sudo ./scripts/sign-file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt /boot/vmlinuz-6.13.0-rc4 
+sudo sbsign --key ~/my-keys/MOK.key --cert ~/my-keys/MOK.crt /boot/vmlinuz-[KERNEL-VERSION] --output /boot/vmlinuz-[KERNEL-VERSION].signed
+```
+
+Then replace the original kernel image with the signed one.
+
+```bash title="Replace the original kernel image with the signed one"
+sudo mv /boot/vmlinuz-[KERNEL-VERSION] ~/kernel-backup
+sudo mv /boot/vmlinuz-[KERNEL-VERSION].signed /boot/vmlinuz-[KERNEL-VERSION]
 ```
 
 #### 5. Sign Kernel Modules
@@ -275,4 +284,6 @@ To verify if your kernel is signed and trusted by Secure Boot, run the following
 ```bash
 sudo dmesg | grep -i 'cert'
 sudo mokutil --sb-state
+sudo apt install pesign
+sudo pesign -S -i /boot/vmlinuz-6.13.0-rc4
 ```
