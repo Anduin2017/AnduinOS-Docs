@@ -15,6 +15,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     dpkg-reconfigure -f noninteractive tzdata
 
 RUN apt-get update && apt-get install -y weasyprint fonts-noto-cjk wget unzip python3-pip
+
+# Allow pip to break system packages
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
 RUN pip install -r requirements.txt
 
 # TODO: Add --strict to check all links
