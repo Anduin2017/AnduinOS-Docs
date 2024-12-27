@@ -190,17 +190,17 @@ sudo reboot
 
 After rebooting, you can check the Kernel version using the following command:
 
-```bash
+```bash title="Check the Kernel version"
 uname -r
 ```
 
 ![uname -r](./after-built.png)
 
-### Step 6 - Sign the Kernel (Optional, only for Secure Boot)
+## Step 6 - Sign the Kernel (Optional, only for Secure Boot)
 
 To use your custom kernel with Secure Boot enabled, you need to sign the kernel and its modules using your own keys and enroll them with **MokManager**.
 
-#### 1. Generate a Self-Signed Certificate
+### 1. Generate a Self-Signed Certificate
 
 First, create a private key and a self-signed certificate.
 
@@ -212,7 +212,7 @@ openssl x509 -req -in MOK.csr -signkey MOK.key -out MOK.crt
 openssl x509 -in MOK.crt -outform DER -out MOK.der
 ```
 
-#### 2. Enroll the Certificate with MokManager
+### 2. Enroll the Certificate with MokManager
 
 Add your certificate to the Machine Owner Key (MOK) list.
 
@@ -222,7 +222,7 @@ sudo mokutil --import MOK.der
 
 You will be prompted to create a password. **Remember this password**, as you will need it during the next reboot.
 
-#### 3. Reboot and Enroll the Key
+### 3. Reboot and Enroll the Key
 
 Reboot your system. During the boot process, the **MokManager** interface will appear.
 
@@ -237,7 +237,7 @@ To verify if the key is enrolled, run the following command:
 sudo mokutil --list-enrolled
 ```
 
-#### 4. Sign the Kernel Image
+### 4. Sign the Kernel Image
 
 After enrolling the key, sign your compiled kernel image. Change directory to the Kernel source code directory.
 
@@ -261,11 +261,12 @@ sudo apt install -y pesign
 sudo pesign -S -i /boot/vmlinuz-[KERNEL-VERSION]
 ```
 
-#### 5. Sign Kernel Modules
+### 5. Sign Kernel Modules
 
 Similarly, sign all necessary kernel modules.
 
 ```bash title="Sign kernel modules"
+cd ./linux-6.13-rc4 # Change to the Kernel source code directory
 for module in $(find /lib/modules/$(uname -r)/kernel/ -type f -name '*.ko'); do
     echo "Signing $module"
     sudo ./scripts/sign-file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt "$module"
@@ -276,7 +277,7 @@ for module in $(find /lib/modules/$(uname -r)/kernel/ -type f -name '*.ko'); do
 done
 ```
 
-#### 6. Update Bootloader
+### 6. Update Bootloader
 
 Ensure your bootloader is aware of the new kernel. Update GRUB if necessary.
 
