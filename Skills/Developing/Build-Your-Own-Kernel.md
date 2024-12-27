@@ -36,6 +36,8 @@ wget $link -O linux-6.13-rc4.tar.gz
 tar -zxvf linux-6.13-rc4.tar.gz
 ```
 
+!!! warning "This might not be the latest version of the Kernel!"
+
 ### Option 2: Clone the Kernel source code from the Git repository
 
 You can also clone the Kernel source code from the Git repository.
@@ -44,6 +46,10 @@ You can also clone the Kernel source code from the Git repository.
 sudo apt install -y git
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 ```
+
+!!! warning "The latest Tovralds' Kernel may not be able to build!"
+
+    The latest tovralds Kernel may not be stable. It is better to download a stable version of the Kernel.
 
 ## Step 2 - Install the required tools
 
@@ -93,15 +99,15 @@ You can use the current Kernel configuration as the base configuration.
 sudo cp /boot/config-$(uname -r) .config
 ```
 
-If the kernel you are building is a newer version than the one you are currently using, you may need to update the configuration.
+If the kernel you are building is a newer version than the one you are currently using, you **need** to update the configuration.
 
 Run either of the following commands to update the configuration:
 
 ```bash
 # Automatically migrate old configurations to the new kernel version
 make olddefconfig
-# Manually update the configuration
-make menuconfig
+# Or: Manually update the configuration
+make oldconfig
 ```
 
 ### Option 2: Use the default configuration
@@ -114,7 +120,7 @@ make defconfig
 
 ### Review the configuration
 
-It is also suggested to review the configuration to make sure it is correct.
+It is also **suggested** to review the configuration to make sure it is correct.
 
 The following command will open the configuration menu to review the kernel configuration.
 
@@ -124,7 +130,7 @@ make menuconfig
 
 ### Disable Canonical's signing key
 
-You need to disable Canonical's signing key because that file is not available on your system.
+You **need** to disable Canonical's signing key because that file is not available on your system.
 
 ```bash
 vim .config
@@ -132,8 +138,8 @@ vim .config
 
 Search for:
 
-* CONFIG_SYSTEM_TRUSTED_KEYS=*
-* CONFIG_SYSTEM_REVOCATION_KEYS=*
+* `CONFIG_SYSTEM_TRUSTED_KEYS`
+* `CONFIG_SYSTEM_REVOCATION_KEYS`
 
 Comment out those lines.
 
@@ -150,6 +156,10 @@ Now, you can build the Kernel.
 make clean
 make -j$(nproc)
 ```
+
+!!! tip "Building the kernel takes around 20 minutes to 2 hours!"
+
+    Various factors can affect the build time, such as the number of CPU cores, the CPU speed, the amount of RAM, and the disk speed. Building the Kernel using all the available CPU cores will reduce the build time.
 
 This command will build the Kernel using all the available CPU cores.
 
@@ -181,3 +191,5 @@ After rebooting, you can check the Kernel version using the following command:
 ```bash
 uname -r
 ```
+
+![uname -r](./after-built.png)
