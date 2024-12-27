@@ -141,6 +141,7 @@ nav:
       - Backup And Restore: ./Install/Backup-And-Restore.md
 
   - Skills:
+    - Introduction: ./Skills/Introduction.md
     - System Management:
       - Check system layout: ./Skills/System-Management/Check-System-Layout.md
       - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
