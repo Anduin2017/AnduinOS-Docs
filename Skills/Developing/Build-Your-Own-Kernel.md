@@ -195,3 +195,71 @@ uname -r
 ```
 
 ![uname -r](./after-built.png)
+
+### Step 6 - Sign the Kernel (Optional, only for Secure Boot)
+
+To use your custom kernel with Secure Boot enabled, you need to sign the kernel and its modules using your own keys and enroll them with **MokManager**.
+
+#### 1. Generate a Self-Signed Certificate
+
+First, create a private key and a self-signed certificate.
+
+```bash title="Generate a private key and self-signed certificate"
+mkdir ~/my-keys
+cd ~/my-keys
+openssl req -new -newkey rsa:2048 -days 36500 -nodes -keyout MOK.key -out MOK.csr
+openssl x509 -req -in MOK.csr -signkey MOK.key -out MOK.crt
+```
+
+#### 2. Enroll the Certificate with MokManager
+
+Add your certificate to the Machine Owner Key (MOK) list.
+
+```bash title="Import the certificate to MOK"
+sudo mokutil --import MOK.crt
+```
+
+You will be prompted to create a password. **Remember this password**, as you will need it during the next reboot.
+
+#### 3. Reboot and Enroll the Key
+
+Reboot your system. During the boot process, the **MokManager** interface will appear.
+
+1. Select **"Enroll MOK"**.
+2. Choose **"Continue"**.
+3. Enter the password you set earlier.
+4. Confirm to enroll the key and reboot.
+
+#### 4. Sign the Kernel Image
+
+After enrolling the key, sign your compiled kernel image.
+
+```bash title="Sign the kernel image"
+sudo /usr/src/linux-6.13-rc4/scripts/sign_file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt /boot/vmlinuz-6.13-rc4
+```
+
+#### 5. Sign Kernel Modules
+
+Similarly, sign all necessary kernel modules.
+
+```bash title="Sign kernel modules"
+for module in $(find /lib/modules/$(uname -r)/kernel/ -type f -name '*.ko'); do
+    sudo /usr/src/linux-6.13-rc4/scripts/sign_file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt "$module"
+done
+```
+
+#### 6. Update Bootloader
+
+Ensure your bootloader is aware of the new kernel. Update GRUB if necessary.
+
+```bash title="Update GRUB"
+sudo update-grub
+```
+
+#### Summary
+
+By following these steps, your custom kernel and its modules are signed with your own keys and trusted by Secure Boot through **MokManager**. This allows you to securely use your custom kernel without disabling Secure Boot.
+
+!!! tip "Secure Boot Compatibility"
+
+    Signing your kernel ensures that Secure Boot remains enabled, maintaining the security integrity of your system while allowing the use of a custom-compiled kernel.
