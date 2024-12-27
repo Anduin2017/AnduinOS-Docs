@@ -114,9 +114,7 @@ make oldconfig
 
 It is also **suggested** to review the configuration to make sure it is correct.
 
-The following command will open the configuration menu to review the kernel configuration.
-
-```bash
+```bash title="Open the configuration menu to review the kernel configuration"
 make menuconfig
 ```
 
