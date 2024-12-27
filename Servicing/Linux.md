@@ -381,6 +381,13 @@ sudo sysctl net.ipv4.tcp_available_congestion_control | grep -q bbr ||  enable_b
 
 ### Setup best apt mirror
 
+<!--
+
+TODO
+
+The command above only works for Ubuntu 22.04 (Jammy Jellyfish). We need to update the command to work with other versions of Ubuntu.
+ -->
+
 !!! warning "Ubuntu Jammy and AnduinOS only"
 
     The following command is for Ubuntu Jammy and AnduinOS. If you are using other versions of Ubuntu, you should search for the best apt mirror for your version.

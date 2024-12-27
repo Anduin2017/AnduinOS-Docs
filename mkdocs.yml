@@ -146,6 +146,7 @@ nav:
       - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
       - Enter terminal mode: ./Skills/System-Management/Terminal-Mode.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
+      - Mounting remote folders: ./Skills/System-Management/Mounting-Remote-Folder.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Debug storage consumption: ./Skills/System-Management/Debug-Storage-Consumption.md
       - Check file format: ./Skills/System-Management/Check-File-Format.md
@@ -191,6 +192,7 @@ nav:
       - Internet Services:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
+        - Dropbox: ./Applications/Internet-Services/Dropbox/Dropbox.md
 
       - Media Players:
         - VLC Media Player: ./Applications/Media-Players/VLC-Media-Player/VLC-Media-Player.md
@@ -267,6 +269,7 @@ nav:
       - NekoImageGallery: ./Servicing/NekoImageGallery/NekoImageGallery.md
       - Apt Mirror: ./Servicing/AptMirror/AptMirror.md
       - SqlServer: ./Servicing/SqlServer/SqlServer.md
+      - Samba: ./Servicing/Samba/Samba.md
 
   - Virtualization:
     - Windows: ./Virtualization/Windows.md

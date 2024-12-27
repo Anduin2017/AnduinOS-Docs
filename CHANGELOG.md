@@ -1,5 +1,13 @@
 # AnduinOS Changelog
 
+## v1.0.5
+
+* Added **GNOME Maps** to the default app suite for enhanced navigation experiences.
+* Replaced **Audio Output Switcher** with **Sound Output Device Chooser** for a more streamlined and intuitive audio device selection experience.
+* Introduced the **Lock Keys** GNOME extension, which provides a visual indicator on the taskbar when **Caps Lock** is enabled.
+* Added the **Tiling Assistant** GNOME extension, offering advanced window tiling and management capabilities for improved multitasking.
+* The **Location Service** is now disabled by default to prioritize user privacy.
+
 ## v1.0.4
 
 * Fixed an issue that the `help` feature in some gnome apps might not work.
