@@ -93,6 +93,12 @@ Not all of these tools are required to build the Kernel. But it's better to inst
 
 ## Step 3 - Configure the Kernel
 
+Change directory to the Kernel source code directory.
+
+```bash title="Change directory to the Kernel source code directory"
+cd ./linux-6.13-rc4
+```
+
 Now, you need to configure the Kernel. You can use the current Kernel configuration as the base configuration.
 
 ```bash title="Use the current Kernel configuration"
@@ -133,10 +139,12 @@ Search for:
 
 Comment out those lines.
 
-```ini
+```ini title="Edit the .config file to comment out the lines"
 #CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem"
 #CONFIG_SYSTEM_REVOCATION_KEYS="debian/canonical-revoked-certs.pem"
 ```
+
+And press `ECS` and `:wq` to save the file.
 
 ## Step 4 - Build the Kernel
 
