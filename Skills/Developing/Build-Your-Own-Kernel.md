@@ -161,6 +161,16 @@ make -j$(nproc)
 
 This command will build the Kernel using all the available CPU cores.
 
+??? tip "What if the build fails?"
+
+    If the build fails, you need to fix the issue and run the `make` command again.
+
+    To know what the exact issue is, you can rebuild with a single thread and verbose mode.
+
+    ```bash title="Rebuild to review the error"
+    make -j1 V=1
+    ```
+
 ## Step 5 - Install the Kernel
 
 Now, you can install the Kernel.
