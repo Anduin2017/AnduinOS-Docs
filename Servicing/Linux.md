@@ -443,7 +443,7 @@ sudo chmod +x /usr/local/bin/update.sh
 
 ### Install latest kernel
 
-By default, the server provider may not install the latest kernel for you. For example, by default, Ubuntu 22.04 may provide the 5.15 kernel, but the latest kernel is 6.*.
+By default, the server provider may not install the latest kernel for you.
 
 !!! warning "Kernel version"
 
@@ -460,13 +460,9 @@ uname -r
 You can install the latest kernel by running:
 
 ```bash title="Install latest kernel"
-sudo apt install -y linux-generic-hwe-22.04
+sudo apt search linux-generic-hwe-* | awk -F'/' '/linux-generic-hwe-/ {print $1}' | sort | head -n 1 | xargs -r sudo apt install -y
 sudo reboot
 ```
-
-!!! note "Command only for Ubuntu 22.04"
-
-    The command above is only for Ubuntu 22.04. For other versions, you can search for the latest kernel package.
 
 ------
 
