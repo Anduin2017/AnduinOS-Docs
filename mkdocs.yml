@@ -111,7 +111,8 @@ nav:
     - Documentation: README.md
     - Change Log: CHANGELOG.md
     - Known Issues: KNOWN_ISSUES.md
-    - License: LICENSE
+    # COMMON GPT-v3 license URL
+    - License: https://gitlab.aiursoft.cn/anduin/anduinos/-/blob/master/LICENSE
   - Install:
     - Installing AnduinOS:
       - System Requirements: ./Install/System-Requirements.md
