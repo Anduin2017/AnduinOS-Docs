@@ -49,7 +49,6 @@ function switchSource() {
     "http://mirrors.163.com/ubuntu/"                    # 网易
     "http://mirrors.cloud.tencent.com/ubuntu/"          # 腾讯云
     "http://mirror.aiursoft.cn/ubuntu/"                 # Aiursoft
-    "http://mirrors.anduinos.com/ubuntu/"               # AnduinOS
     "http://mirrors.huaweicloud.com/ubuntu/"            # 华为云
     "http://mirrors.zju.edu.cn/ubuntu/"                 # 浙江大学
     "http://azure.archive.ubuntu.com/ubuntu/"           # Azure
