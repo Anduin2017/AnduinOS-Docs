@@ -109,6 +109,7 @@ plugins:
 nav:
   - Home:
     - Documentation: README.md
+    - Versions table: VERSIONS.md
     - Change Log: CHANGELOG.md
     - Known Issues: KNOWN_ISSUES.md
     # COMMON GPT-v3 license URL

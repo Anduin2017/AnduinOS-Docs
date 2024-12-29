@@ -6,6 +6,12 @@ This is the official repository for AnduinOS documentation.
 
 [Download AnduinOS (ISO)](https://www.anduinos.com/){ .md-button .md-button--primary }
 
+## Choose your AnduinOS version
+
+AnduinOS is available in two version branches :LTS and Standard. The LTS version is recommended for most users, while the Standard version is recommended for developers and tech enthusiasts.
+
+To view current version release schedules, see the [AnduinOS Version Release Schedule](./VERSIONS.md).
+
 ## What is AnduinOS?
 
 AnduinOS is a custom Debian-based Linux distribution that aims to facilitate developers transitioning from Windows to Ubuntu by maintaining familiar operational habits and workflows.
