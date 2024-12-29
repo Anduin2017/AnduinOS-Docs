@@ -1,4 +1,4 @@
-# AnduinOS Version Release schedule
+# AnduinOS Version Release Schedule
 
 AnduinOS Released | Release Date | Based On | End of Standard Support | End of Ubuntu Pro Support | End of Legacy Support
 -- | -- | -- | -- | -- | --
