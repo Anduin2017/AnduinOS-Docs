@@ -193,6 +193,7 @@ nav:
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
         - Slack: ./Applications/Communication/Slack/Slack.md
         - Discord: ./Applications/Communication/Discord/Discord.md
+        - Feishu: ./Applications/Communication/Feishu/Feishu.md
 
       - Internet Services:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
