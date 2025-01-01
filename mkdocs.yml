@@ -192,6 +192,7 @@ nav:
         - QQ: ./Applications/Communication/QQ/QQ.md
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
         - Slack: ./Applications/Communication/Slack/Slack.md
+        - Evolution: ./Applications/Communication/Evolution/Evolution.md
         - Discord: ./Applications/Communication/Discord/Discord.md
         - Feishu: ./Applications/Communication/Feishu/Feishu.md
 
