@@ -13,4 +13,5 @@ sudo apt update
 sudo apt install gnome-boxes libvirt-daemon
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
+sudo systemctl enable libvirtd
 ```

@@ -36,6 +36,13 @@ Type=Application
 Categories=System;" | sudo tee /usr/share/applications/virt-viewer.desktop
 ```
 
+To start the service, you can run:
+
+```bash title="Start the libvirt service"
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+```
+
 Now you can start Virt Manager by running `virt-manager` in the terminal or searching for it in the application menu.
 
 To virtualize Windows on AnduinOS, you can follow the guide [here](../../../Virtualization/Windows.md).
