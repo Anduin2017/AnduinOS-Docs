@@ -5,7 +5,8 @@ In some cases, you might mess up your desktop settings and want to reset them to
 To reset your desktop settings, you can run:
 
 ```bash title="Reset Desktop Settings"
-curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/mods/35-dconf-patch/dconf.ini?ref_type=heads | dconf load /org/gnome/
+VERSION=$(grep -oP "VERSION_ID=\"\\K\\d+\\.\\d+" /etc/os-release)
+curl -sL https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/$VERSION/src/mods/35-dconf-patch/dconf.ini?ref_type=heads | dconf load /org/gnome/
 ```
 
 This command WILL reset your desktop settings to the AnduinOS default settings, including:
