@@ -218,6 +218,7 @@ nav:
         - OBS Studio: ./Applications/Media-Editing/OBS-Studio/OBS-Studio.md
         - Blender: ./Applications/Media-Editing/Blender/Blender.md
         - Inkscape: ./Applications/Media-Editing/Inkscape/Inkscape.md
+        - HandBrake: ./Applications/Media-Editing/HandBrake/HandBrake.md
 
       - Office:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
