@@ -46,3 +46,25 @@ sudo apt install nvidia-driver-545
 ```
 
 After the installation is complete, reboot your system.
+
+## Intel Graphics Driver
+
+Intel usually will merge latest drivers and packages to the Linux kernel. However, some modules, like `libva`, `vaapi`, `vulkan`, and `intel-media-driver`, may need to be installed separately.
+
+To install the Intel graphics driver, you need to follow the [Intel Graphics Installer for Linux](https://dgpu-docs.intel.com/driver/client/overview.html) guide.
+
+For example:
+
+```bash title="install the intel-graphics PPA and the necessary compute and media packages"
+# Please refer to the official Intel Graphics Installer for Linux guide for the latest instructions
+sudo apt-get update
+
+# Add the intel-graphics PPA for 24.10
+sudo add-apt-repository -y ppa:kobuk-team/intel-graphics
+
+# Install the compute-related packages
+sudo apt-get install -y libze-intel-gpu1 libze1 intel-ocloc intel-opencl-icd clinfo intel-gsc
+
+# Install the media-related packages
+sudo apt-get install -y intel-media-va-driver-non-free libmfx1 libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo
+```
