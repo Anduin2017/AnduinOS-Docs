@@ -47,6 +47,20 @@ sudo apt install nvidia-driver-545
 
 After the installation is complete, reboot your system.
 
+### Manually install the Nvidia driver
+
+In case you couldn't install Canonical's Nvidia driver, you can download the driver from the [Nvidia website](https://www.nvidia.com/en-us/drivers/) and install it manually.
+
+Search for the driver that matches your graphics card and download it. Then, run the following commands to install the driver:
+
+```bash title="Install the Nvidia driver manually"
+sudo apt install gcc make build-essential
+sudo systemctl isolate multi-user.target
+sudo systemctl stop gdm
+sudo chmod +x NVIDIA-Linux-x86_64-470.103.01.run
+sudo ./NVIDIA-Linux-x86_64-470.103.01.run
+```
+
 ## Intel Graphics Driver
 
 Intel usually will merge latest drivers and packages to the Linux kernel. However, some modules, like `libva`, `vaapi`, `vulkan`, and `intel-media-driver`, may need to be installed separately.
@@ -68,3 +82,7 @@ sudo apt-get install -y libze-intel-gpu1 libze1 intel-ocloc intel-opencl-icd cli
 # Install the media-related packages
 sudo apt-get install -y intel-media-va-driver-non-free libmfx1 libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo
 ```
+
+## Build the Kernel
+
+In case you bought very latest hardware, you may need to build the kernel from source to get the latest drivers. Please refer to the [Kernel Compilation](../Skills/Developing/Build-Your-Own-Kernel.md) guide for more information.
