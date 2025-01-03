@@ -1,5 +1,46 @@
 # AnduinOS Changelog
 
+## v1.2.0
+
+* **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.0
+
+* **Codebase Management Restructure**: Refactored branch management. Branches will now follow the "Fork version" naming convention (e.g., 1.0, 1.1, 1.2). "Dot versions" will now be represented as tags instead of branches.
+* **Upgraded Base System**: The foundational system has been updated from **Jammy (Ubuntu 22.04)** to **Noble (Ubuntu 24.04)**.
+* **Default Text Editor Update**: Replaced `gedit` with `gnome-text-editor` as the default text editor.
+* **Removed Unstable Extensions**:  
+  * **Rounded Window Corners Extension**: Removed due to instability in GNOME 45+ environments.  
+  * **Audio Output Switcher Extension**: Removed due to compatibility issues with GNOME 45+.
+* **Enhanced Documentation**: Updated the `README.md` file to include detailed instructions for users to compile their own AnduinOS builds.
+* **ISO Boot Menu Enhancements**: The ISO boot menu now includes additional options such as **Safe Graphics**, **Next Volume**, and **UEFI Firmware Settings**.
+* **Compression Method Update**: Replaced `xz` compression with `zstd` for faster and more efficient ISO generation.
+* **Simplified ISO Modes**: The ISO now consolidates the previous **Try Mode** and **Install Mode** into a unified **Install Mode**.
+* **Streamlined Daily Builds**: Daily builds will now only support English and Chinese language options.
+* **Updated Default Packages**:
+  * **Added**:  
+    - `apt-utils`, `crash`, `debconf-i18n`, `fdisk`, `grub-efi-amd64`, `hwdata`, `info`, `init`, `numactl`, `cloud-init`, `coreutils`, `dnsutils`, `gvfs-fuse`, `htop`, `httping`, `libsass1`, `squashfs-tools`, `sysstat`, `thermald`, `traceroute`, `vim`, `whiptail`, `openvpn`, `network-manager-openvpn`, `network-manager-openvpn-gnome`, `network-manager-pptp-gnome`, `ibus`, `gnome-snapshot`, `gnome-text-editor`, `gstreamer1.0-libav`, `gstreamer1.0-alsa`, `gstreamer1.0-vaapi`, `gstreamer1.0-tools`, `gstreamer1.0-packagekit`, `gstreamer1.0-plugins-base-apps`, `alsa-base`, `fprintd`, `pipx`.
+  * **Removed**:  
+    - `wireless-tools`, `cheese`, `gedit`, `nautilus-extension-gnome-console`, `zutty`.
+* **Improved Extension Management**:  
+  * Switched from using `pip3` to `pipx` for installing `gnome-extensions-cli`.  
+  * Replaced `openweather-extension@jenslody.de` with `openweather-extension@penguin-teal.github.io`.  
+  * Added new GNOME extensions:  
+    - `mediacontrols@cliffniff.github.com`.  
+    - `loc@anduinos.com`.
+* **Theme Switching Overhaul**: Redesigned the dark/light theme switcher to listen for system theme changes and apply the theme accordingly.
+* **Cursor Size Adjustment**: Set the default cursor size to **32**, based on feedback from [Arch Linux forums](https://bbs.archlinux.org/viewtopic.php?id=299624).
+* **Keyboard Shortcut Updates**:  
+  * The **Super + Up Arrow** shortcut now toggles fullscreen mode instead of enabling it.  
+  * Notifications will now appear in the **bottom-right corner** instead of the top.
+* **Taskbar Improvements**:  
+  * Updated the visual indicator for highlighted applications on the taskbar from **dashes effect** to **segmented effect**.
+* **Startup Sound Disabled**: The Ubuntu startup sound is now disabled by default.
+* **AppArmor Restriction Adjustment**: Set `kernel.apparmor_restrict_unprivileged_userns` to **0**, addressing concerns raised in [Ask Ubuntu](https://askubuntu.com/questions/1511854/how-to-permanently-disable-ubuntus-new-apparmor-user-namespace-creation-restric).
+* **Live Environment Username**: Changed the default live environment username to **live**.
+* **Netplan Configuration**: The ISO now includes a pre-generated Netplan configuration file.
+* **Pre-Updated Live Environment**: The compiled ISO has already run `apt update`, ensuring better user experience in the live environment with proper command hints and install suggestions.
+
 ## v1.0.5
 
 * Added **GNOME Maps** to the default app suite for enhanced navigation experiences.
