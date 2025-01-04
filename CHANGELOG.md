@@ -41,6 +41,11 @@
 * **Netplan Configuration**: The ISO now includes a pre-generated Netplan configuration file.
 * **Pre-Updated Live Environment**: The compiled ISO has already run `apt update`, ensuring better user experience in the live environment with proper command hints and install suggestions.
 
+## v1.0.6
+
+* Added the following packages to the default app list:
+  * `apt-utils`, `crash`, `debconf-i18n`, `fdisk`, `grub-efi-amd64`, `hwdata`, `info`, `init`, `numactl`, `cloud-init`, `coreutils`, `dnsutils`, `gvfs-fuse`, `htop`, `httping`, `libsass1`, `squashfs-tools`, `sysstat`, `thermald`, `traceroute`, `vim`, `whiptail`, `openvpn`, `network-manager-openvpn`, `network-manager-openvpn-gnome`, `network-manager-pptp-gnome`, `ibus`, `gnome-snapshot`, `gnome-text-editor`, `gstreamer1.0-libav`, `gstreamer1.0-alsa`, `gstreamer1.0-vaapi`, `gstreamer1.0-tools`, `gstreamer1.0-packagekit`, `gstreamer1.0-plugins-base-apps`, `alsa-base`, `fprintd`, `pipx`.
+
 ## v1.0.5
 
 * Added **GNOME Maps** to the default app suite for enhanced navigation experiences.
