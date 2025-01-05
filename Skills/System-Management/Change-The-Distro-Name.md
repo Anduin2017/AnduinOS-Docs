@@ -4,6 +4,15 @@ In some cases, for exmaple, some software may only support specific Linux distri
 
 For example, if you want to change AnduinOS to Ubuntu without reinstalling the system, you can follow these steps:
 
+Backup the original files:
+
+```bash
+sudo cp /etc/os-release /etc/os-release.bak
+sudo cp /etc/lsb-release /etc/lsb-release.bak
+```
+
+Then, reinstall the following packages:
+
 ```bash
 sudo apt reinstall lsb-release distro-info-data base-files
 ```
@@ -17,6 +26,13 @@ lsb_release -a
 ```
 
 You may observe `Ubuntu` as the distro name in the output.
+
+To revert the change, you can restore the backup files:
+
+```bash
+sudo cp /etc/os-release.bak /etc/os-release
+sudo cp /etc/lsb-release.bak /etc/lsb-release
+```
 
 ## Next step
 
