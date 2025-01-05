@@ -147,6 +147,7 @@ nav:
     - System Management:
       - Check system layout: ./Skills/System-Management/Check-System-Layout.md
       - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
+      - Manage Appp Icons: ./Skills/System-Management/Manage-App-Icons.md
       - Enter terminal mode: ./Skills/System-Management/Terminal-Mode.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Mounting remote folders: ./Skills/System-Management/Mounting-Remote-Folder.md
