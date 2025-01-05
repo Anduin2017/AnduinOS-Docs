@@ -10,8 +10,9 @@ To install Gnome Boxes on AnduinOS, you can run:
 
 ```bash
 sudo apt update
-sudo apt install gnome-boxes libvirt-daemon
+sudo apt install gnome-boxes libvirt-daemon qemu-kvm libvirt-clients libvirt-daemon-system virtinst bridge-utils
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
 sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
 ```
