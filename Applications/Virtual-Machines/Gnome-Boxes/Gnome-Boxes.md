@@ -16,3 +16,5 @@ sudo adduser $USER kvm
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 ```
+
+You **NEED** to logout and login again to apply the changes. Or you may see error message: `Permission denied`.
