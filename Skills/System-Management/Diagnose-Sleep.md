@@ -156,12 +156,20 @@ You may see lines such as:
 
 This clearly indicates that your system actually used **S3** (deep).
 
-If it were S0ix or a purely software-based S2idle, you might see references to `S0` or a mention of `s2idle` in the logs. For example:
+If it were S2idle, you might see references to a mention of `s2idle` in the logs. For example:
 
 ```text
-ACPI: PM: Preparing to enter system sleep state S0
-ACPI: PM: Suspending to idle
+[14262.195856] PM: suspend entry (s2idle)
+[14263.467432] ACPI: EC: interrupt blocked
+[14270.703817] ACPI: EC: interrupt unblocked
+[14271.069936] PM: suspend exit
 ```
+
+Indicating that the system used **s2idle**.
+
+!!! note "Is `s2idle` actually `S0ix`?"
+
+    The kernel may use `s2idle` as a placeholder for S0ix if the hardware supports it. However, if the firmware or drivers don’t fully implement S0ix, it may just be a shallow suspend. To confirm, you’d need to check the ACPI tables and possibly the kernel source code.
 
 ---
 
