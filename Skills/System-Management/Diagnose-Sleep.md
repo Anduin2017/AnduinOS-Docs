@@ -8,18 +8,19 @@ This document helps you diagnose and debug sleep (suspend/hibernate) issues on A
 
 Modern computers implement different sleep states, the most common being **S0ix** (aka **Modern Standby**) and **S3** (traditional **Suspend to RAM**).
 
-- **S0ix (S0 Idle Substates)**: 
+- **S0ix (S0 Idle Substates)**:
   - A low-power idle state within the normal S0 (working) power state.
   - Allows quick wake-up, often used in newer laptops.
   - Sometimes referred to as **S0i3** or **Modern Standby** on Windows.  
   - On Linux, it often appears as **`s2idle`** (though `s2idle` can also be a purely software-based suspend if hardware support is incomplete).
 
-- **S3 (Suspend to RAM)**: 
+- **S3 (Suspend to RAM)**:
   - A deeper, traditional sleep state on most desktops and many laptops.
   - RAM remains powered, but most other hardware is switched off.
   - Wake-up is slightly slower than S0ix (though still pretty fast), but **power consumption is typically lower** than a pure S0ix platform.
 
 ### Why does it matter?
+
 - **Power consumption**:  
   S3 tends to reduce power usage more effectively, particularly on desktops.  
   S0ix can be very efficient on well-supported hardware (e.g., certain ultrabooks) but can also be quite leaky if the firmware or drivers aren’t optimized.
@@ -75,37 +76,44 @@ cat /sys/power/state
 ```
 
 This might show a subset of:
+
 - **`freeze`** (aka Suspend-to-idle, a lightweight software-driven suspend)
 - **`standby`** (ACPI S1 on some architectures)
 - **`mem`** (ACPI S3 or S0ix, depending on hardware/firmware)
 - **`disk`** (ACPI S4, hibernation)
 
 ### 3.1 `mem` and `/sys/power/mem_sleep`
+
 When you see `mem` in `/sys/power/state`, the underlying behavior can be **S3** or **S0ix** (or `s2idle`) depending on your hardware. To see which variant of `mem` your system is using by default, check:
 
-```bash
+```bash title="Check default suspend state"
 cat /sys/power/mem_sleep
 ```
 
 You’ll typically see two modes here:
+
 - **`s2idle`**: A shallow, mostly software-based suspend. If your hardware truly supports S0i3, the kernel may place the CPU into deeper idle states while in `s2idle`. Otherwise, it’s just a light suspend mode.  
 - **`deep`**: Traditional ACPI S3 deep suspend.
 
 The output might be:
-```
+
+```text
 [s2idle] deep
 ```
+
 This means **`s2idle`** is the *current default*, but **`deep`** (S3) is also available.
 
 Or:
-```
+
+```text
 s2idle [deep]
 ```
+
 Now **`deep`** (S3) is the default.
 
 > **Tip**: You can switch between them by writing either `s2idle` or `deep` to `/sys/power/mem_sleep`, if your hardware and firmware actually support both:
 
-```bash
+```bash title="Switch sleep state"
 echo s2idle | sudo tee /sys/power/mem_sleep
 echo deep | sudo tee /sys/power/mem_sleep
 ```
@@ -116,7 +124,7 @@ echo deep | sudo tee /sys/power/mem_sleep
 
 If you want to manually test sleep, you can use:
 
-```bash
+```bash title="Force a suspend"
 sudo systemctl unmask suspend.target
 sudo systemctl suspend
 ```
@@ -125,13 +133,14 @@ This triggers a **Suspend to `mem`** (whichever variant is the current default).
 
 To confirm it worked, check the kernel logs after resuming:
 
-```bash
+```bash title="Check kernel logs"
 sudo dmesg | grep -i "ACPI"
 ```
 
 You may see lines such as:
 
-```
+```text
+[  831.097590] ACPI: EC: interrupt blocked
 [  831.097591] ACPI: EC: interrupt blocked
 [  831.140449] ACPI: PM: Preparing to enter system sleep state S3
 [  831.344293] ACPI: EC: event blocked
@@ -149,7 +158,7 @@ This clearly indicates that your system actually used **S3** (deep).
 
 If it were S0ix or a purely software-based S2idle, you might see references to `S0` or a mention of `s2idle` in the logs. For example:
 
-```
+```text
 ACPI: PM: Preparing to enter system sleep state S0
 ACPI: PM: Suspending to idle
 ```
@@ -171,13 +180,13 @@ For more details, refer to the [official kernel documentation on system sleep st
 
 If your system wakes up immediately or sporadically, you may have certain devices set as wake sources. To list them:
 
-```bash
+```bash title="List wake-up sources"
 cat /proc/acpi/wakeup
 ```
 
 You’ll see output like:
 
-```
+```text
 Device  S-state   Status   Sysfs node
 PEG1      S4    *enabled  pci:0000:00:01.0
 PEGP      S4    *disabled pci:0000:01:00.0
@@ -191,7 +200,7 @@ PEG0      S4    *enabled  pci:0000:00:06.0
 
 You can toggle them by echoing into the file. For example, to disable a wake source:
 
-```bash
+```bash title="Disable a wake source"
 echo PEG1 > /proc/acpi/wakeup
 ```
 
@@ -208,10 +217,12 @@ Repeat the command to re-enable it. This is helpful if your system keeps waking 
 2. **Kernel Parameters**  
    - You can force a default suspend variant via `mem_sleep_default=s2idle` or `mem_sleep_default=deep` in your boot loader (GRUB).  
    - For example, edit `/etc/default/grub`:
-     ```bash
+
+     ```bash title="Edit GRUB configuration"
      GRUB_CMDLINE_LINUX_DEFAULT="quiet splash mem_sleep_default=deep"
      sudo update-grub
      ```
+
    - Reboot to apply. If your hardware does *not* actually support deep, the kernel will likely fall back to s2idle anyway.
 
 3. **Driver or Firmware Issues**  
