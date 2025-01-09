@@ -145,6 +145,7 @@ nav:
   - Skills:
     - Introduction: ./Skills/Introduction.md
     - System Management:
+      - Diagnose Sleep: ./Skills/System-Management/Diagnose-Sleep.md
       - Check system layout: ./Skills/System-Management/Check-System-Layout.md
       - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
       - Manage Appp Icons: ./Skills/System-Management/Manage-App-Icons.md
