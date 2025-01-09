@@ -111,12 +111,14 @@ s2idle [deep]
 
 Now **`deep`** (S3) is the default.
 
-> **Tip**: You can switch between them by writing either `s2idle` or `deep` to `/sys/power/mem_sleep`, if your hardware and firmware actually support both:
+!!! note "How to switch between `s2idle` and `deep`"
 
-```bash title="Switch sleep state"
-echo s2idle | sudo tee /sys/power/mem_sleep
-echo deep | sudo tee /sys/power/mem_sleep
-```
+    **Tip**: You can switch between them by writing either `s2idle` or `deep` to `/sys/power/mem_sleep`, if your hardware and firmware actually support both:
+
+    ```bash title="Switch sleep state"
+    echo s2idle | sudo tee /sys/power/mem_sleep
+    echo deep | sudo tee /sys/power/mem_sleep
+    ```
 
 ---
 
