@@ -249,3 +249,41 @@ Repeat the command to re-enable it. This is helpful if your system keeps waking 
 - If your computer keeps waking up or fails to enter deep sleep, check wake-up sources and firmware settings.
 
 By following the steps in this guide, you can pinpoint why your system chooses a particular sleep state and how to optimize or troubleshoot it. If you still experience unexpected behavior, consult your distribution’s forums or the kernel documentation for deeper debugging methods.
+
+## 9. FAQ
+
+**Q: Can I use S0ix on my desktop?**
+
+A: S0ix is primarily designed for laptops and ultrabooks. Desktops usually rely on S3 for sleep, as they don’t need to maintain network connections or wake up as quickly as laptops.
+
+**Q: Why does my laptop wake up immediately after suspending?**
+
+A: This can be due to wake-up sources like USB devices, network cards, or firmware settings. Check `/proc/acpi/wakeup` to see which devices are enabled for wake-up.
+
+**Q: How do I know if my system supports S0ix?**
+
+A: Check the `Low Power S0 Idle` field in the FACP table of your ACPI tables. If it’s set to `1`, your system likely supports S0ix.
+
+**Q: Can I force my system to use S3 instead of S0ix?**
+
+A: You can try setting `mem_sleep_default=deep` in your boot loader configuration. However, if your hardware doesn’t support S3, the kernel will likely fall back to S0ix or s2idle.
+
+**Q: Why does my system only show `s2idle` in `/sys/power/mem_sleep`?**
+
+A: Some modern laptops have disabled S3 in favor of S0ix. If you don’t see `deep` as an option, that usually means S3 is not exposed by your firmware.
+
+**Q: Why my computer failed to boot but with message below?**
+
+```text
+Free initramfs and sswitch to another root fss:
+chroot to NEW_ROOTT. delete all in /, move NEW_ROOT to /.
+execute NEW_INIT. PID must be 1. NEW_ROOT musst be a mountpoint.
+
+-c DEV Reopen sstdio to DEV after switch
+-d CAPS Drop capabilities
+-n Dry run
+
+No init found. Try passing init= bootarg.
+```
+
+A: This is a common error message when the system fails to find the initramfs or the init process. If this happend after you call `sudo systemctl hibernate`, it might because you didn't have swap partition or swap file. You can create a swap file by following the [official documentation](https://help.ubuntu.com/community/SwapFaq). Or simply disable hibernate by running `sudo systemctl mask hibernate.target`.
