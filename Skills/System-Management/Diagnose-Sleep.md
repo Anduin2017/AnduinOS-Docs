@@ -133,8 +133,8 @@ This triggers a **Suspend to `mem`** (whichever variant is the current default).
 
 To confirm it worked, check the kernel logs after resuming:
 
-```bash title="Check kernel logs"
-sudo dmesg | grep -i "ACPI"
+```bash title="Check kernel logs ACPI and power management messages"
+sudo dmesg | grep -i -E 'acpi|pm'
 ```
 
 You may see lines such as:
