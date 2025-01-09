@@ -36,6 +36,8 @@ Or you can directly prompt current machine as a swarm manager:
 sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
 ```
 
+For how to use Docker to manage container applications, you can visit the [document](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
+
 ## Docker with Nvidia GPU
 
 If your system has an Nvidia GPU, you can use it with Docker. This provides GPU acceleration for your containers.
