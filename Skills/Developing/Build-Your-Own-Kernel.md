@@ -37,7 +37,7 @@ Here I'm downloading the Kernel version 6.13-rc4 as an example.
 ```bash title="Download the Kernel source code"
 link=https://git.kernel.org/torvalds/t/linux-6.13-rc4.tar.gz
 wget $link -O linux-6.13-rc4.tar.gz
-tar -zxvf linux-6.13-rc4.tar.gz
+tar -xJvf ./linux-6.13-rc4.tar.gz
 ```
 
 !!! warning "This might not be the latest version of the Kernel!"
