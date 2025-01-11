@@ -146,6 +146,41 @@ Comment out those lines.
 
 And press `ECS` and `:wq` to save the file.
 
+!!! note "It's optional to disable some features for best performance"
+
+    You can disable some features to get the best performance. For example, you can disable debugging features, unnecessary drivers, etc.
+
+    ```ini title="Edit the .config file to disable some features"
+    # Disable most debugging features
+    CONFIG_DEBUG_KERNEL=n
+    CONFIG_DEBUG_MISC=n
+    CONFIG_DEBUG_FS=n
+
+    # Disable generation of additional debug info
+    CONFIG_DEBUG_INFO=n
+    CONFIG_DEBUG_INFO_DWARF4=n
+
+    # Disable function tracing
+    CONFIG_FTRACE=n
+    CONFIG_FUNCTION_TRACER=n
+    CONFIG_FUNCTION_GRAPH_TRACER=n
+
+    # Disable kcov coverage
+    CONFIG_KCOV=n
+
+    # Disable stack protector options if security is not a concern on your build
+    CONFIG_CC_STACKPROTECTOR_NONE=y
+    # CONFIG_CC_STACKPROTECTOR is not set
+    # CONFIG_CC_STACKPROTECTOR_STRONG is not set
+
+    # Disable System Request debugging
+    CONFIG_MAGIC_SYSRQ=n
+
+    # Disable profiling
+    CONFIG_PROFILING=n
+    CONFIG_OPROFILE=n
+    ```
+
 ## Step 4 - Build the Kernel
 
 Now, you can build the Kernel.
