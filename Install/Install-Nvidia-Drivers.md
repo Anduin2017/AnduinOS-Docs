@@ -1,6 +1,6 @@
 # Installing NVIDIA Drivers on AnduinOS
 
-This guide provides a comprehensive approach to installing proprietary NVIDIA drivers on **AnduinOS**, a distribution based on Ubuntu. By using NVIDIA's proprietary drivers, you can achieve better performance and gain access to features not available through the open-source Nouveau driver. This tutorial covers both **automatic** and **manual** installation methods, along with tips for Secure Boot, driver signing, display server configuration, and more.
+This guide provides a comprehensive approach to installing proprietary NVIDIA drivers on **AnduinOS**. By using NVIDIA's proprietary drivers, you can achieve better performance and gain access to features not available through the open-source Nouveau driver.
 
 ---
 
@@ -8,10 +8,12 @@ This guide provides a comprehensive approach to installing proprietary NVIDIA dr
 
 1. **Internet Connection**: Ensure you have a stable internet connection for downloading packages and drivers.
 2. **Kernel Headers and Build Tools**: For building modules (especially for manual installation), you need:
+
    ```bash
    sudo apt update
    sudo apt install gcc make build-essential dkms linux-headers-$(uname -r)
    ```
+
    This ensures you have the required tools and kernel headers to compile the NVIDIA kernel module.
 
 !!! warning "System Backup or Snapshot Recommended"
@@ -69,6 +71,7 @@ This ensures no leftover packages interfere with the new installation.
    - Select the appropriate operating system (Linux 64-bit).
    - Click "Search" and download the appropriate `.run` file.
 3. **Make the file executable**. Suppose your file is named `NVIDIA-Linux-x86_64-565.77.run`:
+
    ```bash
    chmod +x NVIDIA-Linux-x86_64-565.77.run
    ```
@@ -86,6 +89,7 @@ This ensures no leftover packages interfere with the new installation.
 Secure Boot ensures your system only loads drivers or kernel modules signed by a trusted key. If **Secure Boot is enabled** in your BIOS/UEFI, you **must** sign the NVIDIA driver module. If Secure Boot is **disabled**, you can skip this step—but it is **strongly recommended** to keep Secure Boot enabled.
 
 1. **Generate a private key and a self-signed certificate**:
+
    ```bash
    mkdir ~/my-keys
    cd ~/my-keys
@@ -93,32 +97,40 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
    openssl x509 -req -in MOK.csr -signkey MOK.key -out MOK.crt
    openssl x509 -in MOK.crt -outform DER -out MOK.der
    ```
+
    - `MOK.key` is your **private key**. 
    - `MOK.crt` is your **public certificate**.
    - `MOK.der` is your certificate in DER format for enrollment.
 
 2. **Enroll your key using `mokutil`**:
+
    ```bash
    sudo mokutil --import MOK.der
    ```
+
    You will be prompted to create a password. **Remember this password**, as you will use it after the reboot.
 
 3. **Reboot and enroll your key**:
+
    ```bash
    sudo reboot
    ```
+
    - During the boot, **MokManager** appears.
    - Select **"Enroll MOK"**, then **"Continue"**.
    - Enter the password you set previously.
    - Confirm to enroll the key and reboot again.
 
 4. **Verify your key is enrolled**:
+
    ```bash
    sudo mokutil --list-enrolled
    ```
+
    The output should list your certificate. If it is listed, Secure Boot should now trust modules signed with your private key.
 
 !!! note "Keep Your Keys Safe"
+
     - **Never share your private key (`.key`)** with others.
     - Always keep these files in a secure place. If you lose them, you’ll need to re-sign or re-enroll future kernel modules.
 
@@ -137,13 +149,16 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
 
 2. **Switch to a multi-user (text) target**:  
    Before installing the driver, you must stop the display server (Xorg or Wayland). You can do this by changing the system’s runlevel/target:
+
    ```bash
    sudo systemctl set-default multi-user.target
    sudo systemctl isolate multi-user.target
    ```
+
    Your screen will switch to a TTY console. **Log in** with your username and password. (Nothing appears as you type the password—this is normal.)
 
 !!! warning "Be Prepared for a Terminal-Only Environment"
+
     Once you move to `multi-user.target`, you lose the graphical interface. If something goes wrong, you will need to troubleshoot via the command line.
 
 ---
@@ -151,10 +166,13 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
 ### Step 5: Install the NVIDIA Driver
 
 1. **Navigate to the directory containing the downloaded driver**:
+
    ```bash
    cd ~/Downloads
    ```
+
 2. **Run the installer** (example filename below):
+
    ```bash
    sudo ./NVIDIA-Linux-x86_64-565.77.run
    ```
@@ -171,6 +189,7 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
      - You must also have your corresponding `.crt` in the same directory for verification.
 
 !!! warning "Provide the Correct Key"
+
     - **`.key`** = private key  
     - **`.crt`** = public certificate  
     Installing the driver will automatically sign the kernel module with your private key if configured correctly.
@@ -182,10 +201,13 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
 The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. To ensure it doesn’t load:
 
 1. **Blacklist Nouveau**:
+
    ```bash
    sudo vim /etc/modprobe.d/blacklist-nouveau.conf
    ```
+
    Insert the following lines:
+
    ```bash
    blacklist amd76x_edac
    blacklist vga16fb
@@ -194,9 +216,11 @@ The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. 
    blacklist nvidiafb
    blacklist rivatv
    ```
+
    (Note: The line `blacklist amd76x_edac` is sometimes recommended on certain systems. If you do not have AMD hardware, it might be unnecessary. However, it’s often included in sample blacklist files.)
 
 2. **Regenerate initramfs**:
+
    ```bash
    sudo update-initramfs -u -k all
    ```
@@ -206,22 +230,29 @@ The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. 
 ### Step 7: Reboot and Validate Installation
 
 1. **Reboot** your system:
+
    ```bash
    sudo reboot
    ```
+
 2. **Check driver status**:
+
    ```bash
    nvidia-smi
    ```
+
    If the driver is installed correctly, you should see a table showing your GPU, driver version, and other details.
 
 3. **Secure Boot Verification (if applicable)**:
+
    ```bash
    sudo mokutil --sb-state
    ```
+
    - If it shows `SecureBoot enabled`, your driver should be signed and recognized by the system.
 
 !!! note "Kernel Updates"
+
     **When your kernel updates**, you may need to recompile or re-sign the NVIDIA driver module. If you installed via a .run file, you may have to rerun the installer or rely on DKMS (if configured properly).
 
 ---
@@ -231,9 +262,11 @@ The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. 
 Depending on your system, you may be running **Xorg** or **Wayland**. In many cases, **Xorg** provides better compatibility with NVIDIA’s proprietary drivers.
 
 1. **Check your current session type**:
+
    ```bash
    echo $XDG_SESSION_TYPE
    ```
+
    - Returns `x11` (Xorg) or `wayland`.
 
 2. **Switching display servers**:
@@ -241,13 +274,17 @@ Depending on your system, you may be running **Xorg** or **Wayland**. In many ca
    - Some distributions default to Wayland; if you experience issues, try switching to Xorg.
 
 3. **Adjust your resolution** (example using `xrandr`):
+
    ```bash
    xrandr
    ```
+
    This lists available modes. To set a specific resolution and refresh rate:
+
    ```bash
    xrandr --output HDMI-0 --mode 3840x2160 --rate 144
    ```
+
    Replace `HDMI-0` with the correct output device name (it can be `DP-0`, `DVI-D-0`, etc.).
 
 ---
