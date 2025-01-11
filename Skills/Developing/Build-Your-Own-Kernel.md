@@ -328,3 +328,9 @@ To verify if your kernel is signed and trusted by Secure Boot, run the following
 sudo dmesg | grep -i 'cert'
 sudo mokutil --sb-state
 ```
+
+### 7. Install NVIDIA Drivers (Optional)
+
+After building the Kernel, since NVIDIA drivers are out of the Kernel tree, you need to reinstall the NVIDIA drivers.
+
+Please read the instructions in the [Install NVIDIA Drivers](../../Install/Install-Nvidia-Drivers.md) guide.

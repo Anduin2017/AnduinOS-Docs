@@ -61,6 +61,8 @@ sudo chmod +x NVIDIA-Linux-x86_64-470.103.01.run
 sudo ./NVIDIA-Linux-x86_64-470.103.01.run
 ```
 
+For more information, please read the [Nvidia driver installation guide](./Install-Nvidia-Drivers.md).
+
 ## Intel Graphics Driver
 
 Intel usually will merge latest drivers and packages to the Linux kernel. However, some modules, like `libva`, `vaapi`, `vulkan`, and `intel-media-driver`, may need to be installed separately.
