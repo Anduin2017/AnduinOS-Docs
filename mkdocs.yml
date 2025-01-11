@@ -124,7 +124,7 @@ nav:
       - First Boot for Secure Boot: ./Install/First-Boot-For-Secure-Boot.md
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
       - Install Drivers: ./Install/Install-Drivers.md
-      - Install NVIDIA Driver: ./Install/Install-NVIDIA-Driver.md
+      - Install NVIDIA Driver: ./Install/Install-Nvidia-Drivers.md
       - Mounting second disk: ./Install/Mounting-Second-Disk.md
       - Install input method: ./Install/Install-Input-Method.md
       - Update your system: ./Install/Update-Your-System.md
