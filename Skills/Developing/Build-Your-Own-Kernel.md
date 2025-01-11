@@ -190,6 +190,14 @@ make clean
 make -j$(nproc)
 ```
 
+!!! tip "Building the Kernel with only part of the CPU cores"
+
+    In some cases, you may want to build the Kernel using only part of the CPU cores. You can use the `taskset` command to specify the CPU cores to use.
+
+    ```bash title="Build the Kernel"
+    taskset -c 0-7 make -j8
+    ```
+
 !!! tip "Building the kernel takes around 20 minutes to 2 hours!"
 
     Various factors can affect the build time, such as the number of CPU cores, the CPU speed, the amount of RAM, and the disk speed. Building the Kernel using all the available CPU cores will reduce the build time.
