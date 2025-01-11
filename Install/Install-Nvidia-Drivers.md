@@ -1,4 +1,3 @@
-```markdown
 # Installing NVIDIA Drivers on AnduinOS
 
 This guide provides a comprehensive approach to installing proprietary NVIDIA drivers on **AnduinOS**, a distribution based on Ubuntu. By using NVIDIA's proprietary drivers, you can achieve better performance and gain access to features not available through the open-source Nouveau driver. This tutorial covers both **automatic** and **manual** installation methods, along with tips for Secure Boot, driver signing, display server configuration, and more.
