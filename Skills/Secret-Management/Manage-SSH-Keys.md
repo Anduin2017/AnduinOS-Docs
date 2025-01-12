@@ -78,3 +78,33 @@ chmod 600 ~/.ssh/id_rsa
 ```
 
 Make sure to set the correct permissions on the private key file.
+
+## SSH to Server
+
+To SSH to a server using a specific private key, you can use the `-i` option.
+
+```bash
+ssh -i /path/to/private_key user@hostname
+```
+
+Replace `/path/to/private_key` with the path to your private key file, `user` with your username, and `hostname` with the IP address or domain name of the server.
+
+### Via SSH gateway
+
+In some cases, the Server might behind a firewall or NAT, and you need to use a jump host to connect to it. You can use the `-J` option to specify a jump host.
+
+```bash
+ssh -J user@jump_host user@hostname
+```
+
+Replace `user@jump_host` with the username and hostname of the jump host, and `user@hostname` with the username and hostname of the server.
+
+### Via HTTP proxy
+
+In some cases, you might need to connect to a server through an HTTP proxy. You can use the `ProxyCommand` option to specify the proxy command.
+
+```bash
+ssh -o "ProxyCommand=nc -X connect -x <proxy_host>:<proxy_port> %h %p" <user>@<host>
+```
+
+Replace `<proxy_host>` and `<proxy_port>` with the hostname and port of the proxy server, `<user>` with your username, and `<host>` with the IP address or domain name of the server.
