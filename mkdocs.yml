@@ -198,6 +198,7 @@ nav:
         - Evolution: ./Applications/Communication/Evolution/Evolution.md
         - Discord: ./Applications/Communication/Discord/Discord.md
         - Feishu: ./Applications/Communication/Feishu/Feishu.md
+        - Nextcloud Talk: ./Applications/Communication/NextcloudTalk/NextcloudTalk.md
 
       - Internet Services:
         - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
