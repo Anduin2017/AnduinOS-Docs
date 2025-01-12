@@ -32,12 +32,18 @@ First, you need to get the Kernel source code. You can get the Kernel source cod
 
 Directly download the Kernel source code from the website. Click the `tarball` link to download the Kernel source code.
 
-Here I'm downloading the Kernel version 6.13-rc4 as an example.
+Here I'm downloading the Kernel version 6.13-rc4 (xz) as an example.
 
 ```bash title="Download the Kernel source code"
-link=https://git.kernel.org/torvalds/t/linux-6.13-rc4.tar.gz
-wget $link -O linux-6.13-rc4.tar.gz
-tar -xJvf ./linux-6.13-rc4.tar.gz
+link=https://git.kernel.org/torvalds/t/linux-6.13-rc4.tar.xz
+wget $link -O linux-6.13-rc4.tar.xz
+tar -xJvf ./linux-6.13-rc4.tar.xz
+```
+
+If the tarball is a `gz` compressed file, you can use the following command to extract the tarball.
+
+```bash title="Extract the tarball"
+tar -zxvf ./linux-6.13-rc4.tar.gz
 ```
 
 !!! warning "This might not be the latest version of the Kernel!"
