@@ -243,6 +243,7 @@ nav:
         - GameConqueror: ./Applications/Utilities/GameConqueror/GameConqueror.md
         - Terminus: ./Applications/Utilities/Terminus/Terminus.md
         - Cool Retro Term: ./Applications/Utilities/Cool-Retro-Term/Cool-Retro-Term.md
+        - Brasero: ./Applications/Utilities/Brasero/Brasero.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
