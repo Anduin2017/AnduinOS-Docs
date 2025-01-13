@@ -42,7 +42,7 @@ sudo -E ln -sf "$TALK_BIN" /usr/bin/nextcloudtalk
 echo "[Desktop Entry]
 Name=Nextcloud Talk
 Comment=Nextcloud Talk Desktop Client
-Exec="$TALK_BIN"
+Exec=\"${TALK_BIN}\"
 Icon=$ICON_PATH
 Terminal=false
 Type=Application
