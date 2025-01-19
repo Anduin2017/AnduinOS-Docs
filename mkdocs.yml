@@ -119,6 +119,7 @@ nav:
       - System Requirements: ./Install/System-Requirements.md
       - Download AnduinOS: ./Install/Download-AnduinOS.md
       - Burn a USB stick: ./Install/Burn-A-USB-Stick.md
+      - Change NVME LBA size: ./Install/Change-NVME-LBA-Size.md
       - Install AnduinOS from USB: ./Install/Install-AnduinOS-From-USB.md
     - Setting Up AnduinOS:
       - First Boot for Secure Boot: ./Install/First-Boot-For-Secure-Boot.md

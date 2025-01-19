@@ -31,6 +31,10 @@ After booting from the USB drive, you will see the AnduinOS installer screen. Yo
 
 Choose the option that suits your needs, and follow the on-screen instructions to install AnduinOS on your computer.
 
+## Change NVME LBA Format
+
+Before actual installation, you may need to change the NVME LBA format to the suggested value for best performance. Please refer to the [Change NVME LBA Size](./Change-NVME-LBA-Size.md) guide for more information.
+
 ## Installation Process
 
 The installation process will guide you through the following steps:
