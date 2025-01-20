@@ -27,14 +27,14 @@ To install AnduinOS, you can follow the instructions in the [Installation Guide]
 After installing AnduinOS, you may need to do some post-installation configurations. You can follow the instructions in the following guides:
 
 * [Select best apt source](./Install/Select-Best-Apt-Source.md)
-* [Install Drivers](./Install/Install-Drivers.md)
-* [Mounting Second Disk](./Install/Mounting-Second-Disk.md)
+* [Install drivers](./Install/Install-Drivers.md)
+* [Mounting second disk](./Install/Mounting-Second-Disk.md)
 * [Install input method](./Install/Install-Input-Method.md)
 * [Update your system](./Install/Update-Your-System.md)
 * [Switch to your language](./Install/Switch-To-Your-Language.md)
 * [Update firmware](./Install/Upgrade-Firmware.md)
-* [Configure Power Settings](./Install/Configure-Power-Settings.md)
-* [Install an App Store](./Install/Install-An-App-Store.md) or [Install applications](./Applications/Introduction.md)
+* [Configure power settings](./Install/Configure-Power-Settings.md)
+* [Install an app store](./Install/Install-An-App-Store.md) or [Install applications](./Applications/Introduction.md)
 
 ## How to install applications on AnduinOS?
 
