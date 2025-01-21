@@ -220,6 +220,8 @@ This command will build the Kernel using all the available CPU cores.
     make -j1 V=1
     ```
 
+After building, the Kernel image will be available in the `./arch/x86/boot/bzImage` directory. And the modules will be available in the `./modules` directory. You can install the Kernel and the modules using the following steps.
+
 ## Step 5 - Install the Kernel
 
 Now, you can install the Kernel.
