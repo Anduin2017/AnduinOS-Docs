@@ -41,6 +41,8 @@ print "Disk usage"
 sudo df -Th
 print "Memory information"
 sudo free -h
+print "Memory speed"
+sudo dmidecode --type memory | grep -i "Memory Speed"
 print "Network information"
 sudo ip link show
 print "Firewall status"
