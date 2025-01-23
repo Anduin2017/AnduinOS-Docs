@@ -17,7 +17,7 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     gsettings set org.gnome.desktop.background picture-uri-dark "file://$FILE"
     EOF
     chmod +x ~/.local/slide.sh
-    (crontab -l ; echo "*/30 * * * * ~/.local/slide.sh") | crontab -
+    (crontab -l ; echo "*/30 * * * * /home/$USER/.local/slide.sh") | crontab -
     ```
 
     Don't forget to replace `~/Pictures/Wallpapers` with the path to the directory containing your wallpapers!
