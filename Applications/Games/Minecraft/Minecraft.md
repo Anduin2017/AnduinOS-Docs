@@ -6,8 +6,7 @@ To install Minecraft on AnduinOS, you can run:
 
 ```bash
 wget https://launcher.mojang.com/download/Minecraft.deb -O /tmp/minecraft.deb
-sudo dpkg -i /tmp/minecraft.deb
-sudo apt install --fix-broken -y
+sudo apt install /tmp/minecraft.deb -y
 rm /tmp/minecraft.deb
 ```
 

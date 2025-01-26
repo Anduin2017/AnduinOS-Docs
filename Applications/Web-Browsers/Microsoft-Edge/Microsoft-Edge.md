@@ -6,8 +6,7 @@ To install Microsoft Edge on AnduinOS, you can run:
 
 ```bash title="Install Microsoft Edge"
 wget https://go.microsoft.com/fwlink?linkid=2149051 -O microsoft-edge-stable.deb
-sudo dpkg -i microsoft-edge-stable.deb
-sudo apt install --fix-broken -y
+sudo apt install ./microsoft-edge-stable.deb -y
 rm microsoft-edge-stable.deb
 ```
 
