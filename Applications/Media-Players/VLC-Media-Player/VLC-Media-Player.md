@@ -84,3 +84,13 @@ xdg-mime default vlc.desktop audio/x-s3m
 xdg-mime default vlc.desktop audio/x-stm
 xdg-mime default vlc.desktop audio/x-xm
 ```
+
+## Install VLC nightly builds
+
+The official build might be outdated, you can install the nightly build by running:
+
+```bash
+sudo add-apt-repository ppa:videolan/master-daily
+sudo apt update
+sudo apt install -y vlc qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtgraphicaleffects qml6-module-qtquick-effects
+```

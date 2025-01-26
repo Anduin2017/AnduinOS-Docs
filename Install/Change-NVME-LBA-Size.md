@@ -2,6 +2,10 @@
 
 Since we are about to deploy AnduinOS on a machine, and you may have a NVME SSD with a 4K LBA size, we need to change the LBA size to 512 bytes to make it compatible with AnduinOS.
 
+!!! tip "This is fully optional"
+
+    If you are not sure about the LBA size of your NVME SSD, you can skip this step. AnduinOS will work fine with both 4K and 512 bytes LBA size. This step is only for performance improvement.
+
 This guide will walk you through changing your NVMe drive to use a 4K (4096 bytes) Logical Block Addressing (LBA) format. **Please note that this procedure will erase all data on the drive.** Make sure to back up any important information beforehand.
 
 ---
