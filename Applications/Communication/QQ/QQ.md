@@ -2,14 +2,13 @@
 
 Tencent QQ (Chinese: 腾讯QQ), also known as QQ, is an instant messaging software service and web portal developed by the Chinese technology company Tencent. QQ offers services that provide online social games, music, shopping, microblogging, movies, and group and voice chat software.
 
-To Install QQ on AnduinOS, first download a deb package form [here](https://im.qq.com/linuxqq/index.shtml). Then you can install it with `dpkg`:
+To Install QQ on AnduinOS, first download a deb package form [here](https://im.qq.com/linuxqq/index.shtml). Then you can install it with `apt`:
 
 <!-- The link needs to be updated regularly. -->
 
 ```bash
 wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.15_241224_amd64_01.deb -O qq.deb
-sudo dpkg -i qq.deb
-sudo apt install --fix-broken -y
+sudo apt install ./qq.deb -y
 rm qq.deb
 ```
 

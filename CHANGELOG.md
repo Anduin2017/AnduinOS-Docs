@@ -1,5 +1,15 @@
 # AnduinOS Changelog
 
+## v1.2.1
+
+* Fixed a keyboard shortcut conflict that caused the **Super + N** shortcut to toggle notifications center.
+* Fixed a keyboard shortcut conflict that caused the **Super + A** shortcut to toggle action center.
+
+## v1.1.1
+
+* Fixed a keyboard shortcut conflict that caused the **Super + N** shortcut to toggle notifications center.
+* Fixed a keyboard shortcut conflict that caused the **Super + A** shortcut to toggle action center.
+
 ## v1.2.0
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.

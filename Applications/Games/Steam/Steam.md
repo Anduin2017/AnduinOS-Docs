@@ -30,8 +30,7 @@ sudo apt update
 sudo apt install libc6-i386 libutempter0 xbitmaps xterm libgl1-mesa-dri:i386 libgl1:i386 -y
 
 wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb -O steam.deb
-sudo dpkg -i steam.deb
-sudo apt install --fix-broken -y
+sudo apt install ./steam.deb -y
 rm steam.deb
 ```
 

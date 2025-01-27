@@ -11,6 +11,10 @@ If you are tired of fixed wallpapers and want to add some life to your desktop, 
     mkdir -p ~/Pictures/Wallpapers
     cat << 'EOF' > ~/.local/slide.sh
     #!/bin/bash
+    EEUID=$(id --real --user)
+    PID=$(pgrep --euid $EEUID gnome-session-c)
+    export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-)
+
     DIR="/home/$USER/Pictures/Wallpapers"
     FILE=$(find $DIR -type f \( -name '*.jpg' -o -name '*.png' -o -name '*.jpeg' -o -name '*.bmp' \) -print0 | shuf -n1 -z)
     gsettings set org.gnome.desktop.background picture-uri      "file://$FILE"

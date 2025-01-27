@@ -6,8 +6,7 @@ To Install WeChat on AnduinOS, you can run:
 
 ```bash
 wget https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb -O wechat.deb
-sudo dpkg -i wechat.deb
-sudo apt install --fix-broken -y
+sudo apt install ./wechat.deb -y
 rm wechat.deb
 ```
 
