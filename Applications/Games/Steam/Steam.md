@@ -17,6 +17,12 @@ To install Steam on AnduinOS, you can run:
 
     If you encounter any issues after enabling the i386 architecture, you can revert the changes by removing the i386 architecture and its associated packages. However, this process may not be straightforward and could result in further complications.
 
+    To remove the i386 architecture and its associated packages, you can run:
+
+    ```bash title="Remove i386 Architecture"
+    sudo dpkg --remove-architecture i386
+    ```
+
 ```bash title="Install Steam"
 cd ~
 sudo dpkg --add-architecture i386
