@@ -7,8 +7,7 @@ To install Discord on AnduinOS, you can run:
 ```bash
 link="https://discord.com/api/download?platform=linux&format=deb"
 wget -O discord.deb $link
-sudo dpkg -i discord.deb
-sudo apt install --fix-broken -y
+sudo apt install ./discord.deb -y
 rm discord.deb
 ```
 

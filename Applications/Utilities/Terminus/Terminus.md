@@ -5,7 +5,6 @@ Terminus is a cross-platform terminal emulator that is available for Windows, ma
 ```bash
 link=https://www.termius.com/download/linux/Termius.deb
 wget $link -O terminus.deb
-sudo dpkg -i terminus.deb
-sudo apt install --fix-broken -y
+sudo apt install ./terminus.deb -y
 rm terminus.deb
 ```

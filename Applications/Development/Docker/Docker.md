@@ -220,8 +220,7 @@ If you insist on using Docker Desktop, you can run:
 ```bash
 cd ~
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb -O docker-desktop-amd64.deb
-sudo dpkg -i docker-desktop-amd64.deb
-sudo apt install --fix-broken -y
+sudo apt install ./docker-desktop-amd64.deb -y
 rm docker-desktop-amd64.deb
 ```
 

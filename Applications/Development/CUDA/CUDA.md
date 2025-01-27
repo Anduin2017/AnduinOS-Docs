@@ -52,7 +52,7 @@ Run:
 
 ```bash
 echo "Installing CUDNN..."
-sudo dpkg -i ./cudnn-local-repo-ubuntu2204-8.9.0.131_1.0-1_amd64_cuda11.deb
+sudo apt-get install ./cudnn-local-repo-ubuntu2204-8.9.0.131_1.0-1_amd64_cuda11.deb -y
 sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/
 sudo apt-get update
 sudo apt-get install libcudnn8=8.9.0.131-1+cuda11.8

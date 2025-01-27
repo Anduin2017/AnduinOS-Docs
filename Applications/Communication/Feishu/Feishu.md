@@ -2,7 +2,7 @@
 
 ByteDance Feishu is a communication and collaboration tool. It is a competitor to Slack and Microsoft Teams.
 
-To Install Feishu on AnduinOS, first download a deb package form [here](https://www.feishu.cn/download). Then you can install it with `dpkg`:
+To Install Feishu on AnduinOS, first download a deb package form [here](https://www.feishu.cn/download). Then you can install it with `apt`:
 
 <!-- The link needs to be updated regularly. -->
 
@@ -10,8 +10,7 @@ To Install Feishu on AnduinOS, first download a deb package form [here](https://
 api=https://www.feishu.cn/api/package_info?platform=10
 download_link=$(curl -s $api | jq -r '.data.download_link')
 wget $download_link -O Feishu.deb
-sudo dpkg -i Feishu.deb
-sudo apt install --fix-broken -y
+sudo apt install ./Feishu.deb -y
 rm Feishu.deb
 ```
 
