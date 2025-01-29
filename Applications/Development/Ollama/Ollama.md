@@ -17,3 +17,5 @@ ollama run deepseek-r1:671b
 ```
 
 That's it! You're now ready to use Ollama and its models.
+
+You may also want to deploy a web UI for Ollama. To do this, you can deploy the [https://github.com/open-webui/open-webui](Open WebUI) project.
