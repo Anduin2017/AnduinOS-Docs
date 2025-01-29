@@ -254,6 +254,7 @@ nav:
         - .NET: ./Applications/Development/Dotnet/Dotnet.md
         - PowerShell: ./Applications/Development/PowerShell/PowerShell.md
         - Golang: ./Applications/Development/Golang/Golang.md
+        - Ollama: ./Applications/Development/Ollama/Ollama.md
 
       - Database Tools:
         - Azure Data Studio: ./Applications/Database-Tools/Azure-Data-Studio/Azure-Data-Studio.md
