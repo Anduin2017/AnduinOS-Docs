@@ -22,6 +22,8 @@ ollama run deepseek-r1:7b
 
 That's it! You're now ready to use Ollama and its models.
 
+For more `DeepSeek` models, please view more details [here](https://ollama.com/library/deepseek-r1:7b).
+
 ## Install Web UI
 
 You may also want to deploy a web UI for Ollama. To do this, you can deploy the [https://github.com/open-webui/open-webui](Open WebUI) project.
