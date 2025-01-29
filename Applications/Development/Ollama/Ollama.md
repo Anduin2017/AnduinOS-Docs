@@ -7,3 +7,13 @@ To install Ollama, you can run the following command:
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
+
+After installing Ollama, you may want to install some models like `DeepSeek`.
+
+To install DeepSeek, you can run the following command:
+
+```bash
+ollama run deepseek-r1:671b
+```
+
+That's it! You're now ready to use Ollama and its models.
