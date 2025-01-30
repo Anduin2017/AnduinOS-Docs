@@ -197,6 +197,7 @@ nav:
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
         - Slack: ./Applications/Communication/Slack/Slack.md
         - Evolution: ./Applications/Communication/Evolution/Evolution.md
+        - Thunderbird: ./Applications/Communication/Thunderbird/Thunderbird.md
         - Discord: ./Applications/Communication/Discord/Discord.md
         - Feishu: ./Applications/Communication/Feishu/Feishu.md
         - Nextcloud Talk: ./Applications/Communication/NextcloudTalk/NextcloudTalk.md

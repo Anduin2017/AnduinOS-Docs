@@ -12,7 +12,7 @@ However, if you want to install Firefox, you can do so by running the following 
 
 ```bash title="Install Firefox"
 sudo add-apt-repository -y ppa:mozillateam/ppa -n > /dev/null 2>&1
-echo -e '\nPackage: *\nPin: release o=LP-PPA-mozillateam\nPin-Priority: 1002' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+echo -e '\nPackage: *\nPin: release o=LP-PPA-mozillateam\nPin-Priority: 1002' | sudo tee /etc/apt/preferences.d/mozilla-ppa
 sudo apt update
 sudo apt install firefox
 ```
