@@ -190,6 +190,9 @@ nav:
         - Snap Store: ./Applications/Store/Snap-Store/Snap-Store.md
         - Nix: ./Applications/Store/Nix/Nix.md
 
+      - File Managers:
+        - Nemo: ./Applications/File-Managers/Nemo/Nemo.md
+
       - Communication:
         - Telegram: ./Applications/Communication/Telegram/Telegram.md
         - WeChat: ./Applications/Communication/WeChat/WeChat.md
