@@ -239,7 +239,7 @@ nav:
         - eza: ./Applications/Shell-Tools/eza/eza.md
         - zoxide: ./Applications/Shell-Tools/zoxide/zoxide.md
         - bat: ./Applications/Shell-Tools/bat/bat.md
-        - dstat: ./Applications/Utilities/dstat/dstat.md
+        - dstat: ./Applications/Shell-Tools/dstat/dstat.md
 
       - Download Tools:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
