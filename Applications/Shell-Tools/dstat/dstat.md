@@ -27,5 +27,5 @@ sudo dstat
 Or more options:
 
 ```bash
-sudo dstat --cpu --mem --disk --net --load --nocolor --noheaders
+sudo dstat --cpu --mem --disk --net --load --nocolor --noheaders -D sda,nvme1n1,nvme0n1
 ```

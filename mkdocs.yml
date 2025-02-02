@@ -239,6 +239,7 @@ nav:
         - eza: ./Applications/Shell-Tools/eza/eza.md
         - zoxide: ./Applications/Shell-Tools/zoxide/zoxide.md
         - bat: ./Applications/Shell-Tools/bat/bat.md
+        - dstat: ./Applications/Utilities/dstat/dstat.md
 
       - Download Tools:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
@@ -251,7 +252,6 @@ nav:
         - Google Earth: ./Applications/Utilities/Google-Earth/Google-Earth.md
         - Insomnia: ./Applications/Utilities/Insomnia/Insomnia.md
         - MissionCenter: ./Applications/Utilities/MissionCenter/MissionCenter.md
-        - Dstat: ./Applications/Utilities/Dstat/Dstat.md
         - Postman: ./Applications/Utilities/Postman/Postman.md
         - GameConqueror: ./Applications/Utilities/GameConqueror/GameConqueror.md
         - Terminus: ./Applications/Utilities/Terminus/Terminus.md
