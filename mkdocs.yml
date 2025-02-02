@@ -234,6 +234,9 @@ nav:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
         - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
 
+      - Shell Tools:
+        - Morden Shell: ./Applications/Shell-Tools/Morden-Shell/Morden-Shell.md
+
       - Download Tools:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
         - qBittorrent: ./Applications/Download-Tools/qBittorrent/qBittorrent.md
