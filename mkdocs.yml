@@ -235,7 +235,10 @@ nav:
         - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
 
       - Shell Tools:
-        - Morden Shell: ./Applications/Shell-Tools/Morden-Shell/Morden-Shell.md
+        - lsd: ./Applications/Shell-Tools/lsd/lsd.md
+        - eza: ./Applications/Shell-Tools/eza/eza.md
+        - zoxide: ./Applications/Shell-Tools/zoxide/zoxide.md
+        - bat: ./Applications/Shell-Tools/bat/bat.md
 
       - Download Tools:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
