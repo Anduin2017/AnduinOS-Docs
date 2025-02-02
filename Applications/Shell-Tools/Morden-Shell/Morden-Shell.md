@@ -6,7 +6,7 @@
 
 lsd is the next gen ls command. [source code](https://github.com/lsd-rs/lsd)
 
-You must have [Nerd Fonts](https://www.nerdfonts.com/) installed to ues lsd perfectly. Don't worry, the nerd fonts has already installed in AnduinOS by default.
+You must have [Nerd Fonts](https://www.nerdfonts.com/) installed to ues lsd perfectly. But don't worry, the nerd fonts has already installed in AnduinOS by default. If your logo did't showup correctly in some ui, checkout your font settings.
 
 Install lsd to AnduinOS:
 
@@ -36,6 +36,7 @@ sudo apt install eza
 Then you can set an alias to replace ls:
 
 ```bash
+# write this line to your .bashrc or .zshrc etc
 alias ls=eza
 ```
 
