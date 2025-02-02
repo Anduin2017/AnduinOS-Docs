@@ -10,9 +10,8 @@ To install Youtube dl on AnduinOS, run the following command:
 
 ```bash
 sudo apt install python3-pip -y
-pip3 install 'git+https://github.com/ytdl-org/youtube-dl.git@master#egg=youtube_dl'
-sudo cp ~/.local/bin/youtube-dl /usr/bin/youtube-dl
-/usr/bin/youtube-dl --version
+pipx install 'git+https://github.com/ytdl-org/youtube-dl.git@master#egg=youtube_dl' --force
+~/.local/bin/youtube-dl --version
 ```
 
 ## Get cookies
@@ -29,7 +28,7 @@ To download a video, you can run the following command:
 
 ```bash
 cd ~/Downloads
-youtube-dl \
+~/.local/bin/youtube-dl \
     -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
     --cookies './www.youtube.com_cookies.txt' \
     --write-description \
@@ -50,7 +49,7 @@ For example, if you need to download `https://www.youtube.com/watch?v=KtekEWk3zD
 
 ```bash
 cd ~/Downloads
-youtube-dl \
+~/.local/bin/youtube-dl \
     -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' \
     --cookies './www.youtube.com_cookies.txt' \
     --write-description \
