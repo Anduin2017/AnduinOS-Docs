@@ -150,7 +150,7 @@ nav:
       - Diagnose Sleep: ./Skills/System-Management/Diagnose-Sleep.md
       - Check system layout: ./Skills/System-Management/Check-System-Layout.md
       - Change the Distro Name: ./Skills/System-Management/Change-The-Distro-Name.md
-      - Manage Appp Icons: ./Skills/System-Management/Manage-App-Icons.md
+      - Manage App Icons: ./Skills/System-Management/Manage-App-Icons.md
       - Enter terminal mode: ./Skills/System-Management/Terminal-Mode.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
       - Mounting remote folders: ./Skills/System-Management/Mounting-Remote-Folder.md
@@ -159,6 +159,7 @@ nav:
       - Check file format: ./Skills/System-Management/Check-File-Format.md
       - Remove duplicate apt source: ./Skills/System-Management/Remove-Duplicate-Apt-Source.md
       - Make a RAM disk: ./Skills/System-Management/Make-A-RAM-Disk.md
+      - Make a Bcache disk: ./Skills/System-Management/Make-A-Bcache-Disk.md
     - Sandboxing:
       - Using Docker as container: ./Skills/Sandboxing/Using-Docker-As-Container.md
       - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
