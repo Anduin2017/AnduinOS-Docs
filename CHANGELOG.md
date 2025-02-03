@@ -1,5 +1,10 @@
 # AnduinOS Changelog
 
+## v1.3.0 (Development branch)
+
+* Added a new shortcut **Super + V** to toggle the clipboard history.
+* Added `ethtool` to the default app list.
+
 ## v1.2.1
 
 * Fixed a keyboard shortcut conflict that caused the **Super + N** shortcut to toggle notifications center.
