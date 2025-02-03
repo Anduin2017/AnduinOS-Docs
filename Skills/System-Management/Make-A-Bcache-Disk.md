@@ -48,8 +48,9 @@ The backing device is responsible for storing the actual data. Before using it, 
    sudo wipefs -a /dev/sda
    ```
 
-   > **Warning:**  
-   > Ensure that any important data on `/dev/sda` is backed up or no longer needed before proceeding.
+!!! warning "Backup Data!"
+
+   Ensure that any important data on `/dev/sda` is backed up or no longer needed before proceeding.
 
 2. **Initialize the Device as a bcache Backing Device**
 
@@ -270,8 +271,9 @@ Since the actual data is stored on the backing device (for example, `/dev/sda`),
      sudo mount /dev/bcache0 /swarm-vol
      ```
 
-   > **Tip:**  
-   > Update the `/etc/fstab` entry to reflect the new device path and ensure that the initramfs loads the bcache module or that the appropriate udev rules are in place.
+   ??? tip "Update the `/etc/fstab` Entry"
+
+      Update the `/etc/fstab` entry to reflect the new device path and ensure that the initramfs loads the bcache module or that the appropriate udev rules are in place.
 
 ---
 

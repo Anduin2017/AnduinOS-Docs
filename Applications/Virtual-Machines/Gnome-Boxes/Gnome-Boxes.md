@@ -17,4 +17,4 @@ sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 ```
 
-You **NEED** to logout and login again to apply the changes. Or you may see error message: `Permission denied`.
+You **NEED** to reboot to apply the changes. Or you may see error message: `Permission denied`.
