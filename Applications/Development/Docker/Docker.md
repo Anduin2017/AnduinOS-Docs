@@ -16,13 +16,26 @@ rm get-docker.sh
 
 To quickly learn how to use Docker, you can visit the [official Docker documentation](https://docs.docker.com/get-started/). You can also view our quick Docker handbook [here](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
 
+## Allow current user to run Docker commands without sudo
+
 To allow current user to run Docker commands without sudo, you can run:
 
 ```bash title="Allow current user to run Docker commands without sudo"
 sudo usermod -aG docker $USER
+```
+
+Then, you need to log out and log back in to apply the changes. And you can run `docker` commands without `sudo`.
+
+In some cases, you might not want to share the user-scope docker context with other users. You can configure rootless Docker by running:
+
+```bash title="Configure rootless Docker"
 sudo apt install -y uidmap
 dockerd-rootless-setuptool.sh install
 ```
+
+And you can run `docker` commands without `sudo` in a rootless Docker context. That context won't be shared with other users.
+
+## Docker Compose
 
 You may need `docker-compose` to manage multi-container Docker applications. To install `docker-compose`, you can run:
 
