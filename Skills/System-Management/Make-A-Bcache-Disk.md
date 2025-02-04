@@ -273,7 +273,7 @@ Since the actual data is stored on the backing device (for example, `/dev/sda`),
 
 ??? tip "Update the `/etc/fstab` Entry"
 
-   Update the `/etc/fstab` entry to reflect the new device path and ensure that the initramfs loads the bcache module or that the appropriate udev rules are in place.
+    Update the `/etc/fstab` entry to reflect the new device path and ensure that the initramfs loads the bcache module or that the appropriate udev rules are in place.
 
 ---
 
