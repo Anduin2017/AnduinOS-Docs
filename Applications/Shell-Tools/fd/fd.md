@@ -10,7 +10,7 @@ Run this command to install fd on AnduinOS:
 sudo apt install fd-find
 ```
 
-Then you can set a alias to fd-find:
+Then you can set a alias to fd:
 
 ```bash
 # add this line to your .bashrc or .zshrc
