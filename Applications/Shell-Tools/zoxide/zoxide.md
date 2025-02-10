@@ -1,5 +1,9 @@
 # zoxide
 
+!!! tip "AnduinOS Verified App - Open Source"
+
+    Zoxide is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
 zoxide is a smarter cd command. Supports all major shells.  [source code](https://github.com/ajeetdsouza/zoxide)
 
 It remembers which directories you use most frequently, so you can "jump" to them in just a few keystrokes.

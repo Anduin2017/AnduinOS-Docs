@@ -240,6 +240,14 @@ nav:
         - zoxide: ./Applications/Shell-Tools/zoxide/zoxide.md
         - bat: ./Applications/Shell-Tools/bat/bat.md
         - dstat: ./Applications/Shell-Tools/dstat/dstat.md
+        - delta: ./Applications/Shell-Tools/delta/delta.md
+        - duf: ./Applications/Shell-Tools/duf/duf.md
+        - fd: ./Applications/Shell-Tools/fd/fd.md
+        - fzf: ./Applications/Shell-Tools/fzf/fzf.md
+        - nvtop: ./Applications/Shell-Tools/nvtop/nvtop.md
+        - btop: ./Applications/Shell-Tools/btop/btop.md
+        - ripgrep: ./Applications/Shell-Tools/ripgrep/ripgrep.md
+        - tldr: ./Applications/Shell-Tools/tldr/tldr.md
 
       - Download Tools:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md

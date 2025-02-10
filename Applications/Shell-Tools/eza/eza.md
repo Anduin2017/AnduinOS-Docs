@@ -1,8 +1,10 @@
 # eza (exa)
 
-eza is a modern alternative to ls. [source code](https://github.com/eza-community/eza)
+!!! tip "AnduinOS Verified App - Open Source"
 
-<!-- If you are still using exa, replace to eza bacause exa is nologger supported. -->
+    Eza is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+
+eza is a modern alternative to ls. [source code](https://github.com/eza-community/eza)
 
 Install eza to AnduinOS:
 
