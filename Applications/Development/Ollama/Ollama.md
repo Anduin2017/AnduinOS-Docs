@@ -35,4 +35,4 @@ pipx install open-webui
 open-webui serve
 ```
 
-That's it. Now open `http://localhost:8000` in your browser to access the web UI.
+That's it. Now open `http://localhost:8080` in your browser to access the web UI.
