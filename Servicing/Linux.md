@@ -546,14 +546,15 @@ sudo apt install -y sysbench
 sysbench cpu --threads=$(nproc) run
 ```
 
-| CPU             | Total number of events |
-| --------------- | ---------------------- |
-| Intel 13900KS   | 100,0000                |
-| Intel 13900H    |  43,0000                |
-| Intel 10900H    |  40,0000                |
-| Vultr 2 vCPU    |   7,0000                |
-| Azure B1s       |   1,8000                |
-| 腾讯云轻量应用  |   1,6000                |
+| CPU                      | Total number of events |
+| ------------------------ | ---------------------- |
+| Intel Ultra 9 285        | 150,0000                |
+| Intel 13900KS            | 100,0000                |
+| Intel 13900H             |  43,0000                |
+| Intel 10900H             |  40,0000                |
+| Vultr 2 vCPU             |   7,0000                |
+| Azure B1s                |   1,8000                |
+| 腾讯云轻量应用             |   1,6000                |
 
 | Average latency (ms) | Rating     |
 | --------------- | -----------|
