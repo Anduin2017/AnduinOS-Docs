@@ -550,6 +550,7 @@ sysbench cpu --threads=$(nproc) run
 | -------------------------------- | ---------------------- |
 | Intel Core Ultra 9 285           | 150,0000                |
 | Intel Core i9 13900KS            | 100,0000                |
+| AMD Ryzen 9 6900HS               |  45,0000                |
 | Intel Core i9 13900H             |  43,0000                |
 | Intel Core i9 10900H             |  40,0000                |
 | AMD Ryzen 7 6800HS               |  40,0000                |
