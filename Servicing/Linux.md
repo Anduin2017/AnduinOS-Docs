@@ -555,6 +555,7 @@ sysbench cpu --threads=$(nproc) run
 | Intel Core i9 10900H             |  40,0000                |
 | AMD Ryzen 7 6800HS               |  40,0000                |
 | Intel Core i9 10900X             |  23,0000                |
+| Intel N100                       |  11,0000                |
 | Vultr 2 vCPU                     |   7,0000                |
 | Azure B1s                        |   1,8000                |
 | 腾讯云轻量应用                    |   1,6000                |
