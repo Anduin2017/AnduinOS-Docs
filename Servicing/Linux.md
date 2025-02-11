@@ -546,6 +546,8 @@ sudo apt install -y sysbench
 sysbench cpu --threads=$(nproc) run
 ```
 
+The following is the benchmark result for different CPUs (AMD64 architecture, under Linux):
+
 | CPU                              | Total number of events |
 | -------------------------------- | ---------------------- |
 | Intel Core Ultra 9 285           | 150,0000                |
@@ -554,6 +556,8 @@ sysbench cpu --threads=$(nproc) run
 | Intel Core i9 13900H             |  43,0000                |
 | Intel Core i9 10900H             |  40,0000                |
 | AMD Ryzen 7 6800HS               |  40,0000                |
+| Intel E5 2680 v4                 |  39,8000                |
+| AMD Ryzen 7 5800H                |  37,9000                |
 | Intel Core i9 10900X             |  23,0000                |
 | Intel N100                       |  11,0000                |
 | Vultr 2 vCPU                     |   7,0000                |
