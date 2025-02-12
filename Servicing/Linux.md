@@ -550,7 +550,7 @@ The following is the benchmark result for different CPUs (AMD64 architecture, un
 
 | CPU                              | Total number of events |
 | -------------------------------- | ---------------------- |
-| Intel Xeon Platinum 8358P        | 182,0000                |
+| Intel Xeon Platinum 8358P x2     | 182,0000                |
 | Intel Core Ultra 9 285           | 150,0000                |
 | Intel Core i9 13900KS            | 100,0000                |
 | AMD Ryzen 9 6900HS               |  45,0000                |
