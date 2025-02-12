@@ -560,6 +560,7 @@ The following is the benchmark result for different CPUs (AMD64 architecture, un
 | Intel E5 2680 v4                 |  39,8000                |
 | AMD Ryzen 7 5800H                |  37,9000                |
 | Intel Core i9 10900X             |  23,0000                |
+| Intel i7-8700K                   |  13,5000                |
 | Intel N100                       |  11,0000                |
 | Vultr 2 vCPU                     |   7,0000                |
 | Azure B1s                        |   1,8000                |
