@@ -127,7 +127,7 @@ nav:
       - Install Drivers: ./Install/Install-Drivers.md
       - Install NVIDIA Driver: ./Install/Install-Nvidia-Drivers.md
       - Manage Swap: ./Install/Manage-Swap.md
-      - Mounting second disk: ./Install/Mounting-Second-Disk.md
+      - Mount second disk: ./Install/Mount-Second-Disk.md
       - Install input method: ./Install/Install-Input-Method.md
       - Update your system: ./Install/Update-Your-System.md
       - Switch To Your Language: ./Install/Switch-To-Your-Language.md
