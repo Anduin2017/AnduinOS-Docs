@@ -266,6 +266,8 @@ nav:
         - Terminus: ./Applications/Utilities/Terminus/Terminus.md
         - Cool Retro Term: ./Applications/Utilities/Cool-Retro-Term/Cool-Retro-Term.md
         - Brasero: ./Applications/Utilities/Brasero/Brasero.md
+        - KDiskMark: ./Applications/Utilities/KDiskMark/KDiskMark.md
+        - GSmartControl: ./Applications/Utilities/GSmartControl/GSmartControl.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
