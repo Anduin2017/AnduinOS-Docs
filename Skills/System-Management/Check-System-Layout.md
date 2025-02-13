@@ -240,5 +240,5 @@ uname -r
 To check the kernel log on AnduinOS, you can use the `dmesg` command:
 
 ```bash title="Check kernel log"
-sudo dmesg
+sudo dmesg -w
 ```

@@ -36,5 +36,5 @@ sudo reboot
 After rebooting, the new kernel parameters will take effect. You can verify the changes by running the following command:
 
 ```bash
-sudo dmesg
+sudo dmesg -w
 ```
