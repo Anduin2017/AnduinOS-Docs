@@ -14,6 +14,17 @@ In some cases, for example:
 
 You may need to build your own Kernel.
 
+!!! warning "You don't have to build because you can download from Caonnical"
+
+    You don't have to build your own Kernel because Canonical provides the latest Kernel for Ubuntu. You can install the latest Kernel using the following command.
+
+    ```bash title="Install latest kernel"
+    sudo apt search linux-generic-hwe-* | awk -F'/' '/linux-generic-hwe-/ {print $1}' | sort | head -n 1 | xargs -r sudo apt install -y
+    sudo reboot
+    ```
+
+    However, if the Kernel from Canonical doesn't work for you, you can build your own Kernel.
+
 Here are 5 simple steps to build your own Kernel:
 
 * Get the Kernel source code
