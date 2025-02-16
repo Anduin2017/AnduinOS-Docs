@@ -14,7 +14,7 @@ In some cases, for example:
 
 You may need to build your own Kernel.
 
-!!! warning "You don't have to build because you can download from Caonnical"
+!!! warning "You don't have to build because you can download it from Caonnical."
 
     You don't have to build your own Kernel because Canonical provides the latest Kernel for Ubuntu. You can install the latest Kernel using the following command.
 
