@@ -1,4 +1,4 @@
-# Mounting your second disk
+# Mount your second disk
 
 If you have a second disk in your computer, you can mount it to your system to use it as a storage device. In this guide, we will show you how to mount your second disk to your system.
 
@@ -22,6 +22,10 @@ sudo mkdir -p /opt/disk2
 ```
 
 3. (Optional) Format the second disk.
+
+!!! warning "Data Loss"
+
+    Formatting the disk will lose all data on the disk. Make sure to back up your data before formatting the disk.
 
 ```bash
 sudo mkfs.ext4 /dev/nvme1n1 # The second disk. Replace it with your disk name.
