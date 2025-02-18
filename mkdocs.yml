@@ -163,7 +163,8 @@ nav:
       - Mounting remote folders: ./Skills/File-System-Management/Mounting-Remote-Folder.md
       - Make a RAM disk: ./Skills/File-System-Management/Make-A-RAM-Disk.md
       - Make a Bcache disk: ./Skills/File-System-Management/Make-A-Bcache-Disk.md
-      - Make a Ceph Cluster: ./Skills/File-System-Management/Make-A-Ceph-Cluster.md
+      - Make a RAID cluster: ./Skills/File-System-Management/Make-A-Raid-Cluster.md
+      - Make a Ceph cluster: ./Skills/File-System-Management/Make-A-Ceph-Cluster.md
     - Sandboxing:
       - Using Docker as container: ./Skills/Sandboxing/Using-Docker-As-Container.md
       - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
