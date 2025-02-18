@@ -79,8 +79,8 @@ To maintain and optimize your AnduinOS system, it's crucial to understand variou
 - [**Check File Format**](./System-Management/Check-File-Format.md): Verify and manage file formats to ensure compatibility and integrity.
 - [**Check System Layout**](./System-Management/Check-System-Layout.md): Analyze the directory structure and system configuration for optimal performance.
 - [**Debug Storage Consumption**](./System-Management/Debug-Storage-Consumption.md): Identify and resolve storage issues to maintain system efficiency.
-- [**Make a RAM Disk**](./System-Management/Make-A-RAM-Disk.md): Create temporary storage in RAM for faster data access and improved performance.
-- [**Mounting Remote Folders**](./System-Management/Mounting-Remote-Folder.md): Access and integrate remote directories seamlessly into your local filesystem.
+- [**Make a RAM Disk**](./File-System-Management/Make-A-RAM-Disk.md): Create temporary storage in RAM for faster data access and improved performance.
+- [**Mounting Remote Folders**](./File-System-Management/Mounting-Remote-Folder.md): Access and integrate remote directories seamlessly into your local filesystem.
 - [**Remove Duplicate APT Sources**](./System-Management/Remove-Duplicate-Apt-Source.md): Clean up package sources to prevent conflicts and streamline updates.
 - [**Update Kernel Parameters**](./System-Management/Update-Kernel-Parameters.md): Modify kernel settings to fine-tune system behavior and performance.
 

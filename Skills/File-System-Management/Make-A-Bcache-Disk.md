@@ -2,28 +2,6 @@
 
 This document is intended to share comprehensive experience in using bcache to build a “large capacity backing device + high-speed cache” solution. It covers everything from installing the tools and initializing devices, to performance tuning, safely removing the cache device without service disruption, migrating the backing device to another machine, and troubleshooting common issues.
 
----
-
-## Table of Contents
-
-- [Use Bcache in AnduinOS](#use-bcache-in-anduinos)
-  - [Table of Contents](#table-of-contents)
-  - [Installing bcache Tools](#installing-bcache-tools)
-  - [Configuring and Formatting the Backing Device](#configuring-and-formatting-the-backing-device)
-  - [Adding a Cache Device to the Backing Device](#adding-a-cache-device-to-the-backing-device)
-  - [Viewing Performance Information of the Backing and Cache Devices](#viewing-performance-information-of-the-backing-and-cache-devices)
-  - [Performance Tuning](#performance-tuning)
-  - [Safely Removing the Cache Device Without Affecting Services](#safely-removing-the-cache-device-without-affecting-services)
-  - [Migrating the Backing Device to Another Machine and Mounting](#migrating-the-backing-device-to-another-machine-and-mounting)
-  - [Common Issue Troubleshooting](#common-issue-troubleshooting)
-    - [1. `wipefs` Reports “Device or resource busy”](#1-wipefs-reports-device-or-resource-busy)
-    - [2. bcache Device Not Showing Up in fdisk](#2-bcache-device-not-showing-up-in-fdisk)
-    - [3. Cache Device Unexpectedly Detaches or Fails](#3-cache-device-unexpectedly-detaches-or-fails)
-    - [4. Data Risks in Writeback Mode](#4-data-risks-in-writeback-mode)
-  - [Conclusion](#conclusion)
-
----
-
 ## Installing bcache Tools
 
 On AnduinOS, **bcache-tools** are available in the official repositories. To install them, update the package list and run the following commands:

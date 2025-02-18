@@ -154,13 +154,14 @@ nav:
       - Manage App Icons: ./Skills/System-Management/Manage-App-Icons.md
       - Enter terminal mode: ./Skills/System-Management/Terminal-Mode.md
       - Use APT to manage packages: ./Skills/System-Management/Use-APT-to-manage-packages.md
-      - Mounting remote folders: ./Skills/System-Management/Mounting-Remote-Folder.md
       - Update Kernel Parameters: ./Skills/System-Management/Update-Kernel-Parameters.md
       - Debug storage consumption: ./Skills/System-Management/Debug-Storage-Consumption.md
       - Check file format: ./Skills/System-Management/Check-File-Format.md
       - Remove duplicate apt source: ./Skills/System-Management/Remove-Duplicate-Apt-Source.md
-      - Make a RAM disk: ./Skills/System-Management/Make-A-RAM-Disk.md
-      - Make a Bcache disk: ./Skills/System-Management/Make-A-Bcache-Disk.md
+    - File System Management:
+      - Mounting remote folders: ./Skills/File-System-Management/Mounting-Remote-Folder.md
+      - Make a RAM disk: ./Skills/File-System-Management/Make-A-RAM-Disk.md
+      - Make a Bcache disk: ./Skills/File-System-Management/Make-A-Bcache-Disk.md
     - Sandboxing:
       - Using Docker as container: ./Skills/Sandboxing/Using-Docker-As-Container.md
       - Run Ubuntu Desktop in Container: ./Skills/Sandboxing/Remote-Desktop-To-Ubuntu-Container.md
