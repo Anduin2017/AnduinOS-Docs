@@ -9,7 +9,7 @@ By using it may violate the terms of service of the video hosting sites. Please 
 To install Youtube dl on AnduinOS, run the following command:
 
 ```bash
-sudo apt install python3-pip pipx -y
+sudo apt install python3-pip pipx atomicparsley ffmpeg -y
 pipx install 'git+https://github.com/ytdl-org/youtube-dl.git@master#egg=youtube_dl' --force
 ~/.local/bin/youtube-dl --version
 ```
