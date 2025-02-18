@@ -136,14 +136,15 @@ nav:
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
       - Install an App Store: ./Install/Install-An-App-Store.md
       - Enable SSH and Firewall: ./Install/Enable-SSH-And-Firewall.md
+      - Add Printers: ./Install/Managing-Printers.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
+    - Personalizing AnduinOS:
       - Personalize Your Desktop: ./Install/Personalize-Your-Desktop.md
-      - Managing Printers: ./Install/Managing-Printers.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
-    - Maintaining AnduinOS:
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
-      - Backup And Restore: ./Install/Backup-And-Restore.md
+    - Maintaining AnduinOS:
+      - Setup Backup: ./Install/Backup-And-Restore.md
 
   - Skills:
     - Introduction: ./Skills/Introduction.md
