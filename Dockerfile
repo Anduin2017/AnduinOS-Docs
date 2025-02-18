@@ -19,7 +19,7 @@ RUN PIP_BREAK_SYSTEM_PACKAGES=1 python3 -m pip install --no-cache-dir --upgrade 
 
 COPY . .
 
-RUN python3 -m mkdocs build
+RUN python3 -m mkdocs build --strict
 
 # ============================
 # Prepare Runtime Environment

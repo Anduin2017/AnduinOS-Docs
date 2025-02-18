@@ -68,7 +68,7 @@ One of the most powerful and unifying concepts in Linux is that **everything is 
 AnduinOS incorporates a wide array of technologies that enhance its functionality and versatility:
 
 - [**Containers**](./Sandboxing/Using-Docker-As-Container.md): Lightweight, portable units for deploying applications consistently across environments.
-- [**KVM (Kernel-based Virtual Machine)**](./Developing/Build-Your-Own-Kernel.md#kvm): A virtualization solution integrated into the Linux kernel, enabling the creation of virtual machines.
+- [**KVM (Kernel-based Virtual Machine)**](./Developing/Build-Your-Own-Kernel.md): A virtualization solution integrated into the Linux kernel, enabling the creation of virtual machines.
 - [**Wine**](./Sandboxing/Run-Windows-Apps.md): A compatibility layer that allows running Windows applications on Linux.
 - [**Package Management**](./System-Management/Use-APT-to-manage-packages.md): Tools for installing, updating, and managing software packages efficiently.
 - [**Terminal**](./System-Management/Terminal-Mode.md): A powerful interface for interacting with the system through commands.
@@ -79,8 +79,8 @@ To maintain and optimize your AnduinOS system, it's crucial to understand variou
 - [**Check File Format**](./System-Management/Check-File-Format.md): Verify and manage file formats to ensure compatibility and integrity.
 - [**Check System Layout**](./System-Management/Check-System-Layout.md): Analyze the directory structure and system configuration for optimal performance.
 - [**Debug Storage Consumption**](./System-Management/Debug-Storage-Consumption.md): Identify and resolve storage issues to maintain system efficiency.
-- [**Make a RAM Disk**](./System-Management/Make-A-RAM-Disk.md): Create temporary storage in RAM for faster data access and improved performance.
-- [**Mounting Remote Folders**](./System-Management/Mounting-Remote-Folder.md): Access and integrate remote directories seamlessly into your local filesystem.
+- [**Make a RAM Disk**](./File-System-Management/Make-A-RAM-Disk.md): Create temporary storage in RAM for faster data access and improved performance.
+- [**Mounting Remote Folders**](./File-System-Management/Mounting-Remote-Folder.md): Access and integrate remote directories seamlessly into your local filesystem.
 - [**Remove Duplicate APT Sources**](./System-Management/Remove-Duplicate-Apt-Source.md): Clean up package sources to prevent conflicts and streamline updates.
 - [**Update Kernel Parameters**](./System-Management/Update-Kernel-Parameters.md): Modify kernel settings to fine-tune system behavior and performance.
 

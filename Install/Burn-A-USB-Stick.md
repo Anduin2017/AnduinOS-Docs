@@ -32,7 +32,7 @@ sudo fdisk -l
 Then, use the `dd` command to burn the ISO file to the USB drive. Replace `<device>` with the device name of the USB drive.
 
 ```shell title="Burning ISO to USB using dd on Linux"
-sudo dd if=./AnduinOS-jammy-1.0.0-2407181704.iso of=<device> status=progress oflag=sync bs=4M
+sudo dd if=./AnduinOS.iso of=<device> status=progress oflag=sync bs=4M
 ```
 
 !!! warning "Data Loss!"

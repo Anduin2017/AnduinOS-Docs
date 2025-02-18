@@ -6,30 +6,19 @@ After burning the AnduinOS ISO file to a USB drive in the [previous step](./Burn
 
 ## Turn on Secure Boot
 
-!!! warning "Adjust Secure boot settings in your BIOS!"
+!!! warning "Turn on Secure Boot!"
 
     AnduinOS supports Secure boot well. During the installation, it is very recommended to turn on Secure Boot to ensure the security of your system.
 
-    ![Adjust secure boot settings](./seboot.png)
-
 To turn on Secure Boot, you need to enter BIOS settings first. The key to enter BIOS settings varies depending on the manufacturer of your computer. Common keys include `F2`, `F10`, `Volume up + Power` or `Del`. You can usually see the key to enter BIOS settings on the boot screen when you start your computer.
 
-Boot your computer, press `F2` or the key to enter BIOS settings, and then find the Secure Boot option in the BIOS settings. Enable Secure Boot and save the changes. Set the Secure Boot certificate to `Linux` or `3rd Party CA`. After that, you can boot your computer from the AnduinOS USB drive and install AnduinOS.
+Boot your computer, press `F2` or the key to enter BIOS settings, and then find the Secure Boot option in the BIOS settings. Enable Secure Boot and save the changes. Set the Secure Boot certificate to `Windows`. After that, you can boot your computer from the AnduinOS USB drive and install AnduinOS.
 
 ## Boot from USB
 
 The key to enter the boot devices menu varies depending on the manufacturer of your computer. Common keys include `F12`, `F11`, `Esc`, `F10`, or `Volume down + Power`.
 
 Boot your computer, press the key to enter the boot devices menu, and then select the USB drive from the boot menu. Your computer will boot from the USB drive, and you will see the AnduinOS installer screen.
-
-## Select between Try AnduinOS and Install AnduinOS
-
-After booting from the USB drive, you will see the AnduinOS installer screen. You can choose between `Try AnduinOS` and `Install AnduinOS`.
-
-- `Try AnduinOS`: This option allows you to try AnduinOS without installing it. You can explore the system and see if it works well on your computer.
-- `Install AnduinOS`: This option will start the installation process. You can follow the on-screen instructions to install AnduinOS on your computer.
-
-Choose the option that suits your needs, and follow the on-screen instructions to install AnduinOS on your computer.
 
 ## Change NVME LBA Format
 

@@ -85,6 +85,27 @@ sudo apt-get install -y libze-intel-gpu1 libze1 intel-ocloc intel-opencl-icd cli
 sudo apt-get install -y intel-media-va-driver-non-free libmfx1 libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo
 ```
 
+## Intel NPU Driver
+
+For some models of Intel CPU including `MeteorLake`, `ArrowLake` and `LunarLake`, you may notice that the Intel NPU is not working. To enable the Intel NPU, you need to install the Intel NPU driver.
+
+Please download and install the driver following [Intel NPU Driver Installation Guide](https://github.com/intel/linux-npu-driver/releases/latest).
+
+After installing the driver, reboot your system, and you will see device: `/dev/accel/accel0`.
+
+You need to set the render group for the device:
+
+```bash title="Set the render group for the device"
+# set the render group for accel device
+sudo chown root:render /dev/accel/accel0
+sudo chmod g+rw /dev/accel/accel0
+# add user to the render group
+sudo usermod -a -G render $USER
+# user needs to restart the session to use the new group (log out and log in)
+```
+
+You can use the NPU to run some AI models, like `DeepSeek R1`. For more details about how to use NPU to deploy AI models, please refer to the [Blog](https://anduin.aiursoft.cn/post/2025/2/3/deepseek-r1-32b-with-npu).
+
 ## Build the Kernel
 
 In case you bought very latest hardware, you may need to build the kernel from source to get the latest drivers. Please refer to the [Kernel Compilation](../Skills/Developing/Build-Your-Own-Kernel.md) guide for more information.

@@ -78,7 +78,7 @@ sudo mokutil --sb-state
 You can also check the signature database status:
 
 ```bash title="Check Secure Boot status"
-sudo mkutil --list-enrolled
+sudo mokutil --list-enrolled
 ```
 
 ## Check Root File System
@@ -87,6 +87,12 @@ To check the root file system on AnduinOS, you can use the `df` command:
 
 ```bash title="Check root file system"
 sudo df -Th /
+```
+
+And if you want to check all mount points, you can use the `lsblk` command:
+
+```bash title="Check all mount points"
+sudo lsblk
 ```
 
 ## Check Boot Mode

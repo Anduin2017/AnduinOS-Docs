@@ -96,7 +96,7 @@ That's it! You have successfully hosted Samba on AnduinOS.
 
 You can access Samba by mounting the shared folder on your other machine. Open the File Explorer, type `\\<AnduinOS_IP>` in the address bar, and press Enter. You will be prompted to enter the username and password you specified in the `docker-compose.yml` file.
 
-To mount the folder on AnduinOS, you can follow the instructions in the [Mounting a Remote Folder](../../Skills/System-Management/Mounting-Remote-Folder.md) guide.
+To mount the folder on AnduinOS, you can follow the instructions in the [Mounting a Remote Folder](../../Skills/File-System-Management/Mounting-Remote-Folder.md) guide.
 
 ## Uninstall
 

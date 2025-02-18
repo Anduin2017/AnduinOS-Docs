@@ -10,11 +10,11 @@ Please [Follow the Docker install instructions](../Applications/Development/Dock
 
 ## Servicing with https
 
-By default, all services in this document are served with http. If you want to serve with https, you need to install a reverse proxy server like [Caddy](../Applications/Development/Caddy/Caddy.md) or [Traefik](../Applications/Development/Traefik/Traefik.md).
+By default, all services in this document are served with http. If you want to serve with https, you need to install a reverse proxy server like Caddy.
 
 ## Servicing external customers behind NAT
 
-Obviously, you can't expose your services to the internet directly if you are behind NAT. You need to use a reverse proxy server like [frp](.) to expose your services to the internet.
+Obviously, you can't expose your services to the internet directly if you are behind NAT. You need to use a reverse proxy server like `frp` expose your services to the internet.
 
 ## Bought a server from an external provider? Set it up!
 

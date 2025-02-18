@@ -21,7 +21,7 @@ System requirements for the best experience:
 | Component       | Requirement                                          |
 |-----------------|------------------------------------------------------|
 | Architecture    | x86_64 architecture                                  |
-| Firmware        | UEFI firmware with Secure Boot (3rd party OS trust)  |
+| Firmware        | UEFI firmware with Secure Boot                       |
 | Processor       | 2.5 GHz quad-core processor                          |
 | RAM             | 8 GB RAM                                             |
 | Disk Space      | 50 GB disk space                                     |
