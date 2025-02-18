@@ -194,6 +194,12 @@ Run this to check the logs:
 sudo docker service logs tensor-qs
 ```
 
+Don't forget to remove the service after testing:
+
+```bash title="Remove the service"
+sudo docker service rm tensor-qs
+```
+
 And if you want to use it in a `docker-compose` file, you can use the following:
 
 ```yaml
