@@ -28,7 +28,7 @@ After installing AnduinOS, you may need to do some post-installation configurati
 
 * [Select best apt source](./Install/Select-Best-Apt-Source.md)
 * [Install drivers](./Install/Install-Drivers.md)
-* [Mounting second disk](./Install/Mounting-Second-Disk.md)
+* [Mount second disk](./Install/Mount-Second-Disk.md)
 * [Install input method](./Install/Install-Input-Method.md)
 * [Update your system](./Install/Update-Your-System.md)
 * [Switch to your language](./Install/Switch-To-Your-Language.md)
