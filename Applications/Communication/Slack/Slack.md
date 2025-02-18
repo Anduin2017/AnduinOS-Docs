@@ -5,7 +5,7 @@ Slack is a messaging app for teams. It brings all your team's communication and 
 To install Slack on AnduinOS, you can run the following commands in the terminal:
 
 ```bash
-link="https://downloads.slack-edge.com/desktop-releases/linux/x64/4.39.95/slack-desktop-4.39.95-amd64.deb"
+link="https://downloads.slack-edge.com/desktop-releases/linux/x64/4.41.105/slack-desktop-4.41.105-amd64.deb"
 wget $link -O slack.deb
 sudo apt install ./slack.deb -y
 rm slack.deb
