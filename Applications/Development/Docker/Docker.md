@@ -181,10 +181,17 @@ sudo systemctl restart docker
 Then you can deploy the service:
 
 ```bash title="Deploy a service with GPU"
+docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
 docker service create --replicas 1 \
   --name tensor-qs \
   --generic-resource "NVIDIA-GPU=0" \
   tomlankhorst/tensorflow-quickstart
+```
+
+Run this to check the logs:
+
+```bash title="Check the logs of Tensorflow Quickstart in Docker"
+sudo docker service logs tensor-qs
 ```
 
 And if you want to use it in a `docker-compose` file, you can use the following:
