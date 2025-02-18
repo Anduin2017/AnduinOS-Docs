@@ -57,49 +57,20 @@ If your system has an Nvidia GPU, you can use it with Docker. This provides GPU 
 
 First, confirm that your Nvidia GPU is detected by the system:
 
-```bash
+```bash title="Check Nvidia GPU"
 $ sudo lspci | grep NVIDIA
 01:00.0 3D controller: NVIDIA Corporation GP104GL [Tesla P4] (rev a1)
 ```
 
-To list available drivers:
+You need to install the Nvidia driver. You can refer to the [Nvidia driver installation guide](../../../Install/Install-Nvidia-Drivers.md) for more information.
 
-```bash
-sudo ubuntu-drivers list --gpgpu
+After installing the Nvidia driver, you can check the GPU status:
+
+```bash title="Check GPU status"
+$ nvidia-smi
 ```
 
-You should see a list of drivers such as:
-
-```bash
-nvidia-driver-470
-nvidia-driver-470-server
-nvidia-driver-535
-...
-```
-
-To install the recommended driver:
-
-```bash
-sudo ubuntu-drivers install
-```
-
-To install a specific driver:
-
-```bash
-sudo ubuntu-drivers install nvidia:535
-```
-
-Reboot your system to apply the changes:
-
-```bash
-sudo reboot
-```
-
-Check the installed driver version:
-
-```bash
-nvidia-smi
-```
+Then, you need to install Docker and Nvidia Container Toolkit.
 
 Install Docker using the following commands:
 
@@ -180,7 +151,57 @@ services:
               capabilities: [gpu]
 ```
 
-To find CUDA images, visit [NVIDIA CUDA Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags).
+And it still reqirues some additional configurations to make it work in Swarm mode.
+
+Run the following command to deploy the service:
+
+```bash title="Allow NVIDIA GPU in Docker Swarm"
+echo "Configuring docker daemon for Nvidia GPU..."
+GPU_ID=$(valgrind nvidia-smi -a 2> /dev/null | grep UUID | awk '{print substr($4,0,12)}') # FUCKING NVIDIA, WHY DO YOU MAKE IT SO HARD TO GET THE GPU ID?!
+echo "GPU_ID: $GPU_ID"
+sudo mv /etc/docker/daemon.json /etc/docker/daemon.json.bak
+sudo tee /etc/docker/daemon.json <<EOF
+{
+  "runtimes": {
+    "nvidia": {
+      "path": "/usr/bin/nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  },
+  "default-runtime": "nvidia",
+  "node-generic-resources": [
+    "NVIDIA-GPU=$GPU_ID"
+  ]
+}
+EOF
+sudo sed -i 's/#swarm-resource = "DOCKER_RESOURCE_GPU"/swarm-resource = "DOCKER_RESOURCE_GPU"/' /etc/nvidia-container-runtime/config.toml
+sudo systemctl restart docker
+```
+
+Then you can deploy the service:
+
+```bash title="Deploy a service with GPU"
+docker service create --replicas 1 \
+  --name tensor-qs \
+  --generic-resource "NVIDIA-GPU=0" \
+  tomlankhorst/tensorflow-quickstart
+```
+
+And if you want to use it in a `docker-compose` file, you can use the following:
+
+```yaml
+  test:
+    image: tomlankhorst/tensorflow-quickstart
+    deploy:
+      resources:
+        reservations:
+          generic_resources:
+            - discrete_resource_spec:
+                kind: NVIDIA-GPU
+                value: 0
+```
+
+To find more CUDA images, visit [NVIDIA CUDA Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags).
 
 ### Example CUDA Application
 

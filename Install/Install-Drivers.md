@@ -85,6 +85,12 @@ sudo apt-get install -y libze-intel-gpu1 libze1 intel-ocloc intel-opencl-icd cli
 sudo apt-get install -y intel-media-va-driver-non-free libmfx1 libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo
 ```
 
+## Intel NPU Driver
+
+For some models of Intel CPU including `MeteorLake`, `ArrowLake` and `LunarLake`, you may notice that the Intel NPU is not working. To enable the Intel NPU, you need to install the Intel NPU driver.
+
+Please download and install the driver following [Intel NPU Driver Installation Guide](https://github.com/intel/linux-npu-driver/releases/latest).
+
 ## Build the Kernel
 
 In case you bought very latest hardware, you may need to build the kernel from source to get the latest drivers. Please refer to the [Kernel Compilation](../Skills/Developing/Build-Your-Own-Kernel.md) guide for more information.

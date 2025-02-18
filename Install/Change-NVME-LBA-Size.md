@@ -62,6 +62,12 @@ In the example above, the drive has two LBA formats available. We want the 4K fo
 
 1. **Execute the format** command:
 
+!!! warning "Backup your data before running this command!"
+
+    Formatting the drive will erase all data. Make sure to back up any important information beforehand.
+
+    And do NOT use `dd` to backup the drive because changing the LBA size will make the backup unusable.
+
 ```bash
 sudo nvme format /dev/nvme0n1 --lbaf=1 --ses=0
 ```
@@ -69,7 +75,7 @@ sudo nvme format /dev/nvme0n1 --lbaf=1 --ses=0
 - `--lbaf=1` selects the 4K LBA format.
 - `--ses=0` performs a format without secure erase (faster). You can use `--ses=1` for a more thorough erase if desired.
 
-2. Wait for the format to complete. The device should now be in 4K mode internally.
+1. Wait for the format to complete. The device should now be in 4K mode internally.
 
 ---
 
