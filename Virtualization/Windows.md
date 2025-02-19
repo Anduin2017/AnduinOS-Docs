@@ -67,6 +67,20 @@ Type=Application
 Categories=System;" | sudo tee /usr/share/applications/virt-viewer.desktop
 ```
 
+## Quick setup with Docker
+
+If you want to skip the complicated configuration and setup, you can use the Docker image `dockurr/windows` to run Windows on your AnduinOS. This image provides a pre-configured Windows virtual machine with VNC support.
+
+To run the Docker image, install Docker and run the following command:
+
+```bash title="Run Windows Docker image"
+docker run -it --rm -p 8006:8006 --device=/dev/kvm --device=/dev/net/tun --cap-add NET_ADMIN --stop-timeout 120 dockurr/windows
+```
+
+That's it! You can now access the Windows virtual machine through VNC at `http://localhost:8006`.
+
+However, it is still suggested to configure the virtual machine manually for better performance and features, like passing through a PCIe device, enabling IOMMU, tuning the CPU cores, etc.
+
 ## Setting up IO-MMU
 
 In some cases, you may need to pass through a PCIe device to a virtual machine. For example, if you want your virtual machine to have direct access to a GPU.  To do this, you need to enable IOMMU in the BIOS and add the `iommu=pt` kernel parameter.
