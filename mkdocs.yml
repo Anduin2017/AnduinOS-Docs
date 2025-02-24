@@ -212,13 +212,13 @@ nav:
         - Nextcloud Talk: ./Applications/Communication/NextcloudTalk/NextcloudTalk.md
 
       - Internet Services:
-        - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
         - Dropbox: ./Applications/Internet-Services/Dropbox/Dropbox.md
 
       - Media Players:
         - VLC Media Player: ./Applications/Media-Players/VLC-Media-Player/VLC-Media-Player.md
         - Spotify: ./Applications/Media-Players/Spotify/Spotify.md
+        - QQ Music: ./Applications/Media-Players/QQ-Music/QQ-Music.md
         - Yes Play Music: ./Applications/Media-Players/Yes-Play-Music/Yes-Play-Music.md
         - mpv: ./Applications/Media-Players/mpv/mpv.md
 
