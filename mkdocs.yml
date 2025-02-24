@@ -297,6 +297,7 @@ nav:
         - Steam: ./Applications/Games/Steam/Steam.md
         - Stellarium: ./Applications/Games/Stellarium/Stellarium.md
         - 0AD: ./Applications/Games/0AD/0AD.md
+        - XPlane12: ./Applications/Games/XPlane12/XPlane12.md
 
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
