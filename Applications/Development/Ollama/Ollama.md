@@ -26,7 +26,7 @@ For more `DeepSeek` models, please view more details [here](https://ollama.com/l
 
 ## Install Web UI
 
-You may also want to deploy a web UI for Ollama. To do this, you can deploy the [https://github.com/open-webui/open-webui](Open WebUI) project.
+You may also want to deploy a web UI for Ollama. To do this, you can deploy the [Open WebUI](https://github.com/open-webui/open-webui) project.
 
 To deploy the Open WebUI project, you can run the following command:
 
