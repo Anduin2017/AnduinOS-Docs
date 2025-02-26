@@ -189,7 +189,6 @@ nav:
         - Sublime Text: ./Applications/Code-Editors/Sublime-Text/Sublime-Text.md
         - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
-        - Obsidian: ./Applications/Code-Editors/Obsidian/Obsidian.md
 
       - Store:
         - Flathub: ./Applications/Store/Flathub/Flathub.md
@@ -212,13 +211,13 @@ nav:
         - Nextcloud Talk: ./Applications/Communication/NextcloudTalk/NextcloudTalk.md
 
       - Internet Services:
-        - QQ Music: ./Applications/Internet-Services/QQ-Music/QQ-Music.md
         - Nextcloud: ./Applications/Internet-Services/Nextcloud/Nextcloud.md
         - Dropbox: ./Applications/Internet-Services/Dropbox/Dropbox.md
 
       - Media Players:
         - VLC Media Player: ./Applications/Media-Players/VLC-Media-Player/VLC-Media-Player.md
         - Spotify: ./Applications/Media-Players/Spotify/Spotify.md
+        - QQ Music: ./Applications/Media-Players/QQ-Music/QQ-Music.md
         - Yes Play Music: ./Applications/Media-Players/Yes-Play-Music/Yes-Play-Music.md
         - mpv: ./Applications/Media-Players/mpv/mpv.md
 
@@ -238,6 +237,7 @@ nav:
       - Office:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
         - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
+        - Obsidian: ./Applications/Office/Obsidian/Obsidian.md
 
       - Shell Tools:
         - lsd: ./Applications/Shell-Tools/lsd/lsd.md
@@ -297,6 +297,7 @@ nav:
         - Steam: ./Applications/Games/Steam/Steam.md
         - Stellarium: ./Applications/Games/Stellarium/Stellarium.md
         - 0AD: ./Applications/Games/0AD/0AD.md
+        - XPlane12: ./Applications/Games/XPlane12/XPlane12.md
 
   - Servicing:
     - Introduction: ./Servicing/Introduction.md
