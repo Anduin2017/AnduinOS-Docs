@@ -1,25 +1,33 @@
 # AnduinOS Changelog
 
-## v1.3.0 (Development branch)
+## v1.3.0 (Development branch, Forked from v1.2.0)
 
 * Added a new shortcut **Super + V** to toggle the clipboard history.
 * Added `ethtool` to the default app list.
+
+## v1.2.2
+
+* Suppress a notification from ArcMenu by default.
 
 ## v1.2.1
 
 * Fixed a keyboard shortcut conflict that caused the **Super + N** shortcut to toggle notifications center.
 * Fixed a keyboard shortcut conflict that caused the **Super + A** shortcut to toggle action center.
 
+## v1.2.0 (Forked from v1.1.0)
+
+* **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.2
+
+* Suppress a notification from ArcMenu by default.
+
 ## v1.1.1
 
 * Fixed a keyboard shortcut conflict that caused the **Super + N** shortcut to toggle notifications center.
 * Fixed a keyboard shortcut conflict that caused the **Super + A** shortcut to toggle action center.
 
-## v1.2.0
-
-* **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
-
-## v1.1.0
+## v1.1.0 (Forked from v1.0.6)
 
 * Refactored the branch management. Branches will now follow the "Fork version" naming convention (e.g., 1.0, 1.1, 1.2). "Dot versions" will now be represented as tags instead of branches.
 * The foundational system has been updated from **Jammy (Ubuntu 22.04)** to **Noble (Ubuntu 24.04)**.
