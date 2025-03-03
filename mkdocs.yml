@@ -234,6 +234,7 @@ nav:
         - Blender: ./Applications/Media-Editing/Blender/Blender.md
         - Inkscape: ./Applications/Media-Editing/Inkscape/Inkscape.md
         - HandBrake: ./Applications/Media-Editing/HandBrake/HandBrake.md
+        - MuseScore: ./Applications/Media-Editing/MuseScore/MuseScore.md
 
       - Office:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
