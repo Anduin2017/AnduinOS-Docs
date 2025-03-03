@@ -16,5 +16,5 @@ Then you can use `rg` to replace grep if you want.
 
 ```bash
 # add this line to your .bashrc or .zshrc
-alias rg=grep
+alias grep=rg
 ```
