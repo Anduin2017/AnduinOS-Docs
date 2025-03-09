@@ -33,7 +33,7 @@ The backing device is responsible for storing the actual data. Before using it, 
 2. **Initialize the Device as a bcache Backing Device**
 
    ```bash title="Initialize as a bcache Backing Device"
-   sudo make-bcache -B /dev/sda
+   sudo make-bcache -B --block 4k /dev/sda
    ```
 
    This command will create the corresponding bcache backing device (for example, `/dev/bcache0`). If the device does not immediately appear, try loading the kernel module:
@@ -67,10 +67,10 @@ Using a high-speed device (such as an NVMe SSD) as a cache can significantly imp
 
 2. **Initialize the Device as a bcache Cache**
 
-   Based on the physical parameters of the device (for example, block size and bucket size), initialize it as a cache. In this example, we use a 512B block and a 4M bucket (adjust these parameters based on your actual device characteristics):
+   Based on the physical parameters of the device (for example, block size and bucket size), initialize it as a cache. In this example, we use a 4K block and a 8M bucket (adjust these parameters based on your actual device characteristics):
 
    ```bash title="Initialize as a bcache Cache"
-   sudo make-bcache --block 512 --bucket 4M -C /dev/nvme2n1
+   sudo make-bcache --block 4k --bucket 8M -C /dev/nvme2n1
    ```
 
 3. **Obtain the Cache Device UUID**
@@ -95,6 +95,15 @@ Using a high-speed device (such as an NVMe SSD) as a cache can significantly imp
    cat /sys/block/bcache0/bcache/cache_mode
    cat /sys/block/bcache0/bcache/state
    ```
+
+!!! warning "What if attach fails?"
+
+    If the attach operation fails, ensure that the cache device is properly initialized and that the UUID is correct. If the issue persists, check the kernel logs for more detailed error messages.
+
+
+    ```bash title="Check Kernel Logs"
+    sudo dmesg
+    ```
 
 ---
 
@@ -296,6 +305,8 @@ When running `wipefs -a /dev/nvme1n1`, you receive the error “Device or resour
 
   If the device is already part of a bcache setup, stop the related bcache service (e.g., write a 1 to `/sys/block/bcacheX/bcache/stop` for the appropriate bcache device) before running `wipefs`.
 
+  If the device is already a cache device of bcache, stop the related cache service. Write a `1` to `/sys/fs/bcache/<cache_set_uuid>/stop` to stop the cache device.
+
 - **Check for Swap Usage:**
 
   ```bash title="Check for Swap Usage"
@@ -379,7 +390,7 @@ During service operation, the cache device disconnects unexpectedly, causing the
 ### 4. Data Risks in Writeback Mode
 
 **Explanation:**  
-Using writeback mode can greatly improve performance; however, if the cache device loses power or fails, any dirty data not yet written to the backing device may be lost.
+Using writeback mode can greatly improve performance; however, if the cache device loses or fails, any dirty data not yet written to the backing device may be lost.
 
 **Recommendations:**
 
