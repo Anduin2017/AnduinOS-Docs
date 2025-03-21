@@ -701,7 +701,7 @@ Due to lack of VirtIO drivers, you may not see the disk during the installation 
     </qemu:commandline>
     ```
 
-    * Make sure the host machine has enabled IO-MMO on both grub settings and BIOS settings.
+    * Make sure the host machine has enabled IO-MMU on both grub settings and BIOS settings.
     * Make sure the host machine has ignored MSRs.
     * Make sure you uninstalled the driver for the PCIe device you want to pass through. (It has been reported that NVIDIA driver may block the device to pass through) Verify the pci device is running with driver `vfio-pci` by running `lspci -nnv -s 21:00.0`.
     * Make sure the `Above 4G Decoding` and `Re-Size BAR` are enabled in the BIOS settings.
@@ -764,6 +764,7 @@ Run `C:\Program File\SPICE webdavd\map-drive.bat` will map the shared folder, wh
 If the host goes to sleep, the virtual machine will be paused. To prevent this, you can run the following command to prevent the host from sleeping:
 
 ```bash title="Prevent the host from sleeping"
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 ```
