@@ -14,3 +14,23 @@ Run the following command to install gh on AnduinOS:
 	&& sudo apt update \
 	&& sudo apt install gh -y
 ```
+
+Login your github account:
+
+```bash
+gh auth login
+```
+
+Create a remote repository from the current directory:
+
+```bash
+gh repo create my-project --private --source=. --remote=upstream
+```
+
+Checkout the github repository in browser:
+
+```bash
+gh repo view -w
+```
+
+Checkout [the official website](https://cli.github.com/) for more tips!
