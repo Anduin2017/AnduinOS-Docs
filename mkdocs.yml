@@ -254,6 +254,9 @@ nav:
         - btop: ./Applications/Shell-Tools/btop/btop.md
         - ripgrep: ./Applications/Shell-Tools/ripgrep/ripgrep.md
         - tldr: ./Applications/Shell-Tools/tldr/tldr.md
+        - gh: ./Applications/Shell-Tools/gh/gh.md
+        - glab: ./Applications/Shell-Tools/glab/glab.md
+        - ncdu: ./Applications/Shell-Tools/ncdu/ncdu.md
 
       - Download Tools:
         - Motrix: ./Applications/Download-Tools/Motrix/Motrix.md
