@@ -87,6 +87,7 @@ sudo apt-get install -y \
   cpio \
   dwarves \
   flex \
+  gawk \
   gcc \
   git \
   gzip \
@@ -328,15 +329,70 @@ sudo pesign -S -i /boot/vmlinuz-[KERNEL-VERSION]
 Similarly, sign all necessary kernel modules.
 
 ```bash title="Sign kernel modules"
-cd ./linux-6.13-rc4 # Change to the Kernel source code directory
-for module in $(find /lib/modules/$(uname -r)/kernel/ -type f -name '*.ko'); do
-    echo "Signing $module"
+#!/bin/bash
+# filepath: sign-kernel-modules.sh
+
+# Replace with your actual new kernel version
+NEW_KERNEL_VERSION="6.13-rc4"  # Change this to match your kernel version!
+
+cd ./linux-6.13-rc4  # Change to the Kernel source code directory
+
+# Create a temporary directory for decompression
+TEMP_DIR=$(mktemp -d)
+echo "Using temporary directory: $TEMP_DIR"
+
+# Process compressed (.ko.zst) modules
+echo "Processing compressed modules (.ko.zst)..."
+for module in $(find /lib/modules/${NEW_KERNEL_VERSION}/kernel/ -type f -name "*.ko.zst"); do
+    echo "Found compressed module: $module"
+    
+    # Extract the module filename without path
+    module_name=$(basename "$module")
+    
+    # Decompress to temporary location
+    echo "Decompressing $module_name to $TEMP_DIR"
+    zstd -d "$module" -o "${TEMP_DIR}/${module_name%.zst}"
+    
+    # Sign the decompressed module
+    echo "Signing ${TEMP_DIR}/${module_name%.zst}"
+    sudo ./scripts/sign-file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt "${TEMP_DIR}/${module_name%.zst}"
+    if [ $? -ne 0 ]; then
+        echo "Failed to sign ${module_name%.zst}"
+        continue
+    fi
+    
+    # Recompress the signed module
+    echo "Recompressing ${module_name%.zst}"
+    sudo zstd -19 "${TEMP_DIR}/${module_name%.zst}" -o "$module" --rm
+    
+    echo "Successfully processed $module_name"
+    echo "----------------------------------------"
+done
+
+# Process any uncompressed (.ko) modules that might exist
+echo "Processing uncompressed modules (.ko)..."
+for module in $(find /lib/modules/${NEW_KERNEL_VERSION}/kernel/ -type f -name "*.ko"); do
+    echo "Signing uncompressed module: $module"
     sudo ./scripts/sign-file sha256 ~/my-keys/MOK.key ~/my-keys/MOK.crt "$module"
     if [ $? -ne 0 ]; then
         echo "Failed to sign $module"
-        exit 1
+        continue
     fi
+    echo "Successfully signed $module"
+    echo "----------------------------------------"
 done
+
+# Clean up
+rm -rf "$TEMP_DIR"
+echo "Finished signing all kernel modules"
+```
+
+After signing the kernel modules, you can verify if the modules are signed by running the following command:
+
+```bash title="Verify the kernel modules are signed"
+modinfo -F signer /lib/modules/[KERNEL-VERSION]/kernel/drivers/[MODULE].ko
+# For example:
+# modinfo -F signer /lib/modules/6.13-rc4/kernel/arch/x86/crypto/aesni-intel.ko.zst
 ```
 
 ### 6. Update Bootloader
