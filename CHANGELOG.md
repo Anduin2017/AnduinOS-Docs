@@ -5,6 +5,10 @@
 * Added a new shortcut **Super + V** to toggle the clipboard history.
 * Added `ethtool` to the default app list.
 
+## v1.2.3
+
+* Bump packages to the latest version.
+
 ## v1.2.2
 
 * Suppress a notification from ArcMenu by default.
@@ -17,6 +21,10 @@
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.3
+
+* Bump packages to the latest version.
 
 ## v1.1.2
 
