@@ -16,8 +16,6 @@ To view current version release schedules, see the [AnduinOS Version Release Sch
 
 AnduinOS is a custom Debian-based Linux distribution that aims to facilitate developers transitioning from Windows to Ubuntu by maintaining familiar operational habits and workflows.
 
-AnduinOS is built on the Ubuntu Jammy package base.
-
 ## How to install AnduinOS?
 
 To install AnduinOS, you can follow the instructions in the [Installation Guide](./Install/./System-Requirements.md).
