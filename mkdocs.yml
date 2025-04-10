@@ -310,6 +310,7 @@ nav:
       - GitLab: ./Servicing/GitLab/GitLab.md
       - Jellyfin: ./Servicing/Jellyfin/Jellyfin.md
       - Nextcloud: ./Servicing/Nextcloud/Nextcloud.md
+      - Registry: ./Servicing/Registry/Registry.md
       - MoongladePure: ./Servicing/MoongladePure/MoongladePure.md
       - OpenGist: ./Servicing/OpenGist/OpenGist.md
       - NekoImageGallery: ./Servicing/NekoImageGallery/NekoImageGallery.md

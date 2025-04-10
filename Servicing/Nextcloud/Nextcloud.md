@@ -80,6 +80,7 @@ services:
     deploy:
       resources:
         limits:
+          cpus: '4.0'
           memory: 16384M
 
   cron:
@@ -92,6 +93,7 @@ services:
     deploy:
       resources:
         limits:
+          cpus: '0.5'
           memory: 128M
 
   nextclouddb:
@@ -109,6 +111,7 @@ services:
     deploy:
       resources:
         limits:
+          cpus: '4.0'
           memory: 8192M
 
   redis:
