@@ -111,6 +111,7 @@ nav:
     - Documentation: README.md
     - Versions table: VERSIONS.md
     - Change Log: CHANGELOG.md
+    - News & Updates: https://news.anduinos.com/
     - Known Issues: KNOWN_ISSUES.md
     # COMMON GPT-v3 license URL
     - License: https://gitlab.aiursoft.cn/anduin/anduinos/-/blob/1.2/LICENSE
