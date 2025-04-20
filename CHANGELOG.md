@@ -5,7 +5,9 @@
 * Added a new shortcut **Super + V** to toggle the clipboard history.
 * Added `ethtool` to the default app list.
 * Preinstalled `gnome-software` to support installing software from the software store.
+* Preinstalled `flatpak` to support installing software from the software store.
 * Changed os-id to `anduinos` in `/etc/os-release`.
+* Fixed Firefox localization issue.
 
 ## v1.2.3
 
