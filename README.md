@@ -14,7 +14,7 @@ To view current version release schedules, see the [AnduinOS Version Release Sch
 
 ## What is AnduinOS?
 
-AnduinOS is a custom Debian-based Linux distribution that aims to facilitate developers transitioning from Windows to Ubuntu by maintaining familiar operational habits and workflows.
+AnduinOS is a custom Ubuntu-based Linux distribution that aims to facilitate developers transitioning from Windows to Linux by maintaining familiar operational habits and workflows.
 
 ## How to install AnduinOS?
 

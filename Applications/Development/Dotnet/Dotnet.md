@@ -6,6 +6,14 @@
 
 .NET is a free, cross-platform, open source developer platform for building many different types of applications.
 
+First. Add the .NET backports repository (if applicable).
+
+```bash
+if [[ "$(lsb_release -sc)" =~ ^(devel|jammy|noble)$ ]]; then
+  sudo add-apt-repository ppa:dotnet/backports
+fi
+```
+
 To install .NET 9 on AnduinOS, you can run:
 
 ```bash
