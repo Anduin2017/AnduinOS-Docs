@@ -11,3 +11,23 @@ To install MuseScore on AnduinOS, run the following command:
 ```bash
 sudo apt-get install musescore
 ```
+
+Or you can install the AppImage version of MuseScore:
+
+<!-- The link needs to be updated regularly. -->
+
+```bash
+wget https://cdn.jsdelivr.net/musescore/v4.5.1/MuseScore-Studio-4.5.1.250800846-x86_64.AppImage -O musescore.AppImage
+chmod +x musescore.AppImage
+./musescore.AppImage --appimage-extract
+sudo mv squashfs-root /opt/musescore
+sudo ln -s /opt/musescore/AppRun /usr/bin/musescore
+echo "[Desktop Entry]
+Name=MuseScore
+Comment=Music Notation Software
+Exec=/opt/musescore/AppRun
+Icon=/opt/musescore/usr/share/icons/hicolor/512x512/apps/mscore4portable.png
+Terminal=false
+Type=Application
+Categories=Audio;Music;" | sudo tee /usr/share/applications/musescore.desktop
+```
