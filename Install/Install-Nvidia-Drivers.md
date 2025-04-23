@@ -4,102 +4,13 @@ This guide provides a comprehensive approach to installing proprietary NVIDIA dr
 
 ---
 
-## Manual Installation (Advanced Users)
+## Prerequisites
 
-!!! warning "Select the version carefully"
-
-    - The driver may not support your current kernel version! Before starting, please check the compatibility of the driver with your kernel version!!!
-
-1. Disable Nouveau driver:
-
-   Before installing the NVIDIA driver, you need to disable the Nouveau driver. This is the open-source driver for NVIDIA GPUs and can conflict with the proprietary NVIDIA driver.
-
-   To disable Nouveau, create a configuration file:
-
-   ```bash
-   echo "blacklist nouveau" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
-   echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
-   ```
-
-   Then update the initramfs:
-
-   ```bash
-   sudo update-initramfs -u -k all
-   ```
-   After this, reboot your system:
-
-   ```bash
-   sudo reboot
-   ```
-
-2. **Kernel Headers and Build Tools**: For building modules (especially for manual installation), you need:
-
-   ```bash
-   sudo apt update
-   sudo apt install gcc make build-essential dkms linux-headers-$(uname -r)
-   ```
-
-   This ensures you have the required tools and kernel headers to compile the NVIDIA kernel module.
-
-!!! warning "System Backup or Snapshot Recommended"
-
-    Installing proprietary drivers can sometimes result in unexpected issues such as black screens or system boot failures. **Always back up your system or create a system snapshot** before making significant changes.
-
-3. Download Nvidia drivers from the official NVIDIA website.
-
-   Open the [Nvidia driver download page](https://www.nvidia.com/en-us/drivers/) and select your GPU model and operating system. Download the appropriate driver package.
-
-   You may get a file like `NVIDIA-Linux-x86_64-XXX.XX.run`, where `XXX.XX` is the version number.
-
-4. Switch to a TTY console (optional but recommended):
-
-   - Press `Ctrl + Alt + F3` (or any function key from F3 to F6) to switch to a TTY console.
-   - Log in with your username and password.
-
-   Now you need to disable all graphical interfaces to install the NVIDIA driver. This is important because the NVIDIA installer needs to stop the X server (the graphical interface) to work properly.
-
-   ```bash
-   sudo systemctl isolate multi-user.target
-   sudo systemctl stop gdm3
-   ```
-
-5. Uninstall any existing NVIDIA drivers:
-
-   ```bash
-   sudo apt remove --purge '^nvidia-.*'
-   ```
-
-   This command removes all installed NVIDIA packages. If you have previously installed the driver using a different method, ensure to remove those as well.
-
-6. Install the driver:
-
-   Navigate to the directory where you downloaded the NVIDIA driver and run the installer:
-
-   ```bash
-   cd ~/Downloads
-   chmod +x NVIDIA-Linux-x86_64-XXX.XX.run
-   sudo ./NVIDIA-Linux-x86_64-XXX.XX.run
-   ```
-
-   Follow the on-screen instructions to complete the installation. You may be prompted to accept the license agreement and choose installation options.
-
-7. Reboot your system:
-
-   ```bash
-   sudo reboot
-   ```
-
-8. Verify the installation:
-
-   After rebooting, check if the NVIDIA driver is installed correctly:
-
-   ```bash
-   nvidia-smi
-   ```
-
-   This command should display information about your GPU, including the driver version and GPU utilization.
-
----
+- **AnduinOS** (or any Ubuntu-based distribution).
+- A compatible NVIDIA GPU.
+- Basic knowledge of using the terminal.
+- Internet connection to download drivers and dependencies.
+- Backup your system or important data before proceeding with driver installations.
 
 ## Automatic Installation (Recommended for Most Users)
 
@@ -215,7 +126,38 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
 
 ---
 
-### Step 4: Prepare to Install the NVIDIA Driver
+### Step 4: Blacklist the Nouveau Driver
+
+The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. To ensure it doesn’t load:
+
+1. **Blacklist Nouveau**:
+
+   ```bash
+   sudo vim /etc/modprobe.d/blacklist-nouveau.conf
+   ```
+
+   Insert the following lines:
+
+   ```bash
+   blacklist amd76x_edac
+   blacklist vga16fb
+   blacklist nouveau
+   blacklist rivafb
+   blacklist nvidiafb
+   blacklist rivatv
+   ```
+
+   (Note: The line `blacklist amd76x_edac` is sometimes recommended on certain systems. If you do not have AMD hardware, it might be unnecessary. However, it’s often included in sample blacklist files.)
+
+2. **Regenerate initramfs**:
+
+   ```bash
+   sudo update-initramfs -u -k all
+   ```
+
+---
+
+### Step 5: Prepare to Install the NVIDIA Driver
 
 1. **Install necessary build dependencies**:
 
@@ -242,7 +184,7 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
 
 ---
 
-### Step 5: Install the NVIDIA Driver
+### Step 6: Install the NVIDIA Driver
 
 1. **Navigate to the directory containing the downloaded driver**:
 
@@ -272,37 +214,6 @@ Secure Boot ensures your system only loads drivers or kernel modules signed by a
     - **`.key`** = private key  
     - **`.crt`** = public certificate  
     Installing the driver will automatically sign the kernel module with your private key if configured correctly.
-
----
-
-### Step 6: Blacklist the Nouveau Driver
-
-The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. To ensure it doesn’t load:
-
-1. **Blacklist Nouveau**:
-
-   ```bash
-   sudo vim /etc/modprobe.d/blacklist-nouveau.conf
-   ```
-
-   Insert the following lines:
-
-   ```bash
-   blacklist amd76x_edac
-   blacklist vga16fb
-   blacklist nouveau
-   blacklist rivafb
-   blacklist nvidiafb
-   blacklist rivatv
-   ```
-
-   (Note: The line `blacklist amd76x_edac` is sometimes recommended on certain systems. If you do not have AMD hardware, it might be unnecessary. However, it’s often included in sample blacklist files.)
-
-2. **Regenerate initramfs**:
-
-   ```bash
-   sudo update-initramfs -u -k all
-   ```
 
 ---
 
