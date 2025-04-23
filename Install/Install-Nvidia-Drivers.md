@@ -4,9 +4,34 @@ This guide provides a comprehensive approach to installing proprietary NVIDIA dr
 
 ---
 
-## Prerequisites
+## Manual Installation (Advanced Users)
 
-1. **Internet Connection**: Ensure you have a stable internet connection for downloading packages and drivers.
+!!! warning "Select the version carefully"
+
+    - The driver may not support your current kernel version! Before starting, please check the compatibility of the driver with your kernel version!!!
+
+1. Disable Nouveau driver:
+
+   Before installing the NVIDIA driver, you need to disable the Nouveau driver. This is the open-source driver for NVIDIA GPUs and can conflict with the proprietary NVIDIA driver.
+
+   To disable Nouveau, create a configuration file:
+
+   ```bash
+   echo "blacklist nouveau" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
+   echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
+   ```
+
+   Then update the initramfs:
+
+   ```bash
+   sudo update-initramfs -u -k all
+   ```
+   After this, reboot your system:
+
+   ```bash
+   sudo reboot
+   ```
+
 2. **Kernel Headers and Build Tools**: For building modules (especially for manual installation), you need:
 
    ```bash
@@ -19,6 +44,60 @@ This guide provides a comprehensive approach to installing proprietary NVIDIA dr
 !!! warning "System Backup or Snapshot Recommended"
 
     Installing proprietary drivers can sometimes result in unexpected issues such as black screens or system boot failures. **Always back up your system or create a system snapshot** before making significant changes.
+
+3. Download Nvidia drivers from the official NVIDIA website.
+
+   Open the [Nvidia driver download page](https://www.nvidia.com/en-us/drivers/) and select your GPU model and operating system. Download the appropriate driver package.
+
+   You may get a file like `NVIDIA-Linux-x86_64-XXX.XX.run`, where `XXX.XX` is the version number.
+
+4. Switch to a TTY console (optional but recommended):
+
+   - Press `Ctrl + Alt + F3` (or any function key from F3 to F6) to switch to a TTY console.
+   - Log in with your username and password.
+
+   Now you need to disable all graphical interfaces to install the NVIDIA driver. This is important because the NVIDIA installer needs to stop the X server (the graphical interface) to work properly.
+
+   ```bash
+   sudo systemctl isolate multi-user.target
+   sudo systemctl stop gdm3
+   ```
+
+5. Uninstall any existing NVIDIA drivers:
+
+   ```bash
+   sudo apt remove --purge '^nvidia-.*'
+   ```
+
+   This command removes all installed NVIDIA packages. If you have previously installed the driver using a different method, ensure to remove those as well.
+
+6. Install the driver:
+
+   Navigate to the directory where you downloaded the NVIDIA driver and run the installer:
+
+   ```bash
+   cd ~/Downloads
+   chmod +x NVIDIA-Linux-x86_64-XXX.XX.run
+   sudo ./NVIDIA-Linux-x86_64-XXX.XX.run
+   ```
+
+   Follow the on-screen instructions to complete the installation. You may be prompted to accept the license agreement and choose installation options.
+
+7. Reboot your system:
+
+   ```bash
+   sudo reboot
+   ```
+
+8. Verify the installation:
+
+   After rebooting, check if the NVIDIA driver is installed correctly:
+
+   ```bash
+   nvidia-smi
+   ```
+
+   This command should display information about your GPU, including the driver version and GPU utilization.
 
 ---
 
