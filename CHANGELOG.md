@@ -67,6 +67,10 @@
 * The ISO now includes a pre-generated Netplan configuration file.
 * The compiled ISO has already run `apt update`, ensuring better user experience in the live environment with proper command hints and install suggestions.
 
+## v1.0.7
+
+* Bump packages to the latest version.
+
 ## v1.0.6
 
 * Added the following packages to the default app list:
