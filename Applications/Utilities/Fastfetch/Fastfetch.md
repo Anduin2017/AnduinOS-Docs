@@ -5,7 +5,6 @@ Fastfetch is a simple and fast system information tool written in C. Fastfetch s
 To install Fastfetch, you can use the following commands:
 
 ```bash
-sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt update
 sudo apt install fastfetch -y
 ```
