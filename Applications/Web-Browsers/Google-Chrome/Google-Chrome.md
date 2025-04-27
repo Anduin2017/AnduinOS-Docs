@@ -16,6 +16,16 @@ sudo apt update
 sudo apt install google-chrome-stable
 ```
 
+Or you can install the deb file of Google Chrome:
+
+<!-- The link needs to be updated regularly. -->
+
+```bash
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O google-chrome.deb
+sudo apt install ./google-chrome.deb -y
+rm google-chrome.deb
+```
+
 !!! note "Uninstall Firefox"
 
     After installing Google Chrome, you may want to uninstall the default web browser, Firefox. To uninstall Firefox, you can run:
