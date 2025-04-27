@@ -6,7 +6,6 @@
 * Added `ethtool` to the default app list.
 * Preinstalled `gnome-software` to support installing software from the software store.
 * Preinstalled `flatpak` to support installing software from the software store.
-* Changed os-id to `anduinos` in `/etc/os-release`.
 * Fixed Firefox localization issue.
 * Bumped Gnome to 48 and added HDR support.
 
