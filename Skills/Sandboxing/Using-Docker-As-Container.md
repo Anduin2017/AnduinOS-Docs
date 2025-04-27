@@ -316,7 +316,7 @@ Include this in your Dockerfile when your application depends on correct timezon
 You can install GUI applications in Docker containers. For example, here's how to install WeChat:
 
 ```Dockerfile
-FROM hub.aiursoft.cn/aiursoft/internalimages/ubuntu:latest
+FROM ubuntu:22.04
 
 # Install locales
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \

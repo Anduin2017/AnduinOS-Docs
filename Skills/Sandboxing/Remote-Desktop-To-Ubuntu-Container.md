@@ -23,7 +23,7 @@ User name is `test`, password is `1234`.
 If you want to build the image yourself, you can write a new `Dockerfile` with the following content:
 
 ```Dockerfile
-FROM hub.aiursoft.cn/aiursoft/internalimages/ubuntu:latest
+FROM ubuntu:22.04
 EXPOSE 3389/tcp
 ARG USER=test
 ARG PASS=1234
