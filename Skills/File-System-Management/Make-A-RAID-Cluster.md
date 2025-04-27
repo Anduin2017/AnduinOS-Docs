@@ -99,3 +99,84 @@ After creating the RAID array, you can format it with a file system (e.g., ext4)
    ```
 
 That's it! You have successfully used **mdadm** to build a RAID array and completed the entire process, from installation to initialization, monitoring progress, formatting, and mounting. By choosing the appropriate RAID level based on your needs, you can achieve a balance between performance and data security.
+
+## 6. Transfer the RAID Array to Another Machine
+
+In some cases you may need to migrate an existing RAID array to a new host. The steps below show how to safely stop the array on the source machine and reassemble it on the destination.
+
+!!! warning "Ensure Data Safety During Migration"
+    
+    Always unmount and stop the array cleanly before moving disks. Make sure you have a current backup in case of metadata corruption.
+
+### 6.1 Stop and Unmount on the Source Machine
+
+1. Unmount the array:
+   ```bash title="Unmount RAID Array"
+   sudo umount /mnt/raid
+   ```
+2. Stop the array so metadata is written and devices freed:
+   ```bash title="Stop RAID Array"
+   sudo mdadm --stop /dev/md0
+   ```
+
+### 6.2 Prepare the Destination Machine
+
+1. Install `mdadm` if not already present:
+   ```bash title="Install mdadm on Destination"
+   sudo apt update
+   sudo apt install mdadm
+   ```
+2. Connect the member disks (or disk partitions) in any available SATA/NVMe slots. Confirm they appear under `/dev`:
+   ```bash title="List Available Disks"
+   lsblk
+   ```
+
+### 6.3 Reassemble the Array on the Destination
+
+1. Scan and assemble all recognized arrays:
+   ```bash title="Auto-assemble RAID Arrays"
+   sudo mdadm --assemble --scan
+   ```
+2. (Optional) If the array does not assemble automatically, specify member devices explicitly:
+   ```bash title="Explicitly Assemble md0"
+   sudo mdadm --assemble /dev/md0 /dev/sdX /dev/sdY [...other devices]
+   ```
+
+3. Verify the assembly:
+   ```bash title="Check RAID Status"
+   cat /proc/mdstat
+   sudo mdadm --detail /dev/md0
+   ```
+
+### 6.4 Persist Configuration on the New Host
+
+1. Append the array definition to `mdadm.conf` so it assembles at boot:
+   ```bash title="Add to mdadm.conf"
+   sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf
+   sudo update-initramfs -u
+   ```
+
+2. Add an `/etc/fstab` entry for automatic mounting:
+   ```bash title="Update /etc/fstab"
+   echo "/dev/md0 /mnt/raid ext4 defaults 0 2" | sudo tee -a /etc/fstab
+   ```
+
+### 6.5 Mount and Verify Data
+
+1. Create (or reuse) the mount point:
+   ```bash title="Create Mount Point"
+   sudo mkdir -p /mnt/raid
+   ```
+2. Mount the array:
+   ```bash title="Mount RAID Array"
+   sudo mount /dev/md0 /mnt/raid
+   ```
+3. Confirm data integrity:
+   ```bash title="Verify Contents"
+   ls -l /mnt/raid
+   df -h /mnt/raid
+   ```
+
+---
+
+With these steps, your RAID array will be safely migrated and available on the new machine, preserving both performance and redundancy characteristics.
