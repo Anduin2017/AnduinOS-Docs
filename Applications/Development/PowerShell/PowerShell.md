@@ -24,3 +24,45 @@ Then you can run PowerShell by typing `pwsh` in the terminal.
     The above command only installs the launcher. If you run `sudo apt upgrade`, it won't upgrade it automatically. You will need to manually rerun the above command to upgrade.
 
     This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
+
+!!! warning "PowerShell depends on libicu which may not be available in the default repositories"
+
+    PowerShell depends on `libicu` which is not available in the default repositories. You will need to override it manually.
+
+    For example, you may have `libicu76` installed, but PowerShell requires `libicu70`. You can fix it by overriding the dependency with the following 
+
+    First, download the `PowerShell` deb package.
+
+    Then, install the `libicu76` package:
+
+    ```bash
+    sudo apt install libicu76
+    ```
+
+    Now, you can edit the dependency of the `PowerShell` deb package.
+
+    ```bash
+    mkdir -p pwsh-extract
+    dpkg-deb -R ms-powershell.deb pwsh-extract/
+    vim pwsh-extract/DEBIAN/control
+    ```
+
+    Edit the `Depends` line to remove `libicu70` and add `libicu76`:
+
+    ```text
+    Depends: libicu76
+    ```
+
+    Then, you can repackage the deb file:
+
+    ```bash
+    dpkg-deb -b pwsh-extract/ modified-pwsh.deb
+    ```
+
+    Finally, install the modified deb package:
+
+    ```bash
+    sudo dpkg -i modified-pwsh.deb
+    ```
+
+    This will install PowerShell with the modified dependency.
