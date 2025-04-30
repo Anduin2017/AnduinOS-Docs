@@ -29,6 +29,18 @@ sudo ubuntu-drivers install
 
     The automatically installed driver might **not** be the latest available from NVIDIA. If you require newer drivers—for example, to support newer GPU models or software features—you should proceed with the **Manual Installation** instructions.
 
+!!! warning "Nvidia drivers may have a lot of bugs..."
+
+    The NVIDIA drivers may have a lot of bugs. If you encounter any issues, please report them to the [NVIDIA developer forum](https://forums.developer.nvidia.com/c/linux/). You can also check the [NVIDIA driver release notes](https://www.nvidia.com/en-us/drivers/unix/) for known issues and fixes.
+
+    To mitigate, it is recommended to use an older version of the NVIDIA driver. And use Xorg instead of Wayland.
+
+    To view available NVIDIA driver versions, you can use the following command:
+
+   ```bash title="List available NVIDIA driver versions"
+   ubuntu-drivers list --gpgpu
+   ```
+
 ---
 
 ## Manual Installation
