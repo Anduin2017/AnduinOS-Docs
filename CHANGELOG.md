@@ -2,8 +2,8 @@
 
 ## v1.3.0 (Development branch, Forked from v1.2.0)
 
+* **Upgraded Base System**: The foundational system has been updated from **Oracular (Ubuntu 24.10)** to **Plucky (Ubuntu 25.04)**.
 * Added a new shortcut **Super + V** to toggle the clipboard history.
-* Added `ethtool` to the default app list.
 * Preinstalled `gnome-software` to support installing software from the software store.
 * Preinstalled `flatpak` to support installing software from the software store.
 * Fixed Firefox localization issue.
