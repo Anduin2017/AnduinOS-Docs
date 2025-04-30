@@ -1,6 +1,6 @@
 # AnduinOS Changelog
 
-## v1.3.0 (Development branch, Forked from v1.2.0)
+## v1.3.0 (Forked from v1.2.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Oracular (Ubuntu 24.10)** to **Plucky (Ubuntu 25.04)**.
 * Added a new shortcut **Super + V** to toggle the clipboard history.
