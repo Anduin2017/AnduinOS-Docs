@@ -11,6 +11,9 @@ We strongly recommend learning and using these shortcuts to improve your product
 * Lock the screen: `Windows + L`
 * Open the system menu: `Windows`
 * Toggle display network state on taskbar: `Windows + U`
+* View clipboard history: `Windows + V` (Since 1.3)
+* Toggle action center: `Windows + A`
+* Toggle notification center: `Windows + N`
 
 ## Applications
 
