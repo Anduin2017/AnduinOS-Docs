@@ -44,7 +44,16 @@ To host services on AnduinOS, you can follow the instructions in the [Servicing 
 
 ## Where to get the source code of AnduinOS?
 
-To get the source code of AnduinOS, you can visit the [AnduinOS GitLab repository](https://gitlab.aiursoft.cn/anduin/anduinos)
+To get the source code of AnduinOS, you can visit:
+
+* [AnduinOS GitLab repository](https://gitlab.aiursoft.cn/anduin/anduinos)
+* [AnduinOS GitHub repository](https://github.com/anduin2017/AnduinOS)
+
+## Discuss with other AnduinOS users
+
+To discuss with other AnduinOS users, you can join our community on:
+
+* [AnduinOS Revolt](https://rvlt.gg/AE7Kx4qD)
 
 ## Copyright
 
