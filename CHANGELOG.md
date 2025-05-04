@@ -28,6 +28,8 @@
 
 ## v1.1.4
 
+* Added torrent files for downloading the ISO.
+* Added `clipboard-indicator@tudmotu.com` plugin to the default plugin list.
 * Fixed an issue that the homepage of Firefox may not be able to be adjusted.
 * Added the following packages to the default app list:
   * orca
