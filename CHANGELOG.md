@@ -26,6 +26,22 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
+## v1.1.4
+
+* Fixed an issue that the homepage of Firefox may not be able to be adjusted.
+* Added the following packages to the default app list:
+  * orca
+  * spice-vdagent
+  * bpfcc-tools
+  * bpftrace
+  * exfatprogs
+  * gdb
+  * gir1.2-wnck-3.0
+  * ieee-data
+  * iw
+  * linux-headers
+  * linux-tools
+
 ## v1.1.3
 
 * Bump packages to the latest version.
