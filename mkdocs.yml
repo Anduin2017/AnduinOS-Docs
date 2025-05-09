@@ -201,6 +201,7 @@ nav:
 
       - Communication:
         - Telegram: ./Applications/Communication/Telegram/Telegram.md
+        - Signal: ./Applications/Communication/Signal/Signal.md
         - WeChat: ./Applications/Communication/WeChat/WeChat.md
         - QQ: ./Applications/Communication/QQ/QQ.md
         - Zoom: ./Applications/Communication/Zoom/Zoom.md
@@ -238,6 +239,7 @@ nav:
 
       - Office:
         - WPS Office: ./Applications/Office/WPS-Office/WPS-Office.md
+        - OnlyOffice: ./Applications/Office/OnlyOffice/OnlyOffice.md
         - LibreOffice: ./Applications/Office/LibreOffice/LibreOffice.md
         - Obsidian: ./Applications/Office/Obsidian/Obsidian.md
 
