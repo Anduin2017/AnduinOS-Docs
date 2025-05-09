@@ -1,5 +1,14 @@
 # AnduinOS Changelog
 
+## v1.3.1 (Development)
+
+* Fixed an issue that `nautilus` may crash when clicking `Network`.
+* Added `en_GB` locale to the default locale list to support British English.
+* Fixed an issue that `nautilus admin:/` command result in `admin locations are not supported` error.
+* Fixed an issue that the installer doesn't follow system theme.
+* Added `gvfs-background` to the default app list to support `admin://` protocol.
+* Added `libpam-gnome-keyring` package to avoid gnome-keyring asking for password when login.
+
 ## v1.3.0 (Forked from v1.2.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Oracular (Ubuntu 24.10)** to **Plucky (Ubuntu 25.04)**.
