@@ -8,6 +8,7 @@
 * Fixed an issue that the installer doesn't follow system theme.
 * Added `gvfs-background` to the default app list to support `admin://` protocol.
 * Added `libpam-gnome-keyring` package to avoid gnome-keyring asking for password when login.
+* Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly.
 
 ## v1.3.0 (Forked from v1.2.0)
 
