@@ -3,6 +3,7 @@
 ## v1.3.1
 
 * Fixed an issue that `nautilus` may crash when clicking `Network`.
+* Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
 * Added `en_GB` locale to the default locale list to support British English.
 * Fixed an issue that `nautilus admin:/` command result in `admin locations are not supported` error.
 * Fixed an issue that the installer doesn't follow system theme.
