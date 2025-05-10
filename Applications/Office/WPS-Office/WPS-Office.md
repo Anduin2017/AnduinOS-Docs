@@ -22,6 +22,14 @@ rm wps.deb
 
     This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
 
+## third-party repository
+
+If you want to automatically update via `sudo apt upgrade`, you can try adding [wcbing APT Repo](https://packages.wcbing.top/deb/). This is a third-party software repository that is updated more timely. The author redirects the index to allow users to download directly from the official distribution channel of the software, ensuring the security and legality of the packages source.
+
+!!! warning "This is a third-party repository"
+
+    This is a repository maintained by third-party, and AnduinOS does not make any guarantees for it.
+
 ## Fix the `missing fonts` issue
 
 WPS may alert you that some fonts are missing. To fix this, you can install the fonts via this [GitHub Repo https://github.com/dv-anomaly/ttf-wps-fonts](https://github.com/dv-anomaly/ttf-wps-fonts).
