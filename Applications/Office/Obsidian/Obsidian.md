@@ -5,7 +5,7 @@ Obsidian is a powerful knowledge base that works on top of a local folder of pla
 To install Obsidian on AnduinOS, follow these steps:
 
 ```bash title="Install Obsidian"
-link=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.4/obsidian_1.8.4_amd64.deb
+link=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/obsidian_1.8.10_amd64.deb
 wget $link -O /tmp/obsidian.deb
 sudo apt install /tmp/obsidian.deb -y
 rm /tmp/obsidian.deb
