@@ -41,7 +41,9 @@ Since AnduinOS currently does not have its own dedicated software repository (al
 To update AnduinOS to the latest dot build version, simply run the following command: `do_anduinos_upgrade`. For example:
 
 ```text
-1.3.0 → 1.3.0
+1.1.0 → 1.1.4
+1.2.0 → 1.2.4
+1.3.0 → 1.3.1
 ```
 
 Please note that this command will **not** upgrade across fork versions—that is, it will not upgrade from 1.2.0 to 1.3.1.
