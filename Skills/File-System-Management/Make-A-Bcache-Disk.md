@@ -185,6 +185,22 @@ Depending on your workload and device characteristics, you can adjust various sy
    - Tweak readahead settings to further improve read performance.
    - It is recommended to make adjustments during periods of low load and monitor the changes with the provided statistics.
 
+### Persistent Settings
+
+!!! warning "Settings might not persist across reboots"
+
+    Changes made to sysfs parameters are not persistent across reboots!!
+
+To make them persistent, you can create a file under `/etc/tmpfiles.d/` or use systemd services to apply the settings at boot time.
+
+```bash title="Make Settings Persistent"
+cat << EOF > /etc/tmpfiles.d/bcache.conf
+w /sys/block/bcache0/bcache/sequential_cutoff - - - - 0
+w /sys/block/bcache0/bcache/cache_mode        - - - - writeback
+w /sys/block/bcache0/bcache/writeback_percent - - - - 15
+EOF
+```
+
 ---
 
 ## Safely Removing the Cache Device Without Affecting Services
