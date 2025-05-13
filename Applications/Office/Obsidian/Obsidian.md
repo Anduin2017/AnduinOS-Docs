@@ -21,7 +21,7 @@ rm /tmp/obsidian.deb
 
     This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
 
-## third-party repository
+## Third-party repository
 
 If you want to automatically update via `sudo apt upgrade`, you can try adding [wcbing APT Repo](https://packages.wcbing.top/deb/). This is a third-party software repository that is updated more timely. 
 
