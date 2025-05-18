@@ -1,12 +1,21 @@
 # AnduinOS Changelog
 
+## v1.3.2 (Under development)
+
+* Added `cracklib-runtime` package to the default app list.
+* Use dynamic trackers retrieval from online source to generate torrent files.
+* Added `power-profiles-daemon` to the default app list.
+* For `zh_CN` version, changed default flathub mirror from `sjtu` to `ustc`.
+* Added `vim` to the default app list.
+* Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
+
 ## v1.3.1
 
 * Fixed an issue that `nautilus` may crash when clicking `Network`.
 * Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
 * Added `en_GB` locale to the default locale list to support British English.
 * Fixed an issue that `nautilus admin:/` command result in `admin locations are not supported` error.
-* Fixed an issue that the installer doesn't follow system theme.
+* Fixed an issue that the installer `ubiquity` doesn't follow system theme.
 * Added `gvfs-background` to the default app list to support `admin://` protocol.
 * Added `libpam-gnome-keyring` package to avoid gnome-keyring asking for password when login.
 * Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
@@ -19,6 +28,39 @@
 * Preinstalled `flatpak` to support installing software from the software store.
 * Fixed Firefox localization issue.
 * Bumped Gnome to 48 and added HDR support.
+
+## v1.2.5 (Under development)
+
+* Fix qalculate localization issue that may not show localized text.
+* Added `en_GB` locale to the default locale list to support British English.
+* Fixed an issue that the installer `ubiquity` doesn't follow system theme.
+* Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
+* Added `cracklib-runtime` package to the default app list.
+* Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage.
+* Use dynamic trackers retrieval from online source to generate torrent files.
+* Added `power-profiles-daemon` to the default app list.
+* Added `vim` to the default app list.
+* Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
+
+## v1.2.4
+
+* Added torrent files for downloading the ISO.
+* Added `clipboard-indicator@tudmotu.com` plugin to the default plugin list.
+* Fixed an issue that the homepage of Firefox may not be able to be adjusted.
+* Added package `gstreamer1.0-libav` to the default app list.
+* Added the following packages to the default app list:
+  * orca
+  * spice-vdagent
+  * bpfcc-tools
+  * bpftrace
+  * exfatprogs
+  * gdb
+  * gir1.2-wnck-3.0
+  * ieee-data
+  * iw
+  * linux-headers
+  * linux-tools
 
 ## v1.2.3
 
@@ -36,6 +78,21 @@
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.5 (Under development)
+
+* Added package `gstreamer1.0-libav` to the default app list.
+* Fix qalculate localization issue that may not show localized text.
+* Added `en_GB` locale to the default locale list to support British English.
+* Fixed an issue that the installer `ubiquity` doesn't follow system theme.
+* Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
+* Added `cracklib-runtime` package to the default app list.
+* Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage.
+* Use dynamic trackers retrieval from online source to generate torrent files.
+* Added `power-profiles-daemon` to the default app list.
+* Added `vim` to the default app list.
+* Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 
 ## v1.1.4
 
