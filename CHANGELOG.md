@@ -8,7 +8,7 @@
 * For `zh_CN` version, changed default flathub mirror from `sjtu` to `ustc`.
 * Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
-* Added Intel `thesofproject/sof-bin` firmware to support Intel audio devices.
+* Added Intel `thesofproject/sof-bin` firmware to support Intel audio devices (Tested on Lunarlake CPU).
 
 ## v1.3.1
 
