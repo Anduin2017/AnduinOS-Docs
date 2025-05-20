@@ -3,6 +3,7 @@
 ## v1.3.2 (Under development)
 
 * Added `cracklib-runtime` package to the default app list.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage.
 * Use dynamic trackers retrieval from online source to generate torrent files.
 * Added `power-profiles-daemon` to the default app list.
 * For `zh_CN` version, changed default flathub mirror from `sjtu` to `ustc`.
