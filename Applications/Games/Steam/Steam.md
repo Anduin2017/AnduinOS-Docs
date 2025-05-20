@@ -4,31 +4,7 @@ Steam is a digital distribution platform developed by Valve Corporation, which o
 
 To install Steam on AnduinOS, you can run:
 
-!!! warning "i386 architecture required"
-
-    Enabling the i386 architecture on a 64-bit system is required to run certain 32-bit applications like Steam. This process involves adding support for 32-bit libraries, which can have implications for your system's stability and performance. Below are some potential issues you may encounter:
-
-    Potential Issues:
-
-    * Dependency Conflicts: Adding i386 architecture may lead to dependency conflicts where certain packages require different versions of the same library.
-    * Increased Disk Usage: Installing 32-bit libraries alongside 64-bit ones will consume additional disk space.
-    * System Complexity: Managing both 32-bit and 64-bit libraries can increase the complexity of system maintenance and troubleshooting.
-    * Compatibility Issues: Some software or updates might not be fully compatible with the i386 architecture, leading to potential instability or broken dependencies.
-
-    If you encounter any issues after enabling the i386 architecture, you can revert the changes by removing the i386 architecture and its associated packages. However, this process may not be straightforward and could result in further complications.
-
-    To remove the i386 architecture and its associated packages, you can run:
-
-    ```bash title="Remove i386 Architecture"
-    sudo dpkg --remove-architecture i386
-    ```
-
 ```bash title="Install Steam"
-cd ~
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install libc6-i386 libutempter0 xbitmaps xterm libgl1-mesa-dri:i386 libgl1:i386 -y
-
 wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb -O steam.deb
 sudo apt install ./steam.deb -y
 rm steam.deb
