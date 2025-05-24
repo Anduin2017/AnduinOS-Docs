@@ -11,6 +11,7 @@
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 * Added Intel `thesofproject/sof-bin` firmware to support Intel audio devices (Tested on Lunarlake CPU).
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
+* Added a new user systemd service `systemctl --user status deskmon.service` to automatically allow executing desktop files in the `~/Desktop` directory.
 
 ## v1.3.1
 
@@ -46,6 +47,7 @@
 * Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
+* Added a new user systemd service `systemctl --user status deskmon.service` to automatically allow executing desktop files in the `~/Desktop` directory.
 
 ## v1.2.4
 
@@ -98,6 +100,7 @@
 * Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
+* Added a new user systemd service `systemctl --user status deskmon.service` to automatically allow executing desktop files in the `~/Desktop` directory.
 
 ## v1.1.4
 
