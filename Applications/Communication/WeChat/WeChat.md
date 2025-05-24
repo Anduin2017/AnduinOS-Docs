@@ -5,6 +5,8 @@ WeChat is a Chinese multi-purpose messaging, social media and mobile payment app
 To Install WeChat on AnduinOS, you can run:
 
 ```bash
+sudo apt update
+sudo apt install -y libxcb-icccm4
 wget https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.deb -O wechat.deb
 sudo apt install ./wechat.deb -y
 rm wechat.deb
