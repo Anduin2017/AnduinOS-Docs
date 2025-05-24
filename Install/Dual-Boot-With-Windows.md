@@ -2,7 +2,7 @@
 
 Before you begin, ensure you have a backup of your important data. Dual booting can lead to data loss if not done correctly.
 
-!!! warning "Turn on Secure Boot!"
+!!! info "Turn on Secure Boot!"
 
     AnduinOS supports Secure boot well. During the installation, it is very recommended to turn on Secure Boot to ensure the security of your system. If you have already installed AnduinOS without Secure Boot, you can turn on Secure Boot at any time. However, you may need to sign the kernel modules manually if you have installed third-party kernel modules.
 
@@ -22,6 +22,10 @@ Replace `/dev/sdX` with the actual disk identifier for the AnduinOS disk (e.g., 
 3. **Install AnduinOS**: During the installation of AnduinOS, select the second disk as the installation target. Let AnduinOS take the entire disk and handle the partitioning automatically.
 4. **Bootloader**: AnduinOS will automatically install the GRUB bootloader, which will detect Windows and add it to the boot menu.
 5. **Enable BitLocker (Optional)**: If you want to use BitLocker on the Windows disk, you can enable it after the installation of AnduinOS.
+
+!!! warning "Always install Windows first!"
+
+    Windows installer tends to overwrite the bootloader of other operating systems. Therefore, it is crucial to install Windows first before installing AnduinOS! If you have already installed AnduinOS, you may need to reinstall the GRUB bootloader after installing Windows!
 
 ## Single disk setup
 
