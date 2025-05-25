@@ -2,18 +2,18 @@
 
 ## v1.3.2
 
-* Added `cracklib-runtime` package to the default app list to enhance password security.
-* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage out of the box.
-* Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to support AppImage out of the box.
 * Added `power-profiles-daemon` to the default app list to help manage power profiles.
 * For `zh_CN` version, changed default flathub mirror from `sjtu` to `ustc`.
-* Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 * Added Intel `thesofproject/sof-bin` firmware to support Intel latest audio devices (Tested on Lunarlake CPU). (This feature won't be shipped via upgrading and only available in the ISO image)
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
 * Added a new user systemd service `systemctl --user status deskmon.service` to automatically allow executing desktop files in the `~/Desktop` directory. This will simplify the process of "Create Desktop shortcut" for users.
 * Fixed an issue that theme and icon may be reverted to default after reboot.
+* Added `vim` to the default app list.
+* Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
 * Added `xserver-xorg-input-all`, `xorg`, `xserver-xorg-legacy`, `xserver-xorg-video-intel` and `xserver-xorg-video-qxl` to optimize the X11 experience. In Hyper-V virtual machine, X11 is used by default. Now the ISO can boot into the desktop environment in Hyper-V without any issues.
+* Added `cracklib-runtime` package to the default app list to enhance password security.
 
 ## v1.3.1
 

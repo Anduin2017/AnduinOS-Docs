@@ -147,6 +147,7 @@ nav:
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
     - Maintaining AnduinOS:
       - Setup Backup: ./Install/Backup-And-Restore.md
+      - Install Ubuntu Pro: ./Install/Install-Ubuntu-Pro.md
 
   - Skills:
     - Introduction: ./Skills/Introduction.md
