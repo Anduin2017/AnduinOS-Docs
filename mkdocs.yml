@@ -282,6 +282,7 @@ nav:
         - Brasero: ./Applications/Utilities/Brasero/Brasero.md
         - KDiskMark: ./Applications/Utilities/KDiskMark/KDiskMark.md
         - GSmartControl: ./Applications/Utilities/GSmartControl/GSmartControl.md
+        - Deskmon: ./Applications/Utilities/Deskmon/Deskmon.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
