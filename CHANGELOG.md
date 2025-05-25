@@ -1,15 +1,15 @@
 # AnduinOS Changelog
 
-## v1.3.2 (Under development)
+## v1.3.2
 
-* Added `cracklib-runtime` package to the default app list.
-* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage.
-* Use dynamic trackers retrieval from online source to generate torrent files.
-* Added `power-profiles-daemon` to the default app list.
+* Added `cracklib-runtime` package to the default app list to enhance password security.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage out of the box.
+* Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
+* Added `power-profiles-daemon` to the default app list to help manage power profiles.
 * For `zh_CN` version, changed default flathub mirror from `sjtu` to `ustc`.
 * Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
-* Added Intel `thesofproject/sof-bin` firmware to support Intel audio devices (Tested on Lunarlake CPU).
+* Added Intel `thesofproject/sof-bin` firmware to support Intel latest audio devices (Tested on Lunarlake CPU). (This feature won't be shipped via upgrading and only available in the ISO image)
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
 * Added a new user systemd service `systemctl --user status deskmon.service` to automatically allow executing desktop files in the `~/Desktop` directory. This will simplify the process of "Create Desktop shortcut" for users.
 * Fixed an issue that theme and icon may be reverted to default after reboot.
@@ -35,17 +35,17 @@
 * Fixed Firefox localization issue.
 * Bumped Gnome to 48 and added HDR support.
 
-## v1.2.5 (Under development)
+## v1.2.5
 
 * Fix qalculate localization issue that may not show localized text.
 * Added `en_GB` locale to the default locale list to support British English.
 * Fixed an issue that the installer `ubiquity` doesn't follow system theme.
 * Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
-* Added `cracklib-runtime` package to the default app list.
+* Added `cracklib-runtime` package to the default app list to enhance password security.
 * Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
-* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage.
-* Use dynamic trackers retrieval from online source to generate torrent files.
-* Added `power-profiles-daemon` to the default app list.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage out of the box.
+* Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
+* Added `power-profiles-daemon` to the default app list to help manage power profiles.
 * Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
@@ -89,18 +89,18 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
-## v1.1.5 (Under development)
+## v1.1.5
 
 * Added package `gstreamer1.0-libav` to the default app list.
 * Fix qalculate localization issue that may not show localized text.
 * Added `en_GB` locale to the default locale list to support British English.
 * Fixed an issue that the installer `ubiquity` doesn't follow system theme.
 * Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
-* Added `cracklib-runtime` package to the default app list.
+* Added `cracklib-runtime` package to the default app list to enhance password security.
 * Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
-* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage.
-* Use dynamic trackers retrieval from online source to generate torrent files.
-* Added `power-profiles-daemon` to the default app list.
+* Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage out of the box.
+* Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
+* Added `power-profiles-daemon` to the default app list to help manage power profiles.
 * Added `vim` to the default app list.
 * Added `software-properties-gtk`(Modified), `libgtk3-perl`, `python3-dateutil` and `gir1.2-handy-1` to the default app list. Hold `software-properties-gtk` to prevent it from being upgraded.
 * Created pin file under `/etc/apt/preferences.d/` to prevent `software-properties-gtk` and `base-files` from being upgraded.
