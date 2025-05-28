@@ -1,5 +1,9 @@
 # AnduinOS Changelog
 
+## v1.3.3 (Under development)
+
+* Fixed an accessibility issue that caused the screen reader unable to read the text.
+
 ## v1.3.2
 
 * Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to support AppImage out of the box.
@@ -34,6 +38,10 @@
 * Preinstalled `flatpak` to support installing software from the software store.
 * Fixed Firefox localization issue.
 * Bumped Gnome to 48 and added HDR support.
+
+## v1.2.6 (Under development)
+
+* Fixed an accessibility issue that caused the screen reader unable to read the text.
 
 ## v1.2.5
 
@@ -88,6 +96,10 @@
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.6 (Under development)
+
+* Fixed an accessibility issue that caused the screen reader unable to read the text.
 
 ## v1.1.5
 
