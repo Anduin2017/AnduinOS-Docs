@@ -122,6 +122,7 @@ nav:
       - Burn a USB stick: ./Install/Burn-A-USB-Stick.md
       - Change NVME LBA size: ./Install/Change-NVME-LBA-Size.md
       - Install AnduinOS from USB: ./Install/Install-AnduinOS-From-USB.md
+      - Dual Boot With Windows.md: ./Install/Dual-Boot-With-Windows.md
     - Setting Up AnduinOS:
       - First Boot for Secure Boot: ./Install/First-Boot-For-Secure-Boot.md
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
@@ -146,6 +147,7 @@ nav:
       - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
     - Maintaining AnduinOS:
       - Setup Backup: ./Install/Backup-And-Restore.md
+      - Install Ubuntu Pro: ./Install/Install-Ubuntu-Pro.md
 
   - Skills:
     - Introduction: ./Skills/Introduction.md
@@ -281,6 +283,7 @@ nav:
         - Brasero: ./Applications/Utilities/Brasero/Brasero.md
         - KDiskMark: ./Applications/Utilities/KDiskMark/KDiskMark.md
         - GSmartControl: ./Applications/Utilities/GSmartControl/GSmartControl.md
+        - Deskmon: ./Applications/Utilities/Deskmon/Deskmon.md
 
       - Development:
         - Docker: ./Applications/Development/Docker/Docker.md
