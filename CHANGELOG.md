@@ -17,7 +17,7 @@
 * Added `vim` to the default app list.
 * Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
 * Added `xserver-xorg-input-all`, `xorg`, `xserver-xorg-legacy`, `xserver-xorg-video-intel` and `xserver-xorg-video-qxl` to optimize the X11 experience. In Hyper-V virtual machine, X11 is used by default. Now the ISO can boot into the desktop environment in Hyper-V without any issues.
-* Added `cracklib-runtime` package to the default app list to enhance password security.
+* Added `cracklib-runtime` package to the default app list to fix an issue that may not able to set a password.
 
 ## v1.3.1
 
@@ -49,7 +49,7 @@
 * Added `en_GB` locale to the default locale list to support British English.
 * Fixed an issue that the installer `ubiquity` doesn't follow system theme.
 * Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
-* Added `cracklib-runtime` package to the default app list to enhance password security.
+* Added `cracklib-runtime` package to the default app list to fix an issue that may not able to set a password.
 * Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
 * Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage out of the box.
 * Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
@@ -108,7 +108,7 @@
 * Added `en_GB` locale to the default locale list to support British English.
 * Fixed an issue that the installer `ubiquity` doesn't follow system theme.
 * Fixed `fr_FR` font issue that caused some characters to be displayed incorrectly. Adjusted default fallback order for sans-serif, serif, and monospace to prioritize Latin fonts while retaining proper CJK support.
-* Added `cracklib-runtime` package to the default app list to enhance password security.
+* Added `cracklib-runtime` package to the default app list to fix an issue that may not able to set a password.
 * Changed the text of the image during boot(grub menu) from `Install AnduinOS` to `Try and Install AnduinOS`.
 * Added `libfuse2t64`, `libfuse3-3` and `libopengl0` to the default app list to support AppImage out of the box.
 * Use dynamic trackers retrieval from online source to generate torrent files for more stability of torrent downloads.
