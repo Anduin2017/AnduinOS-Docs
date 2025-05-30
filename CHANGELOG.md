@@ -3,6 +3,7 @@
 ## v1.3.3 (Under development)
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
+* Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
 
 ## v1.3.2
 
@@ -42,6 +43,7 @@
 ## v1.2.6 (Under development)
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
+* Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
 
 ## v1.2.5
 
@@ -100,6 +102,7 @@
 ## v1.1.6 (Under development)
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
+* Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
 
 ## v1.1.5
 
