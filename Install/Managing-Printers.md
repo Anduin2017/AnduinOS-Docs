@@ -8,7 +8,7 @@ CUPS is the printing system used by all modern Linux distributions. To install C
 
 ```bash
 sudo apt update
-sudo apt install cups system-config-printer
+sudo apt install cups system-config-printer printer-driver-all
 ```
 
 ## Allow printer discovery
@@ -34,3 +34,20 @@ To add a printer, open the Gnome settings and go to the `Printers` section. Clic
 To add a printer, you need to open the CUPS web interface. Open your web browser and go to `http://localhost:631`. Click on the `Administration` tab and then click on the `Add Printer` button. Follow the on-screen instructions to add your printer.
 
 It may ask you to enter your username and password. Enter your Linux username and password to authenticate.
+
+## Adding HP printer
+
+If you have an HP printer, you can use the `hp-setup` command to add your printer. To install the HP printer driver, you need to install the `hplip` package. You can do this by running the following command:
+
+```bash
+sudo apt update
+sudo apt install hplip pyqt5-dev-tools pyqt5-dev
+```
+
+And to add your printer, run the following command:
+
+```bash
+hp-setup
+```
+
+This command will guide you through the process of adding your HP printer. It will automatically detect your printer and install the necessary drivers.
