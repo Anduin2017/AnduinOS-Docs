@@ -138,6 +138,7 @@ nav:
       - Allow sudo without password: ./Install/Allow-Sudo-Without-Password.md
       - Install an App Store: ./Install/Install-An-App-Store.md
       - Enable SSH and Firewall: ./Install/Enable-SSH-And-Firewall.md
+      - Enable RDP: ./Install/Enable-RDP.md
       - Add Printers: ./Install/Managing-Printers.md
     - Learning AnduinOS:
       - Keyboard Shortcuts: ./Install/Keyboard-Shortcuts.md
