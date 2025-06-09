@@ -4,6 +4,7 @@
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
+* Added `policykit-desktop-privileges` to the default app list to allow no-password prompts for mount, simple updates, etc.
 
 ## v1.3.2
 
@@ -44,6 +45,7 @@
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
+* Added `policykit-desktop-privileges` to the default app list to allow no-password prompts for mount, simple updates, etc.
 
 ## v1.2.5
 
@@ -103,6 +105,7 @@
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
+* Added `policykit-desktop-privileges` to the default app list to allow no-password prompts for mount, simple updates, etc.
 
 ## v1.1.5
 
