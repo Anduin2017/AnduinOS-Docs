@@ -26,6 +26,36 @@ sudo cpupower frequency-info
 sudo cpupower frequency-set -g powersave
 ```
 
+## Use the powerprofilesctl
+
+`powerprofilesctl` is a command-line tool to manage power profiles on Linux. It allows you to switch between different power profiles, such as performance, balanced, and power saver.
+
+`powerprofilesctl` provides three power profiles:
+
+* Performance: Always keep the CPU frequency at the maximum level. (Not recommended)
+* Balanced: Quickly boost the frequency when there is a load, using the `energy_performance_preference` setting. (Recommended)
+* Power Saver: Use the most conservative `powersave` strategy, only boosting the frequency when absolutely necessary. (Recommended)
+
+`powerprofilesctl` is available on AnduinOS by default. And can also be switched via the control center and the GNOME settings app.
+
+To list all available power profiles, you can run the following command:
+
+```bash title="List available power profiles"
+powerprofilesctl list
+```
+
+To get current power profile, you can run the following command:
+
+```bash title="Get current power profile"
+powerprofilesctl get
+```
+
+To set the power profile to performance, you can run the following command:
+
+```bash title="Set power profile to performance"
+powerprofilesctl set performance # Can be performance, balanced, or power-saver
+```
+
 ## Configure auto lock settings
 
 !!! warning "Configure auto lock settings"
