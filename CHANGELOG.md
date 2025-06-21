@@ -5,6 +5,7 @@
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
 * Added `policykit-desktop-privileges` to the default app list to allow no-password prompts for mount, simple updates, etc.
+* The default Firefox mirror was changed to default source instead of the build mirror. This doesn't affect the `zh_CN` version.
 
 ## v1.3.2
 
@@ -46,6 +47,7 @@
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
 * Added `policykit-desktop-privileges` to the default app list to allow no-password prompts for mount, simple updates, etc.
+* The default Firefox mirror was changed to default source instead of the build mirror. This doesn't affect the `zh_CN` version.
 
 ## v1.2.5
 
@@ -106,6 +108,7 @@
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
 * Added `policykit-desktop-privileges` to the default app list to allow no-password prompts for mount, simple updates, etc.
+* The default Firefox mirror was changed to default source instead of the build mirror. This doesn't affect the `zh_CN` version.
 
 ## v1.1.5
 
