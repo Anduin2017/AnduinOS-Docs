@@ -40,6 +40,12 @@ Then just click `Install` and `Run` to launch the game. Steam will automatically
 
 ![black_myth_wukong_running_on_linux](./black_myth.png)
 
+## Install Xbox Controller Driver
+
+By default, your Xbox Controller may not work properly on AnduinOS. You can install the Xbox Controller driver to mitigate this issue.
+
+Please [read the Xbox Controller Driver Installation Guide](../../../Install/Install-Drivers.md#install-xbox-controller-driver) for more details.
+
 ## Uninstall Steam
 
 To uninstall Steam from AnduinOS, you can run:
