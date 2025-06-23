@@ -44,7 +44,7 @@ Then just click `Install` and `Run` to launch the game. Steam will automatically
 
 By default, your Xbox Controller may not work properly on AnduinOS. You can install the Xbox Controller driver to mitigate this issue.
 
-Please [read the Xbox Controller Driver Installation Guide](../../../Install/Install-Drivers.md#install-xbox-controller-driver) for more details.
+Please [read the Xbox Controller Driver Installation Guide](../../../Install/Install-Drivers.md#xbox-controller-driver) for more details.
 
 ## Uninstall Steam
 
