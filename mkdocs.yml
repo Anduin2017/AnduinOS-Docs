@@ -1,4 +1,5 @@
-site_name: AnduinOS
+site_name: AnduinOS Documentation
+site_description: The official documentation for AnduinOS.
 
 # Repository
 repo_name: anduin/anduinos-docs
