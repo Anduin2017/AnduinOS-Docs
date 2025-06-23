@@ -43,7 +43,34 @@ sudo ubuntu-drivers install
 
 ---
 
-## Manual Installation
+## PPA Installation (Recommended if you need latest drivers)
+
+If you don't want to use the automatic installation method or need a specific version of the NVIDIA driver, you can use a PPA (Personal Package Archive) to install the drivers. This method is useful for getting newer drivers that may not yet be available in the default repositories.
+
+To add the graphics-drivers PPA, run the following commands:
+
+```bash title="Add the graphics-drivers PPA"
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+```
+
+This PPA contains the latest NVIDIA drivers. After adding the PPA, you can install the driver using:
+
+```bash title="Install NVIDIA driver from PPA"
+sudo apt install nvidia-graphics-drivers-575 # Replace '575' with the desired driver version
+```
+
+Then reboot your system:
+
+```bash
+sudo reboot
+```
+
+This method is generally safe and recommended for users who want to ensure they have the latest stable drivers without manually downloading and installing them.
+
+---
+
+## Manual Installation (For advanced Users)
 
 The manual installation method allows you to install specific (often newer) NVIDIA drivers, especially if you need features not yet packaged in the default AnduinOS/Ubuntu repositories.
 
