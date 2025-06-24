@@ -106,6 +106,24 @@ sudo usermod -a -G render $USER
 
 You can use the NPU to run some AI models, like `DeepSeek R1`. For more details about how to use NPU to deploy AI models, please refer to the [Blog](https://anduin.aiursoft.cn/post/2025/2/3/deepseek-r1-32b-with-npu).
 
+## Xbox Controller Driver
+
+By default, AnduinOS supports Xbox controllers. However you may encounter issues with the latest Xbox controllers, such as the Xbox Series X controller.
+
+The issue may be like when you press `LT` or `RT`, the controller will not respond correctly. In this case, you need to install the `xpadneo` driver.
+
+To read more about the `xpadneo` driver, please refer to the [xpadneo GitHub repository](https://github.com/atar-axis/xpadneo).
+
+You can install the `xpadneo` driver by running the following commands:
+
+```bash title="Install xpadneo driver"
+git clone https://github.com/atar-axis/xpadneo.git
+cd xpadneo
+sudo ./install.sh
+```
+
+And the reboot your system. If you have previously connected the Xbox controller, you need to remove it from the Bluetooth devices and re-pair it.
+
 ## Build the Kernel
 
 In case you bought very latest hardware, you may need to build the kernel from source to get the latest drivers. Please refer to the [Kernel Compilation](../Skills/Developing/Build-Your-Own-Kernel.md) guide for more information.
