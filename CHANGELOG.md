@@ -1,6 +1,6 @@
 # AnduinOS Changelog
 
-## v1.3.3 (Under development)
+## v1.3.3
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
@@ -41,7 +41,7 @@
 * Fixed Firefox localization issue.
 * Bumped Gnome to 48 and added HDR support.
 
-## v1.2.6 (Under development)
+## v1.2.6
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
@@ -101,7 +101,7 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
-## v1.1.6 (Under development)
+## v1.1.6
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
