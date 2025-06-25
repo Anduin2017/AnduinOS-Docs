@@ -31,8 +31,52 @@ You may also want to deploy a web UI for Ollama. To do this, you can deploy the 
 To deploy the Open WebUI project, you can run the following command:
 
 ```bash
-pipx install open-webui
-open-webui serve
+sudo docker run -it --net=host ghcr.io/open-webui/open-webui:main
 ```
 
 That's it. Now open `http://localhost:8080` in your browser to access the web UI.
+
+You need to add `http://localhost:11434` as a custom Ollama server in the web UI.
+
+## Install Mcpo
+
+Mcpo is a simple proxy that takes an MCP server command and makes it accessible via standard RESTful OpenAPI, so your tools "just work" with LLM agents and apps expecting OpenAPI servers.
+
+It is suggested to run Mcpo with Docker. To do this, you can run the following commands:
+
+```bash
+sudo mkdir -p /var/data/mcpo/
+sudo touch /var/data/mcpo/config.json # Add your own configuration here.
+sudo docker run -it --net=host -v /var/data/mcpo/:/data ghcr.io/open-webui/mcpo:main mcpo --config /data/config.json
+```
+
+And you can setup your `config.json` file with the following content:
+
+```json
+{
+    "mcpServers": {
+        "sequential-thinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ]
+        },
+        "fetch": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-fetch"
+            ]
+        },
+        "time": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-time",
+                "--local-timezone=America/New_York"
+            ]
+        }
+    }
+}
+```
+
+You need to add `http://localhost:8000` as a custom mcpo server in the web UI.
