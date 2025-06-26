@@ -31,12 +31,16 @@ You may also want to deploy a web UI for Ollama. To do this, you can deploy the 
 To deploy the Open WebUI project, you can run the following command:
 
 ```bash
-sudo docker run -it --net=host ghcr.io/open-webui/open-webui:main
+#/app/backend/data
+sudo mkdir -p /var/data/open-webui/
+sudo docker run -it --net=host -v /var/data/open-webui/:/app/backend/data \
+    -e OLLAMA_SERVER=http://127.0.0.1:11434 \
+    ghcr.io/open-webui/open-webui:main
 ```
 
 That's it. Now open `http://localhost:8080` in your browser to access the web UI.
 
-You need to add `http://localhost:11434` as a custom Ollama server in the web UI.
+You need to add `http://127.0.0.1:11434` as a custom Ollama server in the web UI.
 
 ## Install Mcpo
 
