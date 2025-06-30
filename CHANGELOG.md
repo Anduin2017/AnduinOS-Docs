@@ -1,5 +1,9 @@
 # AnduinOS Changelog
 
+## v1.3.4 (Under development)
+
+* Added `japanese` keyboard layout for `ja_JP` users.
+
 ## v1.3.3
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
@@ -107,7 +111,11 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
-## v1.1.6
+## v1.1.7
+
+* Added `japanese` keyboard layout for `ja_JP` users.
+
+## v1.1.6 (Under development)
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
