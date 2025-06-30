@@ -195,6 +195,18 @@ docker cp container_id:/foo.txt foo.txt
 
 ## MySQL Docker Backup and Restore
 
+### Backup a MySQL Database:
+
+```bash title="Backup a MySQL Database"
+sudo docker exec 9cc920668c42 sh -c 'exec mysqldump -u root -p"<root_password>" anduin' > ./Anduin.backup.sql
+```
+
+### Backup a MariaDB Database:
+
+```bash title="Backup a MariaDB Database"
+sudo docker exec 9cc920668c42 sh -c 'exec mysqldump -u root -p"<root_password>" anduin' > ./Anduin.backup.sql
+```
+
 ### Restore a MySQL Database:
 
 ```bash title="Restore a MySQL Database"
