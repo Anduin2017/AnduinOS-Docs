@@ -234,11 +234,6 @@ The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. 
     ```
 
 If you need to return to the graphical interface later, you can switch back to the graphical target with:
-If you need to return to the graphical interface later, you can switch back to the graphical target with:
-
-```bash
-sudo systemctl set-default graphical.target
-```
 
 ```bash
 sudo systemctl set-default graphical.target
