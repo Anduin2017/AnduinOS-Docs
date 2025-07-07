@@ -21,11 +21,27 @@ sudo systemctl isolate multi-user.target
 sudo systemctl stop gdm3.service
 ```
 
+!!! warning "Remember your username and password before switching to multi-user.target"
+
+    You will need to log in again after switching to the multi-user target. Make sure you remember your username and password, or you will be locked out of your system!
+
+    To query the current user name, you can use:
+
+    ```bash
+    whoami
+    ```
+
 If you want to switch back to the graphical mode, you can use the following command:
 
 ```bash
 sudo systemctl start gdm3.service
 sudo systemctl isolate graphical.target
+```
+
+To query current systemd target, you can use:
+
+```bash
+systemctl get-default
 ```
 
 ## Uninstalling the Desktop Environment

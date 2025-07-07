@@ -217,6 +217,33 @@ The open-source Nouveau driver can conflict with NVIDIA’s proprietary driver. 
 
    Your screen will switch to a TTY console. **Log in** with your username and password. (Nothing appears as you type the password—this is normal.)
 
+!!! warning "Remember your username and password before switching to multi-user.target"
+
+    You will need to log in again after switching to the multi-user target. Make sure you remember your username and password, or you will be locked out of your system!
+
+    To query the current target, you can use:
+
+    ```bash
+    systemctl get-default
+    ```
+
+    To query the current user name, you can use:
+
+    ```bash
+    whoami
+    ```
+
+If you need to return to the graphical interface later, you can switch back to the graphical target with:
+If you need to return to the graphical interface later, you can switch back to the graphical target with:
+
+```bash
+sudo systemctl set-default graphical.target
+```
+
+```bash
+sudo systemctl set-default graphical.target
+```
+
 !!! warning "Be Prepared for a Terminal-Only Environment"
 
     Once you move to `multi-user.target`, you lose the graphical interface. If something goes wrong, you will need to troubleshoot via the command line.
