@@ -239,6 +239,12 @@ sudo docker stats --no-stream --format "table {{.Name}}\t{{.Container}}\t{{.CPUP
 sudo docker ps  --filter "health=unhealthy" --format "table {{.ID}}\t{{.Names}}\t{{.Status}}" | sort -k 3 -h
 ```
 
+Or simply list all containers with their health status:
+
+```bash title="List all containers with their health status"
+sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.State}}"
+```
+
 ### Disk Usage
 
 ```bash title="Sort Containers by Disk Usage"
