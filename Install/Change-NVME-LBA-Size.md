@@ -8,6 +8,8 @@ Since we are about to deploy AnduinOS on a machine, and you may have a NVME SSD 
 
 This guide will walk you through changing your NVMe drive to use a 4K (4096 bytes) Logical Block Addressing (LBA) format. **Please note that this procedure will erase all data on the drive.** Make sure to back up any important information beforehand.
 
+It is suggested to execute this step **before installing AnduinOS** and **In the live environment** (e.g., using a live USB). This way, you can ensure the drive is formatted correctly before proceeding with the installation.
+
 ---
 
 ## 1. Install Required Tools
