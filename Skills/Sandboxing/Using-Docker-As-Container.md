@@ -245,6 +245,12 @@ Or simply list all containers with their health status:
 sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.State}}"
 ```
 
+### Start Time
+
+```bash title="List all containers sort by start time"
+sudo docker ps -a --format '{{.ID}}\t{{.Names}}\t{{.Status}}\t{{.CreatedAt}}'  | sort -k4,5
+```
+
 ### Disk Usage
 
 ```bash title="Sort Containers by Disk Usage"
