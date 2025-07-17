@@ -248,7 +248,7 @@ sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.State}}"
 ### Start Time
 
 ```bash title="List all containers sort by start time"
-sudo docker ps -a --format '{{.ID}}\t{{.Names}}\t{{.Status}}\t{{.CreatedAt}}'  | sort -k4,5
+sudo docker ps -aq | xargs -n1 sudo docker inspect --format '{{.Id}} {{.Name}} {{.State.StartedAt}}'   | sort -k3  | awk '{print $3, $2, $1}'
 ```
 
 ### Disk Usage
