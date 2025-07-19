@@ -3,6 +3,7 @@
 ## v1.3.4 (Under development)
 
 * Added `japanese` keyboard layout for `ja_JP` users.
+* Improved multiple display support by embedding the default layout configuration in the `dash-to-panel` extension. Show all pinned apps on all displays.
 
 ## v1.3.3
 
@@ -111,11 +112,12 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
-## v1.1.7
+## v1.1.7 (Under development)
 
 * Added `japanese` keyboard layout for `ja_JP` users.
+* Improved multiple display support by embedding the default layout configuration in the `dash-to-panel` extension. Show all pinned apps on all displays.
 
-## v1.1.6 (Under development)
+## v1.1.6
 
 * Fixed an accessibility issue that caused the screen reader unable to read the text.
 * Added `librime-plugin-lua` for `ibus-rime` users to support Lua scripts. This only affects `zh_CN` by default.
