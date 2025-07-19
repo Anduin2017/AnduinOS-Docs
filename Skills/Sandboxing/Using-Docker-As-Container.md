@@ -245,6 +245,12 @@ Or simply list all containers with their health status:
 sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.State}}"
 ```
 
+Or if you are using Docker Swarm, you can list services with unhealthy replicas:
+
+```bash title="List docker swarm services with unhealthy replicas"
+sudo docker service ls --format '{{.Name}} {{.Replicas}}' | awk '{ split($2, a, "/"); if (a[1] != a[2]) print $0 }'
+```
+
 ### Start Time
 
 ```bash title="List all containers sort by start time"
