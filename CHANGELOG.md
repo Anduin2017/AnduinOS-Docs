@@ -4,6 +4,8 @@
 
 * Added `japanese` keyboard layout for `ja_JP` users.
 * Improved multiple display support by embedding the default layout configuration in the `dash-to-panel` extension. Show all pinned apps on all displays.
+* Changed default mirror for Chinese from `tsing` to `ustc` for better stability.
+* Bumped the `the-sof` firmware to `v2025.05` version to support more modern Intel audio devices and kernel versions. (This won't be shipped via upgrading and only available in the ISO image)
 
 ## v1.3.3
 
@@ -116,6 +118,7 @@
 
 * Added `japanese` keyboard layout for `ja_JP` users.
 * Improved multiple display support by embedding the default layout configuration in the `dash-to-panel` extension. Show all pinned apps on all displays.
+* Changed default mirror for Chinese from `tsing` to `ustc` for better stability.
 
 ## v1.1.6
 
