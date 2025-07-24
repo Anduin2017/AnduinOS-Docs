@@ -331,3 +331,4 @@ nav:
 
   - Virtualization:
     - Windows: ./Virtualization/Windows.md
+    - Boot Physical Disk: ./Virtualization/Boot-Physical-Disk.md
