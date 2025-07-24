@@ -59,6 +59,12 @@ Or you can directly create a new qcow2 image from the physical disk:
 qemu-img convert -f raw -O qcow2 /dev/sdX /path/to/virtual-disk.qcow2
 ```
 
+On the other way, you can also burn a qcow2 image back to a physical disk:
+
+```bash title="Convert qcow2 to raw disk"
+qemu-img convert -f qcow2 -O raw /path/to/virtual-disk.qcow2 /dev/sdX
+```
+
 ## Convert a disk to\from VMDK format
 
 To convert a disk image to or from VMDK format, you can also use the `qemu-img` command. This is useful if you need to work with VMware products.
