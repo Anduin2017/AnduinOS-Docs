@@ -1,12 +1,14 @@
 # AnduinOS Changelog
 
-## v1.3.4 (Under development)
+## v1.3.4
 
 * Added `japanese` keyboard layout for `ja_JP` users.
 * Improved multiple display support by embedding the default layout configuration in the `dash-to-panel` extension. Show all pinned apps on all displays.
 * Fixed an issue that `Super + Shift + S` may not able to paste the screenshot to the clipboard.
-* Changed default mirror for Chinese from `tsing` to `ustc` for better stability.
 * Bumped the `the-sof` firmware to `v2025.05` version to support more modern Intel audio devices and kernel versions. (This won't be shipped via upgrading and only available in the ISO image)
+* Switched default source mirror to `https://mirrors.huaweicloud.com/ubuntu/` for `zh_CN` users.
+* Fixed an issue that `Super + U` shortcut may toggle the network stats successfully.
+* Adjusted the plugin `clipboard-indicator` to not cache images for better performance.
 
 ## v1.3.3
 
@@ -115,12 +117,14 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
-## v1.1.7 (Under development)
+## v1.1.7
 
 * Added `japanese` keyboard layout for `ja_JP` users.
 * Improved multiple display support by embedding the default layout configuration in the `dash-to-panel` extension. Show all pinned apps on all displays.
 * Fixed an issue that `Super + Shift + S` may not able to paste the screenshot to the clipboard.
-* Changed default mirror for Chinese from `tsing` to `ustc` for better stability.
+* Switched default source mirror to `https://mirrors.huaweicloud.com/ubuntu/` for `zh_CN` users.
+* Fixed an issue that `Super + U` shortcut may toggle the network stats successfully.
+* Adjusted the plugin `clipboard-indicator` to not cache images for better performance.
 
 ## v1.1.6
 
