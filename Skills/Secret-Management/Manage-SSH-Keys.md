@@ -108,3 +108,85 @@ ssh -o "ProxyCommand=nc -X connect -x <proxy_host>:<proxy_port> %h %p" <user>@<h
 ```
 
 Replace `<proxy_host>` and `<proxy_port>` with the hostname and port of the proxy server, `<user>` with your username, and `<host>` with the IP address or domain name of the server.
+
+## Renew SSH Keys
+
+This guide walks you through securely rotating your SSH key pair across remote servers.
+
+### 1. Generate a New SSH Key Pair
+
+```bash title="Generate a new SSH key pair with ed25519 algorithm"
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_new -C "renewed-key"
+```
+
+> `ed25519` is fast, compact, and secure. Use a meaningful comment for traceability.
+
+### 2. Deploy the New Public Key to Servers
+
+Run for each server:
+
+```bash title="Copy the new public key to the remote server"
+ssh-copy-id -i ~/.ssh/id_ed25519_new.pub user@server_ip
+```
+
+Or manually:
+
+```bash title="Manually append the new public key to authorized_keys"
+cat ~/.ssh/id_ed25519_new.pub | ssh user@server_ip 'cat >> ~/.ssh/authorized_keys'
+```
+
+### 3. Verify New Key Works
+
+```bash title="Test the new SSH key"
+ssh -i ~/.ssh/id_ed25519_new user@server_ip
+```
+
+If login succeeds, you're safe to remove the old key.
+
+### 4. Make the New Key Default (Optional)
+
+```bash title="Rename the new key to default SSH key names"
+# Move away the old keys
+mv ~/.ssh/id_rsa ~/.ssh/id_rsa.old
+mv ~/.ssh/id_rsa.pub ~/.ssh/id_rsa.pub.old
+# Rename the new key to default names
+mv ~/.ssh/id_ed25519_new ~/.ssh/id_rsa
+mv ~/.ssh/id_ed25519_new.pub ~/.ssh/id_rsa.pub
+# chmod
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+```
+
+> This lets you use `ssh user@host` without `-i`.
+
+### 5. Remove Old Keys from Remote Servers
+
+If you're sure the **new key is the last line**, run:
+
+```bash title="Remove the old key from authorized_keys"
+ssh user@server_ip "tail -n 1 ~/.ssh/authorized_keys > ~/.ssh/authorized_keys.tmp && mv ~/.ssh/authorized_keys.tmp ~/.ssh/authorized_keys"
+```
+
+Or, safer with a backup:
+
+```bash title="Backup and remove old key from authorized_keys"
+ssh user@server_ip "cp ~/.ssh/authorized_keys ~/.ssh/authorized_keys.bak && tail -n 1 ~/.ssh/authorized_keys > ~/.ssh/authorized_keys.tmp && mv ~/.ssh/authorized_keys.tmp ~/.ssh/authorized_keys"
+```
+
+### 6. Test Final Login
+
+```bash title="Final test to ensure the new key works"
+ssh user@server_ip
+```
+
+If it works, your new key is fully in use.
+
+### 7. Clean Up (Optional)
+
+If everything works:
+
+```bash title="Remove the old private key from local machine"
+rm ~/.ssh/id_rsa.old
+```
+
+Or move it to a secure archive location.
