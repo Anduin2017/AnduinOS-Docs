@@ -1,5 +1,10 @@
 # AnduinOS Changelog
 
+## v1.3.5 (Under development)
+
+* Fixed an issue that the logo in the gnome control center may not be displayed correctly.
+* Fixed an issue that the `Super + I` shortcut may not open settings successfully.
+
 ## v1.3.4
 
 * Added `japanese` keyboard layout for `ja_JP` users.
@@ -116,6 +121,11 @@
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.8 (Under development)
+
+* Fixed an issue that the logo in the gnome control center may not be displayed correctly.
+* Fixed an issue that the `Super + I` shortcut may not open settings successfully.
 
 ## v1.1.7
 
