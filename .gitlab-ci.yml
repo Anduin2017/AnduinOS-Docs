@@ -1,8 +1,35 @@
 stages:
   - deploy
 
-deploy_docker:
+deploy_docker_registry:
   stage: deploy
   script:
+    - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
+    - echo building image hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG
     - docker build . -t hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
-    - docker push hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+    - echo "Logging in to Docker Registry hub.aiursoft.cn..."
+    - echo "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.cn -u "$LOCAL_DOCKER_USERNAME" --password-stdin
+    - docker save hub.aiursoft.cn/${CI_PROJECT_NAMESPACE}/$CI_PROJECT_NAME:$TAG -o temp.tar
+    - regctl image import hub.aiursoft.cn/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG temp.tar
+    - rm ./temp.tar
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      exists:
+      - Dockerfile
+
+deploy_docker_hub:
+  stage: deploy
+  needs: 
+    - deploy_docker_registry
+  script:
+    - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then NAMESPACE="anduin2019"; else NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
+    - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
+    - echo building image $NAMESPACE/$CI_PROJECT_NAME:$TAG
+    - docker build . -t $NAMESPACE/$CI_PROJECT_NAME:$TAG
+    - echo "Logging in to Docker Hub..."
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker push $NAMESPACE/$CI_PROJECT_NAME:$TAG
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      exists:
+      - Dockerfile
