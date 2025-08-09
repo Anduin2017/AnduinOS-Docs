@@ -262,8 +262,6 @@ int main() {
 
 If you insist on using Docker Desktop, you can run:
 
-<!-- The link needs to be updated regularly. -->
-
 ```bash
 cd ~
 wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb -O docker-desktop-amd64.deb

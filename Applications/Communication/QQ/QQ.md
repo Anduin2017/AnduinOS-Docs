@@ -7,7 +7,7 @@ To Install QQ on AnduinOS, first download a deb package form [here](https://im.q
 <!-- The link needs to be updated regularly. -->
 
 ```bash
-wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.15_250110_amd64_01.deb -O qq.deb
+wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.18_250724_amd64_01.deb -O qq.deb
 sudo apt install ./qq.deb -y
 rm qq.deb
 ```

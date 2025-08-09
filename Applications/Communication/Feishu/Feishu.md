@@ -4,8 +4,6 @@ ByteDance Feishu is a communication and collaboration tool. It is a competitor t
 
 To Install Feishu on AnduinOS, first download a deb package form [here](https://www.feishu.cn/download). Then you can install it with `apt`:
 
-<!-- The link needs to be updated regularly. -->
-
 ```bash
 api=https://www.feishu.cn/api/package_info?platform=10
 download_link=$(curl -s $api | jq -r '.data.download_link')

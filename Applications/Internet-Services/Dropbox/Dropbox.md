@@ -7,7 +7,7 @@ To install Dropbox on AnduinOS, you can run:
 <!-- The link needs to be updated regularly. -->
 
 ```bash
-url=https://linux.dropbox.com/packages/ubuntu/dropbox_2024.04.17_amd64.deb
+url=https://linux.dropbox.com/packages/ubuntu/dropbox_2025.05.20_amd64.deb
 wget $url -O dropbox.deb
 sudo apt install ./dropbox.deb -y
 rm dropbox.deb

@@ -18,8 +18,6 @@ sudo apt install google-chrome-stable
 
 Or you can install the deb file of Google Chrome:
 
-<!-- The link needs to be updated regularly. -->
-
 ```bash
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O google-chrome.deb
 sudo apt install ./google-chrome.deb -y
