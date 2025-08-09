@@ -167,6 +167,7 @@ nav:
     - File System Management:
       - Mounting remote folders: ./Skills/File-System-Management/Mounting-Remote-Folder.md
       - Use dd to manage disks: ./Skills/File-System-Management/Use-dd-Manage-Disk.md
+      - Use ZFS: ./Skills/File-System-Management/Use-ZFS.md
       - Make a RAM disk: ./Skills/File-System-Management/Make-A-RAM-Disk.md
       - Make a Bcache disk: ./Skills/File-System-Management/Make-A-Bcache-Disk.md
       - Make a RAID cluster: ./Skills/File-System-Management/Make-A-RAID-Cluster.md
