@@ -135,8 +135,6 @@ To create and mount:
 # zfs set mountpoint=/test pool/set
 ```
 
-![file](/image/img-f7897c52-d3ae-448a-99b1-11facec4e6d8.png)
-
 To delete a set:
 
 ```bash title="Delete a ZFS set"
@@ -164,8 +162,6 @@ Or set level:
 ```
 
 Use `zpool list` to check the dedup ratio.
-
-![file](/image/img-18fae3eb-a680-487d-9eb0-e25988e21315.png)
 
 You may also want to check the total size may change:
 
@@ -227,8 +223,6 @@ Rollback is **Dangerous**! It may delete the status between current and the snap
 ```
 
 That will clone the snapshot as a dataset.
-
-![file](/image/img-3a9faa50-862e-47c3-be2c-ce7b2e9e6d37.png)
 
 Delete snapshot:
 
