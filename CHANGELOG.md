@@ -12,6 +12,7 @@
 * Fixed an issue that the logo in the gnome control center may not be displayed correctly.
 * Fixed an issue that the `Super + I` shortcut may not open settings successfully.
 * Added `libcanberra-pulse` and `libcanberra0` to the default app list to support audio notifications.
+* Fixed an issue that due to race condition of `blur-my-shell` and `dash-to-panel` extensions, the taskbar may not be displayed correctly after login.
 
 ## v1.3.4
 
@@ -135,6 +136,7 @@
 * Fixed an issue that the logo in the gnome control center may not be displayed correctly.
 * Fixed an issue that the `Super + I` shortcut may not open settings successfully.
 * Added `libcanberra-pulse` and `libcanberra0` to the default app list to support audio notifications.
+* Fixed an issue that due to race condition of `blur-my-shell` and `dash-to-panel` extensions, the taskbar may not be displayed correctly after login.
 
 ## v1.1.7
 
