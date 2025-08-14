@@ -7,7 +7,7 @@ To install WPS Office on AnduinOS, you can run:
 <!-- The link needs to be updated regularly. -->
 
 ```bash
-wget https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11711_amd64.deb -O wps.deb
+wget https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11723_amd64.deb -O wps.deb
 sudo apt install ./wps.deb -y
 rm wps.deb
 ```
