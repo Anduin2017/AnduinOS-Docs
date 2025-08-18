@@ -12,6 +12,7 @@
 * Fixed an issue that the logo in the gnome control center may not be displayed correctly.
 * Fixed an issue that the `Super + I` shortcut may not open settings successfully.
 * Added `libcanberra-pulse` and `libcanberra0` to the default app list to support audio notifications.
+* Temporarily pin the kernel version to `6.14.0-27-generic` because `6.14.0-28-generic` has a bug that causes the `losetup` to throw `Invalid argument` error when mounting a squashfs in initramfs.
 
 ## v1.3.4
 
