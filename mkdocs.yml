@@ -122,6 +122,7 @@ nav:
       - Select best apt source: ./Install/Select-Best-Apt-Source.md
       - Install Drivers: ./Install/Install-Drivers.md
       - Install NVIDIA Driver: ./Install/Install-Nvidia-Drivers.md
+      - Enable Firewall: ./Install/Enable-Firewall.md
       - Manage Swap: ./Install/Manage-Swap.md
       - Mount second disk: ./Install/Mount-Second-Disk.md
       - Install input method: ./Install/Install-Input-Method.md
