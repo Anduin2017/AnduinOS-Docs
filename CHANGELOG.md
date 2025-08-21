@@ -1,5 +1,13 @@
 # AnduinOS Changelog
 
+To get the latest update, you can use the following command:
+
+```bash title="Update AnduinOS"
+sudo do_anduinos_upgrade
+```
+
+Please note: `do_anduinos_upgrade` will only update in a forked version of AnduinOS. Please read more about versions upgrade [here](./VERSIONS.md).
+
 ## v1.4.0 (Forked from 1.3.0, Under development)
 
 * Changed the base system from **Plucky (Ubuntu 25.04)** to **Questing (Ubuntu 25.10)**.
@@ -7,7 +15,7 @@
 * Added 3 new gnome-shell extensions: to automatically switch the accent color based on gnome settings.
 * Added `AnduinOS To Go` option in the boot menu to allow users to run AnduinOS with persistent storage on a USB drive.
 
-## v1.3.5 (Under development)
+## v1.3.5
 
 * Fixed an issue that the logo in the gnome control center may not be displayed correctly.
 * Fixed an issue that the `Super + I` shortcut may not open settings successfully.
@@ -132,7 +140,7 @@
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
-## v1.1.8 (Under development)
+## v1.1.8
 
 * Fixed an issue that the logo in the gnome control center may not be displayed correctly.
 * Fixed an issue that the `Super + I` shortcut may not open settings successfully.
