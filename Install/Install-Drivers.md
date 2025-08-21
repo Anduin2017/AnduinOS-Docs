@@ -75,14 +75,14 @@ For example:
 # Please refer to the official Intel Graphics Installer for Linux guide for the latest instructions
 sudo apt-get update
 
-# Add the intel-graphics PPA for 24.10
+# Add the intel-graphics PPA
 sudo add-apt-repository -y ppa:kobuk-team/intel-graphics
 
 # Install the compute-related packages
 sudo apt-get install -y libze-intel-gpu1 libze1 intel-ocloc intel-opencl-icd clinfo intel-gsc
 
 # Install the media-related packages
-sudo apt-get install -y intel-media-va-driver-non-free libmfx1 libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo
+sudo apt-get install -y intel-media-va-driver-non-free libmfx-gen1 libvpl2 libvpl-tools libva-glx2 va-driver-all vainfo
 ```
 
 ## Intel NPU Driver
