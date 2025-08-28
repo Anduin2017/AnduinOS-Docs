@@ -15,6 +15,10 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Added 3 new gnome-shell extensions: to automatically switch the accent color based on gnome settings.
 * Added `AnduinOS To Go` option in the boot menu to allow users to run AnduinOS with persistent storage on a USB drive.
 
+## v1.3.6
+
+* Removed the `gnome-maps` from the default app list to reduce the size of the ISO file. (Won't affect upgrading)
+
 ## v1.3.5
 
 * Fixed an issue that the logo in the gnome control center may not be displayed correctly.
@@ -139,6 +143,10 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.9
+
+* Removed the `gnome-maps` from the default app list to reduce the size of the ISO file. (Won't affect upgrading)
 
 ## v1.1.8
 
