@@ -249,7 +249,7 @@ main() {
     # sudo apt modernize-sources
     if [[ $apt_major_version -ge 3 && ( "$format" == "old" || "$format" == "none" ) ]]; then
         echo "APT version is 3.0 or higher, converting to new format"
-        sudo apt modernize-sources
+        sudo apt modernize-sources -y
         echo "APT sources converted to new format"
     fi
 
