@@ -19,6 +19,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 
 * Removed the `gnome-maps` from the default app list to reduce the size of the ISO file. (Won't affect upgrading)
 * Use new upgrade endpoint `https://www.anduinos.com/upgrade/1.3` to improve the stability of upgrades.
+* Bump version for `ArcMenu` to at least v67 to support both `Super L (Left)` and `Super R (Right)` keys to open the start menu.
 
 ## v1.3.5
 
@@ -149,6 +150,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 
 * Removed the `gnome-maps` from the default app list to reduce the size of the ISO file. (Won't affect upgrading)
 * Use new upgrade endpoint `https://www.anduinos.com/upgrade/1.1` to improve the stability of upgrades.
+* Bump version for `ArcMenu` to at least v67 to support both `Super L (Left)` and `Super R (Right)` keys to open the start menu.
 
 ## v1.1.8
 
