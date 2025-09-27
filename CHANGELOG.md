@@ -15,13 +15,18 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Added 3 new gnome-shell extensions: to automatically switch the accent color based on gnome settings.
 * Added `AnduinOS To Go` option in the boot menu to allow users to run AnduinOS with persistent storage on a USB drive.
 
+## v1.3.7
+
+* Added `printer-driver-all` package to the default app list to support more printers.
+* No longer locks the version number to `6.14.0-27-generic` for Linux has fixed the issue that `losetup` may throw `Invalid argument` error when mounting a squashfs in initramfs.
+
 ## v1.3.6
 
 * Removed the `gnome-maps` from the default app list to reduce the size of the ISO file. (Won't affect upgrading)
 * Use new upgrade endpoint `https://www.anduinos.com/upgrade/1.3` to improve the stability of upgrades.
 * Bump version for `ArcMenu` to at least v67 to support both `Super L (Left)` and `Super R (Right)` keys to open the start menu.
 * Fixed an issue that `deskmon` service may cause crash when graphical session was not started yet.
-* Added `printer-driver-all` package to the default app list to support more printers.
+* ~~Added `printer-driver-all` package to the default app list to support more printers.~~ (This change was not taking effectively due to a mistake that ignored all recommended packages. Will be fixed in the next version)
 
 ## v1.3.5
 
@@ -148,13 +153,17 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
 
+## v1.1.10
+
+* Added `printer-driver-all` package to the default app list to support more printers.
+
 ## v1.1.9
 
 * Removed the `gnome-maps` from the default app list to reduce the size of the ISO file. (Won't affect upgrading)
 * Use new upgrade endpoint `https://www.anduinos.com/upgrade/1.1` to improve the stability of upgrades.
 * Bump version for `ArcMenu` to at least v67.
 * Fixed an issue that `deskmon` service may cause crash when graphical session was not started yet.
-* Added `printer-driver-all` package to the default app list to support more printers.
+* ~~Added `printer-driver-all` package to the default app list to support more printers.~~ (This change was not taking effectively due to a mistake that ignored all recommended packages. Will be fixed in the next version)
 
 ## v1.1.8
 
