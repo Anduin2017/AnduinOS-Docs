@@ -22,6 +22,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Bump version for `ArcMenu` to at least v67 to support both `Super L (Left)` and `Super R (Right)` keys to open the start menu.
 * Fixed an issue that `deskmon` service may cause crash when graphical session was not started yet.
 * Added `printer-driver-all` package to the default app list to support more printers.
+* Removed a hack for file `/usr/share/gnome-shell/extensions/blur-my-shell@aunetx/components/panel.js` because it was upstreamed to source repo.
 
 ## v1.3.5
 
@@ -155,6 +156,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Bump version for `ArcMenu` to at least v67.
 * Fixed an issue that `deskmon` service may cause crash when graphical session was not started yet.
 * Added `printer-driver-all` package to the default app list to support more printers.
+* Removed a hack for file `/usr/share/gnome-shell/extensions/blur-my-shell@aunetx/components/panel.js` because it was upstreamed to source repo.
 
 ## v1.1.8
 
