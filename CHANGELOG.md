@@ -164,12 +164,8 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Use new upgrade endpoint `https://www.anduinos.com/upgrade/1.1` to improve the stability of upgrades.
 * Bump version for `ArcMenu` to at least v67.
 * Fixed an issue that `deskmon` service may cause crash when graphical session was not started yet.
-<<<<<<< HEAD
 * ~~Added `printer-driver-all` package to the default app list to support more printers.~~ (This change was not taking effectively due to a mistake that ignored all recommended packages. Will be fixed in the next version)
-=======
-* Added `printer-driver-all` package to the default app list to support more printers.
 * Removed a hack for file `/usr/share/gnome-shell/extensions/blur-my-shell@aunetx/components/panel.js` because it was upstreamed to source repo.
->>>>>>> 22f7fec21e765bc25dc0d92719661a3178aa634a
 
 ## v1.1.8
 
