@@ -2,6 +2,16 @@
 
 Opera is a web browser developed by Opera Software. The latest version is available for Microsoft Windows, OS X, and Linux operating systems.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.opera.Opera
+```
+
+## System install
+
 To install Opera on AnduinOS, you can run the following commands:
 
 ```bash

@@ -6,6 +6,16 @@
 
 Virt Manager is a graphical tool for managing virtual machines. It is based on libvirt and supports KVM, QEMU, Xen, and LXC. It is written in Python and uses GTK+ for the graphical user interface.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.virt_manager.virt-manager
+```
+
+## System install
+
 To install Virt Manager on AnduinOS, you can run:
 
 ```bash title="Install Virt Manager"

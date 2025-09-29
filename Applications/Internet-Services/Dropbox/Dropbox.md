@@ -2,6 +2,16 @@
 
 Dropbox is a file hosting service that offers cloud storage, file synchronization, personal cloud, and client software.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.dropbox.Client
+```
+
+## System install
+
 To install Dropbox on AnduinOS, you can run:
 
 <!-- The link needs to be updated regularly. -->

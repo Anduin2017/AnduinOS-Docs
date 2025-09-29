@@ -6,6 +6,16 @@
 
 LibreOffice is a free and open-source office suite, a project of The Document Foundation. It was forked from OpenOffice.org in 2010, which was an open-sourced version of the earlier StarOffice. The LibreOffice suite comprises programs for word processing, creating and editing of spreadsheets, slideshows, diagrams and drawings, working with databases, and composing mathematical formulae. It is available in 110 languages.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.libreoffice.LibreOffice
+```
+
+## System install
+
 To install LibreOffice on AnduinOS, you can run:
 
 ```bash

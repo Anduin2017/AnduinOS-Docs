@@ -6,6 +6,16 @@
 
 Telegram is a messaging app with a focus on speed and security, it’s super-fast, simple and free. You can use Telegram on all your devices at the same time — your messages sync seamlessly across any number of your phones, tablets or computers.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.telegram.desktop
+```
+
+## System install
+
 To install Telegram on AnduinOS, you can run the following commands in the terminal:
 
 ```bash

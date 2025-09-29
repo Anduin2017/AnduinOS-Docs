@@ -6,7 +6,15 @@ mpv is a free and open-source media player software that is available for all ma
 
     mpv is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
 
-## Install
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub io.mpv.Mpv
+```
+
+## System install
 
 To install mpv on Ubuntu, run the following command:
 

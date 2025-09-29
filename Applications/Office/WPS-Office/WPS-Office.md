@@ -2,6 +2,16 @@
 
 WPS Office is a suite of office software developed by Kingsoft Office. It is available for Windows, Linux, Android, and iOS.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.wps.Office
+```
+
+## System install
+
 To install WPS Office on AnduinOS, you can run:
 
 <!-- The link needs to be updated regularly. -->

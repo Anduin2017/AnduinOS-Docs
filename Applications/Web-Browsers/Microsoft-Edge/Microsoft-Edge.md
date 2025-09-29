@@ -2,6 +2,16 @@
 
 Microsoft Edge is a web browser developed by Microsoft. It was first released for Windows 10 and Xbox One in 2015, and later for Android and iOS in 2017. It is the default web browser on Windows 10 and is designed to be fast, secure, and easy to use.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.microsoft.Edge
+```
+
+## System install
+
 To install Microsoft Edge on AnduinOS, you can run:
 
 <!-- The link needs to be updated regularly. -->

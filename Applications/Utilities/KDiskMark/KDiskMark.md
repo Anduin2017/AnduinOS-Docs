@@ -6,6 +6,16 @@
 
 KDiskMark is a simple utility to test the performance of a disk drive. It uses the same test engine as KFio, but simplifies the process of creating a test. It is built using the KDE Frameworks and is available for Linux and BSD.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub io.github.jonmagon.kdiskmark
+```
+
+## System install
+
 To install KDiskMark, open a terminal and run the following command:
 
 ```bash

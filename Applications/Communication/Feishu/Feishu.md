@@ -1,5 +1,15 @@
 # Feishu
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub cn.feishu.Feishu
+```
+
+## System install
+
 ByteDance Feishu is a communication and collaboration tool. It is a competitor to Slack and Microsoft Teams.
 
 To Install Feishu on AnduinOS, first download a deb package form [here](https://www.feishu.cn/download). Then you can install it with `apt`:

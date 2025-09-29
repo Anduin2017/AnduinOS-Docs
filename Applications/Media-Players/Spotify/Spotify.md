@@ -6,6 +6,16 @@
 
 Spotify is a digital music streaming service that gives you access to millions of songs, podcasts and videos from artists all over the world.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.spotify.Client
+```
+
+## System install
+
 To install Spotify on AnduinOS, you can run:
 
 ```bash

@@ -4,6 +4,18 @@ Yes-Play-Music is a beautiful third-party Netease Cloud Music client maintained 
 
 To Install Yes-Play-Music on AnduinOS, first download a deb package from [here](https://github.com/qier222/YesPlayMusic/releases). Then you can install it with `apt`:
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub io.github.qier222.YesPlayMusic
+```
+
+## System install
+
+To install Yes-Play-Music on AnduinOS, run the following commands:
+
 <!-- The link needs to be updated regularly. -->
 
 ```bash

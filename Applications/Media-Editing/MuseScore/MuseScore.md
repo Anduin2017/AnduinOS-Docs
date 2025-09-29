@@ -6,6 +6,16 @@
 
 MuseScore is a free and open-source music notation software. It is used to create, edit, and print sheet music.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.musescore.MuseScore
+```
+
+## System install
+
 To install MuseScore on AnduinOS, run the following command:
 
 ```bash

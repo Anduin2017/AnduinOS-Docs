@@ -6,6 +6,16 @@
 
 Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring. It is also customizable, so users can change the editor's theme, keyboard shortcuts, and preferences.
 
+## Flatpak install (Not recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.visualstudio.code
+```
+
+## System install
+
 To install Visual Studio Code on AnduinOS, you can run:
 
 ```bash title="Install Visual Studio Code"

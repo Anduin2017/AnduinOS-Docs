@@ -2,6 +2,16 @@
 
 Tencent QQ (Chinese: 腾讯QQ), also known as QQ, is an instant messaging software service and web portal developed by the Chinese technology company Tencent. QQ offers services that provide online social games, music, shopping, microblogging, movies, and group and voice chat software.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.qq.QQ
+```
+
+## System install
+
 To Install QQ on AnduinOS, first download a deb package form [here](https://im.qq.com/linuxqq/index.shtml). Then you can install it with `apt`:
 
 <!-- The link needs to be updated regularly. -->

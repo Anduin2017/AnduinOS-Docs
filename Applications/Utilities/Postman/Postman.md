@@ -2,6 +2,16 @@
 
 Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs—faster.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.getpostman.Postman
+```
+
+## System install
+
 To install Postman on AnduinOS, you can run:
 
 ```bash

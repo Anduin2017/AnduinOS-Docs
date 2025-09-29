@@ -6,6 +6,16 @@
 
 Signal is a cross-platform encrypted messaging service. It is available for Android, iOS, Windows, macOS, and Linux. Signal uses end-to-end encryption to keep your conversations private and secure.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.signal.Signal
+```
+
+## System install
+
 To install Signal on AnduinOS, you can use the following command:
 
 ```bash title="Install Signal"

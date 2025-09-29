@@ -2,6 +2,16 @@
 
 Mission Center is a tool that allows you to monitor your CPU, Memory, Disk, Network and GPU usage.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub io.missioncenter.MissionCenter
+```
+
+## System install
+
 To install Mission Center on AnduinOS, you can run:
 
 ```bash

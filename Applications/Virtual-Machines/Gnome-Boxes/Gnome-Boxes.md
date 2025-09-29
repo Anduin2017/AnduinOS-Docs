@@ -6,6 +6,16 @@
 
 Gnome Boxes is a simple application that allows you to create and manage virtual machines. It is a front-end for QEMU and KVM, and it is part of the GNOME project.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.gnome.Boxes
+```
+
+## System install
+
 To install Gnome Boxes on AnduinOS, you can run:
 
 ```bash

@@ -6,6 +6,16 @@
 
 OBS Studio is a free and open-source software for video recording and live streaming. It is available on Windows, macOS, and Linux. OBS Studio is widely used by content creators on platforms like YouTube, Twitch, and Facebook Gaming.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.obsproject.Studio
+```
+
+## System install
+
 To install OBS Studio on AnduinOS, you can run:
 
 ```bash

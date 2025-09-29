@@ -2,6 +2,16 @@
 
 OnlyOffice is a free and open-source office suite that allows you to create, edit, and collaborate on documents, spreadsheets, and presentations. It is available for Windows, macOS, and Linux.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.onlyoffice.desktopeditors
+```
+
+## System install
+
 To install OnlyOffice on Anduin, you can use the following command:
 
 ```bash title="Install OnlyOffice"

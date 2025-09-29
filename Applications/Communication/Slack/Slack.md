@@ -2,6 +2,16 @@
 
 Slack is a messaging app for teams. It brings all your team's communication and files in one place, where they're instantly searchable and available wherever you go.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.slack.Slack
+```
+
+## System install
+
 To install Slack on AnduinOS, you can run the following commands in the terminal:
 
 <!-- The link needs to be updated regularly. -->

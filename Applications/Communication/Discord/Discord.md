@@ -2,6 +2,16 @@
 
 Discord is a free voice, video, and text chat app for gamers. It is available on Windows, macOS, iOS, Android, and Linux.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.discordapp.Discord
+```
+
+## System install
+
 To install Discord on AnduinOS, you can run:
 
 ```bash

@@ -6,6 +6,16 @@
 
 Google Chrome is a cross-platform web browser developed by Google. It was first released in 2008 for Microsoft Windows and later ported to Linux, macOS, iOS, and Android. The browser is based on the open-source Chromium project, which is also developed by Google.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.google.Chrome
+```
+
+## System install
+
 To install Google Chrome on AnduinOS, you can run:
 
 ```bash title="Install Google Chrome"

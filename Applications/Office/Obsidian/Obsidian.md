@@ -2,6 +2,16 @@
 
 Obsidian is a powerful knowledge base that works on top of a local folder of plain text Markdown files.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub md.obsidian.Obsidian
+```
+
+## System install
+
 To install Obsidian on AnduinOS, follow these steps:
 
 ```bash title="Install Obsidian"

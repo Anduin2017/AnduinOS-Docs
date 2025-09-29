@@ -6,6 +6,16 @@
 
 Krita is a free and open-source raster graphics editor designed primarily for digital painting and 2D animation. It runs on Windows, macOS, and Linux. Krita is widely used by artists, illustrators, and animators.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.kde.krita
+```
+
+## System install
+
 To install Krita on AnduinOS, you can run:
 
 ```bash

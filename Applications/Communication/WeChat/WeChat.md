@@ -2,6 +2,16 @@
 
 WeChat is a Chinese multi-purpose messaging, social media and mobile payment app developed by Tencent.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub com.tencent.WeChat
+```
+
+## System install
+
 To Install WeChat on AnduinOS, you can run:
 
 ```bash

@@ -6,6 +6,16 @@
 
 Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.mozilla.Thunderbird
+```
+
+## System install
+
 To install Thunderbird on AnduinOS, you can run the following commands:
 
 ```bash

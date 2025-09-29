@@ -6,6 +6,16 @@
 
 VLC Media Player is a free and open-source media player that can play most multimedia files as well as DVDs, audio CDs, VCDs, and various streaming protocols.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.videolan.VLC
+```
+
+## System install
+
 To install VLC Media Player on AnduinOS, you can run:
 
 ```bash

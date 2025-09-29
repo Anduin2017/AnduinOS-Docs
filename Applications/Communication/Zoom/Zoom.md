@@ -2,6 +2,16 @@
 
 Zoom is a video conferencing software that allows you to host and join video calls. It is widely used for remote work, online classes, and virtual meetings. Zoom offers features such as screen sharing, recording, and chat, making it a versatile tool for communication and collaboration.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub us.zoom.Zoom
+```
+
+## System install
+
 To install Zoom on AnduinOS, you can run the following commands in the terminal:
 
 ```bash

@@ -6,6 +6,16 @@
 
 qBittorrent is a free, open-source, and cross-platform BitTorrent client. It is a lightweight and easy-to-use application that allows you to download and share files over the BitTorrent network. qBittorrent is available for Windows, macOS, and Linux operating systems.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.qbittorrent.qBittorrent
+```
+
+## System install
+
 To install qBittorrent on AnduinOS, you can use the following command:
 
 ```bash

@@ -8,6 +8,18 @@ Firefox is a free and open-source web browser developed by the Mozilla Foundatio
 
 By default, AnduinOS is shipped with Firefox as the default web browser.
 
+You can still install Firefox via Flatpak, but it is not recommended since the system version is better integrated with AnduinOS.
+
+## Flatpak install (Not recommended)
+
+You can install Firefox via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub org.mozilla.firefox
+```
+
+## System install
+
 However, if you want to install Firefox, you can do so by running the following command:
 
 ```bash title="Install Firefox"

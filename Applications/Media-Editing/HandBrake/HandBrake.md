@@ -6,6 +6,16 @@
 
 HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs. It is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.
 
+## Flatpak install (Recommended)
+
+You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+
+```bash
+flatpak install flathub fr.handbrake.ghb
+```
+
+## System install
+
 To install HandBrake on AnduinOS, you can run:
 
 ```bash title="Install HandBrake"
