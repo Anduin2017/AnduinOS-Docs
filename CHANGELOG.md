@@ -19,6 +19,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 
 * Added `printer-driver-all` package to the default app list to support more printers.
 * No longer locks the version number to `6.14.0-27-generic` for Linux has fixed the issue that `losetup` may throw `Invalid argument` error when mounting a squashfs in initramfs.
+* Bump all Ubuntu packages to latest.
 
 ## v1.3.6
 
@@ -157,6 +158,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 ## v1.1.10
 
 * Added `printer-driver-all` package to the default app list to support more printers.
+* Bump all Ubuntu packages to latest.
 
 ## v1.1.9
 
