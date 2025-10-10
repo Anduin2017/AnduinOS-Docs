@@ -16,6 +16,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Added `AnduinOS To Go` option in the boot menu to allow users to run AnduinOS with persistent storage on a USB drive.
 * `gnome-startup-applications` was removed. See reason [here](https://gitlab.gnome.org/GNOME/gnome-session/-/merge_requests/145).
 * Use `sudo-rs` to as the default `sudo` command.
+* Removed `Gnome Evince` and added `Gnome Papers` as the default PDF viewer.
 * Removed `X11` support. Wayland is now the only display server.
 * Added Mozila's apt server to default apt sources list.
 * Nolonger install Firefox from Canonical's official package. Instead, Firefox will be installed from Mozilla's official apt server (https://packages.mozilla.org/apt).
