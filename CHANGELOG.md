@@ -11,17 +11,23 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 ## v1.4.0 (Forked from 1.3.0, Under development)
 
 * Changed the base system from **Plucky (Ubuntu 25.04)** to **Questing (Ubuntu 25.10)**.
+* Gnome was bumped to 49.
+* Kernel was bumped to 6.17.
 * Added a new language support for `ro_RO` for Romanian users.
-* Added 3 new gnome-shell extensions: to automatically switch the accent color based on gnome settings.
+* Added 3 new gnome-shell extensions: to automatically switch the accent color based on gnome settings. (Thanks to [@florintanasa](https://github.com/florintanasa) for the help)
 * Added `AnduinOS To Go` option in the boot menu to allow users to run AnduinOS with persistent storage on a USB drive.
 * `gnome-startup-applications` was removed. See reason [here](https://gitlab.gnome.org/GNOME/gnome-session/-/merge_requests/145).
 * Use `sudo-rs` to as the default `sudo` command.
 * Removed `Gnome Evince` and added `Gnome Papers` as the default PDF viewer.
 * Removed `X11` support. Wayland is now the only display server.
-* Added Mozila's apt server to default apt sources list.
-* Nolonger install Firefox from Canonical's official package. Instead, Firefox will be installed from Mozilla's official apt server (https://packages.mozilla.org/apt).
-* Gnome was bumped to 49.
-* Kernel was bumped to 6.17.
+* Uses `Firefox ESR` to replace the regular `Firefox` as the default web browser. This is because the Canonical launchpad [http://ppa.launchpad.net/mozillateam/ppa/ubuntu/dists/questing/](http://ppa.launchpad.net/mozillateam/ppa/ubuntu/dists/questing/) no longer provides the latest Firefox builds for Questing.
+* Added new app `gnome-calendar` as default calendar app. Pinned to the start menu by default.
+* Added `system-config-printer` package to the default app list to support printer configuration.
+
+## v1.3.8 (Under development)
+
+* Added `system-config-printer` package to the default app list to support printer configuration.
+* Bump `intel the sof` firmware to `v2025.05.1` version to support more modern Intel audio devices and kernel versions. (This won't be shipped via upgrading and only available in the ISO image)
 
 ## v1.3.7
 
@@ -162,6 +168,10 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.11
+
+* Added `system-config-printer` package to the default app list to support printer configuration.
 
 ## v1.1.10
 
