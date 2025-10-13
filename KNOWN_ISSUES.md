@@ -53,3 +53,13 @@ sudo ubuntu-drivers install nvidia-driver-535-server
 ## The installer may stop responding (Only affects 1.2)
 
 When the user clicks the `Install AnduinOS` app, the installer may stop responding. The workaround is to wait around 5 minutes. The installer will continue to run.
+
+## After user logout, a pop up with message: "Authentication required" (Only affects 1.4)
+
+This is because the `spice-vdagent` service is not running correctly. You can mitigate this via uninstalling the `spice-vdagent` package.
+
+```bash title="Uninstall spice-vdagent"
+sudo apt autoremove spice-vdagent
+```
+
+However this will disable the clipboard sharing feature between the host and the guest VM. We are still conducting investigation on this issue.
