@@ -8,7 +8,7 @@ sudo do_anduinos_upgrade
 
 Please note: `do_anduinos_upgrade` will only update in a forked version of AnduinOS. Please read more about versions upgrade [here](./VERSIONS.md).
 
-## v1.4.0 (Forked from 1.3.0, Under development)
+## v1.4.0 (Forked from 1.3.7. Under development)
 
 * Changed the base system from **Plucky (Ubuntu 25.04)** to **Questing (Ubuntu 25.10)**.
 * Gnome was bumped to 49.
@@ -19,7 +19,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * `gnome-startup-applications` was removed. See reason [here](https://gitlab.gnome.org/GNOME/gnome-session/-/merge_requests/145).
 * Use `sudo-rs` to as the default `sudo` command.
 * Removed `Gnome Evince` and added `Gnome Papers` as the default PDF viewer.
-* Removed `X11` support. Wayland is now the only display server.
+* Removed `X11` support. Wayland is now the only display server. (This change was from upstream Ubuntu 25.10)
 * Uses `Firefox ESR` to replace the regular `Firefox` as the default web browser. This is because the Canonical launchpad [http://ppa.launchpad.net/mozillateam/ppa/ubuntu/dists/questing/](http://ppa.launchpad.net/mozillateam/ppa/ubuntu/dists/questing/) no longer provides the latest Firefox builds for Questing.
 * Added new app `gnome-calendar` as default calendar app. Pinned to the start menu by default.
 * Added `system-config-printer` package to the default app list to support printer configuration.
