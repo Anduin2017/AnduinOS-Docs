@@ -22,10 +22,19 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Removed `X11` support. Wayland is now the only display server. (This change was from upstream Ubuntu 25.10)
 * Uses `Firefox ESR` to replace the regular `Firefox` as the default web browser. This is because the Canonical launchpad [http://ppa.launchpad.net/mozillateam/ppa/ubuntu/dists/questing/](http://ppa.launchpad.net/mozillateam/ppa/ubuntu/dists/questing/) no longer provides the latest Firefox builds for Questing.
 * Added new app `gnome-calendar` as default calendar app. Pinned to the start menu by default.
-* Patch `/usr/bin/add-apt-repository` to trick the `software-properties-common` to think we are using Ubuntu. This is because some PPAs do not support AnduinOS.
-* Pin `software-properties-common` as not to be upgraded. This is to avoid breaking the above patch.
-* Added `fastfetch` package to the default app list to show system information in the terminal. Patched the logo of `AnduinOS` in fastfetch.
 * Added `system-config-printer` package to the default app list to support printer configuration.
+* Removed `gnome-console(kgx)` as the default terminal app. Added `ptyxis` as the default terminal app.
+* Removed `Openweather Refined` gnome extension. Added `SimpleWeather` gnome extension.
+
+### Important: OS Branding Changes
+
+* The `/etc/os-release` branding file was changed. OS ID from `ubuntu` changed to `anduinos`.
+  * Patch `/usr/bin/add-apt-repository` to trick the `software-properties-common` to think we are using Ubuntu. This is because some PPAs do not support AnduinOS.
+  * Pin `software-properties-common` as not to be upgraded. This is to avoid breaking the above patch.
+  * Patched the file `/etc/legal` to update the OS name information.
+  * Added `fastfetch` package to the default app list to show system information in the terminal. Correctly show the logo based on `/etc/os-release` file.
+  * Patched `/usr/bin/add-apt-repository` to fake the OS information to `ubuntu` when adding PPAs.
+  * This is still a hack and may break in the future. Ultimately in the future, we may use our own PPAs to provide software and patches for AnduinOS.
 
 ## v1.3.8 (Under development)
 
