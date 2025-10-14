@@ -63,7 +63,3 @@ sudo apt autoremove spice-vdagent
 ```
 
 However this will disable the clipboard sharing feature between the host and the guest VM. We are still conducting investigation on this issue.
-
-## The `OpenWeather Refined` extension may not work (Only affects 1.4)
-
-The `OpenWeather Refined` extension may be able to show the weather information when user is clicking the icon. But it may not be able to show the weather information on the bar.
