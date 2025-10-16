@@ -348,22 +348,66 @@ If you use **Docker** and want to take advantage of your NVIDIA GPU inside conta
 
 ## Troubleshooting
 
-1. **Black screen or system freeze after reboot**:
-   - Boot into a **recovery mode** or use a **Live USB** to revert or remove the NVIDIA driver.
-   - Check that **Nouveau** was properly blacklisted and the **initramfs** was updated.
-   - Ensure your kernel version matches the **installed kernel headers**.
+### 0. First Diagnostic: Check Driver Status
 
-2. **Driver mismatch**:
-   - If `nvidia-smi` says `NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver`, then your driver or kernel module may not be correctly installed or signed.
+Before troubleshooting, open a terminal and run `nvidia-smi`.
 
-3. **Secure Boot issues**:
-   - Make sure the MOK (Machine Owner Key) is enrolled.
-   - Confirm your private key and certificate paths are correct when prompted during the `.run` installer.
+If you see a table with your GPU name and driver version, your driver is **working**. If your problem is system lag or choppy animations on a laptop, skip to **point 5**.
 
-4. **Updates break the driver**:
-   - Using the `.run` file approach means you might need to re-run the installer after a kernel update. Consider using DKMS or the official Ubuntu packaging for automatic module rebuilding.
+If you see an error like `NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver`, it means the driver module is **not loaded**. Start troubleshooting from point 1 or 2.
 
----
+### 1. Black screen or system freeze after reboot
+
+This is the most common failure, usually happening right after installing a driver. It means the `nvidia` kernel module failed to load, often because it conflicts with the open-source `nouveau` driver, or it wasn't correctly registered with the kernel.
+
+To fix this, you must boot into **recovery mode**. From the recovery menu, drop to a **root shell**. In the shell, run `mount -o remount,rw /` to make the system writable.
+
+Then, completely remove the broken driver by running `sudo apt-get purge '*nvidia*'` and `sudo apt autoremove`. After this, type `reboot`. Your system should now boot normally using the `nouveau` driver, and you can attempt to reinstall the NVIDIA driver again.
+
+### 2. Driver mismatch (nvidia-smi fails)
+
+This error means the system is running, but the NVIDIA driver isn't loaded. The most common cause is a **kernel update**. The NVIDIA driver is a kernel module that must be compiled for the *exact* kernel version you are running. When your kernel updates, the driver module (if not set up with DKMS) is left behind, causing a mismatch.
+
+Another common cause is **Secure Boot**, which blocks unsigned modules from loading. See **point 3** for this.
+
+To fix a kernel mismatch, first ensure you have the headers for your current kernel: `sudo apt install linux-headers-$(uname -r)`. If you installed via `apt`, try `sudo dpkg-reconfigure nvidia-dkms-[version]` (e.g., `nvidia-dkms-550`) to force a recompile. If you used a `.run` file, you must re-run the installer.
+
+### 3. Secure Boot issues
+
+Secure Boot is a UEFI feature that prevents untrusted (unsigned) code from running at boot. Since the NVIDIA driver is a third-party kernel module, Secure Boot will block it by default, leading to a "driver not loaded" error.
+
+The simplest solution is to **reboot, enter your PC's BIOS/UEFI setup, and set Secure Boot to "Disabled"**. This is the easiest fix and has minimal security impact for most users.
+
+The "correct" solution is to enroll the driver's key (MOK). During driver installation (both `apt` and `.run`), you should be prompted to create a MOK password. After you set it, you *must* reboot. A blue "MOK management" screen will appear. Select "Enroll MOK," "Continue," and enter the password you just created. This "authorizes" the driver for Secure Boot.
+
+### 4. Updates break the driver
+
+This is related to point 2. If you installed your driver using the official `.run` file from NVIDIA's website, that driver is compiled *only* for your current kernel. **You must re-run the installer file every time AnduinOS updates its kernel.**
+
+To avoid this, we strongly recommend installing drivers from the AnduinOS/Ubuntu repositories (e.g., `sudo apt install nvidia-driver-550`). These packages use **DKMS** (Dynamic Kernel Module Support).
+
+DKMS automatically rebuilds the NVIDIA module every time your kernel is updated, which prevents this problem from happening. It's the "set it and forget it" solution.
+
+### 5. Laptop animations are laggy (PRIME Profiles)
+
+This is a **configuration issue**, not a driver failure. It's common on NVIDIA Optimus laptops (like HP OMEN) that have both Intel (integrated) and NVIDIA (dedicated) graphics. Your `nvidia-smi` will show the driver is working, but your desktop feels slow.
+
+This happens because the system is in **"On-Demand" mode** to save power. The Intel GPU runs your desktop (menus, animations), while the powerful NVIDIA GPU sleeps until you manually run a game on it. If your Intel GPU isn't powerful enough, the desktop will feel laggy.
+
+To fix this, force the NVIDIA GPU to run everything. Open `nvidia-settings` from your terminal. Go to the **"PRIME Profiles"** tab on the left. Change the setting from "NVIDIA On-Demand" to **"NVIDIA (Performance Mode)"**. Apply, and then **reboot your laptop**. Your desktop will now be rendered by the fast NVIDIA GPU and all animations will be smooth. (Note: this uses much more battery).
+
+Or you can do that via:
+
+```bash
+sudo apt update
+sudo apt install nvidia-prime
+sudo prime-select query # Query current mode (will likely show 'on-demand')
+sudo prime-select nvidia # Switch to NVIDIA (Performance Mode)
+```
+
+You must **reboot your laptop** after running this command for the change to take effect. This does the exact same thing as the `nvidia-settings` GUI method.
+
+To switch back to power-saving mode later (e.g., when on battery), you can run `sudo prime-select on-demand` and reboot again.
 
 ## Conclusion
 
