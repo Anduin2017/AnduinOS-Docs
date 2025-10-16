@@ -5,9 +5,6 @@ By default, AnduinOS may not selected the best APT source for you. You need to s
 To select the best APT source for your system, run the following command in the terminal:
 
 ```bash title="Select best apt source"
-#!/usr/bin/env bash
-set -euo pipefail
-
 # Check current APT source format status
 check_apt_format() {
     local old_format=false
