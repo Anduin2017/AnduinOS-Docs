@@ -63,3 +63,9 @@ sudo apt autoremove spice-vdagent
 ```
 
 However this will disable the clipboard sharing feature between the host and the guest VM. We are still conducting investigation on this issue.
+
+## Limited Experience in VirtualBox on AnduinOS 1.4
+
+AnduinOS 1.4 currently provides a limited out-of-the-box experience in VirtualBox.
+
+This is due to a known bug in the official VirtualBox Guest Additions installer script. This script is incompatible with the new core utilities (coreutils) adopted by AnduinOS 1.4 (which is based on Ubuntu 25.10), causing the installation to fail. Until VirtualBox updates its installer, features like automatic screen resizing and shared clipboard will not be available.
