@@ -2,6 +2,7 @@
 
 AnduinOS Released | Release Date | Based On | End of Standard Support | End of Ubuntu Pro Support | End of Legacy Support
 -- | -- | -- | -- | -- | --
+1.4 | 2025-10-15 | Questing Quokka | Jul 2026 |   |  
 1.3 | 2025-05-01 | Plucky Puffin | Jan 2026 |   |  
 1.2 | 2025-01-09 | Oracular Oriole | Jul 2025 |   |  
 1.1 LTS | 2025-01-06 | Noble Numbat | Apr 2029 | Apr 2034 | Apr 2036
