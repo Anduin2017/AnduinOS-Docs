@@ -21,22 +21,6 @@ This command will install the recommended drivers for your system. After the ins
 
 To install the Nvidia graphics driver, please follow document [here](./Install-Nvidia-Drivers.md).
 
-### Manually install the Nvidia driver
-
-In case you couldn't install Canonical's Nvidia driver, you can download the driver from the [Nvidia website](https://www.nvidia.com/en-us/drivers/) and install it manually.
-
-Search for the driver that matches your graphics card and download it. Then, run the following commands to install the driver:
-
-```bash title="Install the Nvidia driver manually"
-sudo apt install gcc make build-essential
-sudo systemctl isolate multi-user.target
-sudo systemctl stop gdm
-sudo chmod +x NVIDIA-Linux-x86_64-470.103.01.run
-sudo ./NVIDIA-Linux-x86_64-470.103.01.run
-```
-
-For more information, please read the [Nvidia driver installation guide](./Install-Nvidia-Drivers.md).
-
 ## Intel Graphics Driver
 
 Intel usually will merge latest drivers and packages to the Linux kernel. However, some modules, like `libva`, `vaapi`, `vulkan`, and `intel-media-driver`, may need to be installed separately.
