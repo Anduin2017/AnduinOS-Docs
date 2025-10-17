@@ -8,7 +8,7 @@ sudo do_anduinos_upgrade
 
 Please note: `do_anduinos_upgrade` will only update in a forked version of AnduinOS. Please read more about versions upgrade [here](./VERSIONS.md).
 
-## v1.4.0 (Forked from 1.3.7. Under development)
+## v1.4.0 (Forked from 1.3.7)
 
 * Changed the base system from **Plucky (Ubuntu 25.04)** to **Questing (Ubuntu 25.10)**.
 * Gnome was bumped to 49.
