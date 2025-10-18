@@ -8,7 +8,7 @@ Spotify is a digital music streaming service that gives you access to millions o
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Spotify via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.spotify.Client

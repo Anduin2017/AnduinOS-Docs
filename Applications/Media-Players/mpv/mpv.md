@@ -8,7 +8,7 @@ mpv is a free and open-source media player software that is available for all ma
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install mpv via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub io.mpv.Mpv

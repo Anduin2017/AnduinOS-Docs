@@ -4,7 +4,7 @@ Motrix is a full-featured download manager that supports downloading HTTP, FTP, 
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Motrix via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub net.agalwood.Motrix

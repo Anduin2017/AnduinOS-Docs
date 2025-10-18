@@ -4,7 +4,7 @@ Tencent QQ (Chinese: 腾讯QQ), also known as QQ, is an instant messaging softwa
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install QQ via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.qq.QQ

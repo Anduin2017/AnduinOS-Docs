@@ -8,7 +8,7 @@ Telegram is a messaging app with a focus on speed and security, it’s super-fas
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Telegram via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.telegram.desktop

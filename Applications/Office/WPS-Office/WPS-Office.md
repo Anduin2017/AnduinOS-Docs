@@ -4,7 +4,7 @@ WPS Office is a suite of office software developed by Kingsoft Office. It is ava
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install WPS Office via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.wps.Office

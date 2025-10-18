@@ -8,7 +8,7 @@ Nextcloud is a suite of client-server software for creating and using file hosti
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Nextcloud via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.nextcloud.desktopclient.nextcloud

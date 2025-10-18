@@ -8,7 +8,7 @@ LibreOffice is a free and open-source office suite, a project of The Document Fo
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install LibreOffice via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.libreoffice.LibreOffice

@@ -4,7 +4,7 @@ Steam is a digital distribution platform developed by Valve Corporation, which o
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Steam via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.valvesoftware.Steam

@@ -4,7 +4,7 @@ Microsoft Edge is a web browser developed by Microsoft. It was first released fo
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Microsoft Edge via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.microsoft.Edge

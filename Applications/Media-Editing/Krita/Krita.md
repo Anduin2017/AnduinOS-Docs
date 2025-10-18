@@ -8,7 +8,7 @@ Krita is a free and open-source raster graphics editor designed primarily for di
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Krita via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.kde.krita

@@ -8,7 +8,7 @@ Virt Manager is a graphical tool for managing virtual machines. It is based on l
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Virt Manager via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.virt_manager.virt-manager

@@ -4,7 +4,7 @@ DBeaver is a SQL client software application and a database administration tool.
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install DBeaver via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub io.dbeaver.DBeaverCommunity

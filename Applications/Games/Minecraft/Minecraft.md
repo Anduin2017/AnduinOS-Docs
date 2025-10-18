@@ -4,7 +4,7 @@ Minecraft is a sandbox game that allows players to build and destroy blocks in a
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Minecraft via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.mojang.Minecraft

@@ -8,7 +8,7 @@ Signal is a cross-platform encrypted messaging service. It is available for Andr
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Signal via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.signal.Signal

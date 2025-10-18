@@ -4,7 +4,7 @@ Obsidian is a powerful knowledge base that works on top of a local folder of pla
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Obsidian via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub md.obsidian.Obsidian

@@ -8,7 +8,7 @@ Shotcut is a free, open-source, cross-platform video editor. It supports a wide 
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Shotcut via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.shotcut.Shotcut

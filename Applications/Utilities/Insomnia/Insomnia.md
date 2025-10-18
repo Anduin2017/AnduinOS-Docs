@@ -4,7 +4,7 @@ Insomnia is a powerful REST API client that allows you to design, debug, and tes
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Insomnia via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub rest.insomnia.Insomnia

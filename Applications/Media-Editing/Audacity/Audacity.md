@@ -10,7 +10,7 @@ Audacity provides a wide range of features, including support for multiple audio
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Audacity via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.audacityteam.Audacity

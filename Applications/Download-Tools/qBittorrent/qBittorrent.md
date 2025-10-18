@@ -8,7 +8,7 @@ qBittorrent is a free, open-source, and cross-platform BitTorrent client. It is 
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install qBittorrent via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.qbittorrent.qBittorrent

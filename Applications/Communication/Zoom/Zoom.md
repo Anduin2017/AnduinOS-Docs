@@ -4,7 +4,7 @@ Zoom is a video conferencing software that allows you to host and join video cal
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Zoom via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub us.zoom.Zoom

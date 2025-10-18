@@ -8,7 +8,7 @@ Sublime Text is a sophisticated text editor for code, markup and prose. You'll l
 
 ## Flatpak install (Not recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Sublime Text via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.sublimetext.three

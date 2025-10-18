@@ -8,7 +8,7 @@ Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Deluge via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.deluge_torrent.deluge

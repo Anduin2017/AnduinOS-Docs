@@ -8,7 +8,7 @@ GIMP is a free and open-source raster graphics editor used for image retouching 
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install GIMP via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.gimp.GIMP

@@ -8,7 +8,7 @@ KDiskMark is a simple utility to test the performance of a disk drive. It uses t
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install KDiskMark via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub io.github.jonmagon.kdiskmark

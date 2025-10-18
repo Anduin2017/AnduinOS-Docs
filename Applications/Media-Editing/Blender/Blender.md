@@ -8,7 +8,7 @@ Blender is a free and open-source 3D computer graphics software toolset used for
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Blender via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.blender.Blender

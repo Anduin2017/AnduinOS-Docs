@@ -8,7 +8,7 @@ Visual Studio Code is a source code editor developed by Microsoft for Windows, L
 
 ## Flatpak install (Not recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Visual Studio Code via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.visualstudio.code

@@ -8,7 +8,7 @@ OBS Studio is a free and open-source software for video recording and live strea
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install OBS Studio via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.obsproject.Studio

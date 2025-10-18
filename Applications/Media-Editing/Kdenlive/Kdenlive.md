@@ -10,7 +10,7 @@ Kdenlive provides a wide range of features, including support for multiple video
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Kdenlive via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.kde.kdenlive

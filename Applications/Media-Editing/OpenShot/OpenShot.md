@@ -8,7 +8,7 @@ OpenShot is a free, open-source video editor that allows you to create and edit 
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install OpenShot via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.openshot.OpenShot

@@ -8,7 +8,7 @@ MuseScore is a free and open-source music notation software. It is used to creat
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install MuseScore via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.musescore.MuseScore

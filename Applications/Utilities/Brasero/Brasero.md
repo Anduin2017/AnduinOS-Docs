@@ -8,7 +8,7 @@ Brasero is a free disc-burning program for Linux. It is a simple application tha
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Install Brasero on AnduinOS via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.gnome.Brasero

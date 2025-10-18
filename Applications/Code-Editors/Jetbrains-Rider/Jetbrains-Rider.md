@@ -4,7 +4,7 @@ JetBrains Rider is a cross-platform .NET IDE based on the IntelliJ platform and 
 
 ## Flatpak install (Not recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install JetBrains Rider via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.jetbrains.Rider

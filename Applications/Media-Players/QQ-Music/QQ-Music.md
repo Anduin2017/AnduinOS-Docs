@@ -4,7 +4,7 @@ QQ Music is a music player and streaming service developed by Tencent. It is ava
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install QQ Music via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.qq.QQmusic

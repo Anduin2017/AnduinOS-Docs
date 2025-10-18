@@ -4,7 +4,7 @@ Chromium is an open-source web browser project started by Google, to provide the
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Chromium via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.chromium.Chromium

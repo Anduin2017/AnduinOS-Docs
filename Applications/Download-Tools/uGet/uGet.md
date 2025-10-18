@@ -4,7 +4,7 @@ uGet is an open-source software program intended to streamline the process of do
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install uGet via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.ugetdm.uGet

@@ -4,7 +4,7 @@ WeChat is a Chinese multi-purpose messaging, social media and mobile payment app
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install WeChat via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.tencent.WeChat

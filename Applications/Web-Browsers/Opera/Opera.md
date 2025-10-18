@@ -4,7 +4,7 @@ Opera is a web browser developed by Opera Software. The latest version is availa
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Opera via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.opera.Opera

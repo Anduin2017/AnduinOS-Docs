@@ -4,7 +4,7 @@ Terminus is a cross-platform terminal emulator that is available for Windows, ma
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Terminus via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub com.termius.Termius

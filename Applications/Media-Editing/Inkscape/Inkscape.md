@@ -4,7 +4,7 @@ Inkscape is a free and open-source vector graphics editor for traditional Unix-c
 
 ## Flatpak install (Recommended)
 
-You can install Code::Blocks via Flatpak by running the following commands in your terminal:
+You can install Inkscape via Flatpak by running the following commands in your terminal:
 
 ```bash
 flatpak install flathub org.inkscape.Inkscape
