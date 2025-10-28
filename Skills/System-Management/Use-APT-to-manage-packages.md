@@ -182,10 +182,10 @@ It is required to run `apt update` before running other commands because only `a
 
 ```bash
 anduin@host:~$ cat /etc/apt/sources.list
-deb http://mirror.aiursoft.cn/ubuntu/ jammy main restricted universe multiverse
-deb http://mirror.aiursoft.cn/ubuntu/ jammy-updates main restricted universe multiverse
-deb http://mirror.aiursoft.cn/ubuntu/ jammy-backports main restricted universe multiverse
-deb http://mirror.aiursoft.cn/ubuntu/ jammy-security main restricted universe multiverse
+deb http://mirror.aiursoft.com/ubuntu/ jammy main restricted universe multiverse
+deb http://mirror.aiursoft.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://mirror.aiursoft.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb http://mirror.aiursoft.com/ubuntu/ jammy-security main restricted universe multiverse
 
 anduin@host:$ cat /etc/apt/sources.list.d/google-earth-pro.list
 deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main
@@ -298,7 +298,7 @@ Homepage: https://git-scm.com/
 Task: cloud-image, ubuntu-wsl, server, ubuntu-server-raspi, kubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop-core, ubuntustudio-desktop
 Download-Size: 3,165 kB
 APT-Manual-Installed: yes
-APT-Sources: http://mirror.aiursoft.cn/ubuntu jammy-updates/main amd64 Packages
+APT-Sources: http://mirror.aiursoft.com/ubuntu jammy-updates/main amd64 Packages
 Description: fast, scalable, distributed revision control system
  Git is popular version control system designed to handle very large
  projects with speed and efficiency; it is used for many high profile
