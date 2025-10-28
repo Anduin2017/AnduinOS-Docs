@@ -2,7 +2,7 @@
 
 WPS Office is a suite of office software developed by Kingsoft Office. It is available for Windows, Linux, Android, and iOS.
 
-## Flatpak install (Recommended)
+## Flatpak install
 
 You can install WPS Office via Flatpak by running the following commands in your terminal:
 
@@ -10,7 +10,11 @@ You can install WPS Office via Flatpak by running the following commands in your
 flatpak install flathub com.wps.Office
 ```
 
-## System install
+!!! warning "This package is global version"
+
+    This package is global version, if you want to ues Chinese version, see [WPS Office CN](#wps-office-cn)
+
+## System install (manual)
 
 To install WPS Office on AnduinOS, you can run:
 
@@ -32,7 +36,9 @@ rm wps.deb
 
     This is because the software provider didn't setup a repository for automatic updates. You will need to check the official website for updates.
 
-## Third-party repository
+## WPS Office CN
+
+Please visit the [official website](https://www.wps.cn/product/wpslinux) to get the latest version.
 
 If you want to automatically update via `sudo apt upgrade`, you can try adding [wcbing APT Repo](https://packages.wcbing.top/deb/). This is a third-party software repository that is updated more timely. 
 

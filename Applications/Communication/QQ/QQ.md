@@ -14,10 +14,8 @@ flatpak install flathub com.qq.QQ
 
 To Install QQ on AnduinOS, first download a deb package form [here](https://im.qq.com/linuxqq/index.shtml). Then you can install it with `apt`:
 
-<!-- The link needs to be updated regularly. -->
-
 ```bash
-wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.18_250724_amd64_01.deb -O qq.deb
+wget $(curl -s https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js | grep -oE 'https://[^"]+amd64[^"]*\.deb') -O qq.deb
 sudo apt install ./qq.deb -y
 rm qq.deb
 ```

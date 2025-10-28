@@ -2,7 +2,11 @@
 
 QQ Music is a music player and streaming service developed by Tencent. It is available on Windows, macOS, Android, and iOS. QQ Music is one of the most popular music streaming services in China.
 
-## Flatpak install (Recommended)
+## Flatpak install
+
+!!! warning "The QQ Music on Flatpak may be outdated"
+
+    This repository maintainer is inactive, so it may be outdated sometime.
 
 You can install QQ Music via Flatpak by running the following commands in your terminal:
 
@@ -10,14 +14,14 @@ You can install QQ Music via Flatpak by running the following commands in your t
 flatpak install flathub com.qq.QQmusic
 ```
 
-## System install
+## System install (manual)
 
 To install QQ Music on AnduinOS, you can run:
 
 <!-- The link needs to be updated regularly. -->
 
 ```sh
-curl -o qqmusic.deb https://dldir1.qq.com/music/clntupate/linux/qqmusic_1.1.7_amd64.deb
+curl -Lo qqmusic.deb https://c.y.qq.com/cgi-bin/file_redirect.fcg?bid=dldir&file=ecosfile_plink%2Fmusic_clntupate%2Flinux%2Fother%2Fqqmusic_1.1.8_amd64.deb&sign=1-d1ca4d5c5a8369b26af88e881ba3ac544066a899dcaea29778b35c9f648e6fee-68cb7c1c
 sudo apt install -y ./qqmusic.deb
 rm qq.deb
 ```
