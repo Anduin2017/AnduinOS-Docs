@@ -3,7 +3,7 @@ site_description: The official documentation for AnduinOS.
 
 # Repository
 repo_name: anduin/anduinos-docs
-repo_url: https://gitlab.aiursoft.cn/anduin/anduinos-docs
+repo_url: https://gitlab.aiursoft.com/anduin/anduinos-docs
 edit_uri: ""
 
 use_directory_urls: true
@@ -109,7 +109,7 @@ nav:
     - News & Updates: https://news.anduinos.com/
     - Known Issues: KNOWN_ISSUES.md
     # COMMON GPT-v3 license URL
-    - License: https://gitlab.aiursoft.cn/anduin/anduinos/-/blob/1.2/LICENSE
+    - License: https://gitlab.aiursoft.com/anduin/anduinos/-/blob/1.2/LICENSE
   - Install:
     - Installing AnduinOS:
       - System Requirements: ./Install/System-Requirements.md

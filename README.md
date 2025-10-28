@@ -46,7 +46,7 @@ To host services on AnduinOS, you can follow the instructions in the [Servicing 
 
 To get the source code of AnduinOS, you can visit:
 
-* [AnduinOS GitLab repository](https://gitlab.aiursoft.cn/anduin/anduinos)
+* [AnduinOS GitLab repository](https://gitlab.aiursoft.com/anduin/anduinos)
 * [AnduinOS GitHub repository](https://github.com/anduin2017/AnduinOS)
 
 ## Discuss with other AnduinOS users
@@ -61,4 +61,4 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-You should have received [a copy of the GNU General Public License](https://gitlab.aiursoft.cn/anduin/anduinos/-/blob/1.2/LICENSE) along with this program. If not, see <https://www.gnu.org/licenses/>.
+You should have received [a copy of the GNU General Public License](https://gitlab.aiursoft.com/anduin/anduinos/-/blob/1.2/LICENSE) along with this program. If not, see <https://www.gnu.org/licenses/>.

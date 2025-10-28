@@ -388,7 +388,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * Added `fprintd` and `libpam-fprintd` to support fingerprint login.
 * Removed `gnome-tweaks` from the default app list to reduce to avoid distraction.
 * Use `gedit` to replace `gnome-text-editor` as the default text editor, because `gnome-text-editor` may having some issue with ibus.
-* Rime will no longer be preinstalled due to its high disk and memory usage, especially for users without Chinese input needs. Instead, only ibus will be preinstalled. Users can install Rime manually via `sudo apt install ibus-rime`, or use the custom [AnduinOS-Rime](https://gitlab.aiursoft.cn/anduin/anduinos-rime) input method if needed.
+* Rime will no longer be preinstalled due to its high disk and memory usage, especially for users without Chinese input needs. Instead, only ibus will be preinstalled. Users can install Rime manually via `sudo apt install ibus-rime`, or use the custom [AnduinOS-Rime](https://gitlab.aiursoft.com/anduin/anduinos-rime) input method if needed.
 * Patch `baobab` localization for Chinese.
 * Refactor AnduinOS build script as modularized functions.
 

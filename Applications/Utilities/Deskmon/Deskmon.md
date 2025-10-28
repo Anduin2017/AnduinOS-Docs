@@ -38,10 +38,10 @@ sudo apt install -y libglib2.0-dev pkgconf gcc
 
 ### 2. Build Deskmon
 
-You can download the original source code [from here](https://gitlab.aiursoft.cn/anduin/anduinos/-/tree/1.4/src/mods/20-deskmon-mod).
+You can download the original source code [from here](https://gitlab.aiursoft.com/anduin/anduinos/-/tree/1.4/src/mods/20-deskmon-mod).
 
 ```bash
-wget https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/1.4/src/mods/20-deskmon-mod/deskmon.c -O deskmon.c
+wget https://gitlab.aiursoft.com/anduin/anduinos/-/raw/1.4/src/mods/20-deskmon-mod/deskmon.c -O deskmon.c
 gcc -O2 $(pkg-config --cflags glib-2.0 gio-2.0) \
     deskmon.c -o deskmon \
     $(pkg-config --libs glib-2.0 gio-2.0)
