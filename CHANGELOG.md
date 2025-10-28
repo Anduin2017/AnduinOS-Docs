@@ -286,7 +286,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 * The ISO boot menu now includes additional options such as **Safe Graphics**, **Next Volume**, and **UEFI Firmware Settings**.
 * Replaced `xz` compression with `zstd` for faster and more efficient ISO generation.
 * The ISO now consolidates the previous **Try Mode** and **Install Mode** into a unified **Install Mode**.
-* Daily builds will now only support English and Chinese language options. Available to download from the [AnduinOS website](https://anduinos-nightly-builds.aiursoft.cn/).
+* Daily builds will now only support English and Chinese language options. Available to download from the [AnduinOS website](https://anduinos-nightly-builds.aiursoft.com/).
 * Added: `apt-utils`, `crash`, `debconf-i18n`, `fdisk`, `grub-efi-amd64`, `hwdata`, `info`, `init`, `numactl`, `cloud-init`, `coreutils`, `dnsutils`, `gvfs-fuse`, `htop`, `httping`, `libsass1`, `squashfs-tools`, `sysstat`, `thermald`, `traceroute`, `vim`, `whiptail`, `openvpn`, `network-manager-openvpn`, `network-manager-openvpn-gnome`, `network-manager-pptp-gnome`, `ibus`, `gnome-snapshot`, `gnome-text-editor`, `gstreamer1.0-libav`, `gstreamer1.0-alsa`, `gstreamer1.0-vaapi`, `gstreamer1.0-tools`, `gstreamer1.0-packagekit`, `gstreamer1.0-plugins-base-apps`, `alsa-base`, `fprintd`, `pipx`.  
 * Removed: `wireless-tools`, `cheese`, `gedit`, `nautilus-extension-gnome-console`, `zutty`.
 * Switched from using `pip3` to `pipx` for installing `gnome-extensions-cli`.  
@@ -459,7 +459,7 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 ## v0.1.0-beta-jammy
 
 * Removed `gnome-software`, `software-properties-gtk`, `ubuntu-pro-client`, `ubuntu-advantage-desktop-daemon`, `ubuntu-advantage-tools`, `ubuntu-pro-client-l10n`, `gnome-software-common`, `gnome-software-plugin-snap` to reduce the size of the ISO file.
-* Added a `Software-store` pointing to `https://docs.aiursoft.cn/Applications/Introduction.html` in the start menu.
+* Added a `Software-store` pointing to `https://docs.aiursoft.com/Applications/Introduction.html` in the start menu.
 * Patch `Ubiquity-slideshow` to show the AnduinOS introduction.
 * Patch the `/etc/casper.conf` to change the default live session username to `try-user` and hostname to `anduinos`.
 

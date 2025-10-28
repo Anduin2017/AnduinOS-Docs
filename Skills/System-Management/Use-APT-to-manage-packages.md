@@ -533,4 +533,4 @@ sudo bash -c "echo all | ./aptsources-cleanup.pyz  --yes"
 
 ### Setting up your own apt mirror
 
-Reference [here](https://anduin.aiursoft.cn/post/2024/2/8/setup-a-ubuntu-apt-mirror-server)
+Reference [here](https://anduin.aiursoft.com/post/2024/2/8/setup-a-ubuntu-apt-mirror-server)

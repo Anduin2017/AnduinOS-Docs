@@ -62,7 +62,7 @@ sudo usermod -a -G render $USER
 # user needs to restart the session to use the new group (log out and log in)
 ```
 
-You can use the NPU to run some AI models, like `DeepSeek R1`. For more details about how to use NPU to deploy AI models, please refer to the [Blog](https://anduin.aiursoft.cn/post/2025/2/3/deepseek-r1-32b-with-npu).
+You can use the NPU to run some AI models, like `DeepSeek R1`. For more details about how to use NPU to deploy AI models, please refer to the [Blog](https://anduin.aiursoft.com/post/2025/2/3/deepseek-r1-32b-with-npu).
 
 ## Xbox Controller Driver
 

@@ -70,7 +70,7 @@ First open here: [PyTorch](https://pytorch.org/get-started/locally/)
 
 And finish this tutorial:
 
-![tutorial-pytorch](https://anduin.aiursoft.cn/image/img-42995c63-588b-408b-9053-1c1df8ecabc8.png)
+![tutorial-pytorch](https://anduin.aiursoft.com/image/img-42995c63-588b-408b-9053-1c1df8ecabc8.png)
 
 You may see a command:
 
