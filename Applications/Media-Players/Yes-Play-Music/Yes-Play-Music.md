@@ -2,7 +2,7 @@
 
 Yes-Play-Music is a beautiful third-party Netease Cloud Music client maintained by the community.
 
-## Flatpak install
+## Flatpak install (Recommended)
 
 You can install Yes-Play-Music via Flatpak by running the following commands in your terminal:
 
