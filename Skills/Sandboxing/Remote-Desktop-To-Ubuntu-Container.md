@@ -11,7 +11,7 @@ To install Docker, follow the instructions in the [Docker](../../Applications/De
 I have built a Docker image with the Linux Desktop environment. You can run the container with the following command:
 
 ```bash
-docker run -d -p 33900:3389 --name remote-desktop hub.aiursoft.cn/aiursoft/internalimages/remote-desktop:latest
+docker run -d -p 33900:3389 --name remote-desktop hub.aiursoft.com/aiursoft/internalimages/remote-desktop:latest
 ```
 
 Now, you can use a Remote Desktop client to connect to `localhost:33900` to access the Linux Desktop environment.

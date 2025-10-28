@@ -50,7 +50,7 @@ version: '3.3'
 
 services:
   webapp:
-    image: hub.aiursoft.cn/edgeneko/nekoimagegallery.app
+    image: hub.aiursoft.com/edgeneko/nekoimagegallery.app
     ports:
       - target: 5000
         published: 5000
@@ -60,7 +60,7 @@ services:
       - OVERRIDE_API_URL=http://localhost:8000
 
   server:
-    image: hub.aiursoft.cn/edgeneko/neko-image-gallery:latest-cpu
+    image: hub.aiursoft.com/edgeneko/neko-image-gallery:latest-cpu
     ports:
       - target: 8000
         published: 8000

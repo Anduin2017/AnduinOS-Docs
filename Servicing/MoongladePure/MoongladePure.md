@@ -51,7 +51,7 @@ services:
   web:
     depends_on:
       - moongladepure-db
-    image: hub.aiursoft.cn/aiursoft/moongladepure
+    image: hub.aiursoft.com/aiursoft/moongladepure
     ports:
       - target: 5000
         published: 5000

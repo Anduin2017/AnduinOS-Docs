@@ -49,14 +49,14 @@ version: '3.3'
 
 services:
   downloader:
-    image: hub.aiursoft.cn/aiursoft/internalimages/apt-mirror
+    image: hub.aiursoft.com/aiursoft/internalimages/apt-mirror
     volumes:
       - apt-mirror-data:/var/spool/apt-mirror
 
   web_apt:
     depends_on:
       - downloader
-    image: hub.aiursoft.cn/aiursoft/static
+    image: hub.aiursoft.com/aiursoft/static
     ports:
       - target: 5000
         published: 5000

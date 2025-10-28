@@ -86,7 +86,7 @@ services:
     networks:
       - net
     environment:
-      REGISTRY_HTTP_HEADERS_Access-Control-Allow-Origin: '[https://hub.aiursoft.cn]' # Replace with your domain
+      REGISTRY_HTTP_HEADERS_Access-Control-Allow-Origin: '[https://hub.aiursoft.com]' # Replace with your domain
       REGISTRY_HTTP_HEADERS_Access-Control-Allow-Methods: '[HEAD,GET,OPTIONS,DELETE]'
       REGISTRY_HTTP_HEADERS_Access-Control-Allow-Credentials: '[true]'
       REGISTRY_HTTP_HEADERS_Access-Control-Allow-Headers: '[Authorization,Accept,Cache-Control]'
