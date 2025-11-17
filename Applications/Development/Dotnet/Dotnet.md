@@ -14,6 +14,16 @@ if [[ "$(lsb_release -sc)" =~ ^(devel|jammy|noble)$ ]]; then
 fi
 ```
 
+To install .NET 10 on AnduinOS, you can run:
+
+```bash title=".NET 10 installation script"
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh && \
+chmod +x dotnet-install.sh && \
+sudo ./dotnet-install.sh --channel 10.0 --install-dir /usr/share/dotnet && \
+ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet && \
+rm dotnet-install.sh
+```
+
 To install .NET 9 on AnduinOS, you can run:
 
 ```bash
