@@ -15,7 +15,7 @@ The process creates a hybrid partition layout that supports persistence automati
 
 1.  **Burn the ISO**: Follow the [Bare-mental Installation](https://www.google.com/search?q=%23bare-mental-installation---make-a-usb-installer) steps above to burn the ISO to your USB drive.
 
-    warning "Critical: Use `dd` mode"
+!!! warning "Critical: Use `dd` mode"
 
     You **must** use the `dd` mode (in Rufus) or the `dd` command (in Linux) to burn the image.
 
