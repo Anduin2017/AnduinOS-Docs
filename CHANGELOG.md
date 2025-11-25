@@ -8,7 +8,16 @@ sudo do_anduinos_upgrade
 
 Please note: `do_anduinos_upgrade` will only update in a forked version of AnduinOS. Please read more about versions upgrade [here](./VERSIONS.md).
 
-## v1.4.0 (Forked from 1.3.7)
+Please note: `do-anduinos-autorepair` command is added in v1.1.11, v1.3.8 and v1.4.1 to help users to fix common system issues. This command will download latest AnduinOS ISO and try to repair the system by comparing the system files with the ISO image.
+
+## v1.4.1
+
+* Improved the Russian slides localization based on contribution from @AlexanderKryllov.
+* Added `sane-airscan sane-utils simple-scan` packages to the default app list to support scanners out of the box.
+* Added a new command `do-anduinos-autorepair` to help users to fix common system issues. This command will download latest AnduinOS ISO and try to repair the system by comparing the system files with the ISO image.
+* A `REPAIR.sh` was added to the ISO file root directory to help users to repair the system easily, based on the content of the ISO image.
+
+## v1.4.0
 
 * Changed the base system from **Plucky (Ubuntu 25.04)** to **Questing (Ubuntu 25.10)**.
 * Gnome was bumped to 49.
@@ -37,10 +46,16 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
   * Patched `/usr/bin/add-apt-repository` to fake the OS information to `ubuntu` when adding PPAs.
   * This is still a hack and may break in the future. Ultimately in the future, we may use our own PPAs to provide software and patches for AnduinOS.
 
-## v1.3.8 (Under development)
+## v1.3.8
 
 * Added `system-config-printer` package to the default app list to support printer configuration.
 * Bump `intel the sof` firmware to `v2025.05.1` version to support more modern Intel audio devices and kernel versions. (This won't be shipped via upgrading and only available in the ISO image)
+* The daemon code was refactored to improve compatibility and robustness when identifying and processing .desktop files.
+* Patched `/etc/legal` to update the OS name information.
+* Improved the Russian slides localization based on contribution from @AlexanderKryllov.
+* Added `sane-airscan sane-utils simple-scan` packages to the default app list to support scanners out of the box.
+* Added a new command `do-anduinos-autorepair` to help users to fix common system issues. This command will download latest AnduinOS ISO and try to repair the system by comparing the system files with the ISO image.
+* A `REPAIR.sh` was added to the ISO file root directory to help users to repair the system easily, based on the content of the ISO image.
 
 ## v1.3.7
 
@@ -185,6 +200,12 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 ## v1.1.11
 
 * Added `system-config-printer` package to the default app list to support printer configuration.
+* Added `sane-airscan sane-utils simple-scan` packages to the default app list to support scanners out of the box.
+* Added a new command `do-anduinos-autorepair` to help users to fix common system issues. This command will download latest AnduinOS ISO and try to repair the system by comparing the system files with the ISO image.
+* A `REPAIR.sh` was added to the ISO file root directory to help users to repair the system easily, based on the content of the ISO image.
+* Improved the Russian slides localization based on contribution from @AlexanderKryllov.
+* The daemon code was refactored to improve compatibility and robustness when identifying and processing .desktop files.
+* Patched `/etc/legal` to update the OS name information.
 
 ## v1.1.10
 
