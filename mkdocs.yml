@@ -160,6 +160,7 @@ nav:
       - Debug storage consumption: ./Skills/System-Management/Debug-Storage-Consumption.md
       - Check file format: ./Skills/System-Management/Check-File-Format.md
       - Remove duplicate apt source: ./Skills/System-Management/Remove-Duplicate-Apt-Source.md
+      - Auto Repair: ./Skills/System-Management/Auto-Repair.md
     - File System Management:
       - Mounting remote folders: ./Skills/File-System-Management/Mounting-Remote-Folder.md
       - Use dd to manage disks: ./Skills/File-System-Management/Use-dd-Manage-Disk.md
