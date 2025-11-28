@@ -142,7 +142,6 @@ nav:
     - Personalizing AnduinOS:
       - Personalize Your Desktop: ./Install/Personalize-Your-Desktop.md
       - Setup Wallpaper Slideshow: ./Install/Setup-Wallpaper--Slideshow.md
-      - Reset desktop settings: ./Install/Reset-Desktop-Settings.md
     - Maintaining AnduinOS:
       - Setup Backup: ./Install/Backup-And-Restore.md
       - Install Ubuntu Pro: ./Install/Install-Ubuntu-Pro.md
