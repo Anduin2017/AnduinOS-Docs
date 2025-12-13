@@ -2,11 +2,11 @@
 
 !!! tip "AnduinOS Verified App - Open Source"
 
-    Docker is an AnduinOS verified app and it runs awesome on AnduinOS, with easy installation and automatic updates.
+    Docker is an AnduinOS verified app. It runs flawlessly on AnduinOS with easy installation and automatic updates.
 
-Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
+Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software in packages called containers.
 
-To install Docker on AnduinOS, you can run:
+To install Docker on AnduinOS, run the following commands:
 
 ```bash title="Install Docker"
 curl -fsSL get.docker.com -o get-docker.sh
@@ -14,152 +14,123 @@ CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
 ```
 
-To quickly learn how to use Docker, you can visit the [official Docker documentation](https://docs.docker.com/get-started/). You can also view our quick Docker handbook [here](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
+To quickly learn how to use Docker, visit the [official Docker documentation](https://docs.docker.com/get-started/). You can also view our quick Docker handbook [suspicious link removed].
 
-## Allow current user to run Docker commands without sudo
+## Manage Docker as a Non-Root User
 
-To allow current user to run Docker commands without sudo, you can run:
+By default, the Docker daemon runs as `root`. To run Docker commands without prepending `sudo`, you have two options based on your security needs.
 
-```bash title="Allow current user to run Docker commands without sudo"
+### Option 1: Add User to Docker Group (Recommended for Personal Use)
+
+This method allows your current user to control the system-wide Docker daemon. This is the most convenient method for development.
+
+```bash title="Allow current user to run Docker commands"
 sudo usermod -aG docker $USER
 ```
 
-Then, you need to log out and log back in to apply the changes. And you can run `docker` commands without `sudo`.
+**After running this command, you must log out and log back in (or restart your computer) for the changes to take effect.**
 
-In some cases, you might not want to share the user-scope docker context with other users. You can configure rootless Docker by running:
+!!! warning "Security Notice: Root Equivalence"
 
-```bash title="Configure rootless Docker"
+    By adding your user to the `docker` group, you are granting **Root Equivalence**.
+
+    * **Global Scope:** You are interacting with the system-wide socket at `/var/run/docker.sock`.
+    * **Risk:** Any process with access to the Docker daemon can effectively become `root` on the host system (e.g., by mounting the host's root filesystem `/` into a container). 
+    * **Context:** This is standard practice for local development environments but requires you to trust the applications you run.
+
+### Option 2: Rootless Docker (Isolated Scope)
+
+If you need strict isolation (e.g., for multi-user environments) and do not want to share the system Docker daemon, you can use Rootless Docker.
+
+```bash title="Configure Rootless Docker"
 sudo apt install -y uidmap
 dockerd-rootless-setuptool.sh install
 ```
 
-And you can run `docker` commands without `sudo` in a rootless Docker context. That context won't be shared with other users.
+This creates a separate Docker instance using user namespaces. The socket path will differ, and containers will not have root access to the host by default.
 
 ## Docker Compose
 
-You may need `docker-compose` to manage multi-container Docker applications. To install `docker-compose`, you can run:
+Modern Docker installations include the Docker Compose plugin by default. You can verify it is installed by running:
 
 ```bash
-sudo apt install docker-compose
+docker compose version
 ```
 
-Or you can directly prompt current machine as a swarm manager:
+### Enable Swarm Mode (Optional)
+
+If you need to use Docker Swarm features or deploy stacks across multiple nodes:
 
 ```bash
 sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
 ```
 
-For how to use Docker to manage container applications, you can visit the [document](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
+For more details on managing container applications, visit our [suspicious link removed].
 
 ## Docker with Nvidia GPU
 
-If your system has an Nvidia GPU, you can use it with Docker. This provides GPU acceleration for your containers.
+If your system features an Nvidia GPU, Docker can utilize it for hardware acceleration (CUDA).
 
-First, confirm that your Nvidia GPU is detected by the system:
+### 1. Verification & Drivers
 
-```bash title="Check Nvidia GPU"
-$ sudo lspci | grep NVIDIA
-01:00.0 3D controller: NVIDIA Corporation GP104GL [Tesla P4] (rev a1)
+First, confirm your Nvidia GPU is detected:
+
+```bash title="Check Nvidia GPU hardware"
+lspci | grep -i nvidia
 ```
 
-You need to install the Nvidia driver. You can refer to the [Nvidia driver installation guide](../../../Install/Install-Nvidia-Drivers.md) for more information.
+Ensure you have the proprietary Nvidia drivers installed. Refer to the [suspicious link removed].
 
-After installing the Nvidia driver, you can check the GPU status:
-
-```bash title="Check GPU status"
-$ nvidia-smi
-```
-
-Then, you need to install Docker and Nvidia Container Toolkit.
-
-Install Docker using the following commands:
+Verify the driver status:
 
 ```bash
-curl -fsSL get.docker.com -o get-docker.sh
-CHANNEL=stable sh get-docker.sh
-rm get-docker.sh
+nvidia-smi
 ```
 
-Add the Nvidia Container Toolkit repository and install it:
+### 2. Install Nvidia Container Toolkit
 
-Reference: [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+If you haven't installed Docker yet, do so now (see the top of this page). Then, install the Nvidia Container Toolkit:
 
-```bash
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
-curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+*Reference: [Nvidia Container Toolkit Install Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)*
+
+```bash title="Install Nvidia Toolkit"
+# Add the repository
+curl -fsSL [https://nvidia.github.io/libnvidia-container/gpgkey](https://nvidia.github.io/libnvidia-container/gpgkey) | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+curl -s -L [https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list](https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list) | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+# Install packages
 sudo apt-get update
-sudo apt-get install -y nvidia-container-toolkit
-```
+sudo apt-get install -y nvidia-container-toolkit nvidia-docker2
 
-Then, install nvidia-docker2
-
-Reference: [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/1.10.0/install-guide.html](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/1.10.0/install-guide.html)
-
-```bash
-sudo apt-get install -y nvidia-docker2
-```
-
-Restart the Docker service:
-
-```bash
+# Restart Docker to apply changes
 sudo systemctl restart docker
 ```
 
-Verify the GPU setup in Docker:
+### 3. Verification
+
+Verify that Docker can see your GPU:
 
 ```bash
 sudo docker run --rm --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
 ```
 
-Clone the `gpu-burn` repository, build the Docker image, and run the GPU burn test:
+### 4. Advanced: GPU in Docker Swarm
 
-```bash
-git clone https://github.com/wilicc/gpu-burn
-cd gpu-burn
-sudo docker build -t gpu_burn .
-sudo docker run --rm --gpus all gpu_burn
-```
+Using GPUs in Swarm mode requires manual configuration of the Docker daemon resources.
 
-Expected output:
-
-```bash
-GPU 0: Tesla P4 (UUID: GPU-98102189-595e-4a64-3f32-3f0584ff9fe9)
-Using compare file: compare.ptx
-Burning for 60 seconds.
-...
-Tested 1 GPUs:
-        GPU 0: OK
-```
-
-Now you can share the GPU with Docker-Compose
-
-Create a `docker-compose.yml` file to share the GPU:
-
-```yaml
-version: '3.8'
-
-services:
-  cuda_app:
-    image: your_image
-    runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
-```
-
-And it still reqirues some additional configurations to make it work in Swarm mode.
-
-Run the following command to deploy the service:
-
-```bash title="Allow NVIDIA GPU in Docker Swarm"
+```bash title="Configuring Docker Daemon for Swarm GPU"
 echo "Configuring docker daemon for Nvidia GPU..."
-GPU_ID=$(valgrind nvidia-smi -a 2> /dev/null | grep UUID | awk '{print substr($4,0,12)}') # FUCKING NVIDIA, WHY DO YOU MAKE IT SO HARD TO GET THE GPU ID?!
-echo "GPU_ID: $GPU_ID"
-sudo mv /etc/docker/daemon.json /etc/docker/daemon.json.bak
+
+# Get the GPU UUID cleanly
+GPU_ID=$(nvidia-smi --query-gpu=gpu_uuid --format=csv,noheader)
+echo "Detected GPU_ID: $GPU_ID"
+
+# Backup existing config
+if [ -f /etc/docker/daemon.json ]; then
+    sudo cp /etc/docker/daemon.json /etc/docker/daemon.json.bak
+fi
+
+# Write new configuration
 sudo tee /etc/docker/daemon.json <<EOF
 {
   "runtimes": {
@@ -174,100 +145,74 @@ sudo tee /etc/docker/daemon.json <<EOF
   ]
 }
 EOF
+
+# Update Nvidia runtime config
 sudo sed -i 's/#swarm-resource = "DOCKER_RESOURCE_GPU"/swarm-resource = "DOCKER_RESOURCE_GPU"/' /etc/nvidia-container-runtime/config.toml
+
 sudo systemctl restart docker
 ```
 
-Then you can deploy the service:
+Now you can deploy a Swarm service with GPU resources:
 
-```bash title="Deploy a service with GPU"
-docker swarm init  --advertise-addr $(hostname -I | awk '{print $1}')
+```bash title="Deploy a GPU service"
+# Ensure Swarm is initialized
+docker swarm init --advertise-addr $(hostname -I | awk '{print $1}') || true
+
 docker service create --replicas 1 \
   --name tensor-qs \
   --generic-resource "NVIDIA-GPU=0" \
   tomlankhorst/tensorflow-quickstart
 ```
 
-Run this to check the logs:
+Check the logs to confirm execution:
 
-```bash title="Check the logs of Tensorflow Quickstart in Docker"
-sudo docker service logs tensor-qs
+```bash
+docker service logs tensor-qs
 ```
 
-Don't forget to remove the service after testing:
+Clean up:
 
-```bash title="Remove the service"
-sudo docker service rm tensor-qs
+```bash
+docker service rm tensor-qs
 ```
 
-And if you want to use it in a `docker-compose` file, you can use the following:
+#### GPU in Docker Compose (v2)
+
+To request GPU resources in a `docker-compose.yml` file:
 
 ```yaml
-  test:
-    image: tomlankhorst/tensorflow-quickstart
+services:
+  cuda_app:
+    image: nvidia/cuda:11.6.2-base-ubuntu20.04
+    command: nvidia-smi
     deploy:
       resources:
         reservations:
-          generic_resources:
-            - discrete_resource_spec:
-                kind: NVIDIA-GPU
-                value: 0
-```
-
-To find more CUDA images, visit [NVIDIA CUDA Docker Hub](https://hub.docker.com/r/nvidia/cuda/tags).
-
-### Example CUDA Application
-
-Dockerfile:
-
-```Dockerfile
-FROM nvidia/cuda:11.6.2-base-ubuntu20.04
-
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    cuda
-
-COPY hello.cu /usr/src/hello.cu
-WORKDIR /usr/src
-
-RUN nvcc -o hello hello.cu
-
-CMD ["./hello"]
-```
-
-hello.cu:
-
-```cpp
-#include <iostream>
-
-__global__ void helloFromGPU() {
-    printf("Hello World from GPU!\n");
-}
-
-int main() {
-    helloFromGPU<<<1, 1>>>();
-    cudaDeviceSynchronize();
-    return 0;
-}
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 ```
 
 ## Docker Desktop
 
-!!! warning "Not recommended"
+!!! warning "Not Recommended for Linux Users"
 
-    I don't recommend using Docker Desktop on AnduinOS. Docker Desktop is designed for running Docker daemon in a virtual machine. It may mess up your system!
+    **We strongly discourage using Docker Desktop on AnduinOS.**
 
-* Before starting Docker-Desktop, the `docker` command is provided by original Docker daemon. After starting Docker Desktop, the `docker` command is provided by Docker Desktop running in a virtual machine. This may cause confusion.
-* While Docker Desktop is free for personal use, it is not free for commercial use. You may need to pay for it. And it's not open source.
+    Docker Desktop runs the Docker daemon inside a **Virtual Machine (VM)**, which adds unnecessary overhead and complexity compared to the native Linux Docker engine. It may also conflict with your native Docker installation.
 
-If you insist on using Docker Desktop, you can run:
+    Furthermore, Docker Desktop is proprietary software and may require a paid subscription for commercial use.
+
+If you absolutely must use it (e.g., for specific GUI features), you can install the `.deb` package manually:
 
 ```bash
 cd ~
-wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb -O docker-desktop-amd64.deb
+wget [https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb) -O docker-desktop-amd64.deb
 sudo apt install ./docker-desktop-amd64.deb -y
 rm docker-desktop-amd64.deb
 ```
+
 
 !!! warning "The link above may be outdated"
 
