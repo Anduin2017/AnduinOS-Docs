@@ -214,7 +214,7 @@ If you absolutely must use it (e.g., for specific GUI features), you can install
 
 ```bash
 cd ~
-wget [https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb) -O docker-desktop-amd64.deb
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb -O docker-desktop-amd64.deb
 sudo apt install ./docker-desktop-amd64.deb -y
 rm docker-desktop-amd64.deb
 ```
