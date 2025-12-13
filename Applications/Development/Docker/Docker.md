@@ -57,6 +57,12 @@ Modern Docker installations include the Docker Compose plugin by default. You ca
 docker compose version
 ```
 
+!!! note "Docker Compose v2"
+
+    Docker Compose v2 is the latest version and is recommended for all users.
+
+    Some older documentation may still reference Docker Compose v1, with command `docker-compose` instead of `docker compose`. These commands are functionally equivalent.
+
 ### Enable Swarm Mode (Optional)
 
 If you need to use Docker Swarm features or deploy stacks across multiple nodes:
@@ -65,7 +71,7 @@ If you need to use Docker Swarm features or deploy stacks across multiple nodes:
 sudo docker swarm init --advertise-addr $(hostname -I | awk '{print $1}')
 ```
 
-For more details on managing container applications, visit our [suspicious link removed].
+For more details on managing container applications, visit our [document](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
 
 ## Docker with Nvidia GPU
 
