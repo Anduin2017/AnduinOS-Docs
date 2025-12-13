@@ -14,7 +14,7 @@ CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
 ```
 
-To quickly learn how to use Docker, visit the [official Docker documentation](https://docs.docker.com/get-started/). You can also view our quick Docker handbook [suspicious link removed].
+To quickly learn how to use Docker, visit the [official Docker documentation](https://docs.docker.com/get-started/). You can also view our quick Docker handbook [here](../../../Skills/Sandboxing/Using-Docker-As-Container.md).
 
 ## Manage Docker as a Non-Root User
 
