@@ -32,7 +32,7 @@ cat << EOF | sudo tee /usr/share/applications/jetbrains-rider.desktop >/dev/null
 [Desktop Entry]
 Name=JetBrains Rider
 Comment=Integrated Development Environment
-Exec=/opt/rider/bin/rider.sh
+Exec=/opt/rider/bin/rider
 Icon=jetbrains-rider
 Terminal=false
 Type=Application
