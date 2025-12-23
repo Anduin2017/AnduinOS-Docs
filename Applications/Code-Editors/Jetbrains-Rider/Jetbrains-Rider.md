@@ -18,12 +18,12 @@ To install JetBrains Rider on AnduinOS, you can run the following commands:
 
 ```bash
 # Download and extract the tarball.
-url="https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.tar.gz"
+url="https://download.jetbrains.com/rider/JetBrains.Rider-2025.3.1.tar.gz"
 wget -O /tmp/rider.tar.gz "$url"
 sudo tar -xzf /tmp/rider.tar.gz -C /opt
 sudo rm -rf /opt/rider-old-backup
 sudo mv /opt/rider /opt/rider-old-backup || true
-sudo mv /opt/JetBrains\ Rider-2025.3 /opt/rider
+sudo mv /opt/JetBrains\ Rider-2025.3.1 /opt/rider
 sudo chown -R "$USER":"$USER" /opt/rider
 rm /tmp/rider.tar.gz
 
