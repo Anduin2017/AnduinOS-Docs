@@ -175,6 +175,7 @@ nav:
       - Run Windows Apps with Wine: ./Skills/Sandboxing/Run-Windows-Apps.md
     - Secret Management:
       - Manage SSH Keys: ./Skills/Secret-Management/Manage-SSH-Keys.md
+      - Manage SSH Keys with Yubikey: ./Skills/Secret-Management/Manage-SSH-Keys-with-Yubikey.md
     - Developing:
       - Build your own kernel: ./Skills/Developing/Build-Your-Own-Kernel.md
 
