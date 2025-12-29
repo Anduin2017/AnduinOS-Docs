@@ -98,7 +98,7 @@ You can utilize your existing SSH Resident Key to sign Git commits. This elimina
 
 Run this script to bind your YubiKey to Git's signing config immediately.
 
-```bash title="One-click configuration"
+```bash title="One-click configuration for setting up Git signing with the SSH key in YubiKey"
 # 1. Find the resident key
 KEY=$(ssh-add -L | grep "sk-" | head -n 1)
 
