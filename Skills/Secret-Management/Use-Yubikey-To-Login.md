@@ -31,3 +31,7 @@ sudo mv /etc/pam.d/gdm-password.bak /etc/pam.d/gdm-password
 ```
 
 This will revert the changes and allow you to log in with your password again.
+
+## Use Yubikey to authenticate sudo commands
+
+To use your YubiKey for authenticating `sudo` commands, you need to modify the PAM configuration for `sudo`. Read the instructions [here](../../Install/Allow-Sudo-Without-Password.md)
