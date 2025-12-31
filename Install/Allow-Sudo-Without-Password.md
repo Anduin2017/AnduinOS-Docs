@@ -50,4 +50,6 @@ fi
 
 ```
 
-To learn more about how to use Yubikey to protect your SSH key, you can continue read more here: [Manage SSH Keys with Yubikey](https://www.google.com/search?q=../Skills/Secret-Management/Manage-SSH-Keys-with-Yubikey.md) guide to set up your YubiKey for SSH authentication.
+To learn more about how to use Yubikey to protect your SSH key, you can continue read more here: [Manage SSH Keys with Yubikey](../Skills/Secret-Management/Manage-SSH-Keys-with-Yubikey.md) guide to set up your YubiKey for SSH authentication.
+
+You can also use YubiKey to auto unlock your LUKS encrypted disk at boot time. Check out the guide: [Auto Unlock LUKS with YubiKey](../Skills/Secret-Management/Use-Yubikey-To-Unlock-LUKS.md).
