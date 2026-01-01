@@ -13,7 +13,7 @@ This is ideal for carrying your development environment or personal desktop conf
 
 The process creates a hybrid partition layout that supports persistence automatically.
 
-1.  **Burn the ISO**: Follow the [Bare-mental Installation](https://www.google.com/search?q=%23bare-mental-installation---make-a-usb-installer) steps above to burn the ISO to your USB drive.
+1.  **Burn the ISO**: Follow the [Bare-metal Installation](../Burn-A-USB-Stick.md) steps above to burn the ISO to your USB drive.
 
 !!! warning "Critical: Use `dd` mode"
 

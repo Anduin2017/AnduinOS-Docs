@@ -1,4 +1,4 @@
-# Bare-mental Installation - Make a USB installer
+# Bare-metal Installation - Make a USB installer
 
 First, [download the latest release of AnduinOS](./Download-AnduinOS.md).
 
