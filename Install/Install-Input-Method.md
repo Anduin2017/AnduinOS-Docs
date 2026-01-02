@@ -64,12 +64,15 @@ dconf write /org/gnome/desktop/input-sources/sources "[('xkb', 'us'), ('ibus', '
 To install `anduinos-rime`, you can run the following command:
 
 ```bash title="Install anduinos-rime"
+sudo apt install -y ibus-rime
 zip=https://gitlab.aiursoft.com/anduin/anduinos-rime/-/archive/master/anduinos-rime-master.zip
 wget $zip -O anduinos-rime.zip && unzip anduinos-rime.zip && rm anduinos-rime.zip
 rsync -Aavx --update --delete ./anduinos-rime-master/assets/ ~/.config/ibus/rime/
 rm -rf anduinos-rime-master
 ibus restart
 ibus engine rime
+dconf write /org/gnome/desktop/input-sources/mru-sources "[('xkb', 'us'), ('ibus', 'rime')]"
+dconf write /org/gnome/desktop/input-sources/sources "[('xkb', 'us'), ('ibus', 'rime')]"
 echo "Please logout and login to start AnduinOS-Rime!"
 ```
 
