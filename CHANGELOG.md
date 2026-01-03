@@ -10,6 +10,15 @@ Please note: `do_anduinos_upgrade` will only update in a forked version of Andui
 
 Please note: `do-anduinos-autorepair` command is added in v1.1.11, v1.3.8 and v1.4.1 to help users to fix common system issues. This command will download latest AnduinOS ISO and try to repair the system by comparing the system files with the ISO image.
 
+## v1.4.2
+
+* Changed the default apt source to `https://ubuntu.mirror.letscloud.io/ubuntu/` for Brazil build.
+* Added `gstreamer1.0-plugins-base`, `gstreamer1.0-plugins-good`, `gstreamer1.0-plugins-bad`, `gstreamer1.0-plugins-ugly` and `libavcodec-extra` out of box for better video codec support.
+* The repair will download AnduinOS iso under the `Download` folder instead of `/tmp` folder.
+* The repair script will reject reparing `dracut` based system because there is a high risky to break the initrd.
+* Added an error prompt when the `do_anduinos_upgrade` script failed to connect to the server.
+* Bump the `the-sof-bin` to 2025.12 version to support more modern Intel audio devices and kernel versions.
+
 ## v1.4.1
 
 * Improved the Russian slides localization based on contribution from @AlexanderKryllov.
@@ -45,6 +54,15 @@ Please note: `do-anduinos-autorepair` command is added in v1.1.11, v1.3.8 and v1
   * Added `fastfetch` package to the default app list to show system information in the terminal. Correctly show the logo based on `/etc/os-release` file.
   * Patched `/usr/bin/add-apt-repository` to fake the OS information to `ubuntu` when adding PPAs.
   * This is still a hack and may break in the future. Ultimately in the future, we may use our own PPAs to provide software and patches for AnduinOS.
+
+## v1.3.9
+
+* Changed the default apt source to `https://ubuntu.mirror.letscloud.io/ubuntu/` for Brazil build.
+* Added `gstreamer1.0-plugins-base`, `gstreamer1.0-plugins-good`, `gstreamer1.0-plugins-bad`, `gstreamer1.0-plugins-ugly` and `libavcodec-extra` out of box for better video codec support.
+* The repair will download AnduinOS iso under the `Download` folder instead of `/tmp` folder.
+* The repair script will reject reparing `dracut` based system because there is a high risky to break the initrd.
+* Added an error prompt when the `do_anduinos_upgrade` script failed to connect to the server.
+* Bump the `the-sof-bin` to 2025.12 version to support more modern Intel audio devices and kernel versions.
 
 ## v1.3.8
 
@@ -196,6 +214,14 @@ Please note: `do-anduinos-autorepair` command is added in v1.1.11, v1.3.8 and v1
 ## v1.2.0 (Forked from v1.1.0)
 
 * **Upgraded Base System**: The foundational system has been updated from **Noble (Ubuntu 24.04)** to **Oracular (Ubuntu 24.10)**.
+
+## v1.1.12
+
+* Changed the default apt source to `https://ubuntu.mirror.letscloud.io/ubuntu/` for Brazil build.
+* Added `gstreamer1.0-plugins-base`, `gstreamer1.0-plugins-good`, `gstreamer1.0-plugins-bad`, `gstreamer1.0-plugins-ugly` and `libavcodec-extra` out of box for better video codec support.
+* The repair will download AnduinOS iso under the `Download` folder instead of `/tmp` folder.
+* The repair script will reject reparing `dracut` based system because there is a high risky to break the initrd.
+* Added an error prompt when the `do_anduinos_upgrade` script failed to connect to the server.
 
 ## v1.1.11
 
