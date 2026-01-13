@@ -13,3 +13,17 @@ Run this command to install fzf on AnduinOS:
 ```bash
 sudo apt install fzf
 ```
+
+Add the following line to `~/.bashrc`
+
+```bash
+[ -f /usr/share/doc/fzf/examples/key-bindings.bash ] && . /usr/share/doc/fzf/examples/key-bindings.bash
+```
+
+Next, open new terminal to get [three new key bindings](https://github.com/junegunn/fzf?tab=readme-ov-file#key-bindings-for-command-line), which are related to the functionality of fzf with bash.
+
+| Keybind     | Function               |
+| ----------- | ---------------------- |
+| `Ctrl + R`  | Command History        |
+| `Ctrl + T`  | Current Folder Files   |
+| `Alt + c`   | cd Helper              |
