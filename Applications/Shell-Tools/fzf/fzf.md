@@ -24,6 +24,6 @@ Next, open new terminal to get [three new key bindings](https://github.com/juneg
 
 | Keybind     | Function               |
 | ----------- | ---------------------- |
-| `Ctrl + R`  | Command History        |
-| `Ctrl + T`  | Current Folder Files   |
+| `Ctrl + r`  | Command History        |
+| `Ctrl + t`  | Current Folder Files   |
 | `Alt + c`   | cd Helper              |
