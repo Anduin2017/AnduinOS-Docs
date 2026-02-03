@@ -88,7 +88,7 @@ services:
     networks: 
       - internal
     depends_on:
-      - nextcloud
+      - web
     entrypoint: ["/bin/sh", "-c", "apk add curl && sleep 20 && while true; do sleep 300; curl -s http://web/cron.php; done"]
     deploy:
       resources:
