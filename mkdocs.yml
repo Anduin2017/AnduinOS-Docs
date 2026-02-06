@@ -196,6 +196,7 @@ nav:
         - Sublime Text: ./Applications/Code-Editors/Sublime-Text/Sublime-Text.md
         - Jetbrains Rider: ./Applications/Code-Editors/Jetbrains-Rider/Jetbrains-Rider.md
         - Code::Blocks: ./Applications/Code-Editors/Code-Blocks/Code-Blocks.md
+        - Gemini CLI: ./Applications/Code-Editors/Gemini-CLI/Gemini-CLI.md
         - Antigravity: ./Applications/Code-Editors/Antigravity/Antigravity.md
 
       - Store:
